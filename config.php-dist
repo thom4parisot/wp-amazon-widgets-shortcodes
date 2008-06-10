@@ -1,0 +1,13 @@
+<?php
+/*
+ * Setup your own config and pray to implement it in Wordpress Dashboard
+ * 
+ * - AWS_COUNTRY_TLD: domain name extension for the appropriate Amazon Country [.ca, .co.jp, .co.uk, .com, .de, .fr]
+ * - AWS_TRACKING_ID: your amazon tracking ID, always suffixed by -21
+ * 
+ * Enjoy ;-)
+ */
+
+define('AWS_COUNTRY_TLD', 'fr');
+define('AWS_TRACKING_ID', '-21');
+?>
