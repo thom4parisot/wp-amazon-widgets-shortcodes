@@ -53,5 +53,4 @@ class AmazonWidgetsShortcodesTags
 /*
  * 
  */
-echo __("You don't have a sufficient version of Flash Player to display this animation.");exit();
 add_shortcode('amazon-carrousel', array('AmazonWidgetsShortcodesTags', 'widget_carrousel'));
