@@ -34,21 +34,24 @@ class AmazonWidgetsShortcodesTags
       '&amp;Operation=GetDisplayTemplate'
     ), '', $uri);
     $uri = preg_replace('#%2F([a-z0-9_\-]+)-21#iU', '%2F'.AWS_TRACKING_ID, $uri);
-    
+
     return 
-    '<div style="text-align:center">'.
-      '<object type="application/x-shockwave-flash" data="'.$uri.'&amp;Operation=GetDisplayTemplate" width="'.$width.'" height="'.$height.'">'.
-        '<param name="movie" value="'.$uri.'&amp;Operation=GetDisplayTemplate" />'.
-        '<param name="bgcolor" value="'.$bgcolor.'" />'.
-        '<param name="quality" value="high" />'.
-        '<param name="allowscriptaccess" value="always" />'.
-        '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.").'</p>'.
-      '</object>'.
-    '</div>';
+      AWS_FEED_ENABLE === true || !is_feed() ?
+      '<div style="text-align:center">'.
+        '<object type="application/x-shockwave-flash" data="'.$uri.'&amp;Operation=GetDisplayTemplate" width="'.$width.'" height="'.$height.'">'.
+          '<param name="movie" value="'.$uri.'&amp;Operation=GetDisplayTemplate" />'.
+          '<param name="bgcolor" value="'.$bgcolor.'" />'.
+          '<param name="quality" value="high" />'.
+          '<param name="allowscriptaccess" value="always" />'.
+          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.").'</p>'.
+        '</object>'.
+      '</div>' :
+      '';
   }
 }
 
 /*
  * 
  */
+echo __("You don't have a sufficient version of Flash Player to display this animation.");exit();
 add_shortcode('amazon-carrousel', array('AmazonWidgetsShortcodesTags', 'widget_carrousel'));

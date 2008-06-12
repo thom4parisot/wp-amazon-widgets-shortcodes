@@ -13,15 +13,24 @@ Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
 class AmazonWidgetsShortcodes
 {
+  /**
+   * 
+   * @return 
+   */
   function pluginActivation()
   {
     if (!file_exists(dirname(__FILE__).'/config.php'))
     {
       deactivate_plugins(__FILE__);
-      wp_die(__('Please configure the config.php file. It is temporary during the beta.'));
+      _e('Please configure the config.php file. It is temporary during the beta.');
+      return false;
     }
   }
 
+  /**
+   * 
+   * @return 
+   */
   function pluginDeActivation()
   {
     
@@ -31,8 +40,9 @@ class AmazonWidgetsShortcodes
 /*
  * Register main actions
  */
+//load_plugin_textdomain('amazon-widgets-shortcodes', 'wp-content/plugins/amazon-widgets-shortcodes/i18n');
 register_activation_hook(__FILE__, array('AmazonWidgetsShortcodes', 'pluginActivation'));
-//register_deactivation_hook(__FILE__, array('AmazonWidgetsShortcodes', 'pluginDeActivation'));
+register_deactivation_hook(__FILE__, array('AmazonWidgetsShortcodes', 'pluginDeActivation'));
 
 /*
  * Stop the loading if no config file found

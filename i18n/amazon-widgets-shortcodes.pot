@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Amazon Widgets Shortcodes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-06-12 22:45+0100\n"
+"PO-Revision-Date: 2008-06-12 22:48+0100\n"
+"Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
+"Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/oncletom/www/wordpress/amazon-widgets-shortcodes\n"
+
+#: /home/oncletom/www/wordpress/amazon-widgets-shortcodes/amazon-widgets-shortcodes.php:25
+msgid "Please configure the config.php file. It is temporary during the beta."
+msgstr ""
+
+#: /home/oncletom/www/wordpress/amazon-widgets-shortcodes/shortcodes.class.php:46
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr ""
+
