@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Adds a counter to track the number of times a post is viewed.
 Author: Oncle Tom
-Version: 1.0 beta 1
+Version: 1.0 alpha 1
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
