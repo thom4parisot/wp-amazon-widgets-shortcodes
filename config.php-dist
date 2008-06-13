@@ -8,6 +8,6 @@
  * Enjoy ;-)
  */
 
-define('AWS_COUNTRY_TLD', 'fr');
+define('AWS_TRACKING_ID', '-21');
 define('AWS_FEED_ENABLE', false); //possible values: true, false (default)
 ?>

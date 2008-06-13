@@ -22,7 +22,7 @@ class AmazonWidgetsShortcodes
     if (!file_exists(dirname(__FILE__).'/config.php'))
     {
       deactivate_plugins(__FILE__);
-      _e('Please configure the config.php file. It is temporary during the beta.');
+      wp_die(_e('Please configure the config.php file. It is temporary during the beta.'));
       return false;
     }
   }
