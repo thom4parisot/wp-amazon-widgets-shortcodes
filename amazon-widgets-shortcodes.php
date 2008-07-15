@@ -47,9 +47,10 @@ class AmazonWidgetsShortcodes
     /*
      * Default options
      */
-    add_option('awshortcode_tracking_id', '', '', 'yes');
-    add_option('awshortcode_feed', '0', '', 'yes');
     add_option('awshortcode_align', 'center', '', 'yes');
+    add_option('awshortcode_context_links', '0', '', 'yes');
+    add_option('awshortcode_feed', '0', '', 'yes');
+    add_option('awshortcode_tracking_id', '', '', 'yes');
   }
 
   /**
@@ -64,9 +65,10 @@ class AmazonWidgetsShortcodes
    */
   function pluginUninstall()
   {
-    delete_option('awshortcode_tracking_id');
-    delete_option('awshortcode_feed');
     delete_option('awshortcode_align');
+    delete_option('awshortcode_context_links');
+    delete_option('awshortcode_feed');
+    delete_option('awshortcode_tracking_id');
   }
 
   /**
@@ -144,4 +146,14 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   $AwShortcodes = new AmazonWidgetsShortcodesTags();
   add_shortcode('amazon-carrousel', array(&$AwShortcodes, 'widget_carrousel'));
   add_shortcode('amazon-product', array(&$AwShortcodes, 'widget_product'));
+
+  /*
+   * We enqueue Amazon JS at the bottom
+   * Why the bottom ? Because it is recommended for external scripts
+   * And it is one ;-)
+   */
+  if (get_option('awshortcode_context_links'))
+  {
+    add_action('wp_footer', array('AmazonWidgetsShortcodesToolkit', 'displayContextLinks'));
+  }
 }

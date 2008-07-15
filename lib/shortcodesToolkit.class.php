@@ -9,6 +9,25 @@
 class AmazonWidgetsShortcodesToolkit
 {
   /**
+   * Displays context links on Amazon links
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.0 alpha 3
+   * @return 
+   */
+  function displayContextLinks()
+  {
+    $tracking_id = get_option('awshortcode_tracking_id');
+    echo <<<EOF
+<script type="text/javascript"><!--
+var amzn_cl_tag = '{$tracking_id}';
+//--></script>
+<script type="text/javascript" src="http://cls.assoc-amazon.fr/fr/s/cls.js"></script>
+EOF;
+  }
+
+  /**
    * Displays or not the widget according to some conditions
    * 
    * Conditions are:

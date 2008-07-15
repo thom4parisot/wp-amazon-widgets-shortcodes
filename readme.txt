@@ -1,9 +1,9 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
 Tags: amazon, affiliate, shortcode, monetization
-Requires at least: 2.5+
-Tested up to: 2.5.1
-Stable tag: 1.0-a2
+Requires at least: 2.5
+Tested up to: 2.6
+Stable tag: 1.0-a3
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -21,6 +21,12 @@ You may like it for these features:
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
 * minimal shortcodes (1 option and it runs)
+
+Currently supported Amazon widgets/features:
+
+* Carrousel Widget
+* Context Link
+* Product
 
 The Todo-list is full of promising features. It will be hard to wait for them!
 
@@ -72,6 +78,11 @@ For now, it only handles this widget in the "Text + picture" version.
 
 == Release notes ==
 
+= Version 1.0 alpha 3 =
+ * internationalisation support (i18n, english and french)
+ * "hide widgets in feed" renamed as "show widgets in feed" to match better the setting name (more natural)
+ * basic support of context links (no options for now)
+
 = Version 1.0 alpha 2 =
 
  * new widget : Amazon Product (text + picture)
@@ -90,12 +101,11 @@ For now, it only handles this widget in the "Text + picture" version.
 == Todo-list ==
 1. Add a "copy/paste" feature that magically converts the HTML code in Wordpress shortcode
 1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
-1. Add support for i18n
+1. Add support for all Amazon Partners programs
 1. Support for these widgets:
- * Context link
  * Slideshow
  * Products cloud
  * My favourites
  * Wishlist
  * etc.
-1. Earning a lot of money thanks to this widget ;-)
+1. Makes you earning a lot of money thanks to this widget ;-)
