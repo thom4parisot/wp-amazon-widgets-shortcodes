@@ -1,3 +1,1 @@
-<?php
-//Hello World
-?>
+<?php /* Hello World! */ ?>

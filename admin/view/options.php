@@ -35,7 +35,7 @@
         </tr>
         <tr>
           <th scope="row">
-            <label for="awshortcode_feed"><?php _e('Hide Amazon widgets from feed?') ?></label>
+            <label for="awshortcode_feed"><?php _e('Show Amazon widgets in RSS feeds?') ?></label>
           </th>
           <td>
             <input type="checkbox"

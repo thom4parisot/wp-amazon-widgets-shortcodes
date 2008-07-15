@@ -23,7 +23,7 @@ class AmazonWidgetsShortcodesToolkit
    */
   function displayShortcode($html)
   {
-    return (int)get_option('awshortcode_feed') === 1 || !is_feed() ? $html : '';
+    return get_option('awshortcode_feed') || !is_feed() ? $html : '';
   }
 
   /**
