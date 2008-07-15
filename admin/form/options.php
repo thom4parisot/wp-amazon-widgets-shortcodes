@@ -12,7 +12,7 @@ if ($_POST['action'] == 'update')
   ?>
   <div class="updated">
     <p>
-      <strong><?php _e('Options saved.') ?></strong>
+      <strong><?php _e('Options saved.', 'awshortcode') ?></strong>
     </p>
   </div>
   <?php

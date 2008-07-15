@@ -1,13 +1,13 @@
 <div class="wrap">
-  <h2><?php _e('Amazon Widgets Shortcodes: Options') ?></h2>
+  <h2><?php _e('Amazon Widgets Shortcodes: Options', 'awshortcode') ?></h2>
   <?php
   /*
    * Options dynamic options
    */
   $alignments = array(
-    'left' => __('left'),
-    'center' => __('centered'),
-    'right' => __('right')
+    'left' => __('left', 'awshortcode'),
+    'center' => __('centered', 'awshortcode'),
+    'right' => __('right', 'awshortcode')
   );
   ?>
 
@@ -16,12 +16,12 @@
     <input type="hidden" name="action" value="update" />
     <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align" />
 
-    <h3><?php _e('Main Options') ?></h3>
+    <h3><?php _e('Main Options', 'awshortcode') ?></h3>
     <table class="form-table">
       <tbody>
         <tr>
           <th scope="row">
-            <label for="awshortcode_tracking_id"><?php _e('Amazon Tracking ID:') ?></label>
+            <label for="awshortcode_tracking_id"><?php _e('Amazon Tracking ID:', 'awshortcode') ?></label>
           </th>
           <td>
             <input type="text"
@@ -29,13 +29,13 @@
               name="awshortcode_tracking_id"
               value="<?php echo get_option('awshortcode_tracking_id') ?>" />
             <span class="help">
-              <?php _e('Your Amazon Tracking ID, generally suffixed by -21') ?>
+              <?php _e('Your Amazon Tracking ID, generally suffixed by -21', 'awshortcode') ?>
             </span>
           </td>
         </tr>
         <tr>
           <th scope="row">
-            <label for="awshortcode_feed"><?php _e('Show Amazon widgets in RSS feeds?') ?></label>
+            <label for="awshortcode_feed"><?php _e('Show Amazon Widgets in RSS feeds?', 'awshortcode') ?></label>
           </th>
           <td>
             <input type="checkbox"
@@ -51,12 +51,12 @@
       </tbody>
     </table>
 
-    <h3><?php _e('Layout Options') ?></h3>
+    <h3><?php _e('Layout Options', 'awshortcode') ?></h3>
     <table class="form-table">
       <tbody>
         <tr>
           <th scope="row">
-            <label for="awshortcode_align"><?php _e('Default widget alignment:') ?></label>
+            <label for="awshortcode_align"><?php _e('Default Widget alignment:', 'awshortcode') ?></label>
           </th>
           <td>
             <select id="awshortcode_align" name="awshortcode_align">
