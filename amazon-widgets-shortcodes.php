@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Amazon Widgets Shortcodes
-Description: Adds a counter to track the number of times a post is viewed.
+Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
 Author: Oncle Tom
 Version: 1.0 alpha 3
 Author URI: http://oncle-tom.net/
