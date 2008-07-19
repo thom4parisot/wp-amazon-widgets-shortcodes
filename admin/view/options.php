@@ -37,9 +37,9 @@
     <input type="hidden" name="action" value="update" />
     <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links,awshortcode_region" />
 
-    <ul id="awshortcode-navigation">
-      <li><a href="#awshortcode-main"><?php _e('Main Options', 'awshortcode') ?></a></li>
-      <li><a href="#awshortcode-tools"><?php _e('Additional Tools', 'awshortcode') ?></a></li>
+    <ul id="awshortcode-navigation" class="tablenav">
+      <li><a href="#awshortcode-main" class="button-secondary"><?php _e('Main Options', 'awshortcode') ?></a></li>
+      <li><a href="#awshortcode-tools" class="button-secondary"><?php _e('Additional Tools', 'awshortcode') ?></a></li>
     </ul>
 
     <div id="awshortcode-main">

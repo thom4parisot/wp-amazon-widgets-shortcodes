@@ -7,11 +7,20 @@
 #awshortcode div.ui-tabs-panel{
   border: none;
   height: auto;
-  margin: 0;
+  margin: 1.5em 0 0;
   overflow: visible;
+  padding: 0;
   width: auto;
 }
 
 #awshortcode li.ui-tabs-selected{
   font-weight: bold;
 }
+
+#awshortcode #awshortcode-navigation.tablenav{
+  height: auto;
+}
+  #awshortcode #awshortcode-navigation.tablenav li,
+  #awshortcode #awshortcode-navigation.tablenav a.button-secondary{
+    display: inline;
+  }
