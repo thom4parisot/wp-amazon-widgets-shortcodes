@@ -49,7 +49,7 @@ EOF;
    * Find and replace the tracking ID within a given string
    * 
    * @author oncletom
-   * @version 1.0
+   * @version 1.0.1
    * @since 1.0 alpha 2
    * @return $string String Modified string (or not, if nothing found)
    * @param $string String String to modify
@@ -58,7 +58,7 @@ EOF;
   function replaceTrackingId($string, $tracking_id = null)
   {
     return preg_replace(
-      '#(%2F|\?|&)([a-z0-9_\-]+)-21#iU',
+      '#(%2F|\?|&amp;|&)([a-z0-9_\-]+)-21#iU',
       "$1".($tracking_id ? $tracking_id : get_option('awshortcode_tracking_id')),
       $string
     );

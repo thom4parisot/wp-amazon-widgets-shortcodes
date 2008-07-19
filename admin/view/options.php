@@ -1,15 +1,26 @@
-<div class="wrap">
-  <h2><?php _e('Amazon Widgets Shortcodes: Options', 'awshortcode') ?></h2>
+<div class="wrap awshortcode-options" id="awshortcode">
+  <h2><?php _e('Amazon Widgets Shortcodes', 'awshortcode') ?></h2>
 
   <p><?php printf(
             __(
-              'For now, during this alpha stage, shortcode documentation is '.
-              'available on the <a href="%s">official Wordpress.org\'s '.
-              'plugin page</a>.<br />'.
-              'Don\'t hesitate to read it to help yourself.',
+              'Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page.<br />'.
+              'You can also help improving this plugin by '.
+              '<a href="%s" class="new-window">declaring a bug</a> '.
+              'or even look at the <a href="%s" class="new-window">official plugin homepage</a> '.
+              '(or <a href="%s" class="new-window">the author\'s one</a>).',
               'awshortcode')
             ,
-            'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/') ?></p>
+            'http://plugins.trac.wordpress.org/newticket?component=amazon-widgets-shortcodes&owner=oncletom',
+            'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
+            'http://case.oncle-tom.net/code/wordpress/') ?></p>
+  <p><?php printf(
+            __(
+              'For your convenience, the shortcode documentation is available on each '.
+              'post and page edit screen, in a box called <em>%s</em>.',
+              'awshortcode')
+            ,
+            __('Amazon Widgets Shortcodes documentation', 'awshortcode')) ?></p>
+
   <?php
   /*
    * Options dynamic options
@@ -24,12 +35,33 @@
   <form action="options.php" method="post">
     <?php wp_nonce_field('update-options') ?>
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links" />
+    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links,awshortcode_region" />
 
+    <ul id="awshortcode-navigation">
+      <li><a href="#awshortcode-main"><?php _e('Main Options', 'awshortcode') ?></a></li>
+      <li><a href="#awshortcode-tools"><?php _e('Additional Tools', 'awshortcode') ?></a></li>
+    </ul>
+
+    <div id="awshortcode-main">
     <h3><?php _e('Main Options', 'awshortcode') ?></h3>
     <table class="form-table">
       <tbody>
         <tr>
+          <th scope="row">
+            <label for="awshortcode_region">
+              <?php _e('Amazon affiliate region:', 'awshortcode') ?>
+            </label>
+          </th>
+          <td>
+            <select name="awshortcode_region" id="awshortcode_region">
+            <?php foreach(AmazonWidgetsShortcodes::getRegionParameters('') as $id => $region): ?>
+              <option value="<?php echo $id ?>"<?php echo $id === get_option('awshortcode_region') ? ' selected="selected"' : '' ?>>
+                <?php echo $region['name'] ?>
+              </option>
+            <?php endforeach ?>
+            </select>
+          </td>
+        </tr>
           <th scope="row">
             <label for="awshortcode_tracking_id">
               <?php _e('Amazon Tracking ID:', 'awshortcode') ?>
@@ -78,7 +110,7 @@
         <tr>
           <th scope="row">
             <label for="awshortcode_align">
-              <?php _e('Default Widget alignment:', 'awshortcode') ?>
+              <?php _e('Default Widgets alignment:', 'awshortcode') ?>
             </label>
           </th>
           <td>
@@ -96,7 +128,9 @@
         </tr>
       </tbody>
     </table>
+    </div>
 
+    <div id="awshortcode-tools">
     <h3><?php _e('Additional Tools', 'awshortcode') ?></h3>
     <table class="form-table">
       <tbody>
@@ -117,18 +151,43 @@
                />
             <span class="help">
               <?php _e(
-                'Context links display a tooltip on all hypertext '.
-                'links pointing to an Amazon product.'
+                'Context links are hyperkinks automatically '.
+                'added on relevant keywords of your page.'
+                , 'awshortcode') ?>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label for="awshortcode_enhanced_links">
+              <?php _e('Enable Amazon\'s enhanced links:', 'awshortcode') ?>
+            </label>
+          </th>
+          <td>
+            <input type="checkbox"
+              id="awshortcode_enhanced_links"
+              name="awshortcode_enhanced_links"
+              value="1"
+              <?php if (get_option('awshortcode_enhanced_links')): ?>
+              checked="checked"
+              <?php endif ?>
+               />
+            <span class="help">
+              <?php _e(
+                'Enhanced links display a tooltip on all hypertext '.
+                'links pointing to an Amazon product with informations such '.
+                'as price, picture, full name etc.'
                 , 'awshortcode') ?>
             </span>
           </td>
         </tr>
       </tbody>
     </table>
+    </div>
 
-  <p class="submit">
-    <input type="submit" name="Submit" value="<?php _e('Save Changes') ?>" />
-  </p>
+    <p class="submit">
+      <input type="submit" name="Submit" value="<?php _e('Save Changes') ?>" />
+    </p>
 
   </form>
 </div>

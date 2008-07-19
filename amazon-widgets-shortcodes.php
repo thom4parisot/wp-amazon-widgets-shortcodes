@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
 Author: Oncle Tom
-Version: 1.0 alpha 3
+Version: 1.0 beta 1
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
@@ -14,24 +14,120 @@ Plugin URI: http://case.oncle-tom.net/code/wordpress/
 class AmazonWidgetsShortcodes
 {
   /**
-   * Load textdomain even if the plugin is a symlink
+   * Getter for international Amazon parameters
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.0 beta 1
+   * @return $settings Array Settings for all or a limited area
+   * @param $country_code String[Optionnal] limit the returned settings to this country code
+   */
+  function getRegionParameters($country_code = 'autodetect')
+  {
+    if ($country_code == 'autodetect')
+    {
+      $country_code = get_option('awshortcode_region');
+      $country_code = $country_code ? $country_code : 'us';
+    }
+
+    $amazon = array(
+      /*'ca' => array(
+        'lang_iso_code' => 'en_CA',
+        'name' => __('Amazon Canada', 'awshortcode'),
+        'url' => array(
+          'affiliate' => '',
+          'site' => 'http://www.amazon.ca/',
+          'tool-contextlinks' => '',
+          'widget-carrousel' => '',
+          'widget-product' => '',
+        ),
+      ),*/
+      /*'de' => array(
+        'lang_iso_code' => 'de_DE',
+        'name' => __('Amazon Germany', 'awshortcode'),
+        'url' => array(
+          'affiliate' => '',
+          'site' => 'http://www.amazon.de/',
+          'tool-contextlinks' => '',
+          'widget-carrousel' => '',
+          'widget-product' => '',
+        ),
+      ),*/
+      'fr' => array(
+        'lang_iso_code' => 'fr_FR',
+        'name' => __('Amazon France', 'awshortcode'),
+        'url' => array(
+          'affiliate' => 'http://partenaires.amazon.fr/',
+          'site' => 'http://www.amazon.fr/',
+          'tool-contextlinks' => 'http://cls.assoc-amazon.fr/fr/s/cls.js',
+          'tool-enhancelinks' => 'http://www.assoc-amazon.fr/s/link-enhancer?tag=%s&amp;o=8',
+          'widget-carrousel' => '',
+          'widget-product' => 'http://rcm-fr.amazon.fr/e/cm?',
+        ),
+      ),
+      /*'jp' => array(
+        'lang_iso_code' => 'ja_JP',
+        'name' => __('Amazon Japan', 'awshortcode'),
+        'url' => array(
+          'affiliate' => '',
+          'site' => 'http://www.amazon.co.jp/',
+          'tool-contextlinks' => '',
+          'widget-carrousel' => '',
+          'widget-product' => '',
+        ),
+      ),*/
+      /*'uk' => array(
+        'lang_iso_code' => 'en_UK',
+        'name' => __('Amazon United Kingdom', 'awshortcode'),
+        'url' => array(
+          'affiliate' => '',
+          'site' => 'http://www.amazon.co.uk/',
+          'tool-contextlinks' => '',
+          'widget-carrousel' => '',
+          'widget-product' => '',
+        ),
+      ),*/
+      'us' => array(
+        'lang_iso_code' => 'en_US',
+        'name' => __('Amazon USA', 'awshortcode'),
+        'url' => array(
+          'affiliate' => 'https://affiliate-program.amazon.com/',
+          'site' => 'http://www.amazon.com/',
+          'tool-contextlinks' => '',
+          'widget-carrousel' => '',
+          'widget-product' => '',
+        ),
+      ),
+    );
+
+    return $country_code ? $amazon[$country_code] : $amazon;
+  }
+
+  /**
+   * Returns plugin location
    * 
    * In case of symlink, it assumes you linked it with its original plugin name
    * eg: `ln -s /path/to/plugins/amazon-widgets-shortcodes /real/path/to/aws-plugin`
    * 
    * @author oncletom
-   * @since 1.0 alpha 3
-   * @return null
+   * @since 1.0 beta 1
+   * @return $location Array
    */
-  function loadTextDomain()
+  function getPluginLocation()
   {
     if (function_exists('is_link') && is_link(ABSPATH.PLUGINDIR.'/amazon-widgets-shortcodes'))
     {
-      load_plugin_textdomain('awshortcode', PLUGINDIR.'/amazon-widgets-shortcodes/i18n');
+      return array(
+        ABSPATH.PLUGINDIR.'/amazon-widgets-shortcodes/'.basename(__FILE__),
+        PLUGINDIR.'/amazon-widgets-shortcodes/i18n'
+      );
     }
     else
     {
-      load_plugin_textdomain('awshortcode', PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)).'/i18n');
+      return array(
+        __FILE__,
+        PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)).'/i18n'
+      );
     }
   }
 
@@ -49,7 +145,9 @@ class AmazonWidgetsShortcodes
      */
     add_option('awshortcode_align', 'center', '', 'yes');
     add_option('awshortcode_context_links', '0', '', 'yes');
+    add_option('awshortcode_enhanced_links', '0', '', 'yes');
     add_option('awshortcode_feed', '0', '', 'yes');
+    add_option('awshortcode_region', 'us', '', 'yes');
     add_option('awshortcode_tracking_id', '', '', 'yes');
   }
 
@@ -67,53 +165,28 @@ class AmazonWidgetsShortcodes
   {
     delete_option('awshortcode_align');
     delete_option('awshortcode_context_links');
+    delete_option('awshortcode_enhanced_links');
     delete_option('awshortcode_feed');
+    delete_option('awshortcode_region');
     delete_option('awshortcode_tracking_id');
   }
+}
 
-  /**
-   * Admin menu inclusion
-   * 
-   * @author oncletom
-   * @since 1.0 alpha 2
-   * @return null
-   */
-  function setupAdminMenu()
-  {
-    add_options_page(
-      __('Amazon Widgets Shortcodes', 'awshortcode'),
-      __('Amazon Widgets Shortcodes', 'awshortcode'),
-      8,
-      'awshortcode-options',
-      array('AmazonWidgetsShortcodesAdmin', 'displayOptions')
-    );
-  }
-
-  /**
-   * Show a notice to the user if (s)he has not setup the plugin yet
-   * 
-   * @author oncletom
-   * @since 1.0 alpha 2
-   * @return null
-   */
-  function showNotice()
-  {
-    ?>
-    <div class="updated fade">
-      <p><strong><?php _e('Amazon Widget Shortcodes has been activated', 'awshortcode') ?></strong>.</p>
-      <p><?php printf(
-              __('You need to <a href="%s">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets.', 'awshortcode'),
-              'options-general.php?page=awshortcode-options'
-            ) ?></p>
-    </div>
-    <?php
-  }
+/*
+ * Register main actions
+ */
+list($filename, $i18n_path) = AmazonWidgetsShortcodes::getPluginLocation();
+load_plugin_textdomain('awshortcode', $i18n_path);
+register_activation_hook($filename, array('AmazonWidgetsShortcodes', 'pluginActivation'));
+if (function_exists('register_uninstall_hook'))
+{
+  register_uninstall_hook($filename, array('AmazonWidgetsShortcodes', 'pluginUninstall'));
 }
 
 /*
  * Registering classes
  */
-define('AWS_PLUGIN_BASEPATH', dirname(__FILE__));
+define('AWS_PLUGIN_BASEPATH', dirname($filename));
 require(AWS_PLUGIN_BASEPATH.'/lib/shortcodesToolkit.class.php');
 require(AWS_PLUGIN_BASEPATH.'/lib/shortcodes.class.php');
 
@@ -123,24 +196,18 @@ require(AWS_PLUGIN_BASEPATH.'/lib/shortcodes.class.php');
 if (is_admin())
 {
   require(AWS_PLUGIN_BASEPATH.'/lib/shortcodesAdmin.class.php');
-  add_action('admin_menu', array('AmazonWidgetsShortcodes', 'setupAdminMenu'));
+  add_action('admin_menu', array('AmazonWidgetsShortcodesAdmin', 'setupAdminMenu'));
+  add_action('edit_form_advanced', array('AmazonWidgetsShortcodesAdmin', 'displayDocumentation'));
 
   if (!get_option('awshortcode_tracking_id'))
   {
-    add_action('admin_notices', array('AmazonWidgetsShortcodes', 'showNotice'));
+    add_action('admin_notices', array('AmazonWidgetsShortcodesAdmin', 'printNotice'));
   }
 }
 
 /*
- * Register main actions
+ * Frontend stuff
  */
-AmazonWidgetsShortcodes::loadTextDomain();
-register_activation_hook(__FILE__, array('AmazonWidgetsShortcodes', 'pluginActivation'));
-if (function_exists('register_uninstall_hook'))
-{
-  register_uninstall_hook(__FILE__, array('AmazonWidgetsShortcodes', 'pluginUninstall'));
-}
-
 if (get_option('awshortcode_tracking_id') && !is_admin())
 {
   $AwShortcodes = new AmazonWidgetsShortcodesTags();

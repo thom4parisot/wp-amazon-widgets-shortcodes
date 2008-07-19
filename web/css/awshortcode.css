@@ -1,0 +1,17 @@
+/**
+ * @author oncletom
+ * @since 1.0 beta 1
+ * @version 1.0
+ */
+
+#awshortcode div.ui-tabs-panel{
+  border: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+}
+
+#awshortcode li.ui-tabs-selected{
+  font-weight: bold;
+}
