@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-20 17:59+0100\n"
-"PO-Revision-Date: 2008-07-20 17:59+0100\n"
+"POT-Creation-Date: 2008-07-20 18:41+0100\n"
+"PO-Revision-Date: 2008-07-20 18:45+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -136,6 +136,103 @@ msgstr "L'aperçu produit affiche sur tous les hyperliens de produits Amazon une
 #: ../amazon-widgets-shortcodes/admin/view/options.php:193
 msgid "Save Changes"
 msgstr "Enregister les modifications"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:5
+msgid "Amazon Carrousel"
+msgstr "Carrousel Amazon"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:8
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:51
+msgid "Shortcode:"
+msgstr "Shortcode :"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:12
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:55
+msgid "Example:"
+msgstr "Exemple :"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:16
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:59
+msgid "Options:"
+msgstr "Options :"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:21
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:64
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:69
+msgid "align the widget on the desired way"
+msgstr "aligne le widget dans le sens souhaité"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:25
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:68
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:73
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:78
+msgid "CSS hexa or code value"
+msgstr "valeur hexadécimale ou code couleur CSS"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:26
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:74
+msgid "customize the background color of the widget"
+msgstr "personnalise la couleur de fond du widget"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:30
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:35
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:83
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:98
+msgid "value in pixels"
+msgstr "valeur en pixels"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:31
+msgid "height of the animation"
+msgstr "hauteur de l'animation"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:36
+msgid "width of the animation"
+msgstr "largeur de l'animation"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:41
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:104
+msgid "Content:"
+msgstr "Contenu :"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:42
+msgid "Carrousel ID, contained in HTML parameter value like this:"
+msgstr "ID du carrousel, contenue dans une valeur de paramètre HTML comme ceci :"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:47
+msgid "Amazon Product"
+msgstr "Produit Amazon"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:48
+msgid "For now, it only handles this widget in the \"Text + picture\" version."
+msgstr "Pour l'instant, il ne prend en charge que la version \"Texte + image\"."
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:79
+msgid "border color of the widget"
+msgstr "couleur de la bordure du widget"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:84
+msgid "height of the frame"
+msgstr "hauteur de la frame"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:89
+msgid "display a small picture or a big one (0 by default)"
+msgstr "affiche une petite ou une grande image (0 par défaut)"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:93
+msgid "string"
+msgstr "texte"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:94
+msgid "window name to open the link in (_blank by default)"
+msgstr "nom de la fenêtre dans lequel le lien sera ouvert (_blank par défaut)"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:99
+msgid "width of the frame"
+msgstr "largeur de la frame"
+
+#: ../amazon-widgets-shortcodes/admin/view/documentation.php:105
+msgid "ASIN code of the product."
+msgstr "Code ASIN du produit."
 
 #~ msgid ""
 #~ "For now, during this alpha stage, shortcode documentation is available on "
