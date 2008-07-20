@@ -1,9 +1,10 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
-Tags: amazon, affiliate, shortcode, monetization
+Donate link:
+Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation
 Requires at least: 2.5
 Tested up to: 2.6
-Stable tag: 1.0-a3
+Stable tag: 1.0-b1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -21,12 +22,14 @@ You may like it for these features:
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
 * minimal shortcodes (1 option and it runs)
+* inlined documentation to help you using the shortcodes while writing your posts
 
 Currently supported Amazon widgets/features:
 
 * Carrousel Widget
-* Context Link
-* Product
+* Context Links
+* Product Preview
+* Product Links (text + picture)
 
 The Todo-list is full of promising features. It will be hard to wait for them!
 
@@ -40,43 +43,18 @@ The plugin is very basic and is primarily made for my own usage.
 
 Now you plug 'n play 'n earn money ;-)
 
-== Usage ==
-
-This plugin provides those following shortcodes. Please remember it's still in alpha development.
-
-= Amazon Carrousel =
-
- * **Shortcode**: [amazon-carrousel][/amazon-carrousel]
- * **CSS Class**: `awshortcode-carrousel`
- * **Options**:
-  * *align* [left, right, center]: align the widget on the desired way
-  * *bgcolor* (CSS hexa or code value): customize the background color of the widget
-  * *height* (value in pixels): height of the animation
-  * *width* (value in pixel): width of the animation
- * **Content**:
-  * URI provided in the code to paste, usually starting by `http://ws.amazon.com/widgets/`
- * **Example**: `[amazon-carrousel]http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=NoScript[/amazon-carrousel]`
-
-= Amazon Product =
-For now, it only handles this widget in the "Text + picture" version.
-
- * **Shortcode**: [amazon-product][/amazon-product]
- * **CSS Class**: `awshortcode-product`
- * **Options**:
-  * *align* [left, right, center]: align the widget on the desired way
-  * *alink* (CSS hexa or code value): hypertext link color
-  * *bgcolor* (CSS hexa or code value): customize the background color of the widget
-  * *bordercolor* (CSS hexa or code value): border color of the widget
-  * *height* (value in pixels): height of the frame
-  * *small* [0, 1]: display a small picture or a big one (0 by default)
-  * *target* (string): window name to open the link in (_blank by default)
-  * *width* (value in pixel): width of the frame
- * **Content**:
-  * ASIN code of the product 
- * **Example**: `[amazon-product]0596529309[/amazon-product]`
-
 
 == Release notes ==
+
+= Version 1.0 beta 1 =
+ * added region support (USA, Canada and France for now)
+ * added Product Preview support
+ * inlined documentation in the edit page/post screen
+ * added extra links to declare bugs and official homepage
+ * revamped some parts of code
+ * improved stability while plugin is a symlink (activation hook now works)
+ * updated the options pages with a tabbed view
+ * fixed some translation issues
 
 = Version 1.0 alpha 3 =
  * internationalisation support (i18n, english and french)
@@ -109,3 +87,41 @@ For now, it only handles this widget in the "Text + picture" version.
  * Wishlist
  * etc.
 1. Makes you earning a lot of money thanks to this widget ;-)
+
+== Frequently Asked Questions ==
+
+= What are those shortcodes? =
+It is a bundled Wordpress feature. It looks like this : `[shortcode]sample value[/shortcode]`.
+It looks like nothing but it is an expandable feature so we can plug our own shortcodes ... like with this widget.
+
+= How can I use the shortcodes? =
+For now, there is an inlined documentation right below your post/page edit screen. It explains all shortcodes
+and how you can customize their usage.
+
+You will see, it's easy.
+
+= Won't context links garbage my whole page? =
+No it won't.
+
+I added a filter so the context links areas are confined to post and page contents.
+If politely asked, I can make this customizable from the plugin management page.
+
+= Why a Beta ? I can't use it? =
+I consider this plugin as really stable one in term of usage. However not every feature
+are yet complete (especially concerning customization).
+
+So I prefer to encourage only g33k and technical people to use it.
+
+However, I make all my best to keep the plugin as much stable as possible. It will avoid you
+to edit all the post you included widgets in. Better isn't it?
+
+= Nespresso, what else? =
+Yep, what else?
+
+But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
+
+== Screenshots ==
+
+1. Main configuration panel
+2. Extra tools configuration panel
+3. Inlined documentation
