@@ -14,96 +14,6 @@ Plugin URI: http://case.oncle-tom.net/code/wordpress/
 class AmazonWidgetsShortcodes
 {
   /**
-   * Getter for international Amazon parameters
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.0 beta 1
-   * @return $settings Array Settings for all or a limited area
-   * @param $country_code String[Optionnal] limit the returned settings to this country code
-   */
-  function getRegionParameters($country_code = 'autodetect')
-  {
-    if ($country_code == 'autodetect')
-    {
-      $country_code = get_option('awshortcode_region');
-      $country_code = $country_code ? $country_code : 'us';
-    }
-
-    $amazon = array(
-      /*'ca' => array(
-        'lang_iso_code' => 'en_CA',
-        'name' => __('Amazon Canada', 'awshortcode'),
-        'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.ca/',
-          'tool-contextlinks' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
-        ),
-      ),*/
-      /*'de' => array(
-        'lang_iso_code' => 'de_DE',
-        'name' => __('Amazon Germany', 'awshortcode'),
-        'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.de/',
-          'tool-contextlinks' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
-        ),
-      ),*/
-      'fr' => array(
-        'lang_iso_code' => 'fr_FR',
-        'name' => __('Amazon France', 'awshortcode'),
-        'url' => array(
-          'affiliate' => 'http://partenaires.amazon.fr/',
-          'site' => 'http://www.amazon.fr/',
-          'tool-contextlinks' => 'http://cls.assoc-amazon.fr/fr/s/cls.js',
-          'tool-enhancelinks' => 'http://www.assoc-amazon.fr/s/link-enhancer?tag=%s&amp;o=8',
-          'widget-carrousel' => '',
-          'widget-product' => 'http://rcm-fr.amazon.fr/e/cm?',
-        ),
-      ),
-      /*'jp' => array(
-        'lang_iso_code' => 'ja_JP',
-        'name' => __('Amazon Japan', 'awshortcode'),
-        'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.co.jp/',
-          'tool-contextlinks' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
-        ),
-      ),*/
-      /*'uk' => array(
-        'lang_iso_code' => 'en_UK',
-        'name' => __('Amazon United Kingdom', 'awshortcode'),
-        'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.co.uk/',
-          'tool-contextlinks' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
-        ),
-      ),*/
-      'us' => array(
-        'lang_iso_code' => 'en_US',
-        'name' => __('Amazon USA', 'awshortcode'),
-        'url' => array(
-          'affiliate' => 'https://affiliate-program.amazon.com/',
-          'site' => 'http://www.amazon.com/',
-          'tool-contextlinks' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
-        ),
-      ),
-    );
-
-    return $country_code ? $amazon[$country_code] : $amazon;
-  }
-
-  /**
    * Returns plugin location
    * 
    * In case of symlink, it assumes you linked it with its original plugin name
@@ -145,10 +55,15 @@ class AmazonWidgetsShortcodes
      */
     add_option('awshortcode_align', 'center', '', 'yes');
     add_option('awshortcode_context_links', '0', '', 'yes');
-    add_option('awshortcode_enhanced_links', '0', '', 'yes');
     add_option('awshortcode_feed', '0', '', 'yes');
+    add_option('awshortcode_product_preview', '0', '', 'yes');
     add_option('awshortcode_region', 'us', '', 'yes');
     add_option('awshortcode_tracking_id', '', '', 'yes');
+
+    /*
+     * Remove deprecate
+     */
+    delete_option('awshortcode_enhanced_links');
   }
 
   /**
@@ -167,6 +82,7 @@ class AmazonWidgetsShortcodes
     delete_option('awshortcode_context_links');
     delete_option('awshortcode_enhanced_links');
     delete_option('awshortcode_feed');
+    delete_option('awshortcode_product_preview');
     delete_option('awshortcode_region');
     delete_option('awshortcode_tracking_id');
   }
@@ -218,9 +134,17 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
    * We enqueue Amazon JS at the bottom
    * Why the bottom ? Because it is recommended for external scripts
    * And it is one ;-)
+   * @see http://developer.yahoo.net/blog/archives/2007/07/high_performanc_5.html
    */
   if (get_option('awshortcode_context_links'))
   {
-    add_action('wp_footer', array('AmazonWidgetsShortcodesToolkit', 'displayContextLinks'));
+    add_filter('the_excerpt', array(&$AwShortcodes, 'filterContextLinks'), 999);
+    add_filter('the_content', array(&$AwShortcodes, 'filterContextLinks'), 999);
+    add_action('wp_footer', array(&$AwShortcodes, 'displayContextLinks'));
+  }
+
+  if (get_option('awshortcode_product_preview'))
+  {
+    add_action('wp_footer', array(&$AwShortcodes, 'displayProductPreview'));
   }
 }

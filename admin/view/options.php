@@ -30,12 +30,13 @@
     'center' => __('centered', 'awshortcode'),
     'right' => __('right', 'awshortcode')
   );
+  $regions = AmazonWidgetsShortcodesToolkit::getRegionParameters('');
   ?>
 
   <form action="options.php" method="post">
     <?php wp_nonce_field('update-options') ?>
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links,awshortcode_region" />
+    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links,awshortcode_region,awshortcode_product_preview" />
 
     <ul id="awshortcode-navigation" class="tablenav">
       <li><a href="#awshortcode-main" class="button-secondary"><?php _e('Main Options', 'awshortcode') ?></a></li>
@@ -54,7 +55,7 @@
           </th>
           <td>
             <select name="awshortcode_region" id="awshortcode_region">
-            <?php foreach(AmazonWidgetsShortcodes::getRegionParameters('') as $id => $region): ?>
+            <?php foreach($regions as $id => $region): ?>
               <option value="<?php echo $id ?>"<?php echo $id === get_option('awshortcode_region') ? ' selected="selected"' : '' ?>>
                 <?php echo $region['name'] ?>
               </option>
@@ -73,7 +74,10 @@
               name="awshortcode_tracking_id"
               value="<?php echo get_option('awshortcode_tracking_id') ?>" />
             <span class="help">
-              <?php _e('Your Amazon Tracking ID, generally suffixed by -21', 'awshortcode') ?>
+              <?php printf(
+                      __('Your Amazon Tracking ID, generally suffixed by %s.', 'awshortcode'),
+                      $regions[get_option('awshortcode_region')]['suffix']
+                    ) ?>
             </span>
           </td>
         </tr>
@@ -137,7 +141,7 @@
         <tr>
           <th scope="row">
             <label for="awshortcode_context_links">
-              <?php _e('Enable Amazon\'s context links:', 'awshortcode') ?>
+              <?php _e('Enable context links:', 'awshortcode') ?>
             </label>
           </th>
           <td>
@@ -159,23 +163,23 @@
         </tr>
         <tr>
           <th scope="row">
-            <label for="awshortcode_enhanced_links">
-              <?php _e('Enable Amazon\'s enhanced links:', 'awshortcode') ?>
+            <label for="awshortcode_product_preview">
+              <?php _e('Enable product preview:', 'awshortcode') ?>
             </label>
           </th>
           <td>
             <input type="checkbox"
-              id="awshortcode_enhanced_links"
-              name="awshortcode_enhanced_links"
+              id="awshortcode_product_preview"
+              name="awshortcode_product_preview"
               value="1"
-              <?php if (get_option('awshortcode_enhanced_links')): ?>
+              <?php if (get_option('awshortcode_product_preview')): ?>
               checked="checked"
               <?php endif ?>
                />
             <span class="help">
               <?php _e(
-                'Enhanced links display a tooltip on all hypertext '.
-                'links pointing to an Amazon product with informations such '.
+                'Product preview display a tooltip on all hypertext '.
+                'links aiming to an Amazon product with informations such '.
                 'as price, picture, full name etc.'
                 , 'awshortcode') ?>
             </span>

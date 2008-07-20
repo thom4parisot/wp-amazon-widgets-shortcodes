@@ -8,14 +8,14 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
   /**
    * Produces an Amazon Carrousel shortcode
    * 
-   * @version 1.0
+   * @version 1.1
    * @since 1.0 alpha 1
    * @author oncletom
    * @return $html String HTML code
    * @param $atts Array Attributes of the shortcode
-   * @param $uri URI of the Flash object
+   * @param $flash_id String Flash ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
    */
-  function widget_carrousel($atts, $uri)
+  function widget_carrousel($atts, $flash_id)
   {
     extract(
       shortcode_atts(
@@ -30,18 +30,28 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
     );
 
     /*
-     * Preparing URI
+     * Dealing with pre-beta area where the whole URI was needed
      */
-    $uri = str_replace(array(
-      '&amp;Operation=NoScript',
-      '&amp;Operation=GetDisplayTemplate'
-    ), '', $uri);
-    $uri = $this->replaceTrackingId($uri);
+    if (preg_match('#^http#U', $flash_id))
+    {
+      $uri = $flash_id;
+    }
+    else
+    {
+      $region = $this->getRegionParameters();
+      $uri = sprintf(
+               $region['url']['widget-carrousel'],
+               $region['marketplace'],
+               get_option('awshortcode_tracking_id'),
+               $flash_id,
+               'GetDisplayTemplate'
+             );
+    }
 
     return $this->displayShortcode(
       '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
-        '<object type="application/x-shockwave-flash" data="'.$uri.'&amp;Operation=GetDisplayTemplate" width="'.$width.'" height="'.$height.'">'.
-          '<param name="movie" value="'.$uri.'&amp;Operation=GetDisplayTemplate" />'.
+        '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
+          '<param name="movie" value="'.$uri.'" />'.
           '<param name="bgcolor" value="#'.$bgcolor.'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
@@ -80,20 +90,22 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
       )
     );
 
+    $region = $this->getRegionParameters();
+    $uri = sprintf(
+             $region['url']['widget-product'],
+             get_option('awshortcode_tracking_id'),
+             $asin,
+             $color,
+             (int)$small === 0 ? 'IS2' : 'IS1',
+             $target,
+             $alink,
+             $bordercolor,
+             $bgcolor
+           );
+
     return $this->displayShortcode(
       '<div style="text-align:'.$align.'" class="awshortcode-product">'.
-        '<iframe src="http://rcm-fr.amazon.fr/e/cm?t='.get_option('awshortcode_tracking_id').
-          '&amp;o=8'.
-          '&amp;p=8'.
-          '&amp;l=as1'.
-          '&amp;asins='.$asin.
-          '&amp;fc1='.$color.
-          '&amp;'.((int)$small === 0 ? 'IS2' : 'IS1').'=1'.
-          '&amp;lt1='.$target.
-          '&amp;lc1='.$alink.
-          '&amp;bc1='.$bordercolor.
-          '&amp;bg1='.$bgcolor.
-          '&amp;f=ifr" style="width:'.$width.'px;height:'.$height.'px;" '.
+        '<iframe src="'.$uri.'" style="width:'.$width.'px;height:'.$height.'px;" '.
           'scrolling="no" marginwidth="0" marginheight="0" frameborder="0">'.
         '</iframe>'.
       '</div>'
