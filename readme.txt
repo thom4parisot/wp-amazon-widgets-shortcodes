@@ -116,15 +116,6 @@ No it won't.
 I added a filter so the context links areas are confined to post and page contents.
 If politely asked, I can make this customizable from the plugin management page.
 
-= Why a Beta ? I can't use it? =
-I consider this plugin as really stable one in term of usage. However not every feature
-are yet complete (especially concerning customization).
-
-So I prefer to encourage only g33k and technical people to use it.
-
-However, I make all my best to keep the plugin as much stable as possible. It will avoid you
-to edit all the post you included widgets in. Better isn't it?
-
 = Nespresso, what else? =
 Yep, what else?
 
