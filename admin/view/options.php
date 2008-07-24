@@ -36,7 +36,7 @@
   <form action="options.php" method="post">
     <?php wp_nonce_field('update-options') ?>
     <input type="hidden" name="action" value="update" />
-    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_align,awshortcode_context_links,awshortcode_region,awshortcode_product_preview" />
+    <input type="hidden" name="page_options" value="awshortcode_tracking_id,awshortcode_feed,awshortcode_strict_standards,awshortcode_align,awshortcode_context_links,awshortcode_region,awshortcode_product_preview" />
 
     <ul id="awshortcode-navigation" class="tablenav">
       <li><a href="#awshortcode-main" class="button-secondary"><?php _e('Main Options', 'awshortcode') ?></a></li>
@@ -61,6 +61,13 @@
               </option>
             <?php endforeach ?>
             </select>
+            <span class="help">
+              (<?php printf(
+                             __('currenty set on <a href="%2$s" class="new-window">%1$s</a>'),
+                             $regions[get_option('awshortcode_region')]['name'],
+                             $regions[get_option('awshortcode_region')]['url']['affiliate']
+                           ) ?>)
+            </span>
           </td>
         </tr>
           <th scope="row">
@@ -128,6 +135,30 @@
               </option>
             <?php endforeach ?>
             </select>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label for="awshortcode_strict_standards">
+              <?php _e('Strict Standards compliance?', 'awshortcode') ?>
+            </label>
+          </th>
+          <td>
+            <input type="checkbox"
+              id="awshortcode_strict_standards"
+              name="awshortcode_strict_standards"
+              value="1"
+              <?php if (get_option('awshortcode_strict_standards')): ?>
+              checked="checked"
+              <?php endif ?>
+               />
+            <span class="help">
+              <?php _e(
+                'If you need to validate your website in HTML or XHTML Strict, '.
+                'please tick this box.<br />Just keep in mind Internet Explorer 6 '.
+                'may display glitches on some Amazon Widgets.'
+                , 'awshortcode') ?>
+            </span>
           </td>
         </tr>
       </tbody>

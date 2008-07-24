@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
 Author: Oncle Tom
-Version: 1.0 beta 1
+Version: 1.0
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
@@ -58,6 +58,7 @@ class AmazonWidgetsShortcodes
     add_option('awshortcode_feed', '0', '', 'yes');
     add_option('awshortcode_product_preview', '0', '', 'yes');
     add_option('awshortcode_region', 'us', '', 'yes');
+    add_option('awshortcode_strict_standards', '', '', 'yes');
     add_option('awshortcode_tracking_id', '', '', 'yes');
 
     /*
@@ -84,6 +85,7 @@ class AmazonWidgetsShortcodes
     delete_option('awshortcode_feed');
     delete_option('awshortcode_product_preview');
     delete_option('awshortcode_region');
+    delete_option('awshortcode_strict_standards');
     delete_option('awshortcode_tracking_id');
   }
 }
@@ -129,6 +131,9 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   $AwShortcodes = new AmazonWidgetsShortcodesTags();
   add_shortcode('amazon-carrousel', array(&$AwShortcodes, 'widget_carrousel'));
   add_shortcode('amazon-product', array(&$AwShortcodes, 'widget_product'));
+  add_shortcode('amazon-slideshow', array(&$AwShortcodes, 'widget_slideshow'));
+  add_filter('the_excerpt', array(&$AwShortcodes, 'filterXhtmlFormatting'), 999);
+  add_filter('the_content', array(&$AwShortcodes, 'filterXhtmlFormatting'), 999);
 
   /*
    * We enqueue Amazon JS at the bottom
@@ -138,8 +143,8 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
    */
   if (get_option('awshortcode_context_links'))
   {
-    add_filter('the_excerpt', array(&$AwShortcodes, 'filterContextLinks'), 999);
-    add_filter('the_content', array(&$AwShortcodes, 'filterContextLinks'), 999);
+    add_filter('the_excerpt', array(&$AwShortcodes, 'filterContextLinks'), 900);
+    add_filter('the_content', array(&$AwShortcodes, 'filterContextLinks'), 900);
     add_action('wp_footer', array(&$AwShortcodes, 'displayContextLinks'));
   }
 

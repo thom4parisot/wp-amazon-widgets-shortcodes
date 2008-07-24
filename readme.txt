@@ -1,10 +1,10 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
 Donate link:
-Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation
+Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page
 Requires at least: 2.5
 Tested up to: 2.6
-Stable tag: 1.0-b1
+Stable tag: 1.0
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -18,11 +18,13 @@ Now you can earn money with affiliate links without any pain and with XHTML stan
 
 You may like it for these features:
 
+* international support (Canada, France, United Kingdrom, USA)
 * valid XHTML code
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
 * minimal shortcodes (1 option and it runs)
 * inlined documentation to help you using the shortcodes while writing your posts
+
 
 Currently supported Amazon widgets/features:
 
@@ -30,6 +32,7 @@ Currently supported Amazon widgets/features:
 * Context Links
 * Product Preview
 * Product Links (text + picture)
+* Slideshow Widget
 
 The Todo-list is full of promising features. It will be hard to wait for them!
 
@@ -46,6 +49,13 @@ Now you plug 'n play 'n earn money ;-)
 
 == Release notes ==
 
+= Version 1.0 =
+ * added Strict Standards compliance mode (`object` instead of `iframe`)
+ * added region support for United Kingdom
+ * added Slideshow widget support
+ * Amazon Partner developer center aware of the plugin (not a feature I admit)
+ * markup fix (no more `<p>` embracing the shortcode)
+
 = Version 1.0 beta 1 =
  * added region support (USA, Canada and France for now)
  * added Product Preview support
@@ -55,6 +65,7 @@ Now you plug 'n play 'n earn money ;-)
  * improved stability while plugin is a symlink (activation hook now works)
  * updated the options pages with a tabbed view
  * fixed some translation issues
+ * added screenshots to convince you it's a good plugin ;-)
 
 = Version 1.0 alpha 3 =
  * internationalisation support (i18n, english and french)
@@ -81,7 +92,6 @@ Now you plug 'n play 'n earn money ;-)
 1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
 1. Add support for all Amazon Partners programs
 1. Support for these widgets:
- * Slideshow
  * Products cloud
  * My favourites
  * Wishlist
