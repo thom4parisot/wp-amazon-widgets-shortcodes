@@ -18,7 +18,7 @@ Now you can earn money with affiliate links without any pain and with XHTML stan
 
 You may like it for these features:
 
-* international support (Canada, France, United Kingdrom, USA)
+* international support (Canada, France, United Kingdom, USA)
 * valid XHTML code
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
