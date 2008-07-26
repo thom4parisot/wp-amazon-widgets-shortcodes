@@ -11,6 +11,15 @@ Plugin URI: http://case.oncle-tom.net/code/wordpress/
   http://www.opensource.org/licenses/gpl-3.0.html
 */
 
+/*
+ * Bootstrap
+ */
+if (!defined('WP_PLUGIN_DIR'))
+{
+  define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/plugins');
+  define('WP_PLUGIN_URL', WP_CONTENT_URL.'/plugins');
+}
+
 class AmazonWidgetsShortcodes
 {
   /**
@@ -25,10 +34,10 @@ class AmazonWidgetsShortcodes
    */
   function getPluginLocation()
   {
-    if (function_exists('is_link') && is_link(ABSPATH.PLUGINDIR.'/amazon-widgets-shortcodes'))
+    if (function_exists('is_link') && is_link(WP_PLUGIN_DIR.'/amazon-widgets-shortcodes'))
     {
       return array(
-        ABSPATH.PLUGINDIR.'/amazon-widgets-shortcodes/'.basename(__FILE__),
+        WP_PLUGIN_DIR.'/amazon-widgets-shortcodes/'.basename(__FILE__),
         PLUGINDIR.'/amazon-widgets-shortcodes/i18n'
       );
     }
@@ -93,7 +102,7 @@ class AmazonWidgetsShortcodes
 /*
  * Register main actions
  */
-list($filename, $i18n_path) = AmazonWidgetsShortcodes::getPluginLocation();
+list($filename, $i18n_path, $url_path) = AmazonWidgetsShortcodes::getPluginLocation();
 load_plugin_textdomain('awshortcode', $i18n_path);
 register_activation_hook($filename, array('AmazonWidgetsShortcodes', 'pluginActivation'));
 if (function_exists('register_uninstall_hook'))
@@ -110,6 +119,7 @@ require(AWS_PLUGIN_BASEPATH.'/lib/shortcodes.class.php');
 
 /*
  * Admin stuff
+ * Or stuff done from admin like TinyMCE and all
  */
 if (is_admin())
 {
@@ -153,3 +163,8 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
     add_action('wp_footer', array(&$AwShortcodes, 'displayProductPreview'));
   }
 }
+
+/*
+ * Global stuff
+ */
+add_action('init', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Hook'));

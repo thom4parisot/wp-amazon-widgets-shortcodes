@@ -68,6 +68,49 @@ EOF;
   }
 
   /**
+   * 
+   * @since 1.1
+   * @return 
+   * @param $plugins Object
+   */
+  function executeTinymce3Buttons($buttons)
+  {
+    $buttons[] = 'awshortcode-selector';
+    return $buttons;
+  }
+
+  /**
+   * 
+   * @since 1.1
+   * @return 
+   */
+  function executeTinymce3Hook()
+  {
+    if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
+    {
+      return false;
+    }
+
+    if (get_user_option('rich_editing') == 'true')
+    {
+      add_filter('mce_external_plugins', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Plugins'));
+      add_filter('mce_buttons', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Buttons'));
+    }
+  }
+
+  /**
+   * 
+   * @since 1.1
+   * @return 
+   * @param $plugins Object
+   */
+  function executeTinymce3Plugins($plugins)
+  {
+    $plugins['wpAwshortcode'] = WP_PLUGIN_URL.'/amazon-widgets-shortcodes/web/javascript/tinymce3/wpAwshortcode/editor_plugin.js';
+    return $plugins;
+  }
+
+  /**
    * Wraps content in Amazon proprietary HTML comments tag
    * 
    * Context links are added by Amazon engine only between those parts.

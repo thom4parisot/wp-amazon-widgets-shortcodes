@@ -42,7 +42,7 @@ class AmazonWidgetsShortcodesAdmin
   function printJavaScript()
   {
     wp_enqueue_script('jquery-ui-tabs');
-    wp_enqueue_script('awshortcode-main', get_option('siteurl').'/wp-content/plugins/amazon-widgets-shortcodes/web/javascript/awshortcode.js');
+    wp_enqueue_script('awshortcode-main', WP_PLUGIN_URL.'/amazon-widgets-shortcodes/web/javascript/awshortcode.js');
   }
 
   /**
@@ -73,7 +73,7 @@ class AmazonWidgetsShortcodesAdmin
    */
   function printStylesheet()
   {
-    echo '<link rel="stylesheet" type="text/css" media="screen" href="'.get_option('siteurl').'/wp-content/plugins/amazon-widgets-shortcodes/web/css/awshortcode.css" />';
+    echo '<link rel="stylesheet" type="text/css" media="screen" href="'.WP_PLUGIN_URL.'/amazon-widgets-shortcodes/web/css/awshortcode.css" />';
   }
 
   /**

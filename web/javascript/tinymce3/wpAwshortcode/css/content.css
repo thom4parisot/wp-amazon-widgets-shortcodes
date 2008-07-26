@@ -1,0 +1,7 @@
+/**
+ * @author tparisot
+ */
+
+.wp_themeSkin .mceSplitButton a.mce_awshortcode-selector span.mceAction{
+  background: url('../img/amazon-partners-icon.gif') no-repeat center center;
+}

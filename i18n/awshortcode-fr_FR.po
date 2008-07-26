@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-24 22:42+0100\n"
-"PO-Revision-Date: 2008-07-24 22:43+0100\n"
+"PO-Revision-Date: 2008-07-26 10:15+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Amazon France"
 
 #: ../amazon-widgets-shortcodes/lib/shortcodesToolkit.class.php:186
 msgid "Amazon United Kingdom"
-msgstr "Amazon Royaume-Unis"
+msgstr "Amazon Royaume-Uni"
 
 #: ../amazon-widgets-shortcodes/lib/shortcodesToolkit.class.php:201
 msgid "Amazon USA"
