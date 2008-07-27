@@ -1,4 +1,6 @@
 (function() {
+  tinymce.PluginManager.requireLangPack('wpAwshortcode');
+
   tinymce.create('tinymce.plugins.wpAwshortcodePlugin', {
     /**
      * Initializes the plugin, this will be executed after the plugin has been created.
@@ -9,14 +11,18 @@
      * @param {string} url Absolute URL to where the plugin is located.
      */
     init : function(ed, url) {
-      ed.addCommand('wpAwshortcodeSelector', function() {
+      ed.addCommand('wpAwshortcodeSelector', function(ui, val) {
+        alert('Yet to be done ;-)');
+        return;
+
         ed.windowManager.open({
-          file : url + '/dialog.html',
-          width : 320 + ed.getLang('example.delta_width', 0),
-          height : 120 + ed.getLang('example.delta_height', 0),
+          file : url + '/shortcode-'+val+'.html',
+          width : 320 + 'px',
+          height : 120 + 'px',
           inline : 1
         }, {
-          plugin_url : url
+          plugin_url : url,
+          shortcode: val
         });
       });
 
@@ -26,14 +32,17 @@
       ed.onInit.add(function() {
         if (ed.settings.content_css !== false)
         {
-          ed.dom.loadCSS(url + '/css/content.css');
+          dom = ed.windowManager.createInstance('tinymce.dom.DOMUtils', document);
+          dom.loadCSS(url + '/css/content.css');
         }
       });
 
-      // Add a node change handler, selects the button in the UI when a image is selected
-      //ed.onNodeChange.add(function(ed, cm, n) {
-      //cm.setActive('awshortcode-selector', n.nodeName == 'IMG');
-      //});
+      /*
+       * Disable when text is selected, activate otherwise
+       */
+      ed.onNodeChange.add(function(ed, cm, n) {
+        cm.setActive('awshortcode-selector', ed.selection.getContent() == '');
+      });
     },
 
     /**
@@ -55,16 +64,22 @@
       }
 
       c = cm.createSplitButton(n, {
+        onclick: t.showMenu,
         scope : t,
-        title : 'awshortcode-selector.desc'
+        title : 'wpAwshortcode.desc'
       });
 
       c.onRenderMenu.add(function(c, m) {
         var shortcodes = {
-          'amazon-carrousel': 'amazon.carrousel',
-          'amazon-product':   'amazon.product',
-          'amazon-slideshow': 'amazon.slideshow'
+          'amazon-carrousel': 'wpAwshortcode.amazon_carrousel',
+          'amazon-product':   'wpAwshortcode.amazon_product',
+          'amazon-slideshow': 'wpAwshortcode.amazon_slideshow'
         };
+
+        m.add({
+          'class': 'mceMenuItemTitle',
+          title:   'wpAwshortcode.desc'
+        }).setDisabled(1);
 
         each(shortcodes, function(value, key) {
           var o = {icon : 0}, mi;

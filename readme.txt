@@ -1,13 +1,14 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
 Donate link:
-Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page
+Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
 Requires at least: 2.5
 Tested up to: 2.6
 Stable tag: 1.0
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
+
 
 == Description ==
 
@@ -23,7 +24,7 @@ You may like it for these features:
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
 * minimal shortcodes (1 option and it runs)
-* inlined documentation to help you using the shortcodes while writing your posts
+* inline documentation to help you using the shortcodes while writing your posts
 
 
 Currently supported Amazon widgets/features:
@@ -34,7 +35,11 @@ Currently supported Amazon widgets/features:
 * Product Links (text + picture)
 * Slideshow Widget
 
-The Todo-list is full of promising features. It will be hard to wait for them!
+Check the [Other Notes page](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/other_notes/) to read:
+
+* the Release Notes
+* the Todo List
+
 
 == Installation ==
 
@@ -47,7 +52,28 @@ The plugin is very basic and is primarily made for my own usage.
 Now you plug 'n play 'n earn money ;-)
 
 
+== Todo-list ==
+1. Add a "copy/paste" feature that magically converts the HTML code in Wordpress shortcode
+1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
+1. Add support for all Amazon Partners programs
+1. Support for these widgets:
+ * Products cloud
+ * My favourites
+ * Wishlist
+ * etc.
+1. Makes you earning a lot of money thanks to this widget ;-)
+
+
 == Release notes ==
+
+= Version 1.1 =
+ * secured plugin directory using new WP 2.6 constants (backward compatibility for WP 2.5)
+ * improved welcoming text to give more accurate hyperlinks
+ * fixed typo issues
+ * added Amazon Widgets rich text editor button:
+  * handles all supported widgets for now
+  * easy inclusion without reading the documentation
+ * added the ability to hide the documentation from writing pages
 
 = Version 1.0 =
  * added Strict Standards compliance mode (`object` instead of `iframe`)
@@ -59,7 +85,7 @@ Now you plug 'n play 'n earn money ;-)
 = Version 1.0 beta 1 =
  * added region support (USA, Canada and France for now)
  * added Product Preview support
- * inlined documentation in the edit page/post screen
+ * inline documentation in the edit page/post screen
  * added extra links to declare bugs and official homepage
  * revamped some parts of code
  * improved stability while plugin is a symlink (activation hook now works)
@@ -87,16 +113,6 @@ Now you plug 'n play 'n earn money ;-)
  * Provides filter for syndication feed publishing (avoid the display of affiliate media in your feed)
  * Separation of the code ; `trunk` is for dev version
 
-== Todo-list ==
-1. Add a "copy/paste" feature that magically converts the HTML code in Wordpress shortcode
-1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
-1. Add support for all Amazon Partners programs
-1. Support for these widgets:
- * Products cloud
- * My favourites
- * Wishlist
- * etc.
-1. Makes you earning a lot of money thanks to this widget ;-)
 
 == Frequently Asked Questions ==
 
@@ -105,7 +121,7 @@ It is a bundled Wordpress feature. It looks like this : `[shortcode]sample value
 It looks like nothing but it is an expandable feature so we can plug our own shortcodes ... like with this widget.
 
 = How can I use the shortcodes? =
-For now, there is an inlined documentation right below your post/page edit screen. It explains all shortcodes
+For now, there is an inline documentation right below your post/page edit screen. It explains all shortcodes
 and how you can customize their usage.
 
 You will see, it's easy.
@@ -121,8 +137,9 @@ Yep, what else?
 
 But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
 
+
 == Screenshots ==
 
 1. Main configuration panel
 2. Extra tools configuration panel
-3. Inlined documentation
+3. Inline documentation

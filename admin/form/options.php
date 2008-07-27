@@ -5,13 +5,15 @@
 
 if ($_POST['action'] == 'update')
 {
-  update_option('awshortcode_align', $_POST['awshortcode_align']);
-  update_option('awshortcode_context_links', (int)$_POST['awshortcode_context_links']);
-  update_option('awshortcode_feed', (int)$_POST['awshortcode_feed']);
-  update_option('awshortcode_product_preview', (int)$_POST['awshortcode_product_preview']);
-  update_option('awshortcode_region', $_POST['awshortcode_region']);
-  update_option('awshortcode_strict_standards', $_POST['awshortcode_strict_standards']);
-  update_option('awshortcode_tracking_id', $_POST['awshortcode_tracking_id']);
+  foreach (AmazonWidgetsShortcodes::getRegisteredOptions() as $id => $option)
+  {
+    update_option(
+      $id,
+      $option['onSaveCallback']
+        ? call_user_func($option['onSaveCallback'], $_POST[$id])
+        : $_POST[$id]
+    );
+  }
 
   ?>
   <div class="updated">

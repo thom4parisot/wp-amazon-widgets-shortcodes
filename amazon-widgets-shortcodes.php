@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
 Author: Oncle Tom
-Version: 1.0
+Version: 1.1
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
@@ -51,9 +51,76 @@ class AmazonWidgetsShortcodes
   }
 
   /**
+   * Easy way to get the whole list of registered options
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.1
+   * @return $options Array List of options and meta
+   */
+  function getRegisteredOptions()
+  {
+    return array(
+      'awshortcode_align' => array(
+        'autoload' => true,
+        'defaultValue' => 'center',
+        'onSaveCallback' => '',
+        'possibleValues' => array(
+          'left' => __('left', 'awshortcode'),
+          'center' => __('centered', 'awshortcode'),
+          'right' => __('right', 'awshortcode')
+        ),
+      ),
+      'awshortcode_context_links' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_feed' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_inline_documentation' => array(
+        'autoload' => true,
+        'defaultValue' => 1,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_product_preview' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_region' => array(
+        'autoload' => true,
+        'defaultValue' => 'us',
+        'onSaveCallback' => '',
+        'possibleValues' => '',
+      ),
+      'awshortcode_strict_standards' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_tracking_id' => array(
+        'autoload' => true,
+        'defaultValue' => '',
+        'onSaveCallback' => '',
+        'possibleValues' => '',
+      ),
+    );
+  }
+
+  /**
    * Plugin activation processing
    * 
    * @author oncletom
+   * @version 1.1
    * @since 1.0 alpha 1
    * @return $state Mixed null if nothing, else false
    */
@@ -62,13 +129,15 @@ class AmazonWidgetsShortcodes
     /*
      * Default options
      */
-    add_option('awshortcode_align', 'center', '', 'yes');
-    add_option('awshortcode_context_links', '0', '', 'yes');
-    add_option('awshortcode_feed', '0', '', 'yes');
-    add_option('awshortcode_product_preview', '0', '', 'yes');
-    add_option('awshortcode_region', 'us', '', 'yes');
-    add_option('awshortcode_strict_standards', '', '', 'yes');
-    add_option('awshortcode_tracking_id', '', '', 'yes');
+    foreach (AmazonWidgetsShortcodes::getRegisteredOptions() as $id => $option)
+    {
+      add_option(
+        $id,
+        $option['defaultValue'],
+        '',
+        (bool)$option['autoload'] ? 'yes' : 'no'
+      );
+    }
 
     /*
      * Remove deprecate
@@ -83,19 +152,16 @@ class AmazonWidgetsShortcodes
    * Either in a case of a plugin or Core WP files
    * 
    * @author oncletom
+   * @version 1.1
    * @since 1.0 alpha 2
    * @return null
    */
   function pluginUninstall()
   {
-    delete_option('awshortcode_align');
-    delete_option('awshortcode_context_links');
-    delete_option('awshortcode_enhanced_links');
-    delete_option('awshortcode_feed');
-    delete_option('awshortcode_product_preview');
-    delete_option('awshortcode_region');
-    delete_option('awshortcode_strict_standards');
-    delete_option('awshortcode_tracking_id');
+    foreach (array_keys(AmazonWidgetsShortcodes::getRegisteredOptions()) as $option_id)
+    {
+      delete_option($option_id);
+    }
   }
 }
 
@@ -125,7 +191,11 @@ if (is_admin())
 {
   require(AWS_PLUGIN_BASEPATH.'/lib/shortcodesAdmin.class.php');
   add_action('admin_menu', array('AmazonWidgetsShortcodesAdmin', 'setupAdminMenu'));
-  add_action('edit_form_advanced', array('AmazonWidgetsShortcodesAdmin', 'displayDocumentation'));
+
+  if (get_option('awshortcode_inline_documentation'))
+  {
+    add_action('edit_form_advanced', array('AmazonWidgetsShortcodesAdmin', 'displayDocumentation'));
+  }
 
   if (!get_option('awshortcode_tracking_id'))
   {

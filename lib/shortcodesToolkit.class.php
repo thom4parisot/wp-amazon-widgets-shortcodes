@@ -68,10 +68,13 @@ EOF;
   }
 
   /**
+   * Loads additional buttons into the TinyMCE 3 UI
    * 
+   * @author oncletom
+   * @version 1.0
    * @since 1.1
-   * @return 
-   * @param $plugins Object
+   * @return $buttons Array Set of TinyMCE buttons, modified
+   * @param $buttons Array Set of TinyMCE buttons
    */
   function executeTinymce3Buttons($buttons)
   {
@@ -80,9 +83,12 @@ EOF;
   }
 
   /**
+   * Execute TinyMCE 3 hooks and filters
    * 
+   * @author oncletom
+   * @version 1.0
    * @since 1.1
-   * @return 
+   * @return null or false if no permission to edit page or post
    */
   function executeTinymce3Hook()
   {
@@ -95,14 +101,33 @@ EOF;
     {
       add_filter('mce_external_plugins', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Plugins'));
       add_filter('mce_buttons', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Buttons'));
+      add_filter('mce_external_languages', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Langs') );
     }
   }
 
   /**
+   * Loads TinyMCE 3 language files
    * 
+   * @author oncletom
+   * @version 1.0
    * @since 1.1
-   * @return 
-   * @param $plugins Object
+   * @return $langs Array Set of TinyMCE languages, modified
+   * @param $langs Array Set of TinyMCE languages
+   */
+  function executeTinymce3Langs($langs)
+  {
+    $langs['wpAwshortcode'] = WP_PLUGIN_DIR.'/amazon-widgets-shortcodes/web/javascript/tinymce3/wpAwshortcode/langs/langs.php';
+    return $langs;
+  }
+
+  /**
+   * Loads TinyMCE 3 external plugins
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.1
+   * @return $plugins Array Set of TinyMCE plugins, modified
+   * @param $plugins Array Set of TinyMCE plugins
    */
   function executeTinymce3Plugins($plugins)
   {
@@ -258,3 +283,4 @@ EOF;
     return $country_code ? $amazon[$country_code] : $amazon;
   }
 }
+?>
