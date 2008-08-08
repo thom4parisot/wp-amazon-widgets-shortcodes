@@ -157,7 +157,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
 
     return $this->displayShortcode(
       '<div style="text-align:'.$align.'" class="awshortcode-wishlist">'.
-        '<script charset="utf-8" type="text/javascript" src=""></script>'.
+        '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
         '<noscript>'.
           '<a href="'.$this->encodeParameters($uri).'&amp;Operation=NoScript">'.
             ($alt ? $alt : __('Consult this wishlist on Amazon.', 'awshortcode')).
