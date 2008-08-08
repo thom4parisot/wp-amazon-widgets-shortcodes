@@ -39,7 +39,7 @@
       </li>
       <li>
         <strong><?php _e('Content:', 'awshortcode') ?></strong>
-        <?php _e('Carrousel ID, contained in HTML parameter value like this:', 'awshortcode') ?>
+        <?php _e('Widget ID, contained in HTML parameter value like this:', 'awshortcode') ?>
         <code>Player_<span style="background: #ffc">fc64116b-6b59-444b-b4ee-074a4adecf57</span></code>.
       </li>
     </ul>
@@ -143,8 +143,40 @@
       </li>
       <li>
         <strong><?php _e('Content:', 'awshortcode') ?></strong>
-        <?php _e('Slideshow ID, contained in HTML parameter value like this:', 'awshortcode') ?>
+        <?php _e('Widget ID, contained in HTML parameter value like this:', 'awshortcode') ?>
         <code>Player_<span style="background: #ffc">4aa00f5e-1828-4fac-ac94-8596bd8d6803</span></code>.
+      </li>
+    </ul>
+
+    <h4><?php _e('Amazon Wishlist', 'awshortcode') ?></h4>
+    <ul>
+      <li>
+        <strong><?php _e('Shortcode:', 'awshortcode') ?></strong>
+        <code>[amazon-wishlist][/amazon-wishlist]</code>
+      </li>
+      <li>
+        <strong><?php _e('Example:', 'awshortcode') ?></strong>
+        <code>[amazon-wishlist align="right"]e048ac07-8b5b-4b38-abd0-49a92574494d[/amazon-wishlist]</code>
+      </li>
+      <li>
+        <strong><?php _e('Options:', 'awshortcode') ?></strong>
+        <ul>
+          <li>
+            <code>align</code>:
+            {left, right, center}
+            <?php _e('align the widget on the desired way', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>alt</code>:
+            [<?php _e('string', 'awshortcode') ?>]
+            <?php _e('alternative text if Flash or JavaScript is not available on visitor\'s browser', 'awshortcode') ?>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong><?php _e('Content:', 'awshortcode') ?></strong>
+        <?php _e('Widget ID, contained in HTML parameter value like this:', 'awshortcode') ?>
+        <code>ID=V20070822/FR/onctom-21/8004/<span style="background: #ffc">e048ac07-8b5b-4b38-abd0-49a92574494d</span></code>.
       </li>
     </ul>
   </div>

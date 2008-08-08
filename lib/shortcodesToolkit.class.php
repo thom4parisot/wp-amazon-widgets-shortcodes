@@ -68,6 +68,29 @@ EOF;
   }
 
   /**
+   * Encode some parameters located in the query string of an URL for proper behavior purpose
+   * 
+   * Encode characters such as :
+   * - / -> %2F
+   * - & -> &amp;
+   * - &amp;amp; -> &amp; (avoids double "&" encoding)
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.1 beta
+   * @return $encoded_uri String Encoded URI
+   * @param $uri String Uri to encode
+   */
+  function encodeParameters($uri)
+  {
+    $parsed_uri = parse_url($uri);
+    $qs_original = $parsed_uri['query'];
+    $qs = str_replace(array('/', '&', '&amp;amp;'), array('%2F', '&amp;', '&amp;'), $qs_original);
+
+    return str_replace($qs_original, $qs, $uri);
+  }
+
+  /**
    * Loads additional buttons into the TinyMCE 3 UI
    * 
    * @author oncletom
@@ -203,6 +226,7 @@ EOF;
           'widget-carrousel' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
           'widget-product' => 'http://rcm-ca.amazon.ca/e/cm?t=%s&amp;o=15&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-slideshow' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>  'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
       /*'de' => array(
@@ -232,6 +256,7 @@ EOF;
           'widget-carrousel' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
           'widget-product' => 'http://rcm-fr.amazon.fr/e/cm?t=%s&amp;o=8&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-slideshow' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>  'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
       /*'jp' => array(
@@ -261,6 +286,7 @@ EOF;
           'widget-carrousel' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
           'widget-product' => 'http://rcm-uk.amazon.co.uk/e/cm?t=%s&amp;o=2&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-slideshow' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>  'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
       'us' => array(
@@ -276,6 +302,7 @@ EOF;
           'widget-carrousel' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
           'widget-product' => 'http://rcm.amazon.com/e/cm?t=%s&amp;o=1&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-slideshow' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>  'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
     );

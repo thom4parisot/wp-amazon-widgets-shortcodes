@@ -34,6 +34,7 @@ Currently supported Amazon widgets/features:
 * Product Preview
 * Product Links (text + picture)
 * Slideshow Widget
+* Wishlist Widget
 
 Check the [Other Notes page](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/other_notes/) to read:
 
@@ -59,7 +60,6 @@ Now you plug 'n play 'n earn money ;-)
 1. Support for these widgets:
  * Products cloud
  * My favourites
- * Wishlist
  * etc.
 1. Makes you earning a lot of money thanks to this widget ;-)
 

@@ -13,9 +13,9 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
    * @author oncletom
    * @return $html String HTML code
    * @param $atts Array Attributes of the shortcode
-   * @param $flash_id String Flash ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
+   * @param $widget_id String Widget ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
    */
-  function widget_carrousel($atts, $flash_id)
+  function widget_carrousel($atts, $widget_id)
   {
     extract(
       shortcode_atts(
@@ -32,9 +32,9 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
     /*
      * Dealing with pre-beta area where the whole URI was needed
      */
-    if (preg_match('#^http#U', $flash_id))
+    if (preg_match('#^http#U', $widget_id))
     {
-      $uri = $flash_id;
+      $uri = $widget_id;
     }
     else
     {
@@ -43,7 +43,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
                $region['url']['widget-carrousel'],
                $region['marketplace'],
                get_option('awshortcode_tracking_id'),
-               $flash_id,
+               $widget_id,
                'GetDisplayTemplate'
              );
     }
@@ -55,7 +55,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
           '<param name="bgcolor" value="#'.$bgcolor.'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
-          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.").'</p>'.
+          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.", 'awshortcode').'</p>'.
         '</object>'.
       '</div>'
     );
@@ -126,26 +126,22 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
   }
 
   /**
-   * Produces an Amazon Slideshow shortcode
-   * 
-   * HTML code very similar of the Carrousel, only the String Url changes
+   * Produces an Amazon Wishlist shortcode
    * 
    * @version 1.0
-   * @since 1.0 
+   * @since 1.1 beta
    * @author oncletom
    * @return $html String HTML code
    * @param $atts Array Attributes of the shortcode
-   * @param $flash_id String Flash ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
+   * @param $widget_id String Widget ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
    */
-  function widget_slideshow($atts, $flash_id)
+  function widget_wishlist($atts, $widget_id)
   {
     extract(
       shortcode_atts(
         array(
           'align' => get_option('awshortcode_align'),
-          'bgcolor' => 'fff',
-          'height' => '250',
-          'width' => '300',
+          'alt' => '',
         ),
         $atts
       )
@@ -153,22 +149,20 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
 
     $region = $this->getRegionParameters();
     $uri = sprintf(
-             $region['url']['widget-slideshow'],
+             $region['url']['widget-wishlist'],
              $region['marketplace'],
              get_option('awshortcode_tracking_id'),
-             $flash_id,
-             'GetDisplayTemplate'
+             $widget_id
            );
 
     return $this->displayShortcode(
-      '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
-        '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
-          '<param name="movie" value="'.$uri.'" />'.
-          '<param name="bgcolor" value="#'.$bgcolor.'" />'.
-          '<param name="quality" value="high" />'.
-          '<param name="allowscriptaccess" value="always" />'.
-          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.").'</p>'.
-        '</object>'.
+      '<div style="text-align:'.$align.'" class="awshortcode-wishlist">'.
+        '<script charset="utf-8" type="text/javascript" src=""></script>'.
+        '<noscript>'.
+          '<a href="'.$this->encodeParameters($uri).'&amp;Operation=NoScript">'.
+            ($alt ? $alt : __('Consult this wishlist on Amazon.', 'awshortcode')).
+          '</a>'.
+        '</noscript>'.
       '</div>'
     );
   }
