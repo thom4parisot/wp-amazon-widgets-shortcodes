@@ -12,13 +12,17 @@
      */
     init : function(ed, url) {
       ed.addCommand('wpAwshortcodeSelector', function(ui, val) {
-        alert('Yet to be done ;-)');
-        return;
+
+        /*
+         * Popup arguments
+         */
+        var popupArgs = [];
+        popupArgs.push('tinymce='+escape(tinymce.baseURL));
 
         ed.windowManager.open({
-          file : url + '/shortcode-'+val+'.html',
-          width : 320 + 'px',
-          height : 120 + 'px',
+          file : url + '/shortcode-'+val+'.html?'+popupArgs.join('&'),
+          width : 400 + 'px',
+          height : 200 + 'px',
           inline : 1
         }, {
           plugin_url : url,
@@ -64,7 +68,6 @@
       }
 
       c = cm.createSplitButton(n, {
-        onclick: t.showMenu,
         scope : t,
         title : 'wpAwshortcode.desc'
       });
@@ -104,11 +107,11 @@
      */
     getInfo : function() {
       return {
-        longname : 'Amazon Widgets Shortcodes',
-        author : 'Oncle Tom',
-        authorurl : 'http://oncle-tom.net',
-        infourl : 'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version : '1.0'
+        longname:  'Amazon Widgets Shortcodes',
+        author:    'Oncle Tom',
+        authorurl: 'http://oncle-tom.net',
+        infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
+        version:   '1.0'
       };
     }
   });

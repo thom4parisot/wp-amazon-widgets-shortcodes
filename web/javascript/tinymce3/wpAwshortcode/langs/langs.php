@@ -22,6 +22,9 @@ $strings = 'tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode",{
 });
 
 tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
+  alt_options:          "'.js_escape(__('Other Options', 'awshortcode')).'",
+  main_options:         "'.js_escape(__('Main Options', 'awshortcode')).'",
+  widget_id:            "'.js_escape(__('Widget ID', 'awshortcode')).'",
   zzz:                  ""
 });';
 ?>

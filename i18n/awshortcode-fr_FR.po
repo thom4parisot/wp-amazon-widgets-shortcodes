@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-08 17:14+0100\n"
-"PO-Revision-Date: 2008-08-08 17:15+0100\n"
+"POT-Creation-Date: 2008-08-28 22:24+0100\n"
+"PO-Revision-Date: 2008-08-28 22:24+0100\n"
 "Last-Translator: Thomas Parisot <tparisot@clever-age.com>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -87,6 +87,7 @@ msgstr "Bonne utilisation de ce plugin !"
 
 #: ../amazon-widgets-shortcode/admin/view/options.php:39
 #: ../amazon-widgets-shortcode/admin/view/options.php:44
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:26
 msgid "Main Options"
 msgstr "Options principales"
 
@@ -299,6 +300,14 @@ msgstr "Idées cadeaux Amazon"
 #: ../amazon-widgets-shortcode/admin/view/documentation.php:172
 msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
 msgstr "texte alternatif sur Flash ou JavaScript ne sont pas disponibles sur le navigateur du visiteur"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:25
+msgid "Other Options"
+msgstr "Autres options"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
+msgid "Widget ID"
+msgstr "Widget ID"
 
 #~ msgid "Carrousel ID, contained in HTML parameter value like this:"
 #~ msgstr ""

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#wpAwshortcode.amazon_carrousel}</title>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/wp-shortcode.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/aw-shortcode.js"></script>
+	<base target="_self" />
+</head>
+<body style="display: none">
+    <form onsubmit="return awShortcode.sendToRte('carrousel2', this)" method="post" action="">
+
+		<div id="general_panel" class="panel current">
+			<fieldset>
+				<legend>{#wpAwshortcode_dlg.main_options}</legend>
+
+        <p>
+          <label for="widget_id">{#wpAwshortcode_dlg.widget_id}</label>
+          <input id="widget_id" name="widget_id" type="text" value="" class="mceFocus" />
+        </p>
+
+			</fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+      </fieldset>
+		</div>
+
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+			</div>
+
+			<div style="float: right">
+				<input type="submit" id="insert" name="insert" value="{#insert}" />
+			</div>
+		</div>
+	</form>
+</body>
+</html>

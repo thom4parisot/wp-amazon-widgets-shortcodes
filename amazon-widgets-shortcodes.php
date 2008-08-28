@@ -16,8 +16,8 @@ Plugin URI: http://case.oncle-tom.net/code/wordpress/
  */
 if (!defined('WP_PLUGIN_DIR'))
 {
-  define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/plugins');
-  define('WP_PLUGIN_URL', WP_CONTENT_URL.'/plugins');
+  define('WP_PLUGIN_DIR', ABSPATH.PLUGINDIR);
+  define('WP_PLUGIN_URL', get_bloginfo('url').'/'.PLUGINDIR);
 }
 
 class AmazonWidgetsShortcodes
@@ -168,7 +168,7 @@ class AmazonWidgetsShortcodes
 /*
  * Register main actions
  */
-list($filename, $i18n_path, $url_path) = AmazonWidgetsShortcodes::getPluginLocation();
+list($filename, $i18n_path) = AmazonWidgetsShortcodes::getPluginLocation();
 load_plugin_textdomain('awshortcode', $i18n_path);
 register_activation_hook($filename, array('AmazonWidgetsShortcodes', 'pluginActivation'));
 if (function_exists('register_uninstall_hook'))
