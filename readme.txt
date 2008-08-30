@@ -71,9 +71,14 @@ Now you plug 'n play 'n earn money ;-)
  * improved welcoming text to give more accurate hyperlinks
  * fixed typo issues
  * added Amazon Widgets rich text editor button:
+  * insert or edit current widgets in one click
   * handles all supported widgets for now
-  * easy inclusion without reading the documentation
+  * magical tool to copy/paste the provided Amazon's HTML code and transform it in shortcode
+  * easy inclusion without having to read the documentation
  * added the ability to hide the documentation from writing pages
+ * this same documentation is also available from the configuration page
+ * reintroduced the slideshow shortcode which was accidentaly removed
+ * the old way call for the carrousel is now obsolete, please follow the usage provided by the widget documentation
 
 = Version 1.0 =
  * added Strict Standards compliance mode (`object` instead of `iframe`)

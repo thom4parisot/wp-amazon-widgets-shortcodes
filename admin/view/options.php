@@ -38,6 +38,7 @@
     <ul id="awshortcode-navigation" class="tablenav">
       <li><a href="#awshortcode-main" class="button-secondary"><?php _e('Main Options', 'awshortcode') ?></a></li>
       <li><a href="#awshortcode-tools" class="button-secondary"><?php _e('Additional Tools', 'awshortcode') ?></a></li>
+      <li><a href="#awshortcode-documentation" class="button-secondary"><?php _e('Documentation', 'awshortcode') ?></a></li>
     </ul>
 
     <div id="awshortcode-main">
@@ -239,6 +240,10 @@
         </tr>
       </tbody>
     </table>
+    </div>
+
+    <div id="awshortcode-documentation">
+      <?php include(dirname(__FILE__).'/documentation.php') ?>
     </div>
 
     <p class="submit">

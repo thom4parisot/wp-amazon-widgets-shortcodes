@@ -29,24 +29,14 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
       )
     );
 
-    /*
-     * Dealing with pre-beta area where the whole URI was needed
-     */
-    if (preg_match('#^http#U', $widget_id))
-    {
-      $uri = $widget_id;
-    }
-    else
-    {
-      $region = $this->getRegionParameters();
-      $uri = sprintf(
-               $region['url']['widget-carrousel'],
-               $region['marketplace'],
-               get_option('awshortcode_tracking_id'),
-               $widget_id,
-               'GetDisplayTemplate'
-             );
-    }
+    $region = $this->getRegionParameters();
+    $uri = sprintf(
+             $region['url']['widget-carrousel'],
+             $region['marketplace'],
+             get_option('awshortcode_tracking_id'),
+             $widget_id,
+             'GetDisplayTemplate'
+           );
 
     return $this->displayShortcode(
       '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
@@ -55,6 +45,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
           '<param name="bgcolor" value="#'.$bgcolor.'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
+          '<param name="wmode" value="transparent" />'.
           '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.", 'awshortcode').'</p>'.
         '</object>'.
       '</div>'
@@ -123,6 +114,55 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
         '</div>'
       );
     }
+  }
+
+  /**
+   * Produces an Amazon Slideshow shortcode
+   * 
+   * HTML code very similar of the Carrousel, only the String Url changes
+   * 
+   * @version 1.0
+   * @since 1.0 
+   * @author oncletom
+   * @return $html String HTML code
+   * @param $atts Array Attributes of the shortcode
+   * @param $widget_id String Widget ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
+   */
+  function widget_slideshow($atts, $widget_id)
+  {
+    extract(
+      shortcode_atts(
+        array(
+          'align' => get_option('awshortcode_align'),
+          'bgcolor' => 'fff',
+          'height' => '250',
+          'width' => '300',
+        ),
+        $atts
+      )
+    );
+
+    $region = $this->getRegionParameters();
+    $uri = sprintf(
+             $region['url']['widget-slideshow'],
+             $region['marketplace'],
+             get_option('awshortcode_tracking_id'),
+             $widget_id,
+             'GetDisplayTemplate'
+           );
+
+    return $this->displayShortcode(
+      '<div style="text-align:'.$align.'" class="awshortcode-slideshow">'.
+        '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
+          '<param name="movie" value="'.$uri.'" />'.
+          '<param name="bgcolor" value="#'.$bgcolor.'" />'.
+          '<param name="quality" value="high" />'.
+          '<param name="allowscriptaccess" value="always" />'.
+          '<param name="wmode" value="transparent" />'.
+          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.").'</p>'.
+        '</object>'.
+      '</div>'
+    );
   }
 
   /**
