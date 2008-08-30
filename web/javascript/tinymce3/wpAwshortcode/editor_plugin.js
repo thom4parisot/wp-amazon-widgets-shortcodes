@@ -21,8 +21,8 @@
 
         ed.windowManager.open({
           file : url + '/shortcode-'+val+'.html?'+popupArgs.join('&'),
-          width : 400 + 'px',
-          height : 200 + 'px',
+          width : 450 + 'px',
+          height : 450 + 'px',
           inline : 1
         }, {
           plugin_url : url,

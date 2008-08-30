@@ -1,6 +1,6 @@
 <?php
 /**
- * @author tparisot
+ * @author oncletom
  */
 
 if ($_POST['action'] == 'update')

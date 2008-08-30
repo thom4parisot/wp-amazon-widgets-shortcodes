@@ -10,11 +10,10 @@
   /*
    * Matching TinyMCE Url and loading it
    */
-  var matches = /tinymce=(.+)(&|$)/.exec(window.location.href);
-  var tinymce_baseUrl = matches[1] || '';
+    var matches = /tinymce=(.+)(&|$)/.exec(window.location.href);
+    var tinymce_baseUrl = matches[1] || '';
 
-  if (tinymce_baseUrl)
-  {
     document.write('<script type="text/javascript" src="'+unescape(tinymce_baseUrl)+'/tiny_mce_popup.js"></'+'script>');
-  }
+    document.write('<script type="text/javascript" src="'+unescape(tinymce_baseUrl)+'/utils/mctabs.js"></'+'script>');
+    document.write('<script type="text/javascript" src="'+unescape(tinymce_baseUrl)+'/utils/validate.js"></'+'script>');
 })();

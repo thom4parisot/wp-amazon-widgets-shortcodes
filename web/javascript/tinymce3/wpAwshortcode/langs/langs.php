@@ -22,9 +22,20 @@ $strings = 'tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode",{
 });
 
 tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
+  align:                "'.js_escape(__('Align', 'awshortcode')).'",
+  align_center:         "'.js_escape(__('centered', 'awshortcode')).'",
+  align_left:           "'.js_escape(__('left', 'awshortcode')).'",
+  align_right:          "'.js_escape(__('right', 'awshortcode')).'",
   alt_options:          "'.js_escape(__('Other Options', 'awshortcode')).'",
+  bgcolor:              "'.js_escape(__('Background Color', 'awshortcode')).'",
+  copypaste_tab:        "'.js_escape(__('Copy/Paste Code', 'awshortcode')).'",
+  general_tab:          "'.js_escape(__('Main Options', 'awshortcode')).'",
+  height:               "'.js_escape(__('Height', 'awshortcode')).'",
   main_options:         "'.js_escape(__('Main Options', 'awshortcode')).'",
+  pixels:               "'.js_escape(__('pixels', 'awshortcode')).'",
+  plugin_setting:       "'.js_escape(__('Default Plugin Setting', 'awshortcode')).'",
   widget_id:            "'.js_escape(__('Widget ID', 'awshortcode')).'",
+  width:                "'.js_escape(__('Width', 'awshortcode')).'",
   zzz:                  ""
 });';
 ?>

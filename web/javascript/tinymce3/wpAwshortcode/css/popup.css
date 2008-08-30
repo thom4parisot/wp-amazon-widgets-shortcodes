@@ -1,0 +1,18 @@
+/**
+ * @author oncletom
+ * @since 1.1 beta
+ * @package tinymce
+ */
+
+form p{
+  clear: both;
+}
+
+form p label{
+	cursor: pointer;
+  display: block;
+  float: left;
+  padding-right: .5em;
+  text-align: right;
+  width: 30%;
+}

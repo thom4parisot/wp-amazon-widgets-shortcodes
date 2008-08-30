@@ -3,15 +3,23 @@
 <head>
 	<title>{#wpAwshortcode.amazon_carrousel}</title>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/wp-shortcode.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/aw-shortcode.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen" />
 	<base target="_self" />
 </head>
 <body style="display: none">
-    <form onsubmit="return awShortcode.sendToRte('carrousel2', this)" method="post" action="">
+    <form onsubmit="awShortcode.sendToRte('carrousel', this); return false;" method="post" action="">
 
-		<div id="general_panel" class="panel current">
+    <div class="tabs">
+      <ul>
+        <li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.general_tab}</a></span></li>
+        <li id="copypaste_tab"><span><a href="javascript:mcTabs.displayTab('copypaste_tab','copypaste_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.copypaste_tab}</a></span></li>
+      </ul>
+    </div>
+
+    <div class="panel_wrapper">
+  		<div id="general_panel" class="panel current">
 			<fieldset>
 				<legend>{#wpAwshortcode_dlg.main_options}</legend>
 
@@ -24,9 +32,37 @@
 
       <fieldset>
         <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+
+        <p>
+          <label for="align">{#wpAwshortcode_dlg.align}</label>
+          <select name="align" id="align">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="left">{#wpAwshortcode_dlg.align_left}</option>
+            <option value="center">{#wpAwshortcode_dlg.align_center}</option>
+            <option value="right">{#wpAwshortcode_dlg.align_right}</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="bgcolor">{#wpAwshortcode_dlg.bgcolor}</label>
+          <input id="bgcolor" name="bgcolor" type="text" value="" class="hexa text" />
+        </p>
+
+        <p>
+          <label for="height">{#wpAwshortcode_dlg.height}</label>
+          <input id="height" name="height" type="text" value="" class="size text numeric" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+
+        <p>
+          <label for="width">{#wpAwshortcode_dlg.width}</label>
+          <input id="width" name="width" type="text" value="" class="size text numeric" /> {#wpAwshortcode_dlg.pixels}
+        </p>
       </fieldset>
 		</div>
-
+      <div id="copypaste_panel" class="panel">
+        
+      </div>
+    </div>
 		<div class="mceActionPanel">
 			<div style="float: left">
 				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
