@@ -52,10 +52,44 @@ var awShortcode = {
     return shortcode;
   },
   /**
+   * Parse a shortcode from its HTML DOM node
+   * 
+   * @author oncletom
+   * @since 1.1
+   * @version 1.0
+   * @param {Object} node HTML DOM node
+   */
+  parse: function(node){
+    var dom = tinyMCEPopup.editor.dom;
+    var shortcode_tag = node.textContent;
+    var shortcode = {
+      atts: {},
+      type: '',
+      value: ''
+    };
+
+    /*
+     * Parsing type
+     */
+    shortcode.type = /(amazon-[0-9a-z]+)( |$)/.exec(node.className)[1];
+
+    /*
+     * Parsing value 
+     */
+    shortcode.value = /\](.*)\[\//.exec(shortcode_tag)[1]
+
+    /*
+     * Parsing attributes
+     */
+    console.log(node);
+
+    return shortcode;
+  },
+  /**
    * Proxy method to inject a shortcode in TinyMCE Editor
    * 
    * @author oncletom
-   * @since 1.0
+   * @since 1.1
    * @version 1.0
    * @param {Object} type 
    * @param {Object} el DOM element. Only support form for now
@@ -90,7 +124,7 @@ var awShortcode = {
      console.log(ed.dom.getAttrib(fe, 'class')); 
       ed.dom.setAttrib(fe, 'class', '');
       ed.dom.addClass(fe, 'awshortcode');
-      ed.dom.addClass(fe, 'widget-'+type);
+      ed.dom.addClass(fe, 'amazon-'+type);
       ed.dom.setHTML(fe, shortcode);
     }
     /*
@@ -101,7 +135,7 @@ var awShortcode = {
       p.execCommand(
         'mceInsertContent',
         false,
-        '<span class="awshortcode widget-'+type+'">'+shortcode+'</span>'
+        '<span class="awshortcode amazon-'+type+'">'+shortcode+'</span>'
       );
     }
 

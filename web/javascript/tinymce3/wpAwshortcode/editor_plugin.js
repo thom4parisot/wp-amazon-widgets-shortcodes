@@ -11,8 +11,9 @@
      * @param {string} url Absolute URL to where the plugin is located.
      */
     init : function(ed, url) {
-      ed.addCommand('wpAwshortcodeSelector', function(ui, val) {
+      var t = this;
 
+      ed.addCommand('wpAwshortcodeSelector', function(ui, val) {
         /*
          * Popup arguments
          */
@@ -42,10 +43,12 @@
       });
 
       /*
-       * Disable when text is selected, activate otherwise
+       * Select the item on node change
+       * 
+       * @todo replace it with t._selectMenu call
        */
-      ed.onNodeChange.add(function(ed, cm, n) {
-        cm.setActive('awshortcode-selector', ed.selection.getContent() == '');
+      ed.onNodeChange.add(function(ed){
+        t._selectMenu(ed);
       });
     },
 
@@ -60,7 +63,7 @@
      * @return {tinymce.ui.Control} New control instance or null if no control was created.
      */
     createControl : function(n, cm) {
-      var t = this, c, ed = t.editor, each = tinymce.each;
+      var t = this, menu = t._cache.menu, c, ed = tinyMCE.activeEditor, each = tinymce.each;
 
       if (n != 'awshortcode-selector')
       {
@@ -68,37 +71,44 @@
       }
 
       c = cm.createSplitButton(n, {
+        cmd:    '',
         scope : t,
         title : 'wpAwshortcode.desc'
       });
 
       c.onRenderMenu.add(function(c, m) {
-        var shortcodes = {
-          'amazon-carrousel': 'wpAwshortcode.amazon_carrousel',
-          'amazon-product':   'wpAwshortcode.amazon_product',
-          'amazon-slideshow': 'wpAwshortcode.amazon_slideshow'
-        };
-
         m.add({
           'class': 'mceMenuItemTitle',
           title:   'wpAwshortcode.desc'
         }).setDisabled(1);
 
-        each(shortcodes, function(value, key) {
+        each(t.shortcodes, function(value, key) {
           var o = {icon : 0}, mi;
 
           o.onclick = function() {
-            tinyMCE.activeEditor.execCommand('wpAwshortcodeSelector', true, key);
+            ed.execCommand('wpAwshortcodeSelector', true, key);
           };
 
           o.title = value;
           mi = m.add(o);
-        })
+          menu[key] = mi;
+        });
+
+        t._selectMenu(ed);
       });
 
       return c;
     },
-
+    /**
+     * Shortcodes list
+     * 
+     * @since 1.1
+     */
+    shortcodes: {
+      'amazon-carrousel': 'wpAwshortcode.amazon_carrousel',
+      'amazon-product':   'wpAwshortcode.amazon_product',
+      'amazon-slideshow': 'wpAwshortcode.amazon_slideshow'
+    },
     /**
      * Returns information about the plugin as a name/value array.
      * The current keys are longname, author, authorurl, infourl and version.
@@ -113,6 +123,34 @@
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
         version:   '1.0'
       };
+    },
+    /*
+     * Private controls
+     */
+    /*
+     * Cache references
+     */
+    _cache: {
+      menu: {}
+    },
+    /**
+     * Select an item menu based on its classname
+     * 
+     * @since 1.1
+     * @version 1.0
+     * @param {Object} ed TinyMCE Editor reference
+     */
+    _selectMenu: function(ed){
+      var fe  =  ed.selection.getNode(), each = tinymce.each, menu = this._cache.menu;
+
+      each(this.shortcodes, function(value, key){
+        if (typeof menu[key] == 'undefined' || !menu[key])
+        {
+          return;
+        }
+
+        menu[key].setSelected(ed.dom.hasClass(fe, key));
+      });
     }
   });
 
