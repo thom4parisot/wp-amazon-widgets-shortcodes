@@ -38,7 +38,12 @@
         if (ed.settings.content_css !== false)
         {
           dom = ed.windowManager.createInstance('tinymce.dom.DOMUtils', document);
+          /*
+           * Load first for the viewport
+           * And then, inside the RTE frame
+           */
           dom.loadCSS(url + '/css/content.css');
+          ed.dom.loadCSS(url + '/css/content.css');
         }
       });
 
@@ -50,6 +55,45 @@
       ed.onNodeChange.add(function(ed){
         t._selectMenu(ed);
       });
+
+      /*
+       * From Editor to saved content (in database)
+       * 
+       * We basically remove span element
+       */
+      ed.onSetContent.add(function(ed, o){
+        o.content = o.content.replace(/<span[^>]+>([^<]*)<\/span>/g, "$1");
+      });
+
+      /*
+
+        ed.selection.onSetContent.add(function() {
+          t._spansToImgs(ed.getBody());
+        });
+
+        ed.selection.onBeforeSetContent.add(t._objectsToSpans, t);
+       */
+
+      /*
+       * From database to Editor
+       * 
+       * We encapsulate shortcode in span elements
+       */
+      ed.onBeforeSetContent.add(function(ed, o){
+        o.content = o.content.replace(
+          /(\[amazon-[a-z0-9]+[^\]]*\][^\[]+\[\/(amazon-[a-z0-9]+)\])/g,
+          "<span class=\"awshortcode $2\">$1</span>"
+        );
+      });
+
+      /*
+
+      ed.onBeforeSetContent.add(t._objectsToSpans, t);
+
+      ed.onSetContent.add(function() {
+        t._spansToImgs(ed.getBody());
+      });
+       */
     },
 
     /**

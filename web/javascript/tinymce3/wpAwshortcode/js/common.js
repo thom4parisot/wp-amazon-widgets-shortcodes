@@ -13,14 +13,14 @@
    */
   function init()
   {
-    var p = tinyMCEPopup, ed = p.editor, fe = ed.selection.getNode();
+    var p = tinyMCEPopup, ed = p.editor, fe = ed.selection;
     p.resizeToInnerSize();
 
     /*
      * Form populating
      */
     var shortcode = awShortcode.parse(fe);
-    console.log(shortcode);
+    awShortcode.form.populate(document.getElementById('widget-form'), shortcode);
   }
 
   /*

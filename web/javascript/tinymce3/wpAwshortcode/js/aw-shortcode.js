@@ -6,6 +6,92 @@
 
 var awShortcode = {
   /**
+   * Form manipulation
+   * 
+   * @author oncletom
+   * @since 1.1
+   */
+  form: {
+    /**
+     * Extend a form object with getter and setter methods
+     * 
+     * @author oncletom
+     * @since 1.1
+     * @param {Object} form DOM reference to the form
+     */
+    extend: function(form){
+      tinymce.each(this._extend, function(value, key){
+        form[key] = value;
+      });
+    },
+    /**
+     * Populate a form with a shortcode object
+     * 
+     * @param {Object} form DOM reference to the form
+     * @param {Object} shortcode Shortcode object {atts, type, value}
+     */
+    populate: function(form, shortcode){
+      awShortcode.form.extend(form);
+
+      /*
+       * Populating shortcode value
+       */
+      if (form['widget_id'])
+      {
+        form.setValue('widget_id', shortcode.value);
+      }
+
+      /*
+       * Populating attributes
+       */
+      tinymce.each(shortcode.atts, function(value, key){
+        form.setValue(key, value);
+      });
+    },
+    _extend: {
+      getValue: function(field_name, alt_value)
+      {
+        var field = this[field_name];
+        alt_value = alt_value || '';
+      
+        if (typeof field == 'undefined')
+        {
+          return '';
+        }
+      
+        return field.value ? field.value : alt_value;
+      },
+      setValue: function(field_name, value){
+        var field = this[field_name];
+        var inArray = tinymce.inArray;
+
+        /*
+         * Checkbox/selectbox
+         * @todo : test if functionnal
+         */
+        if (field.tagName === 'INPUT' && inArray(['checkbox', 'radio'], field.type) > -1)
+        {
+          field.value = value || '';
+        }
+        /*
+         * Selectbox
+         */
+        else if (field.tagName === 'SELECT')
+        {
+          field.value = value || '';
+        }
+        /*
+         * Input field
+         */
+        else
+        {
+          field.value = value || '';
+        }
+      }
+    }
+    
+  },
+  /**
    * Assembling shortcode to send it to the editor
    * 
    * @author oncletom
@@ -28,14 +114,14 @@ var awShortcode = {
     }
 
     var shortcode = '['+name;
-    each(attr, function(value, key){
-
+    each(attr, function(value, key)
+    {
       /*
        * No value ? No need to save it
        */
       if (!value)
       {
-        return false;
+        return '';
       }
 
       shortcode += ' ';
@@ -57,11 +143,11 @@ var awShortcode = {
    * @author oncletom
    * @since 1.1
    * @version 1.0
-   * @param {Object} node HTML DOM node
+   * @param {Object} tinyMCE Selection
    */
-  parse: function(node){
+  parse: function(fe){
     var dom = tinyMCEPopup.editor.dom;
-    var shortcode_tag = node.textContent;
+    var node = fe.getNode();
     var shortcode = {
       atts: {},
       type: '',
@@ -69,19 +155,29 @@ var awShortcode = {
     };
 
     /*
+     * No content or no selection
+     */
+    if (!dom.hasClass(node, 'awshortcode'))
+    {
+      return shortcode;
+    }
+
+    /*
      * Parsing type
      */
-    shortcode.type = /(amazon-[0-9a-z]+)( |$)/.exec(node.className)[1];
+    shortcode.type = /(amazon-[0-9a-z]+)( |$)/.exec(dom.getAttrib(node, 'class'))[1];
 
     /*
      * Parsing value 
      */
-    shortcode.value = /\](.*)\[\//.exec(shortcode_tag)[1]
+    shortcode.value = /\](.*)\[\//.exec(node.innerHTML)[1]
 
     /*
      * Parsing attributes
      */
-    console.log(node);
+    node.innerHTML.replace(/ ([a-z0-9]+)="([^"]*)"/g, function(match, key, value){
+      shortcode.atts[key] = value;
+    });
 
     return shortcode;
   },
@@ -104,7 +200,7 @@ var awShortcode = {
     }
 
     p.restoreSelection();
-    form.getValue = formGetValue;
+    awShortcode.form.extend(form);
     var shortcode = awShortcode.widget[type].generate(form, 'amazon-'+type);
 
     /*
@@ -121,7 +217,6 @@ var awShortcode = {
      */
     if (fe && /(^| )awshortcode( |$)/.test(ed.dom.getAttrib(fe, 'class')))
     {
-     console.log(ed.dom.getAttrib(fe, 'class')); 
       ed.dom.setAttrib(fe, 'class', '');
       ed.dom.addClass(fe, 'awshortcode');
       ed.dom.addClass(fe, 'amazon-'+type);
@@ -153,7 +248,7 @@ var awShortcode = {
        * @param {Object} name
        */
       generate: function(form, name){
-        var shortcode = awShortcode.generate(name, form.widget_id.value, {
+        var shortcode = awShortcode.generate(name, form.getValue('widget_id'), {
           align:    form.getValue('align'),
           bgcolor:  form.getValue('bgcolor'),
           height:   form.getValue('height'),
@@ -184,16 +279,6 @@ var awShortcode = {
 /*
  * Custom and internal functions
  */
-
-function formGetValue(field_name, alt_value)
-{
-  if (!this.nodeName || this.nodeName != 'FORM')
-  {
-    return '';
-  }
-
-  return this.field_name ? this.field_name : alt_value;
-}
 
 /**
  * Encode a value and assume it can be an HTML attribute value
