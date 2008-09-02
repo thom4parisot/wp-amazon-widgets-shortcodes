@@ -12,7 +12,7 @@
   /*
    * Matching TinyMCE Url and loading it
    */
-    var matches = /tinymce=(.+)(&|$)/.exec(window.location.href);
+    var matches = /tinymce=([^$&]+)/.exec(window.location.href);
     var tinymce_baseUrl = matches[1] || '';
 
     document.write('<script type="text/javascript" src="'+unescape(tinymce_baseUrl)+'/tiny_mce_popup.js"></'+'script>');

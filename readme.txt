@@ -1,10 +1,10 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
 Donate link:
-Tags: amazon, affiliate, shortcode, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
+Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
 Requires at least: 2.5
-Tested up to: 2.6
-Stable tag: 1.0
+Tested up to: 2.6.1
+Stable tag: 1.1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -20,6 +20,7 @@ Now you can earn money with affiliate links without any pain and with XHTML stan
 You may like it for these features:
 
 * international support (Canada, France, United Kingdom, USA)
+* easy insertion from Rich Text Editor
 * valid XHTML code
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
@@ -36,10 +37,7 @@ Currently supported Amazon widgets/features:
 * Slideshow Widget
 * Wishlist Widget
 
-Check the [Other Notes page](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/other_notes/) to read:
-
-* the Release Notes
-* the Todo List
+Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/).
 
 
 == Installation ==

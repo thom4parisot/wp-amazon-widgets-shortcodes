@@ -279,7 +279,7 @@ var awShortcode = {
           bordercolor:  form.getValue('bordercolor'),
           height:       form.getValue('height'),
           small:        form.getValue('small'),
-          small:        form.getValue('target'),
+          target:        form.getValue('target'),
           width:        form.getValue('width')
         });
 
@@ -302,7 +302,7 @@ var awShortcode = {
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
           align:    form.getValue('align'),
-          alt:      form.getValue('bgcolor')
+          alt:      form.getValue('alt')
         });
 
         return shortcode;
