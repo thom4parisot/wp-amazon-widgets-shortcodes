@@ -42,7 +42,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
       '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
         '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
           '<param name="movie" value="'.$uri.'" />'.
-          '<param name="bgcolor" value="#'.$bgcolor.'" />'.
+          '<param name="bgcolor" value="'.$this->filterHexaColor($bgcolor).'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
           '<param name="wmode" value="transparent" />'.
@@ -86,12 +86,12 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
              $region['url']['widget-product'],
              get_option('awshortcode_tracking_id'),
              $asin,
-             $color,
+             $this->filterHexaColor($color, false),
              (int)$small === 0 ? 'IS2' : 'IS1',
              $target,
-             $alink,
-             $bordercolor,
-             $bgcolor
+             $this->filterHexaColor($alink, false),
+             $this->filterHexaColor($bordercolor, false),
+             $this->filterHexaColor($bgcolor, false)
            );
 
     if (get_option('awshortcode_strict_standards'))
@@ -155,7 +155,7 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
       '<div style="text-align:'.$align.'" class="awshortcode-slideshow">'.
         '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
           '<param name="movie" value="'.$uri.'" />'.
-          '<param name="bgcolor" value="#'.$bgcolor.'" />'.
+          '<param name="bgcolor" value="'.$this->filterHexaColor($bgcolor).'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
           '<param name="wmode" value="transparent" />'.

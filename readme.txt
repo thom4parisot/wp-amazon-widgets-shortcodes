@@ -73,7 +73,6 @@ Now you plug 'n play 'n earn money ;-)
  * added Amazon Widgets rich text editor button:
   * insert or edit current widgets in one click
   * handles all supported widgets for now
-  * magical tool to copy/paste the provided Amazon's HTML code and transform it in shortcode
   * easy inclusion without having to read the documentation
  * added the ability to hide the documentation from writing pages
  * this same documentation is also available from the configuration page
@@ -148,3 +147,5 @@ But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
 1. Main configuration panel
 2. Extra tools configuration panel
 3. Inline documentation
+4. Widget selection via Rich Text Editor (with TinyMCE)
+5. Widget configuration via Rich Text Editor (TinyMCE)

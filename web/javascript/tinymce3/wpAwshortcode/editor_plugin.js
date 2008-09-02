@@ -57,43 +57,41 @@
       });
 
       /*
-       * From Editor to saved content (in database)
+       * From Editor to database (Visual to HTML tab)
        * 
        * We basically remove span element
        */
-      ed.onSetContent.add(function(ed, o){
+      ed.onPostProcess.add(function(ed, o){
         o.content = o.content.replace(/<span[^>]+>([^<]*)<\/span>/g, "$1");
       });
 
       /*
-
-        ed.selection.onSetContent.add(function() {
-          t._spansToImgs(ed.getBody());
-        });
-
-        ed.selection.onBeforeSetContent.add(t._objectsToSpans, t);
-       */
-
-      /*
-       * From database to Editor
+       * From database to Editor (HTML tab to Visual)
        * 
        * We encapsulate shortcode in span elements
+       * 
+       * @todo it seems a bit dirty
+       * Maybe for speed reasons; doing a getBody() + replace + setBody() does not work
        */
-      ed.onBeforeSetContent.add(function(ed, o){
-        o.content = o.content.replace(
+      ed.onSetContent.add(function(ed, o){
+        var body = ed.getBody();
+
+        /*
+         * Check if there are already shortcode
+         * 
+         * Avoid undo/redo problem without bloating the code with other ed.onXXX events
+         * Or when the code is copy paster in plain HTML, could happens!
+         */
+        if (/<span class="awshortcode amazon-[0-9a-z]+">/.test(body.innerHTML))
+        {
+          return;
+        }
+
+        body.innerHTML = body.innerHTML.replace(
           /(\[amazon-[a-z0-9]+[^\]]*\][^\[]+\[\/(amazon-[a-z0-9]+)\])/g,
           "<span class=\"awshortcode $2\">$1</span>"
         );
       });
-
-      /*
-
-      ed.onBeforeSetContent.add(t._objectsToSpans, t);
-
-      ed.onSetContent.add(function() {
-        t._spansToImgs(ed.getBody());
-      });
-       */
     },
 
     /**
@@ -151,7 +149,8 @@
     shortcodes: {
       'amazon-carrousel': 'wpAwshortcode.amazon_carrousel',
       'amazon-product':   'wpAwshortcode.amazon_product',
-      'amazon-slideshow': 'wpAwshortcode.amazon_slideshow'
+      'amazon-slideshow': 'wpAwshortcode.amazon_slideshow',
+      'amazon-wishlist':  'wpAwshortcode.amazon_wishlist'
     },
     /**
      * Returns information about the plugin as a name/value array.

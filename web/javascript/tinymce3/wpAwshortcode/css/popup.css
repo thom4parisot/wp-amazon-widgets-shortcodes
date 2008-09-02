@@ -8,11 +8,24 @@ form p{
   clear: both;
 }
 
-form p label{
+form p label,
+form div label{
 	cursor: pointer;
   display: block;
   float: left;
   padding-right: .5em;
   text-align: right;
   width: 30%;
+}
+
+div.colorpicker{
+  display: inline;
+  position: absolute
+}
+
+input.colorpicker{
+  width: 7em;
+}
+input.size{
+  width: 4em;
 }

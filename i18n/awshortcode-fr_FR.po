@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-30 13:04+0100\n"
-"PO-Revision-Date: 2008-08-30 13:04+0100\n"
+"POT-Creation-Date: 2008-09-03 00:47+0100\n"
+"PO-Revision-Date: 2008-09-03 00:47+0100\n"
 "Last-Translator: Thomas Parisot <tparisot@clever-age.com>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:69
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
 msgid "left"
 msgstr "à gauche"
 
 #: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:70
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:26
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
 msgid "centered"
 msgstr "centré"
 
 #: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:71
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
 msgid "right"
 msgstr "à droite"
 
@@ -43,7 +43,7 @@ msgstr "Vous devez <a href=\"%s\">paramétrer votre ID de suivi Amazon</a> afin 
 #: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:96
 #: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:97
 #: ../amazon-widgets-shortcode/admin/view/options.php:2
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
 msgid "Amazon Widgets Shortcodes"
 msgstr "Amazon Widgets Shortcodes"
 
@@ -56,19 +56,19 @@ msgstr "Votre version d'Adobe Flash Player n'est pas suffisamment à jour pour a
 msgid "Consult this wishlist on Amazon."
 msgstr "Consulter cette liste cadeau sur Amazon."
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:219
+#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:244
 msgid "Amazon Canada"
 msgstr "Amazon Canada"
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:249
+#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:274
 msgid "Amazon France"
 msgstr "Amazon France"
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:279
+#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:304
 msgid "Amazon United Kingdom"
 msgstr "Amazon Royaume-Uni"
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:295
+#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:320
 msgid "Amazon USA"
 msgstr "Amazon États-Unis"
 
@@ -91,8 +91,8 @@ msgstr "Bonne utilisation de ce plugin !"
 
 #: ../amazon-widgets-shortcode/admin/view/options.php:39
 #: ../amazon-widgets-shortcode/admin/view/options.php:45
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
 msgid "Main Options"
 msgstr "Options principales"
 
@@ -303,6 +303,7 @@ msgid "Amazon Slideshow"
 msgstr "Amazon Slideshow"
 
 #: ../amazon-widgets-shortcode/admin/view/documentation.php:151
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
 msgid "Amazon Wishlist"
 msgstr "Idées cadeaux Amazon"
 
@@ -310,41 +311,69 @@ msgstr "Idées cadeaux Amazon"
 msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
 msgstr "texte alternatif sur Flash ou JavaScript ne sont pas disponibles sur le navigateur du visiteur"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:25
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:26
 msgid "Align"
 msgstr "Alignement"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "Link Color"
+msgstr "Couleur du lien"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
 msgid "Other Options"
 msgstr "Autres options"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+msgid "ASIN Code"
+msgstr "Code ASIN"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
 msgid "Background Color"
 msgstr "Couleur de fond"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+msgid "Border color"
+msgstr "Couleur de bordure"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
 msgid "Copy/Paste Code"
 msgstr "Copier/coller de code"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
 msgid "Height"
 msgstr "Hauteur"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
 msgid "pixels"
 msgstr "pixels"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
 msgid "Default Plugin Setting"
 msgstr "Réglage par défaut du plugin"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Small size?"
+msgstr "Petite taille ?"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
 msgid "Widget ID"
 msgstr "Widget ID"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
 msgid "Width"
 msgstr "Largeur"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+msgid "Glad you look at here!"
+msgstr "Ravi de vous voir ici !"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "This feature is under heave development and you should enjoy it in the next 1.2 release of this plugin.As you may guess, you will copy/paste widget HTML code provided by Amazon to autofill the previous tab."
+msgstr "Cette fonctionnalité est en plein développement and vous devriez pouvoir en profiter lors de la sortie de la prochaine version de ce plugin, la 1.2. Comme vous pouvez vous en douter, vous pourrez copier/coller le code HTML des widgets fourni par Amazon afin de préremplir le précédent onglet."
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+msgid "Nice isn\\t it?"
+msgstr "Sympa n\\est-ce pas ?"
 
 #~ msgid "Carrousel ID, contained in HTML parameter value like this:"
 #~ msgstr ""

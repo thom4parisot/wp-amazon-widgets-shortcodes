@@ -36,10 +36,7 @@ var awShortcode = {
       /*
        * Populating shortcode value
        */
-      if (form['widget_id'])
-      {
-        form.setValue('widget_id', shortcode.value);
-      }
+      form.setValue('widget_value', shortcode.value);
 
       /*
        * Populating attributes
@@ -51,19 +48,23 @@ var awShortcode = {
     _extend: {
       getValue: function(field_name, alt_value)
       {
-        var field = this[field_name];
+        var field = this[field_name], inArray = tinymce.inArray;
         alt_value = alt_value || '';
       
         if (typeof field == 'undefined')
         {
           return '';
         }
-      
+
+        if (field.tagName === 'INPUT' && inArray(['checkbox', 'radio'], field.type) > -1)
+        {
+          field.value = field.checked ? 1 : '';
+        }
+
         return field.value ? field.value : alt_value;
       },
       setValue: function(field_name, value){
-        var field = this[field_name];
-        var inArray = tinymce.inArray;
+        var field = this[field_name], inArray = tinymce.inArray;
 
         /*
          * Checkbox/selectbox
@@ -71,7 +72,7 @@ var awShortcode = {
          */
         if (field.tagName === 'INPUT' && inArray(['checkbox', 'radio'], field.type) > -1)
         {
-          field.value = value || '';
+          field.checked = value === field.value ? true : false;
         }
         /*
          * Selectbox
@@ -199,6 +200,17 @@ var awShortcode = {
       throw('Unsupported Widget type. Hm, what are you playing with?');
     }
 
+    /*
+     * Form validating
+     * 
+     * Note : tinyMCEPopup.alert() is only available since v3.1.0
+     */
+    if (!AutoValidator.validate(form))
+    {
+      ed.windowManager.alert(ed.getLang('invalid_data'));
+      return false;
+    }
+
     p.restoreSelection();
     awShortcode.form.extend(form);
     var shortcode = awShortcode.widget[type].generate(form, 'amazon-'+type);
@@ -248,7 +260,7 @@ var awShortcode = {
        * @param {Object} name
        */
       generate: function(form, name){
-        var shortcode = awShortcode.generate(name, form.getValue('widget_id'), {
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
           align:    form.getValue('align'),
           bgcolor:  form.getValue('bgcolor'),
           height:   form.getValue('height'),
@@ -260,17 +272,40 @@ var awShortcode = {
     },
     product: {
       generate: function(form, name){
-        
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:        form.getValue('align'),
+          alink:        form.getValue('alink'),
+          bgcolor:      form.getValue('bgcolor'),
+          bordercolor:  form.getValue('bordercolor'),
+          height:       form.getValue('height'),
+          small:        form.getValue('small'),
+          small:        form.getValue('target'),
+          width:        form.getValue('width')
+        });
+
+        return shortcode;
       }
     },
     slideshow: {
       generate: function(form, name){
-        
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:    form.getValue('align'),
+          bgcolor:  form.getValue('bgcolor'),
+          height:   form.getValue('height'),
+          width:    form.getValue('width')
+        });
+
+        return shortcode;
       }
     },
     wishlist: {
       generate: function(form, name){
-        
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:    form.getValue('align'),
+          alt:      form.getValue('bgcolor')
+        });
+
+        return shortcode;
       }
     }
   }

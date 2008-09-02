@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>{#wpAwshortcode.amazon_carrousel}</title>
+  <title>{#wpAwshortcode.amazon_slideshow}</title>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/aw-shortcode.js"></script>
   <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen" />
-	<base target="_self" />
+  <base target="_self" />
 </head>
 <body style="display: none">
-    <form onsubmit="awShortcode.sendToRte('carrousel', this); return false;" method="post" action="" id="widget-form">
+    <form onsubmit="awShortcode.sendToRte('product', this); return false;" method="post" action="" id="widget-form">
 
     <div class="tabs">
       <ul>
@@ -19,16 +19,16 @@
     </div>
 
     <div class="panel_wrapper">
-  		<div id="general_panel" class="panel current">
-			<fieldset>
-				<legend>{#wpAwshortcode_dlg.main_options}</legend>
+      <div id="general_panel" class="panel current">
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.main_options}</legend>
 
         <p>
           <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
           <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
         </p>
 
-			</fieldset>
+      </fieldset>
 
       <fieldset>
         <legend>{#wpAwshortcode_dlg.alt_options}</legend>
@@ -59,7 +59,7 @@
           <input id="width" name="width" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
         </p>
       </fieldset>
-		</div>
+    </div>
       <div id="copypaste_panel" class="panel">
         <p><strong>{#wpAwshortcode_dlg.cpp_welcome}</strong></p>
         
@@ -67,15 +67,15 @@
         <p><em>{#wpAwshortcode_dlg.cpp_close}</em></p>
       </div>
     </div>
-		<div class="mceActionPanel">
-			<div style="float: left">
-				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
-			</div>
+    <div class="mceActionPanel">
+      <div style="float: left">
+        <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+      </div>
 
-			<div style="float: right">
-				<input type="submit" id="insert" name="insert" value="{#insert}" />
-			</div>
-		</div>
-	</form>
+      <div style="float: right">
+        <input type="submit" id="insert" name="insert" value="{#insert}" />
+      </div>
+    </div>
+  </form>
 </body>
 </html>

@@ -159,6 +159,31 @@ EOF;
   }
 
   /**
+   * Filter an hexa code to return it with a prefix, if needed
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.1
+   * @return $color String
+   * @param $color String Hexadecimal color to filter
+   * @param $prefix Boolean[optional] Add a hash prefix or not
+   * 
+   * @todo add a better filter which checks hexa code and more
+   */
+  function filterHexaColor($color, $prefix = true)
+  {
+    // no need to go further
+    if (!$color)
+    {
+      return '';
+    }
+
+    $color = preg_replace('/[^a-fA-F0-9]/U', '', $color);
+    $prefix = (bool)$prefix && $color ? '#' : '';
+    return $prefix.$color;
+  }
+
+  /**
    * Wraps content in Amazon proprietary HTML comments tag
    * 
    * Context links are added by Amazon engine only between those parts.
