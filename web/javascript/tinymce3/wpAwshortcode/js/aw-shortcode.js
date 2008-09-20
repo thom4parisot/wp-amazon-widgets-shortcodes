@@ -72,7 +72,7 @@ var awShortcode = {
          */
         if (field.tagName === 'INPUT' && inArray(['checkbox', 'radio'], field.type) > -1)
         {
-          field.checked = value === field.value ? true : false;
+          field.checked = value == field.value ? true : false;
         }
         /*
          * Selectbox
@@ -91,6 +91,29 @@ var awShortcode = {
       }
     }
     
+  },
+  /**
+   * Proxy method to extract widget settings from HTML code
+   * 
+   * @author oncletom
+   * @param {String} widget_type
+   * @param {String} value_tag_name
+   * @param {String} form_id
+   */
+  fromHtmlToForm: function(widget_type, value_tag_name, form_id){
+    var widgets = this.widget;
+
+    if (typeof widgets[widget_type] != 'object')
+    {
+      throw Exception('Undefined widget, what are you playing with?');
+    }
+
+    var form = document.getElementById(form_id) || document.getElementsByTagName('form')[0];
+    awShortcode.form.extend(form);
+    if (widgets[widget_type].fromHtmlToForm(form.getValue(value_tag_name), form))
+    {
+      mcTabs.displayTab('general_tab','general_panel');
+    }
   },
   /**
    * Assembling shortcode to send it to the editor
@@ -253,9 +276,26 @@ var awShortcode = {
    * Widgets settings and callbacks
    */
   widget: {
+    /*
+     * Subelements
+     */
     carrousel: {
       /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
+        form.setValue('height', /HEIGHT="([0-9]+)px"/i.execAndGet(html));
+        form.setValue('width', /WIDTH="([0-9]+)px"/i.execAndGet(html));
+
+        return form.getValue('widget_value');
+      },
+      /**
        * Generate shortcode from forms value
+       * 
        * @param {Object} form
        * @param {Object} name
        */
@@ -271,6 +311,36 @@ var awShortcode = {
       }
     },
     product: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+
+        /*
+         * Text + images
+         */
+        if (/<iframe src/i.test(html))
+        {
+          form.setValue('widget_value', /asins=([0-9]+)&/i.execAndGet(html));
+          form.setValue('alink', /lc1=([0-9a-f]+)&/i.execAndGet(html));
+          form.setValue('bordercolor', /bc1=([0-9a-f]+)&/i.execAndGet(html));
+          form.setValue('height', /height:([0-9]+)px/i.execAndGet(html));
+          form.setValue('small', /IS2=1&/i.test(html) ? 0 : 1);
+          form.setValue('target', /lt1=([^&])+&/i.execAndGet(html));
+          form.setValue('width', /width:([0-9]+)px"/i.execAndGet(html));
+        }
+
+        return form.getValue('widget_value');
+      },
+      /**
+       * Generate shortcode from forms value
+       * 
+       * @param {Object} form
+       * @param {Object} name
+       */
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
           align:        form.getValue('align'),
@@ -279,7 +349,7 @@ var awShortcode = {
           bordercolor:  form.getValue('bordercolor'),
           height:       form.getValue('height'),
           small:        form.getValue('small'),
-          target:        form.getValue('target'),
+          target:       form.getValue('target'),
           width:        form.getValue('width')
         });
 
@@ -287,6 +357,19 @@ var awShortcode = {
       }
     },
     slideshow: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
+        form.setValue('height', /HEIGHT="([0-9]+)px"/i.execAndGet(html));
+        form.setValue('width', /WIDTH="([0-9]+)px"/i.execAndGet(html));
+
+        return form.getValue('widget_value');
+      },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
           align:    form.getValue('align'),
@@ -299,6 +382,19 @@ var awShortcode = {
       }
     },
     wishlist: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
+
+        form.setValue('widget_value', widget_value);
+
+        return form.getValue('widget_value');
+      },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
           align:    form.getValue('align'),
@@ -314,6 +410,20 @@ var awShortcode = {
 /*
  * Custom and internal functions
  */
+
+/**
+ * Execute a RegExp and extract a result by index
+ * 
+ * @author tparisot
+ * @param {String} haystack String to apply the regular expression on
+ * @param {Integer} index Index of the regexp result to return, if not empty
+ */
+RegExp.prototype.execAndGet = function(haystack, index){
+  index = index || 1;
+
+  var result = this.exec(haystack) || '';
+  return result ? result[index] : '';
+}
 
 /**
  * Encode a value and assume it can be an HTML attribute value

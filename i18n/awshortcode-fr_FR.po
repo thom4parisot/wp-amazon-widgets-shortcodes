@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-03 00:47+0100\n"
-"PO-Revision-Date: 2008-09-03 00:47+0100\n"
+"POT-Creation-Date: 2008-09-19 22:07+0100\n"
+"PO-Revision-Date: 2008-09-19 22:08+0100\n"
 "Last-Translator: Thomas Parisot <tparisot@clever-age.com>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -91,8 +91,8 @@ msgstr "Bonne utilisation de ce plugin !"
 
 #: ../amazon-widgets-shortcode/admin/view/options.php:39
 #: ../amazon-widgets-shortcode/admin/view/options.php:45
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
 msgid "Main Options"
 msgstr "Options principales"
 
@@ -324,57 +324,72 @@ msgid "Other Options"
 msgstr "Autres options"
 
 #: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+msgid "Apply the magic!"
+msgstr "Hop, le tour est joué !"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
 msgid "ASIN Code"
 msgstr "Code ASIN"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
 msgid "Background Color"
 msgstr "Couleur de fond"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
 msgid "Border color"
 msgstr "Couleur de bordure"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+msgid "Copy/paste Amazon HTML's code right below ↓"
+msgstr "Copiez/collez le code HTML Amazon ci-dessous ↓"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
+msgstr "Vous ne souhaitez pas remplir les champs des options principales ? Alors copiez/collez le code HTML Amazon et appréciez l'autocomplétion magique !"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
 msgid "Copy/Paste Code"
 msgstr "Copier/coller de code"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
-msgid "Height"
-msgstr "Hauteur"
-
 #: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
-msgid "pixels"
-msgstr "pixels"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
-msgid "Default Plugin Setting"
-msgstr "Réglage par défaut du plugin"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
-msgid "Small size?"
-msgstr "Petite taille ?"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
-msgid "Widget ID"
-msgstr "Widget ID"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
-msgid "Width"
-msgstr "Largeur"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
 msgid "Glad you look at here!"
 msgstr "Ravi de vous voir ici !"
 
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Height"
+msgstr "Hauteur"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+msgid "pixels"
+msgstr "pixels"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+msgid "Default Plugin Setting"
+msgstr "Réglage par défaut du plugin"
+
 #: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
-msgid "This feature is under heave development and you should enjoy it in the next 1.2 release of this plugin.As you may guess, you will copy/paste widget HTML code provided by Amazon to autofill the previous tab."
-msgstr "Cette fonctionnalité est en plein développement and vous devriez pouvoir en profiter lors de la sortie de la prochaine version de ce plugin, la 1.2. Comme vous pouvez vous en douter, vous pourrez copier/coller le code HTML des widgets fourni par Amazon afin de préremplir le précédent onglet."
+msgid "Small size?"
+msgstr "Petite taille ?"
+
+#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+msgid "Widget ID"
+msgstr "Widget ID"
 
 #: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
-msgid "Nice isn\\t it?"
-msgstr "Sympa n\\est-ce pas ?"
+msgid "Width"
+msgstr "Largeur"
 
+#~ msgid ""
+#~ "This feature is under heave development and you should enjoy it in the "
+#~ "next 1.2 release of this plugin.As you may guess, you will copy/paste "
+#~ "widget HTML code provided by Amazon to autofill the previous tab."
+#~ msgstr ""
+#~ "Cette fonctionnalité est en plein développement and vous devriez pouvoir "
+#~ "en profiter lors de la sortie de la prochaine version de ce plugin, la "
+#~ "1.2. Comme vous pouvez vous en douter, vous pourrez copier/coller le code "
+#~ "HTML des widgets fourni par Amazon afin de préremplir le précédent onglet."
+#~ msgid "Nice isn\\t it?"
+#~ msgstr "Sympa n\\est-ce pas ?"
 #~ msgid "Carrousel ID, contained in HTML parameter value like this:"
 #~ msgstr ""
 #~ "ID du carrousel, contenu dans une valeur de paramètre HTML comme ceci :"

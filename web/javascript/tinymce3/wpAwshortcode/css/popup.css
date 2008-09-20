@@ -4,6 +4,14 @@
  * @package tinymce
  */
 
+.panel_wrapper div.current{
+  height: 300;
+  min-height: 300px;
+}
+html > body .panel_wrapper div.current{
+  height: auto;
+}
+
 form p{
   clear: both;
 }
@@ -17,6 +25,19 @@ form div label{
   text-align: right;
   width: 30%;
 }
+form p.wide label,
+form div.wide label{
+  float: none;
+  clear: left;
+  text-align: left;
+  width: auto;
+}
+
+form .wide textarea{
+	margin: .5em auto;
+  width: 90%;
+}
+
 
 div.colorpicker{
   display: inline;

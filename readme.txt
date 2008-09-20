@@ -4,7 +4,7 @@ Donate link:
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
 Requires at least: 2.5
 Tested up to: 2.6.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -21,6 +21,7 @@ You may like it for these features:
 
 * international support (Canada, France, United Kingdom, USA)
 * easy insertion from Rich Text Editor
+* copy/paste Amazon HTML code
 * valid XHTML code
 * deals nice with both HTML and Rich editors (no more glitches)
 * RSS feed filtering (don't spam your feeds)
@@ -63,6 +64,11 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+
+= Version 1.2 =
+ * Copy/Paste HTML feature
+ * Small code bug fixes
+ * Compressed TinyMCE plugin for faster loading
 
 = Version 1.1 =
  * secured plugin directory using new WP 2.6 constants (backward compatibility for WP 2.5)
@@ -123,10 +129,19 @@ It is a bundled Wordpress feature. It looks like this : `[shortcode]sample value
 It looks like nothing but it is an expandable feature so we can plug our own shortcodes ... like with this widget.
 
 = How can I use the shortcodes? =
-For now, there is an inline documentation right below your post/page edit screen. It explains all shortcodes
-and how you can customize their usage.
+You have 2 ways to using them:
+ * by writing yourself the shortcode as plain text
+ * by using the shortcode wizard provided with the Rich Text Editor (TinyMCE)
 
-You will see, it's easy.
+You can even insert them through the copy/paste feature.
+
+= What is the copy/paste feature you talk about? =
+It's easy : when you want to insert a widget through the RTE wizard, you have a copy/paste tab.
+It's waiting you to copy/paste the Amazon's provided HTML.
+
+It then auto-fills every single field needed.
+
+That is smart. You save time, you gain in quality usage.
 
 = Won't context links garbage my whole page? =
 No it won't.
@@ -142,8 +157,10 @@ But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
 
 == Screenshots ==
 
+
+4. Widget selection via Rich Text Editor (with TinyMCE)
+5. Widget configuration via Rich Text Editor (TinyMCE)
+6. Copy/Paste feature
 1. Main configuration panel
 2. Extra tools configuration panel
 3. Inline documentation
-4. Widget selection via Rich Text Editor (with TinyMCE)
-5. Widget configuration via Rich Text Editor (TinyMCE)

@@ -29,10 +29,14 @@ tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
   align_right:          "'.js_escape(__('right', 'awshortcode')).'",
   alink:                "'.js_escape(__('Link Color', 'awshortcode')).'",
   alt_options:          "'.js_escape(__('Other Options', 'awshortcode')).'",
+  apply_the_magic:      "'.js_escape(__('Apply the magic!', 'awshortcode')).'",
   asin:                 "'.js_escape(__('ASIN Code', 'awshortcode')).'",
   bgcolor:              "'.js_escape(__('Background Color', 'awshortcode')).'",
   bordercolor:          "'.js_escape(__('Border color', 'awshortcode')).'",
+  copypaste_here:       "'.js_escape(__('Copy/paste Amazon HTML\'s code right below ↓', 'awshortcode')).'",
+  copypaste_rtfm:       "'.js_escape(__('Don\'t want to fill main options fields ? So just copy/paste Amazon\'s HTML code and enjoy autocomplete magic!', 'awshortcode')).'",
   copypaste_tab:        "'.js_escape(__('Copy/Paste Code', 'awshortcode')).'",
+  copypaste_welcome:    "'.js_escape(__('Glad you look at here!', 'awshortcode')).'",
   general_tab:          "'.js_escape(__('Main Options', 'awshortcode')).'",
   height:               "'.js_escape(__('Height', 'awshortcode')).'",
   main_options:         "'.js_escape(__('Main Options', 'awshortcode')).'",
@@ -41,10 +45,6 @@ tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
   small:                "'.js_escape(__('Small size?', 'awshortcode')).'",
   widget_id:            "'.js_escape(__('Widget ID', 'awshortcode')).'",
   width:                "'.js_escape(__('Width', 'awshortcode')).'",
-  cpp_welcome:          "'.js_escape(__('Glad you look at here!', 'awshortcode')).'",
-  cpp_message:          "'.js_escape(__('This feature is under heave development and you should enjoy it in the next 1.2 release of this plugin.'.
-                                        'As you may guess, you will copy/paste widget HTML code provided by Amazon to autofill the previous tab.', 'awshortcode')).'",
-  cpp_close:            "'.js_escape(__('Nice isn\t it?', 'awshortcode')).'",
   zzz:                  ""
 });';
 ?>

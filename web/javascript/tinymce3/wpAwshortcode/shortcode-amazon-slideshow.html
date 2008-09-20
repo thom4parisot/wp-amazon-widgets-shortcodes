@@ -61,10 +61,17 @@
       </fieldset>
     </div>
       <div id="copypaste_panel" class="panel">
-        <p><strong>{#wpAwshortcode_dlg.cpp_welcome}</strong></p>
+        <p><strong>{#wpAwshortcode_dlg.copypaste_welcome}</strong></p>
+        <p>{#wpAwshortcode_dlg.copypaste_rtfm}</p>
         
-        <p>{#wpAwshortcode_dlg.cpp_message}</p>
-        <p><em>{#wpAwshortcode_dlg.cpp_close}</em></p>
+        <p class="wide">
+          <label for="copypaste">{#wpAwshortcode_dlg.copypaste_here}</label>
+          <textarea id="copypaste" name="copypaste" rows="15" cols="50" class="html"></textarea>
+        </p>
+
+        <p class="mceActionPanelAlternative">
+          <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm('slideshow', 'copypaste', 'widget-form')" />
+        </p>
       </div>
     </div>
     <div class="mceActionPanel">

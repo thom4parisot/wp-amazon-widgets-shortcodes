@@ -1,0 +1,30 @@
+== Carrousel ==
+{{{
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_fc64116b-6b59-444b-b4ee-074a4adecf57"  WIDTH="600px" HEIGHT="200px"> <PARAM NAME="movie" VALUE="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=GetDisplayTemplate" id="Player_fc64116b-6b59-444b-b4ee-074a4adecf57" quality="high" bgcolor="#ffffff" name="Player_fc64116b-6b59-444b-b4ee-074a4adecf57" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="200px" width="600px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=NoScript">Widgets Amazon.fr</A></NOSCRIPT>
+}}}
+
+== Product ==
+Image + Text
+{{{
+<iframe src="http://rcm-fr.amazon.fr/e/cm?t=onctom-21&o=8&p=8&l=as1&asins=1401207529&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+}}}
+
+Image
+{{{
+<a href="http://www.amazon.fr/gp/product/1401207529?ie=UTF8&tag=onctom-21&linkCode=as2&camp=1642&creative=6746&creativeASIN=1401207529"><img border="0" src="41j3zpn-fTL._SL160_.jpg"></a><img src="http://www.assoc-amazon.fr/e/ir?t=onctom-21&l=as2&o=8&a=1401207529" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+}}}
+
+Text
+{{{
+<a href="http://www.amazon.fr/gp/product/1401207529?ie=UTF8&tag=onctom-21&linkCode=as2&camp=1642&creative=6746&creativeASIN=1401207529">Batman: Year One Deluxe</a><img src="http://www.assoc-amazon.fr/e/ir?t=onctom-21&l=as2&o=8&a=1401207529" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+}}}
+
+== Slideshow ==
+{{{
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_4aa00f5e-1828-4fac-ac94-8596bd8d6803"  WIDTH="300px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8003%2F4aa00f5e-1828-4fac-ac94-8596bd8d6803&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8003%2F4aa00f5e-1828-4fac-ac94-8596bd8d6803&Operation=GetDisplayTemplate" id="Player_4aa00f5e-1828-4fac-ac94-8596bd8d6803" quality="high" bgcolor="#ffffff" name="Player_4aa00f5e-1828-4fac-ac94-8596bd8d6803" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="300px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8003%2F4aa00f5e-1828-4fac-ac94-8596bd8d6803&Operation=NoScript">Widgets Amazon.fr</A></NOSCRIPT>
+}}}
+
+== Wishlist ==
+{{{
+<SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822/FR/onctom-21/8004/e048ac07-8b5b-4b38-abd0-49a92574494d"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8004%2Fe048ac07-8b5b-4b38-abd0-49a92574494d&Operation=NoScript">Widgets Amazon.fr</A></NOSCRIPT>
+}}}
