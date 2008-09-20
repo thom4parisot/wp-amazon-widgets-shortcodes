@@ -53,7 +53,6 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Todo-list ==
-1. Add a "copy/paste" feature that magically converts the HTML code in Wordpress shortcode
 1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
 1. Add support for all Amazon Partners programs
 1. Support for these widgets:
