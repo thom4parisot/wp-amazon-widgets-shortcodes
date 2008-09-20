@@ -117,6 +117,48 @@ class AmazonWidgetsShortcodesTags extends AmazonWidgetsShortcodesToolkit
   }
 
   /**
+   * Produces an Amazon Product Cloud shortcode
+   * 
+   * @version 1.0
+   * @since 1.3
+   * @author oncletom
+   * @return $html String HTML code
+   * @param $atts Array Attributes of the shortcode
+   * @param $widget_id String Widget ID (eg: fc64116b-6b59-444b-b4ee-074a4adecf57)
+   */
+  function widget_productcloud($atts, $widget_id)
+  {
+    extract(
+      shortcode_atts(
+        array(
+          'align' => get_option('awshortcode_align'),
+          'alt' => '',
+        ),
+        $atts
+      )
+    );
+
+    $region = $this->getRegionParameters();
+    $uri = sprintf(
+             $region['url']['widget-productcloud'],
+             $region['marketplace'],
+             get_option('awshortcode_tracking_id'),
+             $widget_id
+           );
+
+    return $this->displayShortcode(
+      '<div style="text-align:'.$align.'" class="awshortcode-productcloud">'.
+        '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
+        '<noscript>'.
+          '<a href="'.$this->encodeParameters($uri).'&amp;Operation=NoScript">'.
+            ($alt ? $alt : __('Consult this product cloud on Amazon.', 'awshortcode')).
+          '</a>'.
+        '</noscript>'.
+      '</div>'
+    );
+  }
+
+  /**
    * Produces an Amazon Slideshow shortcode
    * 
    * HTML code very similar of the Carrousel, only the String Url changes

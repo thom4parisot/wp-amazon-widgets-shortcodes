@@ -36,6 +36,7 @@ Currently supported Amazon widgets/features:
 * Product Preview
 * Product Links (text + picture)
 * Slideshow Widget
+* Product Cloud Widget
 * Wishlist Widget
 
 Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/).
@@ -56,13 +57,16 @@ Now you plug 'n play 'n earn money ;-)
 1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
 1. Add support for all Amazon Partners programs
 1. Support for these widgets:
- * Products cloud
  * My favourites
  * etc.
 1. Makes you earning a lot of money thanks to this widget ;-)
 
 
 == Release notes ==
+
+= Version 1.3 =
+ * inline documentation is now more displayed by default
+ * added Product Cloud Widget
 
 = Version 1.2 =
  * Copy/Paste HTML feature

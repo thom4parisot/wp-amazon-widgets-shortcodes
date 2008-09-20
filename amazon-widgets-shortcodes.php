@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
 Author: Oncle Tom
-Version: 1.2
+Version: 1.3 beta
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
@@ -85,7 +85,7 @@ class AmazonWidgetsShortcodes
       ),
       'awshortcode_inline_documentation' => array(
         'autoload' => true,
-        'defaultValue' => 1,
+        'defaultValue' => 0,
         'onSaveCallback' => 'intval',
         'possibleValues' => array(0, 1),
       ),
@@ -211,6 +211,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   $AwShortcodes = new AmazonWidgetsShortcodesTags();
   add_shortcode('amazon-carrousel', array(&$AwShortcodes, 'widget_carrousel'));
   add_shortcode('amazon-product', array(&$AwShortcodes, 'widget_product'));
+  add_shortcode('amazon-productcloud', array(&$AwShortcodes, 'widget_productcloud'));
   add_shortcode('amazon-slideshow', array(&$AwShortcodes, 'widget_slideshow'));
   add_shortcode('amazon-wishlist', array(&$AwShortcodes, 'widget_wishlist'));
   add_filter('the_excerpt', array(&$AwShortcodes, 'filterXhtmlFormatting'), 999);
