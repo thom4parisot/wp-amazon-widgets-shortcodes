@@ -41,6 +41,8 @@ Currently supported Amazon widgets/features:
 
 Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/).
 
+Plugin available in: English, French and Italian.
+
 
 == Installation ==
 
@@ -66,60 +68,59 @@ Now you plug 'n play 'n earn money ;-)
 
 = Version 1.3 =
  * inline documentation is now more displayed by default
- * added Product Cloud Widget
+ * i18n: new Italian translation thanks to [Gianni Diurno](http://gidibao.net/)
+ * widget: added Product Cloud Widget
 
 = Version 1.2 =
  * Copy/Paste HTML feature
  * Small code bug fixes
- * Compressed TinyMCE plugin for faster loading
+ * tinymce: Compressed plugin for faster loading
 
 = Version 1.1 =
  * secured plugin directory using new WP 2.6 constants (backward compatibility for WP 2.5)
  * improved welcoming text to give more accurate hyperlinks
  * fixed typo issues
- * added Amazon Widgets rich text editor button:
+ * added the ability to hide the documentation from writing pages
+ * this same documentation is also available from the configuration page
+ * the old way call for the carrousel is now obsolete, please follow the usage provided by the widget documentation
+ * tinymce: added Amazon Widgets rich text editor button:
   * insert or edit current widgets in one click
   * handles all supported widgets for now
   * easy inclusion without having to read the documentation
- * added the ability to hide the documentation from writing pages
- * this same documentation is also available from the configuration page
- * reintroduced the slideshow shortcode which was accidentaly removed
- * the old way call for the carrousel is now obsolete, please follow the usage provided by the widget documentation
+ * widget: reintroduced the slideshow shortcode which was accidentaly removed
 
 = Version 1.0 =
  * added Strict Standards compliance mode (`object` instead of `iframe`)
- * added region support for United Kingdom
- * added Slideshow widget support
- * Amazon Partner developer center aware of the plugin (not a feature I admit)
  * markup fix (no more `<p>` embracing the shortcode)
+ * amazon: added region support for United Kingdom
+ * amazon: Amazon Partner developer center aware of the plugin (not a feature I admit)
+ * widget: added Slideshow widget support
 
 = Version 1.0 beta 1 =
- * added region support (USA, Canada and France for now)
- * added Product Preview support
  * inline documentation in the edit page/post screen
  * added extra links to declare bugs and official homepage
  * revamped some parts of code
  * improved stability while plugin is a symlink (activation hook now works)
  * updated the options pages with a tabbed view
- * fixed some translation issues
  * added screenshots to convince you it's a good plugin ;-)
+ * amazon: added region support (USA, Canada and France for now)
+ * i18n: fixed some translation issues
+ * widget: added Product Preview support
 
 = Version 1.0 alpha 3 =
- * internationalisation support (i18n, english and french)
  * "hide widgets in feed" renamed as "show widgets in feed" to match better the setting name (more natural)
- * basic support of context links (no options for now)
+ * i18n: internationalisation support (english and french)
+ * widget: basic support of context links (no options for now)
 
 = Version 1.0 alpha 2 =
-
- * new widget : Amazon Product (text + picture)
  * file organization revamping
  * new option to define default alignment of widgets
  * handling widget alignment (previously customizable but not used)
  * added CSS class to widget container to ease their styling from your stylesheets
  * options are handled by the admin dashboard, no need to edit config.php anymore
+ * widget: added Amazon Product (text + picture)
 
 = Version 1.0 alpha 1 =
-
  * Improved documentation
  * Provides filter for syndication feed publishing (avoid the display of affiliate media in your feed)
  * Separation of the code ; `trunk` is for dev version
@@ -161,9 +162,9 @@ But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
 == Screenshots ==
 
 
-4. Widget selection via Rich Text Editor (with TinyMCE)
-5. Widget configuration via Rich Text Editor (TinyMCE)
-6. Copy/Paste feature
-1. Main configuration panel
-2. Extra tools configuration panel
-3. Inline documentation
+1. Widget selection via Rich Text Editor (with TinyMCE)
+2. Widget configuration via Rich Text Editor (TinyMCE)
+3. Copy/Paste feature
+4. Main configuration panel
+5. Extra tools configuration panel
+6. Inline documentation
