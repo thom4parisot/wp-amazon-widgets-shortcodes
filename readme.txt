@@ -1,10 +1,10 @@
 === Amazon Widgets Shortcodes ===
-Contributors: oncletom
+Contributors: oncletom, gidibao
 Donate link:
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
 Requires at least: 2.5
 Tested up to: 2.6.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -19,7 +19,7 @@ Now you can earn money with affiliate links without any pain and with XHTML stan
 
 You may like it for these features:
 
-* international support (Canada, France, United Kingdom, USA)
+* international Amazon support (Canada, France, United Kingdom, USA)
 * easy insertion from Rich Text Editor
 * copy/paste Amazon HTML code
 * valid XHTML code
@@ -27,6 +27,7 @@ You may like it for these features:
 * RSS feed filtering (don't spam your feeds)
 * minimal shortcodes (1 option and it runs)
 * inline documentation to help you using the shortcodes while writing your posts
+* built-in translations: English, French and Italian.
 
 
 Currently supported Amazon widgets/features:
@@ -39,10 +40,7 @@ Currently supported Amazon widgets/features:
 * Product Cloud Widget
 * Wishlist Widget
 
-Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/).
-
-Plugin available in: English, French and Italian.
-
+Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/) if you are not convinced.
 
 == Installation ==
 
@@ -66,10 +64,9 @@ Now you plug 'n play 'n earn money ;-)
 
 == Release notes ==
 
-= Version 1.3 =
- * inline documentation is now more displayed by default
+= Version 1.2.1 =
+ * small reorganization of screenshots on WP.org plugin page
  * i18n: new Italian translation thanks to [Gianni Diurno](http://gidibao.net/)
- * widget: added Product Cloud Widget
 
 = Version 1.2 =
  * Copy/Paste HTML feature
@@ -153,6 +150,23 @@ No it won't.
 I added a filter so the context links areas are confined to post and page contents.
 If politely asked, I can make this customizable from the plugin management page.
 
+= Can I translate your plugin? =
+Yes for sure but do it only if it's not already translated in your language.
+For this, check Wordpress documentation about [translating a plugin](http://codex.wordpress.org/Writing_a_Plugin#Internationalizing_Your_Plugin) and [translating Wordpress](http://codex.wordpress.org/Translating_WordPress)
+
+Once you have done your first translation from the trunk, [contact me](http://case.oncle-tom.net/contact).
+
+= How is organized the translation =
+There are 3 steps:
+1. code freezing
+2. translation
+3. code release
+
+The code freeze will ... freeze the code in the repository. It means there won't be any changes, except some small bug fixes which don't impact translating work.
+All the translation team will be notified by email about the code change and will let 1 week to translate new chains.
+
+Once all the translations are up, they are added in the repository and the new plugin released.
+
 = Nespresso, what else? =
 Yep, what else?
 
@@ -160,7 +174,6 @@ But no, George Clooney neither Nespresso are a feature of this plugin. Too bad!
 
 
 == Screenshots ==
-
 
 1. Widget selection via Rich Text Editor (with TinyMCE)
 2. Widget configuration via Rich Text Editor (TinyMCE)
