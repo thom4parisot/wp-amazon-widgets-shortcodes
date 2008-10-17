@@ -1,10 +1,10 @@
 === Amazon Widgets Shortcodes ===
-Contributors: oncletom, gidibao
+Contributors: oncletom
 Donate link:
-Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg
+Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 2.6.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -63,6 +63,9 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+
+= Version 1.2.2 =
+ * support for WPMU
 
 = Version 1.2.1 =
  * small reorganization of screenshots on WP.org plugin page

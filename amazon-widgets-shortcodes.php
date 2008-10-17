@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Amazon Widgets Shortcodes
-Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links.
+Description: Enables many shortcodes to display Amazon products on your blog easily! Also adds some features such as context links. Also works on WPMU.
 Author: Oncle Tom
 Version: 1.3 beta
 Author URI: http://oncle-tom.net/
