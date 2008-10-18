@@ -22,16 +22,13 @@
 
   <p><?php _e('Enjoy the usage of this plugin!', 'awshortcode') ?></p>
 
-  <?php
-  /*
-   * Options dynamic options
-   */
-  $options = AmazonWidgetsShortcodes::getRegisteredOptions();
-  $regions = AmazonWidgetsShortcodesToolkit::getRegionParameters('');
-  ?>
-
   <form action="options.php" method="post">
-    <?php wp_nonce_field('update-options') ?>
+    <?php if ($wp_version < '2.7' && !isset($wpmu_version)): ?>
+      <?php wp_nonce_field('update-options') ?>
+    <?php else: ?>
+      <?php wp_nonce_field('awshortcode-options') ?>
+      <input type="hidden" name="option_page" value="awshortcode" />
+    <?php endif ?>
     <input type="hidden" name="action" value="update" />
     <input type="hidden" name="page_options" value="<?php echo implode(',', array_keys($options)) ?>" />
 

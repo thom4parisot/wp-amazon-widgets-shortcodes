@@ -5,7 +5,7 @@
 
 if ($_POST['action'] == 'update')
 {
-  foreach (AmazonWidgetsShortcodes::getRegisteredOptions() as $id => $option)
+  foreach ($options as $id => $option)
   {
     update_option(
       $id,

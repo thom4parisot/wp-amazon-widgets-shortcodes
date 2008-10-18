@@ -29,6 +29,17 @@ class AmazonWidgetsShortcodesAdmin
    */
   function displayOptions()
   {
+    global $wp_version, $wpmu_version;
+
+    /*
+     * Options dynamic options
+     */
+    $options = AmazonWidgetsShortcodes::getRegisteredOptions();
+    $regions = AmazonWidgetsShortcodesToolkit::getRegionParameters('');
+
+    /*
+     * Including elements
+     */
     include AWS_PLUGIN_BASEPATH.'/admin/form/options.php';
     include AWS_PLUGIN_BASEPATH.'/admin/view/options.php';
   }
@@ -105,5 +116,29 @@ class AmazonWidgetsShortcodesAdmin
      */
     add_action('admin_head-'.$options_page, array('AmazonWidgetsShortcodesAdmin', 'printStylesheet'));
     add_action('admin_print_scripts-'.$options_page, array('AmazonWidgetsShortcodesAdmin', 'printJavascript'));
+  }
+
+  /**
+   * Add whitelist options for WPMU
+   * 
+   * @see http://wordpress.org/support/topic/191773#post-876524
+   * @see http://mu.wordpress.org/forums/topic.php?id=9210
+   * @author oncletom
+   * @since 1.2.2
+   * @return $whitelist Array
+   * @param $whitelist Array
+   */
+  function setupOptionsWhitelist($whitelist)
+  {
+    if (is_array($whitelist))
+    {
+      $whitelist = array_merge(
+        $whitelist,
+        array(
+          'awshortcode' => array_keys(AmazonWidgetsShortcodes::getRegisteredOptions())
+        ));
+    }
+
+    return $whitelist;
   }
 }

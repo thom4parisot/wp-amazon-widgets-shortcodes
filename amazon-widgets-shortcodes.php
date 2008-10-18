@@ -191,6 +191,7 @@ if (is_admin())
 {
   require(AWS_PLUGIN_BASEPATH.'/lib/shortcodesAdmin.class.php');
   add_action('admin_menu', array('AmazonWidgetsShortcodesAdmin', 'setupAdminMenu'));
+  add_filter('whitelist_options', array('AmazonWidgetsShortcodesAdmin', 'setupOptionsWhitelist'));
 
   if (get_option('awshortcode_inline_documentation'))
   {

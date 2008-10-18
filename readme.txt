@@ -3,7 +3,7 @@ Contributors: oncletom
 Donate link:
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
-Tested up to: 2.6.1
+Tested up to: 2.7.x
 Stable tag: 1.2.2
 
 
@@ -64,8 +64,13 @@ Now you plug 'n play 'n earn money ;-)
 
 == Release notes ==
 
+= Version 1.3 =
+ * inline documentation is now more displayed by default 
+ * widget: added Product Cloud Widget 
+ * wordpress: Wordpress 2.7 compatibility
+
 = Version 1.2.2 =
- * support for WPMU
+ * wordpress: support of Wordpress µ 2.5+
 
 = Version 1.2.1 =
  * small reorganization of screenshots on WP.org plugin page
