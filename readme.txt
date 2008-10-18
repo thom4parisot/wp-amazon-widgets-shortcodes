@@ -65,7 +65,8 @@ Now you plug 'n play 'n earn money ;-)
 == Release notes ==
 
 = Version 1.3 =
- * inline documentation is now more displayed by default 
+ * inline documentation is now more displayed by default
+ * huge code overhaul for easier maintenance
  * widget: added Product Cloud Widget 
  * wordpress: Wordpress 2.7 compatibility
 

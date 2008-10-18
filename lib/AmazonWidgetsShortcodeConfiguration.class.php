@@ -1,243 +1,109 @@
 <?php
 /**
- * Tookit functions used by the AmazonWidgetsShortcodesTags class
- * 
  * @author oncletom
- * @version 1.0
- * @since 1.0 alpha 2
  */
-class AmazonWidgetsShortcodesToolkit
+
+class AmazonWidgetsShortcodeConfiguration
 {
   /**
-   * Displays context links on Amazon links
+   * Easy way to get the whole list of registered options
    * 
    * @author oncletom
-   * @version 1.1
-   * @since 1.0 alpha 3
-   * @return 
+   * @version 2.0
+   * @since 1.3
+   * @return $options Array List of options and meta
    */
-  function displayContextLinks()
+  function getOptions()
   {
-    $tracking_id = get_option('awshortcode_tracking_id');
-    $region = $this->getRegionParameters();
-    $src = $region['url']['tool-contextlinks'];
-    echo <<<EOF
-<script type="text/javascript">//<![CDATA[
-var amzn_cl_tag = '{$tracking_id}';
-//]]></script><script type="text/javascript" src="{$src}"></script>
-EOF;
+    return array(
+      'awshortcode_align' => array(
+        'autoload' => true,
+        'defaultValue' => 'center',
+        'onSaveCallback' => '',
+        'possibleValues' => array(
+          'left' => __('left', 'awshortcode'),
+          'center' => __('centered', 'awshortcode'),
+          'right' => __('right', 'awshortcode')
+        ),
+      ),
+      'awshortcode_context_links' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_feed' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_inline_documentation' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_product_preview' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_region' => array(
+        'autoload' => true,
+        'defaultValue' => 'us',
+        'onSaveCallback' => '',
+        'possibleValues' => '',
+      ),
+      'awshortcode_strict_standards' => array(
+        'autoload' => true,
+        'defaultValue' => 0,
+        'onSaveCallback' => 'intval',
+        'possibleValues' => array(0, 1),
+      ),
+      'awshortcode_tracking_id' => array(
+        'autoload' => true,
+        'defaultValue' => '',
+        'onSaveCallback' => '',
+        'possibleValues' => '',
+      ),
+    );
   }
 
   /**
-   * Displays context links on Amazon links
-   * 
-   * @author oncletom
-   * @version 1.1
-   * @since 1.0 alpha 3
-   * @return 
-   */
-  function displayProductPreview()
-  {
-    $region = $this->getRegionParameters();
-    $src = sprintf(
-            $region['url']['tool-productpreview'],
-            get_option('awshortcode_tracking_id')
-           );
-
-    echo <<<EOF
-<script type="text/javascript" src="{$src}"></script>
-EOF;
-  }
-
-  /**
-   * Displays or not the widget according to some conditions
-   * 
-   * Conditions are:
-   * - publication to feed is enabled (disabled by default)
-   * - AND we are in a feed
+   * Return a region configuration
    * 
    * @author oncletom
    * @version 1.0
-   * @since 1.0 alpha 2
-   * @return $html String HTML widget
-   * @param $html String HTML widget
+   * @since 1.3
+   * @return $region Array Specific region settings
+   * @param $country_code String[optional] Country code to get settings ; if null, grab the default region
    */
-  function displayShortcode($html)
+  function getRegion($country_code = null)
   {
-    return get_option('awshortcode_feed') || !is_feed() ? $html : '';
-  }
-
-  /**
-   * Encode some parameters located in the query string of an URL for proper behavior purpose
-   * 
-   * Encode characters such as :
-   * - / -> %2F
-   * - & -> &amp;
-   * - &amp;amp; -> &amp; (avoids double "&" encoding)
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1 beta
-   * @return $encoded_uri String Encoded URI
-   * @param $uri String Uri to encode
-   */
-  function encodeParameters($uri)
-  {
-    $parsed_uri = parse_url($uri);
-    $qs_original = $parsed_uri['query'];
-    $qs = str_replace(array('/', '&', '&amp;amp;'), array('%2F', '&amp;', '&amp;'), $qs_original);
-
-    return str_replace($qs_original, $qs, $uri);
-  }
-
-  /**
-   * Loads additional buttons into the TinyMCE 3 UI
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1
-   * @return $buttons Array Set of TinyMCE buttons, modified
-   * @param $buttons Array Set of TinyMCE buttons
-   */
-  function executeTinymce3Buttons($buttons)
-  {
-    $buttons[] = 'awshortcode-selector';
-    return $buttons;
-  }
-
-  /**
-   * Execute TinyMCE 3 hooks and filters
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1
-   * @return null or false if no permission to edit page or post
-   */
-  function executeTinymce3Hook()
-  {
-    if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
-    {
-      return false;
-    }
-
-    if (get_user_option('rich_editing') == 'true')
-    {
-      add_filter('mce_external_plugins', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Plugins'));
-      add_filter('mce_buttons', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Buttons'));
-      add_filter('mce_external_languages', array('AmazonWidgetsShortcodesToolkit', 'executeTinymce3Langs') );
-    }
-  }
-
-  /**
-   * Loads TinyMCE 3 language files
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1
-   * @return $langs Array Set of TinyMCE languages, modified
-   * @param $langs Array Set of TinyMCE languages
-   */
-  function executeTinymce3Langs($langs)
-  {
-    $langs['wpAwshortcode'] = WP_PLUGIN_DIR.'/amazon-widgets-shortcodes/web/javascript/tinymce3/wpAwshortcode/langs/langs.php';
-    return $langs;
-  }
-
-  /**
-   * Loads TinyMCE 3 external plugins
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1
-   * @return $plugins Array Set of TinyMCE plugins, modified
-   * @param $plugins Array Set of TinyMCE plugins
-   */
-  function executeTinymce3Plugins($plugins)
-  {
-    $plugins['wpAwshortcode'] = WP_PLUGIN_URL.'/amazon-widgets-shortcodes/web/javascript/tinymce3/wpAwshortcode/editor_plugin.js';
-    return $plugins;
-  }
-
-  /**
-   * Filter an hexa code to return it with a prefix, if needed
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.1
-   * @return $color String
-   * @param $color String Hexadecimal color to filter
-   * @param $prefix Boolean[optional] Add a hash prefix or not
-   * 
-   * @todo add a better filter which checks hexa code and more
-   */
-  function filterHexaColor($color, $prefix = true)
-  {
-    // no need to go further
-    if (!$color)
-    {
-      return '';
-    }
-
-    $color = preg_replace('/[^a-fA-F0-9]/U', '', $color);
-    $prefix = (bool)$prefix && $color ? '#' : '';
-    return $prefix.$color;
-  }
-
-  /**
-   * Wraps content in Amazon proprietary HTML comments tag
-   * 
-   * Context links are added by Amazon engine only between those parts.
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.0 beta 1
-   * @return $html String Filtered HTML
-   * @param $html String Post/page content to filter
-   */
-  function filterContextLinks($html)
-  {
-    return
-      '<!--Amazon_CLS_IM_START-->'.
-      $html.
-      '<!--Amazon_CLS_IM_END-->';
-  }
-
-  /**
-   * Removes nasty tag wrapping the shortcode
-   * 
-   * @author oncletom
-   * @version 1.0
-   * @since 1.0 beta 2
-   * @return $html String Filtered HTML
-   * @param $html String Post/page content to filter
-   */
-  function filterXhtmlFormatting($html)
-  {
-    return preg_replace(
-             '#<p>(<div .+ class="awshortcode-[a-z0-9]+">.+</div>)</p>#sU',
-             "$1",
-             $html
-           );
-  }
-
-  /**
-   * Getter for international Amazon parameters
-   * 
-   * @author oncletom
-   * @version 1.2
-   * @since 1.0 beta 1
-   * @return $settings Array Settings for all or a limited area
-   * @param $country_code String[Optionnal] limit the returned settings to this country code
-   */
-  function getRegionParameters($country_code = 'autodetect')
-  {
-    if ($country_code == 'autodetect')
+    if (is_null($country_code))
     {
       $country_code = get_option('awshortcode_region');
       $country_code = $country_code ? $country_code : 'us';
     }
 
-    $amazon = array(
+    $regions = AmazonWidgetsShortcodeConfiguration::getRegions();
+
+    return $regions[$country_code];
+  }
+
+  /**
+   * Returns all region configuration
+   * 
+   * @author oncletom
+   * @version 2.0
+   * @since 1.3
+   * @return $regions Array
+   */
+  function getRegions()
+  {
+    return array(
       'ca' => array(
         'lang_iso_code' => 'en_CA',
         'marketplace' => 'CA',
@@ -335,8 +201,34 @@ EOF;
         ),
       ),
     );
+  }
 
-    return $country_code ? $amazon[$country_code] : $amazon;
+  /**
+   * Returns shortcodes configuration
+   * 
+   * @static
+   * @version 1.0
+   * @since 1.3
+   * @return $shortcodes Array Shortcodes configuration
+   */
+  public function getShortcodes()
+  {
+    return array(
+      'amazon-carrousel' => array(
+        'class' => 'AmazonWidgetsShortcodeCarrousel',
+      ),
+      'amazon-product' => array(
+        'class' => 'AmazonWidgetsShortcodeProduct',
+      ),
+      'amazon-productcloud' => array(
+        'class' => 'AmazonWidgetsShortcodeProductCloud',
+      ),
+      'amazon-slideshow' => array(
+        'class' => 'AmazonWidgetsShortcodeSlideshow',
+      ),
+      'amazon-wishlist' => array(
+        'class' => 'AmazonWidgetsShortcodeWishlist',
+      ),
+    );
   }
 }
-?>

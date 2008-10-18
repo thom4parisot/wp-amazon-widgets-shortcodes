@@ -34,8 +34,8 @@ class AmazonWidgetsShortcodesAdmin
     /*
      * Options dynamic options
      */
-    $options = AmazonWidgetsShortcodes::getRegisteredOptions();
-    $regions = AmazonWidgetsShortcodesToolkit::getRegionParameters('');
+    $options = AmazonWidgetsShortcodeConfiguration::getOptions();
+    $regions = AmazonWidgetsShortcodeConfiguration::getRegions();
 
     /*
      * Including elements
@@ -135,7 +135,7 @@ class AmazonWidgetsShortcodesAdmin
       $whitelist = array_merge(
         $whitelist,
         array(
-          'awshortcode' => array_keys(AmazonWidgetsShortcodes::getRegisteredOptions())
+          'awshortcode' => array_keys(AmazonWidgetsShortcodeConfiguration::getOptions())
         ));
     }
 
