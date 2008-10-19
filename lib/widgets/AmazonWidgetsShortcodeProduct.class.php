@@ -36,6 +36,9 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
       )
     );
 
+    /*
+     * Preparing data
+     */
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
     $uri = sprintf(
              $region['url']['widget-product'],
@@ -49,6 +52,9 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
              call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $bgcolor, false)
            );
 
+    /*
+     * Display
+     */
     if (get_option('awshortcode_strict_standards'))
     {
       return

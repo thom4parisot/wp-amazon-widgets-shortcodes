@@ -33,6 +33,9 @@ class AmazonWidgetsShortcodeCarrousel extends AmazonWidgetsShortcodeBase
       )
     );
 
+    /*
+     * Preparing data
+     */
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
     $uri = sprintf(
              $region['url']['widget-carrousel'],
@@ -41,12 +44,16 @@ class AmazonWidgetsShortcodeCarrousel extends AmazonWidgetsShortcodeBase
              $value,
              'GetDisplayTemplate'
            );
+    $bgcolor = call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $bgcolor);
 
+    /*
+     * Display
+     */
     return
       '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
         '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
           '<param name="movie" value="'.$uri.'" />'.
-          '<param name="bgcolor" value="'.call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $bgcolor).'" />'.
+          '<param name="bgcolor" value="'.$bgcolor.'" />'.
           '<param name="quality" value="high" />'.
           '<param name="allowscriptaccess" value="always" />'.
           '<param name="wmode" value="transparent" />'.

@@ -29,6 +29,9 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
       )
     );
 
+    /*
+     * Preparing data
+     */
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
     $uri = sprintf(
              $region['url']['widget-wishlist'],
@@ -36,12 +39,16 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
              get_option('awshortcode_tracking_id'),
              $value
            );
+    $uri_encoded = call_user_func(array(__CLASS__, 'encodeParameters'), $uri);
 
+    /*
+     * Display
+     */
     return
       '<div style="text-align:'.$align.'" class="awshortcode-wishlist">'.
         '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
         '<noscript>'.
-          '<a href="'.call_user_func(array(__CLASS__, 'encodeParameters'), $uri).'&amp;Operation=NoScript">'.
+          '<a href="'.$uri_encoded.'&amp;Operation=NoScript">'.
             ($alt ? $alt : __('Consult this wishlist on Amazon.', 'awshortcode')).
           '</a>'.
         '</noscript>'.
