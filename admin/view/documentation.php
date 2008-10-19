@@ -77,7 +77,6 @@
     </ul>
 
     <h4><?php _e('Amazon Product', 'awshortcode') ?></h4>
-    <p><?php _e('For now, it only handles this widget in the "Text + picture" version.', 'awshortcode') ?></p>
     <ul>
       <li>
         <strong><?php _e('Shortcode:', 'awshortcode') ?></strong>
@@ -85,10 +84,12 @@
       </li>
       <li>
         <strong><?php _e('Example:', 'awshortcode') ?></strong>
-        <code>[amazon-product align="right"]0596529309[/amazon-product]</code>
+        <code>[amazon-product align="right"]0596529309[/amazon-product]</code>,
+        <code>[amazon-product type="text" text="High Performance Websites"]0596529309[/amazon-product]</code>,
+        <code>[amazon-product type="image" image="41W8EhCQu-L._SL160_SL120_.jpg"]0596529309[/amazon-product]</code>
       </li>
       <li>
-        <strong><?php _e('Options:', 'awshortcode') ?></strong>
+        <strong><?php _e('Options:', 'awshortcode') ?> (<?php _e('Image and Text', 'awshortcode') ?>)</strong>
         <ul>
           <li>
             <code>align</code>:
@@ -129,6 +130,36 @@
             <code>width</code>:
             [<?php _e('value in pixels', 'awshortcode') ?>]
             <?php _e('width of the frame', 'awshortcode') ?>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong><?php _e('Options:', 'awshortcode') ?> (<?php _e('Image only', 'awshortcode') ?>)</strong>
+        <ul>
+          <li>
+            <code>image</code>:
+            [<?php _e('image name or Amazon OR full image URL', 'awshortcode') ?>]
+            <?php _e('align the widget on the desired way', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>type</code>:
+            {image}
+            <?php _e('display the widget as image', 'awshortcode') ?>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong><?php _e('Options:', 'awshortcode') ?> (<?php _e('Text only', 'awshortcode') ?>)</strong>
+        <ul>
+          <li>
+            <code>text</code>:
+            [<?php _e('string', 'awshortcode') ?>]
+            <?php _e('text of the hyperlink', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>type</code>:
+            {text}
+            <?php _e('display the widget as hypertext link', 'awshortcode') ?>
           </li>
         </ul>
       </li>

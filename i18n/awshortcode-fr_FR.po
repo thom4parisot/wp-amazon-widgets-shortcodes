@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-19 18:32+0100\n"
-"PO-Revision-Date: 2008-10-19 18:33+0100\n"
+"POT-Creation-Date: 2008-10-19 18:44+0100\n"
+"PO-Revision-Date: 2008-10-19 18:46+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -64,16 +64,19 @@ msgid "Amazon USA"
 msgstr "Amazon États-Unis"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:256
+#: ../admin/view/documentation.php:92
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
 msgid "Image and Text"
 msgstr "Image et texte"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:257
+#: ../admin/view/documentation.php:137
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
 msgid "Image only"
 msgstr "Image uniquement"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:258
+#: ../admin/view/documentation.php:152
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
 msgid "Text only"
 msgstr "Texte uniquement"
@@ -110,88 +113,91 @@ msgstr "Carrousel Amazon"
 
 #: ../admin/view/documentation.php:8
 #: ../admin/view/documentation.php:50
-#: ../admin/view/documentation.php:83
-#: ../admin/view/documentation.php:144
-#: ../admin/view/documentation.php:176
-#: ../admin/view/documentation.php:218
+#: ../admin/view/documentation.php:82
+#: ../admin/view/documentation.php:175
+#: ../admin/view/documentation.php:207
+#: ../admin/view/documentation.php:249
 msgid "Shortcode:"
 msgstr "Shortcode :"
 
 #: ../admin/view/documentation.php:12
 #: ../admin/view/documentation.php:54
-#: ../admin/view/documentation.php:87
-#: ../admin/view/documentation.php:148
-#: ../admin/view/documentation.php:180
-#: ../admin/view/documentation.php:222
+#: ../admin/view/documentation.php:86
+#: ../admin/view/documentation.php:179
+#: ../admin/view/documentation.php:211
+#: ../admin/view/documentation.php:253
 msgid "Example:"
 msgstr "Exemple :"
 
 #: ../admin/view/documentation.php:16
 #: ../admin/view/documentation.php:58
-#: ../admin/view/documentation.php:91
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:137
 #: ../admin/view/documentation.php:152
-#: ../admin/view/documentation.php:184
-#: ../admin/view/documentation.php:226
+#: ../admin/view/documentation.php:183
+#: ../admin/view/documentation.php:215
+#: ../admin/view/documentation.php:257
 msgid "Options:"
 msgstr "Options :"
 
 #: ../admin/view/documentation.php:21
 #: ../admin/view/documentation.php:63
-#: ../admin/view/documentation.php:96
-#: ../admin/view/documentation.php:101
-#: ../admin/view/documentation.php:157
-#: ../admin/view/documentation.php:189
-#: ../admin/view/documentation.php:231
+#: ../admin/view/documentation.php:97
+#: ../admin/view/documentation.php:102
+#: ../admin/view/documentation.php:142
+#: ../admin/view/documentation.php:188
+#: ../admin/view/documentation.php:220
+#: ../admin/view/documentation.php:262
 msgid "align the widget on the desired way"
 msgstr "aligne le widget dans le sens souhaité"
 
 #: ../admin/view/documentation.php:25
-#: ../admin/view/documentation.php:100
-#: ../admin/view/documentation.php:105
-#: ../admin/view/documentation.php:110
-#: ../admin/view/documentation.php:193
+#: ../admin/view/documentation.php:101
+#: ../admin/view/documentation.php:106
+#: ../admin/view/documentation.php:111
+#: ../admin/view/documentation.php:224
 msgid "CSS hexa or code value"
 msgstr "valeur hexadécimale ou code couleur CSS"
 
 #: ../admin/view/documentation.php:26
-#: ../admin/view/documentation.php:106
-#: ../admin/view/documentation.php:194
+#: ../admin/view/documentation.php:107
+#: ../admin/view/documentation.php:225
 msgid "customize the background color of the widget"
 msgstr "personnalise la couleur de fond du widget"
 
 #: ../admin/view/documentation.php:30
 #: ../admin/view/documentation.php:35
-#: ../admin/view/documentation.php:115
-#: ../admin/view/documentation.php:130
-#: ../admin/view/documentation.php:198
-#: ../admin/view/documentation.php:203
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:131
+#: ../admin/view/documentation.php:229
+#: ../admin/view/documentation.php:234
 msgid "value in pixels"
 msgstr "valeur en pixels"
 
 #: ../admin/view/documentation.php:31
-#: ../admin/view/documentation.php:199
+#: ../admin/view/documentation.php:230
 msgid "height of the animation"
 msgstr "hauteur de l'animation"
 
 #: ../admin/view/documentation.php:36
-#: ../admin/view/documentation.php:204
+#: ../admin/view/documentation.php:235
 msgid "width of the animation"
 msgstr "largeur de l'animation"
 
 #: ../admin/view/documentation.php:41
 #: ../admin/view/documentation.php:73
-#: ../admin/view/documentation.php:136
 #: ../admin/view/documentation.php:167
-#: ../admin/view/documentation.php:209
-#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:198
+#: ../admin/view/documentation.php:240
+#: ../admin/view/documentation.php:272
 msgid "Content:"
 msgstr "Contenu :"
 
 #: ../admin/view/documentation.php:42
 #: ../admin/view/documentation.php:74
-#: ../admin/view/documentation.php:168
-#: ../admin/view/documentation.php:210
-#: ../admin/view/documentation.php:242
+#: ../admin/view/documentation.php:199
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:273
 msgid "Widget ID, contained in HTML parameter value like this:"
 msgstr "ID du Widget, contenu dans une valeur de paramètre HTML comme ceci :"
 
@@ -201,15 +207,16 @@ msgid "Amazon My Favorites"
 msgstr "Mes Favoris Amazon"
 
 #: ../admin/view/documentation.php:67
-#: ../admin/view/documentation.php:125
-#: ../admin/view/documentation.php:161
-#: ../admin/view/documentation.php:235
+#: ../admin/view/documentation.php:126
+#: ../admin/view/documentation.php:156
+#: ../admin/view/documentation.php:192
+#: ../admin/view/documentation.php:266
 msgid "string"
 msgstr "texte"
 
 #: ../admin/view/documentation.php:68
-#: ../admin/view/documentation.php:162
-#: ../admin/view/documentation.php:236
+#: ../admin/view/documentation.php:193
+#: ../admin/view/documentation.php:267
 msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
 msgstr "texte alternatif sur Flash ou JavaScript ne sont pas disponibles sur le navigateur du visiteur"
 
@@ -218,45 +225,57 @@ msgstr "texte alternatif sur Flash ou JavaScript ne sont pas disponibles sur le 
 msgid "Amazon Product"
 msgstr "Produit Amazon"
 
-#: ../admin/view/documentation.php:80
-msgid "For now, it only handles this widget in the \"Text + picture\" version."
-msgstr "Pour l'instant, il ne prend en charge que la version \"Texte + image\"."
-
-#: ../admin/view/documentation.php:111
+#: ../admin/view/documentation.php:112
 msgid "border color of the widget"
 msgstr "couleur de la bordure du widget"
 
-#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:117
 msgid "height of the frame"
 msgstr "hauteur de la frame"
 
-#: ../admin/view/documentation.php:121
+#: ../admin/view/documentation.php:122
 msgid "display a small picture or a big one (0 by default)"
 msgstr "affiche une petite ou une grande image (0 par défaut)"
 
-#: ../admin/view/documentation.php:126
+#: ../admin/view/documentation.php:127
 msgid "window name to open the link in (_blank by default)"
 msgstr "nom de la fenêtre dans lequel le lien sera ouvert (_blank par défaut)"
 
-#: ../admin/view/documentation.php:131
+#: ../admin/view/documentation.php:132
 msgid "width of the frame"
 msgstr "largeur de la frame"
 
-#: ../admin/view/documentation.php:137
+#: ../admin/view/documentation.php:141
+msgid "image name or Amazon OR full image URL"
+msgstr "Nom de l'image sur Amazon OU son URL complète"
+
+#: ../admin/view/documentation.php:147
+msgid "display the widget as image"
+msgstr "affiche le widget comme une image"
+
+#: ../admin/view/documentation.php:157
+msgid "text of the hyperlink"
+msgstr "texte de l'hyperlien"
+
+#: ../admin/view/documentation.php:162
+msgid "display the widget as hypertext link"
+msgstr "affiche le widget comme un lien hypertexte"
+
+#: ../admin/view/documentation.php:168
 msgid "ASIN code of the product."
 msgstr "Code ASIN du produit."
 
-#: ../admin/view/documentation.php:141
+#: ../admin/view/documentation.php:172
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
 msgid "Amazon Product Cloud"
 msgstr "Nuage de produits Amazon"
 
-#: ../admin/view/documentation.php:173
+#: ../admin/view/documentation.php:204
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
 msgid "Amazon Slideshow"
 msgstr "Amazon Slideshow"
 
-#: ../admin/view/documentation.php:215
+#: ../admin/view/documentation.php:246
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
 msgid "Amazon Wishlist"
 msgstr "Idées cadeaux Amazon"
@@ -439,4 +458,9 @@ msgstr "Widget ID"
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
 msgid "Width"
 msgstr "Largeur"
+
+#~ msgid ""
+#~ "For now, it only handles this widget in the \"Text + picture\" version."
+#~ msgstr ""
+#~ "Pour l'instant, il ne prend en charge que la version \"Texte + image\"."
 
