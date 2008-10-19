@@ -19,13 +19,17 @@ if (!defined('WP_PLUGIN_DIR'))
   define('WP_PLUGIN_DIR', ABSPATH.PLUGINDIR);
   define('WP_PLUGIN_URL', get_bloginfo('url').'/'.PLUGINDIR);
 }
+if (!defined('WP_CONTENT_DIR'))
+{
+  define('WP_CONTENT_DIR', ABSPATH.'wp-content');
+}
 
 
 /*
  * Bootstrap
  */
-require dirname(__FILE__).'/lib/AmazonWidgetsShortcodePlugin.class.php';
-require dirname(__FILE__).'/lib/AmazonWidgetsShortcodeConfiguration.class.php';
+require_once dirname(__FILE__).'/lib/AmazonWidgetsShortcodePlugin.class.php';
+require_once dirname(__FILE__).'/lib/AmazonWidgetsShortcodeConfiguration.class.php';
 AmazonWidgetsShortcodePlugin::bootstrap(__FILE__);
 
 
@@ -36,7 +40,7 @@ AmazonWidgetsShortcodePlugin::bootstrap(__FILE__);
 if (is_admin())
 {
   $class = 'AmazonWidgetsShortcodesAdmin';
-  require(AWS_PLUGIN_BASEPATH.'/lib/'.$class.'.class.php');
+  require_once(AWS_PLUGIN_BASEPATH.'/lib/'.$class.'.class.php');
   add_action('admin_menu', array($class, 'setupAdminMenu'));
   add_filter('whitelist_options', array($class, 'setupOptionsWhitelist'));
 
@@ -60,7 +64,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   AmazonWidgetsShortcodePlugin::registerShortcodes();
 
   $class = 'AmazonWidgetsShortcodeFilters';
-  require AWS_PLUGIN_BASEPATH.'/lib/'.$class.'.class.php';
+  require_once AWS_PLUGIN_BASEPATH.'/lib/'.$class.'.class.php';
   add_filter('the_excerpt', array($class, 'FormatXhtmlPost'), 999);
   add_filter('the_content', array($class, 'FormatXhtmlPost'), 999);
 
@@ -74,7 +78,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   if (get_option('awshortcode_context_links'))
   {
     $class = 'AmazonWidgetsShortcodeContextLink';
-    require AWS_PLUGIN_BASEPATH.'/lib/tools/'.$class.'.class.php';
+    require_once AWS_PLUGIN_BASEPATH.'/lib/tools/'.$class.'.class.php';
     add_filter('the_excerpt', array($class, 'filterContextLinks'), 900);
     add_filter('the_content', array($class, 'filterContextLinks'), 900);
     add_action('wp_footer', array($class, 'getHtmlCode'));
@@ -83,7 +87,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   if (get_option('awshortcode_product_preview'))
   {
     $class = 'AmazonWidgetsShortcodeProductPreview';
-    require AWS_PLUGIN_BASEPATH.'/lib/tools/'.$class.'.class.php';
+    require_once AWS_PLUGIN_BASEPATH.'/lib/tools/'.$class.'.class.php';
     add_action('wp_footer', array($class, 'displayProductPreview'));
   }
 }
@@ -93,5 +97,5 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
  * Global stuff
  */
 $class = 'AmazonWidgetsShortcodeRteTinyMce';
-require AWS_PLUGIN_BASEPATH.'/lib/rte/'.$class.'.class.php';
+require_once AWS_PLUGIN_BASEPATH.'/lib/rte/'.$class.'.class.php';
 add_action('init', array($class, 'bootstrap'));

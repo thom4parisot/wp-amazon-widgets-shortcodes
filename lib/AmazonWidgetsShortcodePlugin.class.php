@@ -19,7 +19,6 @@ class AmazonWidgetsShortCodePlugin
   {
     $class = __CLASS__;
     list($filename, $i18n_path) = call_user_func(array($class, 'getLocation'), $plugin_home_path);
-
     load_plugin_textdomain('awshortcode', $i18n_path);
     register_activation_hook($filename, array($class, 'executeActivation'));
 
@@ -76,7 +75,7 @@ class AmazonWidgetsShortCodePlugin
     /*
      * Default options
      */
-    foreach (AmazonWidgetsShortcodes::getRegisteredOptions() as $id => $option)
+    foreach (AmazonWidgetsShortcodeConfiguration::getOptions() as $id => $option)
     {
       add_option(
         $id,
@@ -87,9 +86,18 @@ class AmazonWidgetsShortCodePlugin
     }
 
     /*
-     * Remove deprecate
+     * Purge TinyMCE config
      */
-    delete_option('awshortcode_enhanced_links');
+    $js_cache_dir = WP_CONTENT_DIR.'/uploads/js_cache';
+    $dp = opendir($js_cache_dir);
+    while ($element = readdir($dp))
+    {
+      if (preg_match('/^tinymce/', $element) && is_file($js_cache_dir.'/'.$element))
+      {
+        unlink($js_cache_dir.'/'.$element);
+      }
+    }
+    closedir($dp);
   }
 
   /**
