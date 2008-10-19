@@ -353,6 +353,7 @@ var awShortcode = {
          */
         if (/<iframe src/i.test(html))
         {
+          form.setValue('type', 'both');
           form.setValue('widget_value', /asins=([0-9]+)&/i.execAndGet(html));
           form.setValue('alink', /lc1=([0-9a-f]+)&/i.execAndGet(html));
           form.setValue('bordercolor', /bc1=([0-9a-f]+)&/i.execAndGet(html));
@@ -361,6 +362,25 @@ var awShortcode = {
           form.setValue('target', /lt1=([^&])+&/i.execAndGet(html));
           form.setValue('width', /width:([0-9]+)px"/i.execAndGet(html));
         }
+        /*
+         * Image
+         */
+        else if (/"><img /i.test(html))
+        {
+          form.setValue('type', 'image');
+          form.setValue('widget_value', /product\/([0-9]+)\?/i.execAndGet(html));
+          form.setValue('image', /src="([^"]+)"/i.execAndGet(html));
+        }
+        /*
+         * Text
+         */
+        else if (/<a href/i.test(html))
+        {
+          form.setValue('type', 'text');
+          form.setValue('widget_value', /product\/([0-9]+)\?/i.execAndGet(html));
+          form.setValue('text', /<a[^>]+>([^<]+)<\/a>/i.execAndGet(html));
+        }
+        form.type.onchange();
 
         return form.getValue('widget_value');
       },
@@ -371,16 +391,33 @@ var awShortcode = {
        * @param {Object} name
        */
       generate: function(form, name){
-        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:        form.getValue('align'),
-          alink:        form.getValue('alink'),
-          bgcolor:      form.getValue('bgcolor'),
-          bordercolor:  form.getValue('bordercolor'),
-          height:       form.getValue('height'),
-          small:        form.getValue('small'),
-          target:       form.getValue('target'),
-          width:        form.getValue('width')
-        });
+        if (form.getValue('type') == 'both')
+        {
+          var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+            align:        form.getValue('align'),
+            alink:        form.getValue('alink'),
+            bgcolor:      form.getValue('bgcolor'),
+            bordercolor:  form.getValue('bordercolor'),
+            height:       form.getValue('height'),
+            small:        form.getValue('small'),
+            target:       form.getValue('target'),
+            width:        form.getValue('width')
+          });
+        }
+        else if (form.getValue('type') == 'image')
+        {
+          var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+            image:        form.getValue('image'),
+            type:         form.getValue('type')
+          });
+        }
+        else if (form.getValue('type') == 'text')
+        {
+          var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+            text:        form.getValue('text'),
+            type:         form.getValue('type')
+          });
+        }
 
         return shortcode;
       }

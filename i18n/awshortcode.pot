@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-19 15:16+0100\n"
-"PO-Revision-Date: 2008-10-19 15:16+0100\n"
+"POT-Creation-Date: 2008-10-19 18:32+0100\n"
+"PO-Revision-Date: 2008-10-19 18:32+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Your name <your@email.com>\n"
 "MIME-Version: 1.0\n"
@@ -49,16 +49,31 @@ msgstr ""
 msgid "Amazon Canada"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:142
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:144
 msgid "Amazon France"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:174
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:178
 msgid "Amazon United Kingdom"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:192
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:198
 msgid "Amazon USA"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:256
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Image and Text"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:257
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "Image only"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:258
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Text only"
 msgstr ""
 
 #: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:52
@@ -260,7 +275,7 @@ msgstr ""
 #: ../admin/view/options.php:36
 #: ../admin/view/options.php:42
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
 msgid "Main Options"
 msgstr ""
 
@@ -391,23 +406,35 @@ msgstr ""
 msgid "Height"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
-msgid "pixels"
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+msgid "Image Source"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
-msgid "Default Plugin Setting"
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Link text"
 msgstr ""
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
-msgid "Small size?"
+msgid "pixels"
 msgstr ""
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
-msgid "Widget ID"
+msgid "Default Plugin Setting"
 msgstr ""
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+msgid "Display type"
+msgstr ""
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Small size?"
+msgstr ""
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+msgid "Widget ID"
+msgstr ""
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
 msgid "Width"
 msgstr ""
 

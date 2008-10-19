@@ -28,10 +28,18 @@
           <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
         </p>
 
+        <p>
+          <label for="widget_type">{#wpAwshortcode_dlg.product_type}</label>
+          <select name="type" id="widget_type" class="relationship">
+            <option value="both">{#wpAwshortcode_dlg.product_type_both}</option>
+            <option value="image">{#wpAwshortcode_dlg.product_type_image}</option>
+            <option value="text">{#wpAwshortcode_dlg.product_type_text}</option>
+          </select>
+        </p>
 			</fieldset>
 
-      <fieldset>
-        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+      <fieldset id="widget_type-both">
+        <legend>{#wpAwshortcode_dlg.product_type_both}</legend>
 
         <p>
           <label for="align">{#wpAwshortcode_dlg.align}</label>
@@ -74,6 +82,24 @@
         <p>
           <label for="width">{#wpAwshortcode_dlg.width}</label>
           <input id="width" name="width" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+      </fieldset>
+
+      <fieldset id="widget_type-image">
+        <legend>{#wpAwshortcode_dlg.product_type_image}</legend>
+
+        <p>
+          <label for="image">{#wpAwshortcode_dlg.image_source}</label>
+          <input id="image" name="image" type="text" value="" class="" />
+        </p>
+      </fieldset>
+
+      <fieldset id="widget_type-text">
+        <legend>{#wpAwshortcode_dlg.product_type_text}</legend>
+
+        <p>
+          <label for="text">{#wpAwshortcode_dlg.link_text}</label>
+          <input id="text" name="text" type="text" value="" class="" />
         </p>
       </fieldset>
 		</div>

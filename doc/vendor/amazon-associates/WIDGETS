@@ -3,6 +3,11 @@
 <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_fc64116b-6b59-444b-b4ee-074a4adecf57"  WIDTH="600px" HEIGHT="200px"> <PARAM NAME="movie" VALUE="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=GetDisplayTemplate" id="Player_fc64116b-6b59-444b-b4ee-074a4adecf57" quality="high" bgcolor="#ffffff" name="Player_fc64116b-6b59-444b-b4ee-074a4adecf57" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="200px" width="600px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8010%2Ffc64116b-6b59-444b-b4ee-074a4adecf57&Operation=NoScript">Widgets Amazon.fr</A></NOSCRIPT>
 }}}
 
+== My Favorites ==
+{{{
+<SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822/FR/onctom-21/8006/83fd4e57-4df0-49fe-add1-6ad5933247b0"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&MarketPlace=FR&ID=V20070822%2FFR%2Fonctom-21%2F8006%2F83fd4e57-4df0-49fe-add1-6ad5933247b0&Operation=NoScript">Widgets Amazon.fr</A></NOSCRIPT>
+}}}
+
 == Product ==
 Image + Text
 {{{

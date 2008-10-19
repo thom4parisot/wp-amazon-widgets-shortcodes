@@ -111,6 +111,8 @@ class AmazonWidgetsShortcodeConfiguration
         'suffix' => '-20',
         'url' => array(
           'affiliate' => 'http://associates.amazon.ca/',
+          'images' => 'http://ecx.images-amazon.com/images/I/%s',
+          'product' => 'http://www.amazon.ca/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
           'site' => 'http://www.amazon.ca/',
           'tool-contextlinks' => 'http://cls.assoc-amazon.ca/ca/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.ca/s/link-enhancer?tag=%s&amp;o=15',
@@ -143,6 +145,8 @@ class AmazonWidgetsShortcodeConfiguration
         'suffix' => '-21',
         'url' => array(
           'affiliate' => 'http://partenaires.amazon.fr/',
+          'images' => 'http://ecx.images-amazon.com/images/I/%s',
+          'product' => 'http://www.amazon.fr/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
           'site' => 'http://www.amazon.fr/',
           'tool-contextlinks' => 'http://cls.assoc-amazon.fr/fr/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.fr/s/link-enhancer?tag=%s&o=8',
@@ -175,6 +179,8 @@ class AmazonWidgetsShortcodeConfiguration
         'suffix' => '-21',
         'url' => array(
           'affiliate' => 'http://affiliate-program.amazon.co.uk/',
+          'images' => 'http://ecx.images-amazon.com/images/I/%s',
+          'product' => 'http://www.amazon.co.uk/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
           'site' => 'http://www.amazon.co.uk/',
           'tool-contextlinks' => 'http://cls.assoc-amazon.co.uk/gb/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.co.uk/s/link-enhancer?tag=%s&amp;o=2',
@@ -193,6 +199,8 @@ class AmazonWidgetsShortcodeConfiguration
         'suffix' => '-20',
         'url' => array(
           'affiliate' => 'https://affiliate-program.amazon.com/',
+          'images' => 'http://ecx.images-amazon.com/images/I/%s',
+          'product' => 'http://www.amazon.com/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
           'site' => 'http://www.amazon.com/',
           'tool-contextlinks' => 'http://cls.assoc-amazon.com/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.com/s/link-enhancer?tag=%s&amp;o=1',
@@ -205,6 +213,23 @@ class AmazonWidgetsShortcodeConfiguration
         ),
       ),
     );
+  }
+
+  /**
+   * Return a specific shortcode configuration
+   * 
+   * @static
+   * @author oncletom
+   * @version 1.0
+   * @since 1.3
+   * @return $settings Array
+   * @param $shortcode String
+   */
+  public function getShortcode($shortcode)
+  {
+    $shortcodes = AmazonWidgetsShortcodeConfiguration::getShortcodes();
+
+    return $shortcodes['amazon-'.$shortcode];
   }
 
   /**
@@ -226,6 +251,12 @@ class AmazonWidgetsShortcodeConfiguration
       ),
       'amazon-product' => array(
         'class' => 'AmazonWidgetsShortcodeProduct',
+        'default_type' => 'both',
+        'types' => array(
+          'both' => __('Image and Text'),
+          'image' => __('Image only'),
+          'text' => __('Text only'),
+        ),
       ),
       'amazon-productcloud' => array(
         'class' => 'AmazonWidgetsShortcodeProductCloud',

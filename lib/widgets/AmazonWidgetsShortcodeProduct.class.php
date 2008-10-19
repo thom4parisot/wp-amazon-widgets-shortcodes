@@ -19,27 +19,50 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
    */
   function shortcodeToHtml($attributes, $value = null)
   {
-    extract(
-      shortcode_atts(
-        array(
-          'align' => get_option('awshortcode_align'),
-          'alink' => '00f',
-          'bgcolor' => 'fff',
-          'bordercolor' => '000',
-          'color' => '000',
-          'height' => '240',
-          'small' => 0,
-          'target' => '_blank',
-          'width' => '120',
-        ),
-        $attributes
-      )
+    $attributes = shortcode_atts(
+      array(
+        'align' => get_option('awshortcode_align'),
+        'alink' => '00f',
+        'alt' => '',
+        'bgcolor' => 'fff',
+        'bordercolor' => '000',
+        'color' => '000',
+        'height' => '240',
+        'image' => '',
+        'small' => 0,
+        'target' => '_blank',
+        'text' => '',
+        'type' => 'both',
+        'width' => '120',
+      ),
+      $attributes
     );
+    $config = AmazonWidgetsShortcodeConfiguration::getShortcode('product');
+    $attributes['type'] = isset($config['types'][$attributes['type']]) ? $attributes['type'] : $config['default_type'];
 
     /*
      * Preparing data
      */
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
+
+    /*
+     * Display
+     */
+    return call_user_func(
+      array(__CLASS__, 'shortcodeToHtml'.ucfirst($attributes['type'])),
+      $attributes,
+      $value,
+      $region
+    );
+  }
+
+  /**
+   * Display as full widget
+   * @see AmazonWidgetsShortcode::shortcodeToHtml()
+   */
+  function shortcodeToHtmlBoth($attributes, $value, $region)
+  {
+    extract($attributes);
     $uri = sprintf(
              $region['url']['widget-product'],
              get_option('awshortcode_tracking_id'),
@@ -52,15 +75,11 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
              call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $bgcolor, false)
            );
 
-    /*
-     * Display
-     */
     if (get_option('awshortcode_strict_standards'))
     {
       return
         '<div style="text-align:'.$align.'" class="awshortcode-product">'.
-          '<object type="text/html" data="'.$uri.'" style="width:'.$width.'px;height:'.$height.'px;" '.
-            '>'.
+          '<object type="text/html" data="'.$uri.'" style="width:'.$width.'px;height:'.$height.'px;">'.
           '</object>'.
         '</div>';
     }
@@ -73,5 +92,50 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
           '</iframe>'.
         '</div>';
     }
+  }
+
+  /**
+   * Display as image widget
+   * @see AmazonWidgetsShortcode::shortcodeToHtml()
+   */
+  function shortcodeToHtmlImage($attributes, $value, $region)
+  {
+    extract($attributes);
+
+    if (!preg_match('/^https?/', $image))
+    {
+      $image = sprintf($region['url']['images'], $image);
+    }
+
+    $uri = sprintf(
+             $region['url']['product'],
+             $value,
+             get_option('awshortcode_tracking_id')
+    );
+
+    return
+      '<a href="'.$uri.'" class="awshortcode-product awshortcode-product-image" rel="external">'.
+        '<img src="'.$image.'" alt="'.$alt.'" />'.
+      '</a>';
+  }
+
+  /**
+   * Display as text widget
+   * @see AmazonWidgetsShortcode::shortcodeToHtml()
+   */
+  function shortcodeToHtmlText($attributes, $value, $region)
+  {
+    extract($attributes);
+
+    $uri = sprintf(
+             $region['url']['product'],
+             $value,
+             get_option('awshortcode_tracking_id')
+    );
+
+    return
+      '<a href="'.$uri.'" class="awshortcode-product awshortcode-product-text" rel="external">'.
+        $text.
+      '</a>';
   }
 }

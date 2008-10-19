@@ -1,6 +1,6 @@
 /**
  * @author oncletom
- * @since 1.0
+ * @since 1.1
  * @package tinymce
  */
 
@@ -13,7 +13,7 @@
    */
   function init()
   {
-    var p = tinyMCEPopup, ed = p.editor, fe = ed.selection, dom = ed.dom;
+    var p = tinyMCEPopup, ed = p.editor, fe = ed.selection, dom = ed.dom, event = tinymce.dom.Event;
     p.resizeToInnerSize();
 
     /*
@@ -41,6 +41,24 @@
     {
       getById('insert').value = ed.getLang('update', 'Insert', true);
     }
+
+    /*
+     * Relationship switcher
+     */
+    tinymce.each(dom.select('select.relationship', document), function(el){
+      el.onchange = function(){
+        var el = this, prefix = el.id+'-', selected_id = '';
+  
+        selected_id = el.value == '' ? 'default' : el.value;
+  
+        tinymce.each(el.options, function(option){
+          dom.hide(getById(prefix+(option.value || 'default')));
+        });
+        dom.show(getById(prefix+selected_id));
+      }
+
+      el.onchange();
+    });
   }
 
   function getById(id, scope)

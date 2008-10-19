@@ -34,8 +34,9 @@ Currently supported Amazon widgets/features:
 
 * Carrousel Widget
 * Context Links
+* My Favorites Widget
 * Product Preview
-* Product Links (text + picture)
+* Product Links
 * Slideshow Widget
 * Product Cloud Widget
 * Wishlist Widget
@@ -54,11 +55,15 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Todo-list ==
-1. Add a widget feature to add directly your Amazon Widgets in any sidebar of your blog
+1. Blog sidebar Widgets
 1. Add support for all Amazon Partners programs
+1. Profile management
+1. Widgets management
+1. Amazon Associate browsing in the same window
 1. Support for these widgets:
- * My favourites
- * etc.
+ * aStore
+ * Banners
+ * Dynamic Links
 1. Makes you earning a lot of money thanks to this widget ;-)
 
 
@@ -67,7 +72,10 @@ Now you plug 'n play 'n earn money ;-)
 = Version 1.3 =
  * inline documentation is now more displayed by default
  * huge code overhaul for easier maintenance
- * widget: added Product Cloud Widget 
+ * widget: region and/or tracking ID can be overridden individually
+ * widget: added My Favorites Widget
+ * widget: Product Widget now handles text+image, image and text
+ * widget: added Product Cloud Widget
  * wordpress: Wordpress 2.7 compatibility
 
 = Version 1.2.2 =
