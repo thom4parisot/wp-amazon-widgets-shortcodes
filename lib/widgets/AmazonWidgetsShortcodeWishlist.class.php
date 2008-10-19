@@ -24,6 +24,8 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
         array(
           'align' => get_option('awshortcode_align'),
           'alt' => '',
+          'region' => get_option('awshortcode_region'),
+          'tracking_id' => get_option('awshortcode_tracking_id'),
         ),
         $attributes
       )
@@ -32,11 +34,11 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
     /*
      * Preparing data
      */
-    $region = AmazonWidgetsShortcodeConfiguration::getRegion();
+    $region = AmazonWidgetsShortcodeConfiguration::getRegion($region);
     $uri = sprintf(
              $region['url']['widget-wishlist'],
              $region['marketplace'],
-             get_option('awshortcode_tracking_id'),
+             $tracking_id,
              $value
            );
     $uri_encoded = call_user_func(array(__CLASS__, 'encodeParameters'), $uri);

@@ -25,6 +25,8 @@ class AmazonWidgetsShortcodeSlideshow extends AmazonWidgetsShortcodeBase
           'align' => get_option('awshortcode_align'),
           'bgcolor' => 'fff',
           'height' => '250',
+          'region' => get_option('awshortcode_region'),
+          'tracking_id' => get_option('awshortcode_tracking_id'),
           'width' => '300',
         ),
         $attributes
@@ -34,11 +36,11 @@ class AmazonWidgetsShortcodeSlideshow extends AmazonWidgetsShortcodeBase
     /*
      * Preparing data
      */
-    $region = AmazonWidgetsShortcodeConfiguration::getRegion();
+    $region = AmazonWidgetsShortcodeConfiguration::getRegion($region);
     $uri = sprintf(
              $region['url']['widget-slideshow'],
              $region['marketplace'],
-             get_option('awshortcode_tracking_id'),
+             $tracking_id,
              $value,
              'GetDisplayTemplate'
            );

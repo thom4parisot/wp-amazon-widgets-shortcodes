@@ -199,7 +199,7 @@ var awShortcode = {
     /*
      * Parsing attributes
      */
-    node.innerHTML.replace(/ ([a-z0-9]+)="([^"]*)"/g, function(match, key, value){
+    node.innerHTML.replace(/ ([a-z0-9_]+)="([^"]*)"/g, function(match, key, value){
       shortcode.atts[key] = value;
     });
 
@@ -301,10 +301,12 @@ var awShortcode = {
        */
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:    form.getValue('align'),
-          bgcolor:  form.getValue('bgcolor'),
-          height:   form.getValue('height'),
-          width:    form.getValue('width')
+          align:        form.getValue('align'),
+          bgcolor:      form.getValue('bgcolor'),
+          height:       form.getValue('height'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id'),
+          width:        form.getValue('width')
         });
 
         return shortcode;
@@ -329,8 +331,10 @@ var awShortcode = {
       },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:    form.getValue('align'),
-          alt:      form.getValue('alt')
+          align:        form.getValue('align'),
+          alt:          form.getValue('alt'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id')
         });
 
         return shortcode;
@@ -399,8 +403,10 @@ var awShortcode = {
             bgcolor:      form.getValue('bgcolor'),
             bordercolor:  form.getValue('bordercolor'),
             height:       form.getValue('height'),
+            region:       form.getValue('region'),
             small:        form.getValue('small'),
             target:       form.getValue('target'),
+            tracking_id:  form.getValue('tracking_id'),
             width:        form.getValue('width')
           });
         }
@@ -408,13 +414,17 @@ var awShortcode = {
         {
           var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
             image:        form.getValue('image'),
+            region:       form.getValue('region'),
+            tracking_id:  form.getValue('tracking_id'),
             type:         form.getValue('type')
           });
         }
         else if (form.getValue('type') == 'text')
         {
           var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-            text:        form.getValue('text'),
+            region:       form.getValue('region'),
+            text:         form.getValue('text'),
+            tracking_id:  form.getValue('tracking_id'),
             type:         form.getValue('type')
           });
         }
@@ -441,8 +451,10 @@ var awShortcode = {
       },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:    form.getValue('align'),
-          alt:      form.getValue('alt')
+          align:        form.getValue('align'),
+          alt:          form.getValue('alt'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id')
         });
 
         return shortcode;
@@ -467,10 +479,12 @@ var awShortcode = {
       },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:    form.getValue('align'),
-          bgcolor:  form.getValue('bgcolor'),
-          height:   form.getValue('height'),
-          width:    form.getValue('width')
+          align:        form.getValue('align'),
+          bgcolor:      form.getValue('bgcolor'),
+          height:       form.getValue('height'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id'),
+          width:        form.getValue('width')
         });
 
         return shortcode;
@@ -495,8 +509,10 @@ var awShortcode = {
       },
       generate: function(form, name){
         var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
-          align:    form.getValue('align'),
-          alt:      form.getValue('alt')
+          align:        form.getValue('align'),
+          alt:          form.getValue('alt'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id')
         });
 
         return shortcode;

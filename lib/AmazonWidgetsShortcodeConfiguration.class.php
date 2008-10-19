@@ -78,19 +78,19 @@ class AmazonWidgetsShortcodeConfiguration
    * @version 1.0
    * @since 1.3
    * @return $region Array Specific region settings
-   * @param $country_code String[optional] Country code to get settings ; if null, grab the default region
+   * @param $region String[optional] Country code to get settings ; if null, grab the default region
    */
-  function getRegion($country_code = null)
+  function getRegion($region = null)
   {
-    if (is_null($country_code))
+    if (is_null($region) || !$region)
     {
-      $country_code = get_option('awshortcode_region');
-      $country_code = $country_code ? $country_code : 'us';
+      $region = get_option('awshortcode_region');
+      $region = $region ? $region : 'us';
     }
 
     $regions = AmazonWidgetsShortcodeConfiguration::getRegions();
 
-    return $regions[$country_code];
+    return $regions[$region];
   }
 
   /**

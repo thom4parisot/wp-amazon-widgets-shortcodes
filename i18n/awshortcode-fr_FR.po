@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-19 18:44+0100\n"
-"PO-Revision-Date: 2008-10-19 18:46+0100\n"
+"POT-Creation-Date: 2008-10-19 19:19+0100\n"
+"PO-Revision-Date: 2008-10-19 19:20+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -48,18 +48,22 @@ msgid "right"
 msgstr "à droite"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:110
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
 msgid "Amazon Canada"
 msgstr "Amazon Canada"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:144
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
 msgid "Amazon France"
 msgstr "Amazon France"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:178
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
 msgid "Amazon United Kingdom"
 msgstr "Amazon Royaume-Uni"
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:198
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
 msgid "Amazon USA"
 msgstr "Amazon États-Unis"
 
@@ -81,20 +85,20 @@ msgstr "Image uniquement"
 msgid "Text only"
 msgstr "Texte uniquement"
 
-#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:52
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
 msgid "Consult my favorites on Amazon."
 msgstr "Consultez mes favoris sur Amazon."
 
-#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:52
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
 msgid "Consult this wishlist on Amazon."
 msgstr "Consulter cette liste cadeau sur Amazon."
 
-#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:58
-#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:60
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
 msgid "You don't have a sufficient version of Flash Player to display this animation."
 msgstr "Votre version d'Adobe Flash Player n'est pas suffisamment à jour pour afficher cette animation."
 
-#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:52
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
 msgid "Consult this product cloud on Amazon."
 msgstr "Consultez ce nuage de produits sur Amazon."
 
@@ -310,6 +314,7 @@ msgid "Documentation"
 msgstr "Documentation"
 
 #: ../admin/view/options.php:48
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
 msgid "Amazon affiliate region:"
 msgstr "Région d'affiliation Amazon :"
 
@@ -319,6 +324,7 @@ msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 msgstr "actuellement réglé sur <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 
 #: ../admin/view/options.php:70
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
 msgid "Amazon Tracking ID:"
 msgstr "ID de suivi Amazon (Tracking ID) :"
 
@@ -447,15 +453,19 @@ msgstr "Réglage par défaut du plugin"
 msgid "Display type"
 msgstr "Type d'affichage"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
 msgid "Small size?"
 msgstr "Petite taille ?"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:60
+msgid "If filled, it will override your default tracking ID for this widget only."
+msgstr "Si rempli, sa valeur surchargera l'ID de suivi Amazon par défaut, uniquement pour ce widget."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:61
 msgid "Widget ID"
 msgstr "Widget ID"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
 msgid "Width"
 msgstr "Largeur"
 

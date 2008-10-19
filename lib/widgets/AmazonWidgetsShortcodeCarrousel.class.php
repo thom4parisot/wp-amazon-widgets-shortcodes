@@ -27,6 +27,8 @@ class AmazonWidgetsShortcodeCarrousel extends AmazonWidgetsShortcodeBase
           'align' => get_option('awshortcode_align'),
           'bgcolor' => 'fff',
           'height' => '200',
+          'region' => get_option('awshortcode_region'),
+          'tracking_id' => get_option('awshortcode_tracking_id'),
           'width' => '600',
         ),
         $attributes
@@ -36,11 +38,11 @@ class AmazonWidgetsShortcodeCarrousel extends AmazonWidgetsShortcodeBase
     /*
      * Preparing data
      */
-    $region = AmazonWidgetsShortcodeConfiguration::getRegion();
+    $region = AmazonWidgetsShortcodeConfiguration::getRegion($region);
     $uri = sprintf(
              $region['url']['widget-carrousel'],
              $region['marketplace'],
-             get_option('awshortcode_tracking_id'),
+             $tracking_id,
              $value,
              'GetDisplayTemplate'
            );

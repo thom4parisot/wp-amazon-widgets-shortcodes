@@ -29,6 +29,8 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
         'color' => '000',
         'height' => '240',
         'image' => '',
+        'region' => get_option('awshortcode_region'),
+        'tracking_id' => get_option('awshortcode_tracking_id'),
         'small' => 0,
         'target' => '_blank',
         'text' => '',
@@ -43,7 +45,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     /*
      * Preparing data
      */
-    $region = AmazonWidgetsShortcodeConfiguration::getRegion();
+    $region = AmazonWidgetsShortcodeConfiguration::getRegion($region);
 
     /*
      * Display
@@ -65,7 +67,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     extract($attributes);
     $uri = sprintf(
              $region['url']['widget-product'],
-             get_option('awshortcode_tracking_id'),
+             $tracking_id,
              $value,
              call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $color, false),
              (int)$small === 0 ? 'IS2' : 'IS1',
@@ -110,7 +112,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     $uri = sprintf(
              $region['url']['product'],
              $value,
-             get_option('awshortcode_tracking_id')
+             $tracking_id
     );
 
     return
@@ -130,7 +132,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     $uri = sprintf(
              $region['url']['product'],
              $value,
-             get_option('awshortcode_tracking_id')
+             $tracking_id
     );
 
     return
