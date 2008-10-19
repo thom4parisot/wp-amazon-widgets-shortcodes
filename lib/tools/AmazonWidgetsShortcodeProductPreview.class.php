@@ -1,6 +1,6 @@
 <?php
 /**
- * @author tparisot
+ * @author oncletom
  */
 
 class AmazonWidgetsShortcodeProductPreview

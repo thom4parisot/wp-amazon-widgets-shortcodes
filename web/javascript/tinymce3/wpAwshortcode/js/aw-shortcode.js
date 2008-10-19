@@ -277,7 +277,7 @@ var awShortcode = {
    */
   widget: {
     /*
-     * Subelements
+     * Carrousel
      */
     carrousel: {
       /**
@@ -310,6 +310,35 @@ var awShortcode = {
         return shortcode;
       }
     },
+    /*
+     * My Favorites
+     */
+    myfavorites: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
+
+        form.setValue('widget_value', widget_value);
+
+        return form.getValue('widget_value');
+      },
+      generate: function(form, name){
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:    form.getValue('align'),
+          alt:      form.getValue('alt')
+        });
+
+        return shortcode;
+      }
+    },
+    /*
+     * Product
+     */
     product: {
       /**
        * Populate the form from HTML code provided by Amazon
@@ -356,6 +385,9 @@ var awShortcode = {
         return shortcode;
       }
     },
+    /*
+     * Product Cloud
+     */
     productcloud: {
       /**
        * Populate the form from HTML code provided by Amazon
@@ -379,6 +411,9 @@ var awShortcode = {
         return shortcode;
       }
     },
+    /*
+     * Slideshow
+     */
     slideshow: {
       /**
        * Populate the form from HTML code provided by Amazon
@@ -404,6 +439,9 @@ var awShortcode = {
         return shortcode;
       }
     },
+    /*
+     * Wishlist
+     */
     wishlist: {
       /**
        * Populate the form from HTML code provided by Amazon

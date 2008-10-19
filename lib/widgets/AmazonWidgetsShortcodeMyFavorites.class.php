@@ -3,7 +3,7 @@
  * @author oncletom
  */
 
-class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
+class AmazonWidgetsShortcodeMyFavorites extends AmazonWidgetsShortcodeBase
 {
   /**
    * @see AmazonWidgetsShortcode::displayAsHtml()
@@ -34,7 +34,7 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
      */
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
     $uri = sprintf(
-             $region['url']['widget-wishlist'],
+             $region['url']['widget-myfavorites'],
              $region['marketplace'],
              get_option('awshortcode_tracking_id'),
              $value
@@ -49,7 +49,7 @@ class AmazonWidgetsShortcodeWishlist extends AmazonWidgetsShortcodeBase
         '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
         '<noscript>'.
           '<a href="'.$uri_encoded.'&amp;Operation=NoScript">'.
-            ($alt ? $alt : __('Consult this wishlist on Amazon.', 'awshortcode')).
+            ($alt ? $alt : __('Consult my favorites on Amazon.', 'awshortcode')).
           '</a>'.
         '</noscript>'.
       '</div>';

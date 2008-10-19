@@ -115,6 +115,7 @@ class AmazonWidgetsShortcodeConfiguration
           'tool-contextlinks' => 'http://cls.assoc-amazon.ca/ca/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.ca/s/link-enhancer?tag=%s&amp;o=15',
           'widget-carrousel' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
           'widget-product' => 'http://rcm-ca.amazon.ca/e/cm?t=%s&amp;o=15&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-productcloud' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
           'widget-slideshow' => 'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
@@ -146,6 +147,7 @@ class AmazonWidgetsShortcodeConfiguration
           'tool-contextlinks' => 'http://cls.assoc-amazon.fr/fr/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.fr/s/link-enhancer?tag=%s&o=8',
           'widget-carrousel' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
           'widget-product' => 'http://rcm-fr.amazon.fr/e/cm?t=%s&amp;o=8&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-productcloud' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
           'widget-slideshow' => 'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
@@ -177,6 +179,7 @@ class AmazonWidgetsShortcodeConfiguration
           'tool-contextlinks' => 'http://cls.assoc-amazon.co.uk/gb/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.co.uk/s/link-enhancer?tag=%s&amp;o=2',
           'widget-carrousel' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
           'widget-product' => 'http://rcm-uk.amazon.co.uk/e/cm?t=%s&amp;o=2&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-productcloud' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
           'widget-slideshow' => 'http://ws.amazon.co.uk/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
@@ -194,6 +197,7 @@ class AmazonWidgetsShortcodeConfiguration
           'tool-contextlinks' => 'http://cls.assoc-amazon.com/s/cls.js',
           'tool-productpreview' => 'http://www.assoc-amazon.com/s/link-enhancer?tag=%s&amp;o=1',
           'widget-carrousel' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
           'widget-product' => 'http://rcm.amazon.com/e/cm?t=%s&amp;o=1&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-productcloud' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
           'widget-slideshow' => 'http://ws.amazon.com/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
@@ -216,6 +220,9 @@ class AmazonWidgetsShortcodeConfiguration
     return array(
       'amazon-carrousel' => array(
         'class' => 'AmazonWidgetsShortcodeCarrousel',
+      ),
+      'amazon-myfavorites' => array(
+        'class' => 'AmazonWidgetsShortcodeMyFavorites',
       ),
       'amazon-product' => array(
         'class' => 'AmazonWidgetsShortcodeProduct',

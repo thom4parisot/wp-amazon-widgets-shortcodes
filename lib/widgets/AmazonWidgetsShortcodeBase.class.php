@@ -1,6 +1,6 @@
 <?php
 /**
- * @author tparisot
+ * @author oncletom
  * 
  * Basic skeleton for all widgets
  * It is not used for now to keep Wordpress + PHP4 compatibility

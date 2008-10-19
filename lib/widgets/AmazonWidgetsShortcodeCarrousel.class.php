@@ -1,6 +1,6 @@
 <?php
 /**
- * @author tparisot
+ * @author oncletom
  * 
  * In PHP5, it would implement AmazonWidgetsShortcode interface
  */

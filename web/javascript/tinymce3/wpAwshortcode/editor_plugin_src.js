@@ -148,6 +148,7 @@
      */
     shortcodes: {
       'amazon-carrousel':     'wpAwshortcode.amazon_carrousel',
+      'amazon-myfavorites':   'wpAwshortcode.amazon_myfavorites',
       'amazon-product':       'wpAwshortcode.amazon_product',
       'amazon-productcloud':  'wpAwshortcode.amazon_productcloud',
       'amazon-slideshow':     'wpAwshortcode.amazon_slideshow',
