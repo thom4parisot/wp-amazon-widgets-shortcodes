@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>{#wpAwshortcode.amazon_wishlist}</title>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/aw-shortcode.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen" />
+  <base target="_self" />
+</head>
+<body style="display: none">
+    <form onsubmit="awShortcode.sendToRte('productcloud', this); return false;" method="post" action="" id="widget-form">
+
+    <div class="tabs">
+      <ul>
+        <li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.general_tab}</a></span></li>
+        <li id="copypaste_tab"><span><a href="javascript:mcTabs.displayTab('copypaste_tab','copypaste_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.copypaste_tab}</a></span></li>
+      </ul>
+    </div>
+
+    <div class="panel_wrapper">
+      <div id="general_panel" class="panel current">
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.main_options}</legend>
+
+        <p>
+          <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
+          <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
+        </p>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+
+        <p>
+          <label for="align">{#wpAwshortcode_dlg.align}</label>
+          <select name="align" id="align">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="left">{#wpAwshortcode_dlg.align_left}</option>
+            <option value="center">{#wpAwshortcode_dlg.align_center}</option>
+            <option value="right">{#wpAwshortcode_dlg.align_right}</option>
+          </select>
+        </p>
+      </fieldset>
+    </div>
+      <div id="copypaste_panel" class="panel">
+        <p><strong>{#wpAwshortcode_dlg.copypaste_welcome}</strong></p>
+        <p>{#wpAwshortcode_dlg.copypaste_rtfm}</p>
+        
+        <p class="wide">
+          <label for="copypaste">{#wpAwshortcode_dlg.copypaste_here}</label>
+          <textarea id="copypaste" name="copypaste" rows="15" cols="50" class="html"></textarea>
+        </p>
+
+        <p class="mceActionPanelAlternative">
+          <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm('productcloud', 'copypaste', 'widget-form')" />
+        </p>
+      </div>
+    </div>
+    <div class="mceActionPanel">
+      <div style="float: left">
+        <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+      </div>
+
+      <div style="float: right">
+        <input type="submit" id="insert" name="insert" value="{#insert}" />
+      </div>
+    </div>
+  </form>
+</body>
+</html>
