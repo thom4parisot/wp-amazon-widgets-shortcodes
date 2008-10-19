@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-18 23:57+0100\n"
-"PO-Revision-Date: 2008-10-19 00:07+0100\n"
+"POT-Creation-Date: 2008-10-19 14:48+0100\n"
+"PO-Revision-Date: 2008-10-19 14:48+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Your name <your@email.com>\n"
 "MIME-Version: 1.0\n"
@@ -26,22 +26,22 @@ msgstr ""
 #: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
 #: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
 #: ../admin/view/options.php:2
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
 msgid "Amazon Widgets Shortcodes"
 msgstr ""
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
 msgid "left"
 msgstr ""
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
 msgid "centered"
 msgstr ""
 
 #: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
 msgid "right"
 msgstr ""
 
@@ -61,16 +61,16 @@ msgstr ""
 msgid "Amazon USA"
 msgstr ""
 
-#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:45
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:52
 msgid "Consult this wishlist on Amazon."
 msgstr ""
 
-#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:51
-#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:53
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:58
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:60
 msgid "You don't have a sufficient version of Flash Player to display this animation."
 msgstr ""
 
-#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:45
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:52
 msgid "Consult this product cloud on Amazon."
 msgstr ""
 
@@ -201,12 +201,12 @@ msgid "ASIN code of the product."
 msgstr ""
 
 #: ../admin/view/documentation.php:109
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
 msgid "Amazon Slideshow"
 msgstr ""
 
 #: ../admin/view/documentation.php:151
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
 msgid "Amazon Wishlist"
 msgstr ""
 
@@ -229,8 +229,8 @@ msgstr ""
 
 #: ../admin/view/options.php:36
 #: ../admin/view/options.php:42
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
 msgid "Main Options"
 msgstr ""
 
@@ -313,71 +313,75 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+msgid "Amazon Product Cloud"
+msgstr ""
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
 msgid "Align"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
 msgid "Link Color"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
 msgid "Other Options"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
 msgid "Apply the magic!"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
 msgid "ASIN Code"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
 msgid "Background Color"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
 msgid "Border color"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
 msgid "Copy/paste Amazon HTML's code right below ↓"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
 msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
 msgid "Copy/Paste Code"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
 msgid "Glad you look at here!"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
 msgid "Height"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
 msgid "pixels"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
 msgid "Default Plugin Setting"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
 msgid "Small size?"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
 msgid "Widget ID"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
 msgid "Width"
 msgstr ""
 

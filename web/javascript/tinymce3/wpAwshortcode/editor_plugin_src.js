@@ -147,10 +147,11 @@
      * @since 1.1
      */
     shortcodes: {
-      'amazon-carrousel': 'wpAwshortcode.amazon_carrousel',
-      'amazon-product':   'wpAwshortcode.amazon_product',
-      'amazon-slideshow': 'wpAwshortcode.amazon_slideshow',
-      'amazon-wishlist':  'wpAwshortcode.amazon_wishlist'
+      'amazon-carrousel':     'wpAwshortcode.amazon_carrousel',
+      'amazon-product':       'wpAwshortcode.amazon_product',
+      'amazon-productcloud':  'wpAwshortcode.amazon_productcloud',
+      'amazon-slideshow':     'wpAwshortcode.amazon_slideshow',
+      'amazon-wishlist':      'wpAwshortcode.amazon_wishlist'
     },
     /**
      * Returns information about the plugin as a name/value array.
@@ -164,7 +165,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.0'
+        version:   '1.1'
       };
     },
     /*
