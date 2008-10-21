@@ -225,7 +225,7 @@ class AmazonWidgetsShortcodeConfiguration
    * @return $settings Array
    * @param $shortcode String
    */
-  public function getShortcode($shortcode)
+  function getShortcode($shortcode)
   {
     $shortcodes = AmazonWidgetsShortcodeConfiguration::getShortcodes();
 
@@ -240,7 +240,7 @@ class AmazonWidgetsShortcodeConfiguration
    * @since 1.3
    * @return $shortcodes Array Shortcodes configuration
    */
-  public function getShortcodes()
+  function getShortcodes()
   {
     return array(
       'amazon-carrousel' => array(
