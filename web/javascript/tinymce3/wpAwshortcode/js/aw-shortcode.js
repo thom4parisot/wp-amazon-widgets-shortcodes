@@ -352,8 +352,7 @@ var awShortcode = {
        */
       fromHtmlToForm: function(html, form){
         var value_patterns = [
-          /product\/([0-9]+)\?/i,
-          /dp%2F([0-9]+)%/i
+          /\D([0-9]{10})\D/i
         ];
 
         /*

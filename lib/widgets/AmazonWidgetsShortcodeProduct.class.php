@@ -39,13 +39,9 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
       ),
       $attributes
     );
+
     $config = AmazonWidgetsShortcodeConfiguration::getShortcode('product');
     $attributes['type'] = isset($config['types'][$attributes['type']]) ? $attributes['type'] : $config['default_type'];
-
-    /*
-     * Preparing data
-     */
-    $region = AmazonWidgetsShortcodeConfiguration::getRegion($region);
 
     /*
      * Display
@@ -54,7 +50,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
       array(__CLASS__, 'shortcodeToHtml'.ucfirst($attributes['type'])),
       $attributes,
       $value,
-      $region
+      AmazonWidgetsShortcodeConfiguration::getRegion($attributes['region'])
     );
   }
 
@@ -62,11 +58,11 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
    * Display as full widget
    * @see AmazonWidgetsShortcode::shortcodeToHtml()
    */
-  function shortcodeToHtmlBoth($attributes, $value, $region)
+  function shortcodeToHtmlBoth($attributes, $value, $region_settings)
   {
     extract($attributes);
     $uri = sprintf(
-             $region['url']['widget-product'],
+             $region_settings['url']['widget-product'],
              $tracking_id,
              $value,
              call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $color, false),
@@ -100,17 +96,17 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
    * Display as image widget
    * @see AmazonWidgetsShortcode::shortcodeToHtml()
    */
-  function shortcodeToHtmlImage($attributes, $value, $region)
+  function shortcodeToHtmlImage($attributes, $value, $region_settings)
   {
     extract($attributes);
 
     if (!preg_match('/^https?/', $image))
     {
-      $image = sprintf($region['url']['images'], $image);
+      $image = sprintf($region_settings['url']['images'], $image);
     }
 
     $uri = sprintf(
-             $region['url']['product'],
+             $region_settings['url']['product'],
              $value,
              $tracking_id
     );
@@ -125,12 +121,12 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
    * Display as text widget
    * @see AmazonWidgetsShortcode::shortcodeToHtml()
    */
-  function shortcodeToHtmlText($attributes, $value, $region)
+  function shortcodeToHtmlText($attributes, $value, $region_settings)
   {
     extract($attributes);
 
     $uri = sprintf(
-             $region['url']['product'],
+             $region_settings['url']['product'],
              $value,
              $tracking_id
     );
