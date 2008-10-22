@@ -351,6 +351,10 @@ var awShortcode = {
        * @param {Object} form form to inject values in
        */
       fromHtmlToForm: function(html, form){
+        var value_patterns = [
+          /product\/([0-9]+)\?/i,
+          /dp%2F([0-9]+)%/i
+        ];
 
         /*
          * Text + images
@@ -365,6 +369,7 @@ var awShortcode = {
           form.setValue('small', /IS2=1&/i.test(html) ? 0 : 1);
           form.setValue('target', /lt1=([^&])+&/i.execAndGet(html));
           form.setValue('width', /width:([0-9]+)px"/i.execAndGet(html));
+          value_patterns = [];
         }
         /*
          * Image
@@ -372,7 +377,7 @@ var awShortcode = {
         else if (/"><img /i.test(html))
         {
           form.setValue('type', 'image');
-          form.setValue('widget_value', /product\/([0-9]+)\?/i.execAndGet(html));
+          form.setValue('widget_value', '');
           form.setValue('image', /src="([^"]+)"/i.execAndGet(html));
         }
         /*
@@ -381,9 +386,17 @@ var awShortcode = {
         else if (/<a href/i.test(html))
         {
           form.setValue('type', 'text');
-          form.setValue('widget_value', /product\/([0-9]+)\?/i.execAndGet(html));
+          form.setValue('widget_value', '');
           form.setValue('text', /<a[^>]+>([^<]+)<\/a>/i.execAndGet(html));
         }
+
+        tinymce.each(value_patterns, function(pattern){
+          if (!form.getValue('widget_value'))
+          {
+            form.setValue('widget_value', pattern.execAndGet(html));
+          }
+        });
+
         form.type.onchange();
 
         return form.getValue('widget_value');
