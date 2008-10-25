@@ -49,8 +49,6 @@
 
       /*
        * Select the item on node change
-       * 
-       * @todo replace it with t._selectMenu call
        */
       ed.onNodeChange.add(function(ed){
         t._selectMenu(ed);
@@ -62,7 +60,12 @@
        * We basically remove span element
        */
       ed.onPostProcess.add(function(ed, o){
-        o.content = o.content.replace(/<span[^>]+>([^<]*)<\/span>/g, "$1");
+        o.content = o.content.replace(
+          /<span class="awshortcode [^>]+>(.*\])<\/span>/g,
+          function(text, shortcode){
+            return shortcode.replace(/<\/?[^>]*>/g, '');
+          }
+        );
       });
 
       /*
@@ -89,7 +92,9 @@
 
         body.innerHTML = body.innerHTML.replace(
           /(\[amazon-[a-z0-9]+[^\]]*\][^\[]+\[\/(amazon-[a-z0-9]+)\])/g,
-          "<span class=\"awshortcode $2\">$1</span>"
+          function(text, shortcode, widget_id){
+            return '<span class="awshortcode '+widget_id+'">'+shortcode+'</span>';
+          }
         );
       });
     },
@@ -166,7 +171,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.1'
+        version:   '1.2'
       };
     },
     /*
