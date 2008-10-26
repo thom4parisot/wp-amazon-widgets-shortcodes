@@ -26,8 +26,9 @@
           height : 470 + 'px',
           inline : 1
         }, {
-          plugin_url : url,
-          shortcode: val
+          plugin_url: url,
+          shortcode:  val,
+          widget:     val.replace(/amazon-/, '')
         });
       });
 

@@ -26,7 +26,28 @@ class AmazonWidgetsShortcodeRteTinyMce
       add_filter('mce_external_plugins', array($class, 'registerPlugin'));
       add_filter('mce_buttons', array($class, 'registerGui'));
       add_filter('mce_external_languages', array($class, 'registerI18n') );
+      add_filter('tiny_mce_before_init', array($class, 'registerConfig'));
     }
+  }
+
+  /**
+   * Pass some more configuration to TinyMCE, essentially WP related options
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.3
+   * @return Array Modified configuration
+   * @param Array $config
+   */
+  function registerConfig($config)
+  {
+    return array_merge(
+      $config,
+      array(
+        'awshortcode_region' => get_option('awshortcode_region'),
+        'awshortcode_tracking_id' => get_option('awshortcode_tracking_id'),
+      )
+    );
   }
 
   /**

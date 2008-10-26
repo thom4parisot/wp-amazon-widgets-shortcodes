@@ -272,6 +272,54 @@ var awShortcode = {
     p.close();
     return false;
   },
+  /*
+   * Utilities
+   */
+  utils: {
+    /**
+     * Guess the country from a string and deals with the default one
+     * 
+     * @author oncletom
+     * @version 1.0
+     * @package tinymce
+     * @since 1.3
+     * @param {String} uri
+     * @param {String} default_region
+     */
+    getRegionFromString: function(uri, default_region){
+      var config = Configuration.region;
+      var default_region = default_region || tinyMCEPopup.editor.settings.awshortcode_region;
+      var region = /.(amazon.[a-z\.]{2,6})\//.execAndGet(uri);
+      var found_region = '';
+
+      tinymce.each(config, function(value, key){
+        var domain = value.domain;
+
+        if (domain == region)
+        {
+          found_region = key;
+        }
+      });
+
+      return found_region == default_region ? null : found_region;
+    },
+    /**
+     * Guess the tracking ID from a string and deals with the default one
+     * 
+     * @author oncletom
+     * @version 1.0
+     * @package tinymce
+     * @since 1.3
+     * @param {String} uri
+     * @param {String} default_tracking_id
+     */
+    getTrackingIdFromString: function(uri, default_tracking_id){
+      var default_tracking_id = default_tracking_id || tinyMCEPopup.editor.settings.awshortcode_tracking_id;
+      var tracking_id = /([a-z0-9]{4,12}(-[0-9]{1,2})?-[0-9]{2})/.execAndGet(uri);
+
+      return tracking_id == default_tracking_id ? null : tracking_id;
+    }
+  },
   /**
    * Widgets settings and callbacks
    */
@@ -289,6 +337,8 @@ var awShortcode = {
       fromHtmlToForm: function(html, form){
         form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
         form.setValue('height', /HEIGHT="([0-9]+)px"/i.execAndGet(html));
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         form.setValue('width', /WIDTH="([0-9]+)px"/i.execAndGet(html));
 
         return form.getValue('widget_value');
@@ -325,6 +375,8 @@ var awShortcode = {
       fromHtmlToForm: function(html, form){
         var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
 
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         form.setValue('widget_value', widget_value);
 
         return form.getValue('widget_value');
@@ -389,6 +441,8 @@ var awShortcode = {
           form.setValue('text', /<a[^>]+>([^<]+)<\/a>/i.execAndGet(html));
         }
 
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         tinymce.each(value_patterns, function(pattern){
           if (!form.getValue('widget_value'))
           {
@@ -457,6 +511,8 @@ var awShortcode = {
       fromHtmlToForm: function(html, form){
         var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
 
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         form.setValue('widget_value', widget_value);
 
         return form.getValue('widget_value');
@@ -485,6 +541,8 @@ var awShortcode = {
       fromHtmlToForm: function(html, form){
         form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
         form.setValue('height', /HEIGHT="([0-9]+)px"/i.execAndGet(html));
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         form.setValue('width', /WIDTH="([0-9]+)px"/i.execAndGet(html));
 
         return form.getValue('widget_value');
@@ -515,6 +573,8 @@ var awShortcode = {
       fromHtmlToForm: function(html, form){
         var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
 
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
         form.setValue('widget_value', widget_value);
 
         return form.getValue('widget_value');

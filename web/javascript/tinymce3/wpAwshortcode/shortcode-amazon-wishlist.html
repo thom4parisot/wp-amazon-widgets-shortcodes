@@ -3,13 +3,14 @@
 <head>
   <title>{#wpAwshortcode.amazon_wishlist}</title>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/configuration.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/aw-shortcode.js"></script>
   <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen" />
   <base target="_self" />
 </head>
 <body style="display: none">
-    <form onsubmit="awShortcode.sendToRte('wishlist', this); return false;" method="post" action="" id="widget-form">
+    <form onsubmit="awShortcode.sendToRte(tinyMCEPopup.getWindowArg('widget'), this); return false;" method="post" action="" id="widget-form">
 
     <div class="tabs">
       <ul>
@@ -71,7 +72,7 @@
         </p>
 
         <p class="mceActionPanelAlternative">
-          <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm('wishlist', 'copypaste', 'widget-form')" />
+          <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm(tinyMCEPopup.getWindowArg('widget'), 'copypaste', 'widget-form')" />
         </p>
       </div>
     </div>
