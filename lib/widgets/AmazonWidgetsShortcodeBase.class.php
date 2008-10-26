@@ -81,4 +81,46 @@ class AmazonWidgetsShortcodeBase
     $prefix = (bool)$prefix && $color ? '#' : '';
     return $prefix.$color;    
   }
+
+  /**
+   * Render a tracking image thanks to some parameters
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.3
+   * @return String Tracking image HTML code
+   * @param Array $options
+   * @param Array $params
+   * @param Boolean $render[optional]
+   */
+  function getTrackingImage($options, $params, $render = null)
+  {
+    $render = is_null($render) ? (bool)get_option('awshortcode_tracking_image') : (bool)$render;
+    $query_string = array();
+
+    if (function_exists('http_build_query'))
+    {
+      $query_string = http_build_query($params, '', '&amp;');
+    }
+    /*
+     * @todo remove that when PHP4 support ends
+     */
+    else
+    {
+      foreach ($params as $key => $value)
+      {
+        $query_string[] = sprintf('%s=%s', $key, $value);
+      }
+      $query_string = implode('&amp;', $query_string);
+    }
+
+    $uri = sprintf(
+      'http://www.assoc-amazon.%s/e/ir?%s',
+      $options['tld'],
+      $query_string
+    );
+
+    return
+      '<img src="'.$uri.'" alt="" style="height:1px !important; width:1px !important; border:none !important; margin:0 !important; padding: 0 !important;" />';
+  }
 }

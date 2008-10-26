@@ -41,7 +41,18 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     );
 
     $config = AmazonWidgetsShortcodeConfiguration::getShortcode('product');
+    $region = AmazonWidgetsShortcodeConfiguration::getRegion($attributes['region']);
     $attributes['type'] = isset($config['types'][$attributes['type']]) ? $attributes['type'] : $config['default_type'];
+
+    $attributes['tracking_image'] = call_user_func(array(__CLASS__, 'getTrackingImage'),
+      $region,
+      array(
+        't' => $attributes['tracking_id'],
+        'l' => 'as2',
+        'o' => 8,
+        'a' => $value,
+      )
+    );
 
     /*
      * Display
@@ -50,7 +61,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
       array(__CLASS__, 'shortcodeToHtml'.ucfirst($attributes['type'])),
       $attributes,
       $value,
-      AmazonWidgetsShortcodeConfiguration::getRegion($attributes['region'])
+      $region
     );
   }
 
@@ -114,6 +125,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     return
       '<a href="'.$uri.'" class="awshortcode-product awshortcode-product-image" rel="external">'.
         '<img src="'.$image.'" alt="'.$alt.'" />'.
+        $tracking_image.
       '</a>';
   }
 
@@ -134,6 +146,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     return
       '<a href="'.$uri.'" class="awshortcode-product awshortcode-product-text" rel="external">'.
         $text.
+        $tracking_image.
       '</a>';
   }
 }

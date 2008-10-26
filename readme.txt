@@ -71,6 +71,7 @@ Now you plug 'n play 'n earn money ;-)
 = Version 1.3 =
  * inline documentation is now more displayed by default
  * huge code overhaul for easier maintenance
+ * tracking images are now enabled for Product Links
  * tinymce: fixed RTE/HTML switching causing removal of all `<span>` tags
  * tinymce: rich formating inside shortcode is now removed (avoid to break shortcode display on the frontend)
  * tinymce: tracking ID and region are filled automatically from copy/paste feature

@@ -68,6 +68,12 @@ class AmazonWidgetsShortcodeConfiguration
         'onSaveCallback' => '',
         'possibleValues' => '',
       ),
+      'awshortcode_tracking_image' => array(
+        'autoload' => true,
+        'defaultValue' => 1,
+        'onSaveCallback' => '',
+        'possibleValues' => array(0, 1),
+      ),
     );
   }
 
@@ -106,9 +112,10 @@ class AmazonWidgetsShortcodeConfiguration
     return array(
       'ca' => array(
         'lang_iso_code' => 'en_CA',
-        'marketplace' => 'CA',
-        'name' => __('Amazon Canada', 'awshortcode'),
-        'suffix' => '-20',
+        'marketplace' =>   'CA',
+        'name' =>          __('Amazon Canada', 'awshortcode'),
+        'suffix' =>        '-20',
+        'tld' =>           'ca',
         'url' => array(
           'affiliate' => 'http://associates.amazon.ca/',
           'images' => 'http://ecx.images-amazon.com/images/I/%s',
@@ -140,9 +147,10 @@ class AmazonWidgetsShortcodeConfiguration
       ),*/
       'fr' => array(
         'lang_iso_code' => 'fr_FR',
-        'marketplace' => 'FR',
-        'name' => __('Amazon France', 'awshortcode'),
-        'suffix' => '-21',
+        'marketplace' =>   'FR',
+        'name' =>          __('Amazon France', 'awshortcode'),
+        'tld' =>           'fr',
+        'suffix' =>        '-21',
         'url' => array(
           'affiliate' => 'http://partenaires.amazon.fr/',
           'images' => 'http://ecx.images-amazon.com/images/I/%s',
@@ -174,9 +182,10 @@ class AmazonWidgetsShortcodeConfiguration
       ),*/
       'uk' => array(
         'lang_iso_code' => 'en_UK',
-        'marketplace' => 'UK',
-        'name' => __('Amazon United Kingdom', 'awshortcode'),
-        'suffix' => '-21',
+        'marketplace' =>   'UK',
+        'name' =>          __('Amazon United Kingdom', 'awshortcode'),
+        'suffix' =>        '-21',
+        'tld' =>           'co.uk',
         'url' => array(
           'affiliate' => 'http://affiliate-program.amazon.co.uk/',
           'images' => 'http://ecx.images-amazon.com/images/I/%s',
@@ -194,9 +203,10 @@ class AmazonWidgetsShortcodeConfiguration
       ),
       'us' => array(
         'lang_iso_code' => 'en_US',
-        'marketplace' => 'US',
-        'name' => __('Amazon USA', 'awshortcode'),
-        'suffix' => '-20',
+        'marketplace' =>   'US',
+        'name' =>          __('Amazon USA', 'awshortcode'),
+        'suffix' =>        '-20',
+        'tld' =>           'com',
         'url' => array(
           'affiliate' => 'https://affiliate-program.amazon.com/',
           'images' => 'http://ecx.images-amazon.com/images/I/%s',
