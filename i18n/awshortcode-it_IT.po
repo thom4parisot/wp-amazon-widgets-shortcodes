@@ -2,12 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes in italiano\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-19 22:07+0100\n"
-"PO-Revision-Date: 2008-09-20 15:51+0100\n"
+"POT-Creation-Date: 2008-10-26 15:27+0100\n"
+"PO-Revision-Date: 2008-10-26 17:09+0100\n"
 "Last-Translator: Gianni Diurno (aka gidibao) <gidibao@gmail.com>\n"
 "Language-Team: Gianni Diurno | http://gidibao.net/ <gidibao@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
@@ -16,369 +16,474 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:69
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
 msgid "left"
 msgstr "sinistra"
 
-#: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:70
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:27
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
 msgid "centered"
 msgstr "centro"
 
-#: ../amazon-widgets-shortcode/amazon-widgets-shortcodes.php:71
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
 msgid "right"
 msgstr "destra"
 
-#: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:59
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
+msgid "Amazon Canada"
+msgstr "Amazon Canada"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:151
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
+msgid "Amazon France"
+msgstr "Amazon Francia"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:186
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Amazon United Kingdom"
+msgstr "Amazon Regno Unito"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:207
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
+msgid "Amazon USA"
+msgstr "Amazon USA"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:266
+#: ../admin/view/documentation.php:92
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "Image and Text"
+msgstr "Immagine e testo"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:267
+#: ../admin/view/documentation.php:137
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Image only"
+msgstr "Solo immagine"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:268
+#: ../admin/view/documentation.php:152
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Text only"
+msgstr "Solo testo"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
 msgid "Amazon Widget Shortcodes has been activated"
 msgstr "Amazon Widget Shortcodes é stato attivato"
 
-#: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:61
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
 #, php-format
 msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
 msgstr "E' necessario che tu inserisca la tua <a href=\"%s\">Amazon Tracking ID</a> affinché possano essere visualizzati gli shortcode negli Amazon Widget."
 
-#: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:96
-#: ../amazon-widgets-shortcode/lib/shortcodesAdmin.class.php:97
-#: ../amazon-widgets-shortcode/admin/view/options.php:2
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
+#: ../admin/view/options.php:2
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:23
 msgid "Amazon Widgets Shortcodes"
 msgstr "Amazon Widgets Shortcodes"
 
-#: ../amazon-widgets-shortcode/lib/shortcodes.class.php:49
-#: ../amazon-widgets-shortcode/lib/shortcodes.class.php:162
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
 msgid "You don't have a sufficient version of Flash Player to display this animation."
 msgstr "Non hai la versione aggiornata del Flash Player per poter mostrare le animazioni."
 
-#: ../amazon-widgets-shortcode/lib/shortcodes.class.php:203
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
 msgid "Consult this wishlist on Amazon."
 msgstr "Consulta questa wishlist su Amazon."
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:244
-msgid "Amazon Canada"
-msgstr "Amazon Canada"
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
+msgid "Consult this product cloud on Amazon."
+msgstr "Consulta su Amazon questo insieme di prodotti."
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:274
-msgid "Amazon France"
-msgstr "Amazon Francia"
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "Consulta su Amazon i favoriti."
 
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:304
-msgid "Amazon United Kingdom"
-msgstr "Amazon Regno Unito"
-
-#: ../amazon-widgets-shortcode/lib/shortcodesToolkit.class.php:320
-msgid "Amazon USA"
-msgstr "Amazon USA"
-
-#: ../amazon-widgets-shortcode/admin/form/options.php:21
+#: ../admin/form/options.php:21
 msgid "Options saved."
 msgstr "Le opzioni sono state salvate."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:4
+#: ../admin/view/documentation.php:2
+msgid "Amazon Widgets Shortcodes documentation"
+msgstr "Documentazione Amazon Widgets Shortcodes"
+
+#: ../admin/view/documentation.php:5
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
+msgid "Amazon Carrousel"
+msgstr "Amazon Carrousel"
+
+#: ../admin/view/documentation.php:8
+#: ../admin/view/documentation.php:50
+#: ../admin/view/documentation.php:82
+#: ../admin/view/documentation.php:175
+#: ../admin/view/documentation.php:207
+#: ../admin/view/documentation.php:249
+msgid "Shortcode:"
+msgstr "Shortcode:"
+
+#: ../admin/view/documentation.php:12
+#: ../admin/view/documentation.php:54
+#: ../admin/view/documentation.php:86
+#: ../admin/view/documentation.php:179
+#: ../admin/view/documentation.php:211
+#: ../admin/view/documentation.php:253
+msgid "Example:"
+msgstr "Esempio:"
+
+#: ../admin/view/documentation.php:16
+#: ../admin/view/documentation.php:58
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:137
+#: ../admin/view/documentation.php:152
+#: ../admin/view/documentation.php:183
+#: ../admin/view/documentation.php:215
+#: ../admin/view/documentation.php:257
+msgid "Options:"
+msgstr "Opzioni:"
+
+#: ../admin/view/documentation.php:21
+#: ../admin/view/documentation.php:63
+#: ../admin/view/documentation.php:97
+#: ../admin/view/documentation.php:102
+#: ../admin/view/documentation.php:142
+#: ../admin/view/documentation.php:188
+#: ../admin/view/documentation.php:220
+#: ../admin/view/documentation.php:262
+msgid "align the widget on the desired way"
+msgstr "allinea a tuo piacere il widget"
+
+#: ../admin/view/documentation.php:25
+#: ../admin/view/documentation.php:101
+#: ../admin/view/documentation.php:106
+#: ../admin/view/documentation.php:111
+#: ../admin/view/documentation.php:224
+msgid "CSS hexa or code value"
+msgstr "valore esagesimale o codice colore CSS"
+
+#: ../admin/view/documentation.php:26
+#: ../admin/view/documentation.php:107
+#: ../admin/view/documentation.php:225
+msgid "customize the background color of the widget"
+msgstr "personalizza il colere dello sfondo per il widget"
+
+#: ../admin/view/documentation.php:30
+#: ../admin/view/documentation.php:35
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:131
+#: ../admin/view/documentation.php:229
+#: ../admin/view/documentation.php:234
+msgid "value in pixels"
+msgstr "valore in pixel"
+
+#: ../admin/view/documentation.php:31
+#: ../admin/view/documentation.php:230
+msgid "height of the animation"
+msgstr "altezza della animazione"
+
+#: ../admin/view/documentation.php:36
+#: ../admin/view/documentation.php:235
+msgid "width of the animation"
+msgstr "larghezza della animazione"
+
+#: ../admin/view/documentation.php:41
+#: ../admin/view/documentation.php:73
+#: ../admin/view/documentation.php:167
+#: ../admin/view/documentation.php:198
+#: ../admin/view/documentation.php:240
+#: ../admin/view/documentation.php:272
+msgid "Content:"
+msgstr "Contenuto:"
+
+#: ../admin/view/documentation.php:42
+#: ../admin/view/documentation.php:74
+#: ../admin/view/documentation.php:199
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:273
+msgid "Widget ID, contained in HTML parameter value like this:"
+msgstr "ID widget, valore dei parametri HTML:"
+
+#: ../admin/view/documentation.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
+msgid "Amazon My Favorites"
+msgstr "Favoriti Amazon"
+
+#: ../admin/view/documentation.php:67
+#: ../admin/view/documentation.php:126
+#: ../admin/view/documentation.php:156
+#: ../admin/view/documentation.php:192
+#: ../admin/view/documentation.php:266
+msgid "string"
+msgstr "stringa"
+
+#: ../admin/view/documentation.php:68
+#: ../admin/view/documentation.php:193
+#: ../admin/view/documentation.php:267
+msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
+msgstr "testo alternativo qualora Flash o JavaScript non fossero stati abilitati nel browser del visitatore"
+
+#: ../admin/view/documentation.php:79
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+msgid "Amazon Product"
+msgstr "Prodotto Amazon"
+
+#: ../admin/view/documentation.php:112
+msgid "border color of the widget"
+msgstr "colore per il bordo del widget"
+
+#: ../admin/view/documentation.php:117
+msgid "height of the frame"
+msgstr "altezza del frame"
+
+#: ../admin/view/documentation.php:122
+msgid "display a small picture or a big one (0 by default)"
+msgstr "Mostra una immagine piccola/grande (0 per predefinita)"
+
+#: ../admin/view/documentation.php:127
+msgid "window name to open the link in (_blank by default)"
+msgstr "il nome della finestra nella quale il link avrà di landing (predefinito _blank)"
+
+#: ../admin/view/documentation.php:132
+msgid "width of the frame"
+msgstr "larghezza del frame"
+
+#: ../admin/view/documentation.php:141
+msgid "image name or Amazon OR full image URL"
+msgstr "nome immagine, Amazon oppure URL immagine"
+
+#: ../admin/view/documentation.php:147
+msgid "display the widget as image"
+msgstr "mostra il widget come immagine"
+
+#: ../admin/view/documentation.php:157
+msgid "text of the hyperlink"
+msgstr "testo del collegamento"
+
+#: ../admin/view/documentation.php:162
+msgid "display the widget as hypertext link"
+msgstr "mostra il widget come collegamento di testo"
+
+#: ../admin/view/documentation.php:168
+msgid "ASIN code of the product."
+msgstr "Codice ASIN del prodotto."
+
+#: ../admin/view/documentation.php:172
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+msgid "Amazon Product Cloud"
+msgstr "Cloud prodotti Amazon"
+
+#: ../admin/view/documentation.php:204
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+msgid "Amazon Slideshow"
+msgstr "Amazon Slideshow"
+
+#: ../admin/view/documentation.php:246
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
+msgid "Amazon Wishlist"
+msgstr "Amazon Wishlist"
+
+#: ../admin/view/options.php:4
 msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
 msgstr "Benvenuto nella pagina di configurazione di <em>Amazon Widgets Shortcodes</em>!"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:8
+#: ../admin/view/options.php:8
 #, php-format
 msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
 msgstr "Puoi <a href=\"%s\" class=\"new-window\">domandare supporto</a>, <a href=\"%s\" class=\"new-window\">scrivere un commento</a> (positivo o negativo), <a href=\"%s\" class=\"new-window\">comunicare un errore</a> del programma ed anche <a href=\"%s\" class=\"new-window\">leggere i commenti</a> già esistenti.<br />Qualora tu fossi uno sviluppatore di WordPress, puoi utilizzare invece il <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a>."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:23
+#: ../admin/view/options.php:23
 msgid "Enjoy the usage of this plugin!"
 msgstr "Buon utilizzo di questo plugin!"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:39
-#: ../amazon-widgets-shortcode/admin/view/options.php:45
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
 msgid "Main Options"
 msgstr "Opzioni principali"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:40
-#: ../amazon-widgets-shortcode/admin/view/options.php:191
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:188
 msgid "Additional Tools"
 msgstr "Opzioni supplementari"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:41
+#: ../admin/view/options.php:38
 msgid "Documentation"
 msgstr "Documentazione"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:51
+#: ../admin/view/options.php:48
 msgid "Amazon affiliate region:"
 msgstr "Luogo di affiliazione Amazon:"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:64
+#: ../admin/view/options.php:61
 #, php-format
 msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 msgstr "impostato al momento su <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:73
+#: ../admin/view/options.php:70
 msgid "Amazon Tracking ID:"
 msgstr "Amazon Tracking ID:"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:83
+#: ../admin/view/options.php:80
 #, php-format
 msgid "Your Amazon Tracking ID, generally suffixed by %s."
 msgstr "La Amazon Tracking ID ha il suffisso %s."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:92
+#: ../admin/view/options.php:89
 msgid "Show inline documentation?"
 msgstr "Desideri che la documentazione sia mostrata inline?"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:106
+#: ../admin/view/options.php:103
 msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
 msgstr "La documentazione inline sarà presente al di sotto della tua area di scrittura (articoli/pagine).<br />Questa opzione potrà esserti certamente utile per inserire propriamente gli Amazon Widget."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:116
+#: ../admin/view/options.php:113
 msgid "Layout Options"
 msgstr "Opzioni presentazione"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:122
+#: ../admin/view/options.php:119
 msgid "Default Widgets alignment:"
 msgstr "Allineamento predefinito dei widget:"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:141
+#: ../admin/view/options.php:138
 msgid "Show Amazon Widgets in RSS feeds?"
 msgstr "Desideri mostrare gli Amazon Widget nei feed RSS?"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:155
+#: ../admin/view/options.php:152
 msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
 msgstr "Puoi nascondere la visualizzazione dei widget nei feed.<br />Utile qualora desiderassi ripubblicarlo in siti esterni (social news) che non permettono eventualmente la diffusione della pubblicità."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:165
+#: ../admin/view/options.php:162
 msgid "Strict Standards compliance?"
 msgstr "Normative standard?"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:179
+#: ../admin/view/options.php:176
 msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
 msgstr "Metti il segno di spunta qualora desiderassi attenerti alle normative HTML o XHTML.<br />Non dimenticare che Internet Explorer 6 poptrebbe visualizzare alcuni Amazon widget in un modo non proprio."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:197
+#: ../admin/view/options.php:194
 msgid "Enable context links:"
 msgstr "Attiva i link contestuali:"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:211
+#: ../admin/view/options.php:208
 msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
 msgstr "I link contestuali sono dei collegamenti che vengono aggiunti in automatico sulla base delle parole chiave di maggiore rilevanza che appaiono nella tua pagina."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:220
+#: ../admin/view/options.php:217
 msgid "Enable product preview:"
 msgstr "Attiva anteprima del prodotto:"
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:234
+#: ../admin/view/options.php:231
 msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
 msgstr "L'anteprima del prodotto Amazon mostra i collegamenti ad alcune informazioni quali ad esempio: il prezzo, l'immagine, il nome, etc."
 
-#: ../amazon-widgets-shortcode/admin/view/options.php:250
+#: ../admin/view/options.php:247
 msgid "Save Changes"
 msgstr "Salva le modifiche"
 
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:2
-msgid "Amazon Widgets Shortcodes documentation"
-msgstr "Documentazione Amazon Widgets Shortcodes"
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
+msgid "Affiliate Options"
+msgstr "Opzioni affiliati"
 
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:5
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
-msgid "Amazon Carrousel"
-msgstr "Amazon Carrousel"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:8
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:51
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:112
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:154
-msgid "Shortcode:"
-msgstr "Shortcode:"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:12
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:55
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:116
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:158
-msgid "Example:"
-msgstr "Esempio:"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:16
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:59
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:120
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:162
-msgid "Options:"
-msgstr "Opzioni:"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:21
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:64
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:69
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:125
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:167
-msgid "align the widget on the desired way"
-msgstr "allinea a tuo piacere il widget"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:25
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:68
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:73
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:78
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:129
-msgid "CSS hexa or code value"
-msgstr "valore esagesimale o codice colore CSS"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:26
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:74
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:130
-msgid "customize the background color of the widget"
-msgstr "personalizza il colere dello sfondo per il widget"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:30
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:35
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:83
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:98
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:134
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:139
-msgid "value in pixels"
-msgstr "valore in pixel"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:31
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:135
-msgid "height of the animation"
-msgstr "altezza della animazione"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:36
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:140
-msgid "width of the animation"
-msgstr "larghezza della animazione"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:41
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:104
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:145
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:177
-msgid "Content:"
-msgstr "Contenuto:"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:42
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:146
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:178
-msgid "Widget ID, contained in HTML parameter value like this:"
-msgstr "ID widget, valore dei parametri HTML:"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:47
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
-msgid "Amazon Product"
-msgstr "Prodotto Amazon"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:48
-msgid "For now, it only handles this widget in the \"Text + picture\" version."
-msgstr "Per il momento, sarà possibile utilizzare il widget solamente nella versione \"Testo + immagine\"."
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:79
-msgid "border color of the widget"
-msgstr "colore per il bordo del widget"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:84
-msgid "height of the frame"
-msgstr "altezza del frame"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:89
-msgid "display a small picture or a big one (0 by default)"
-msgstr "Mostra una immagine piccola/grande (0 per predefinita)"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:93
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:171
-msgid "string"
-msgstr "stringa"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:94
-msgid "window name to open the link in (_blank by default)"
-msgstr "il nome della finestra nella quale il link avrà di landing (predefinito _blank)"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:99
-msgid "width of the frame"
-msgstr "larghezza del frame"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:105
-msgid "ASIN code of the product."
-msgstr "Codice ASIN del prodotto."
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:109
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
-msgid "Amazon Slideshow"
-msgstr "Amazon Slideshow"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:151
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
-msgid "Amazon Wishlist"
-msgstr "Amazon Wishlist"
-
-#: ../amazon-widgets-shortcode/admin/view/documentation.php:172
-msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
-msgstr "testo alternativo qualora Flash o JavaScript non fossero stati abilitati nel browser del visitatore"
-
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
 msgid "Align"
 msgstr "Allineamento"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
 msgid "Link Color"
 msgstr "Colore del link"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
 msgid "Other Options"
 msgstr "Altre opzioni"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
 msgid "Apply the magic!"
 msgstr "Ecco fatto!"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
 msgid "ASIN Code"
 msgstr "Codice ASIN"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
 msgid "Background Color"
 msgstr "Colore dello sfondo"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
 msgid "Border color"
 msgstr "Colore del bordo"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
 msgid "Copy/paste Amazon HTML's code right below ↓"
 msgstr "Copia/Incolla qui sotto il codice HTML di Amazon ↓"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
 msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
 msgstr "Non desideri compilare i campi per le opzioni? Copia/Incolla il codice HTML di  Amazon e gustati la magia!"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
 msgid "Copy/Paste Code"
 msgstr "Copia/Incolla il codice"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
 msgid "Glad you look at here!"
 msgstr "Lieto di vederti qui!"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
 msgid "Height"
 msgstr "Altezza"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Image Source"
+msgstr "Sorgente immagine"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+msgid "Link text"
+msgstr "Testo collegamento"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
 msgid "pixels"
 msgstr "pixel"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
 msgid "Default Plugin Setting"
 msgstr "Impostazioni predefinite"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Display type"
+msgstr "Mostra tipo"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+msgid "Region"
+msgstr "Regione"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
 msgid "Small size?"
 msgstr "Dimensione minuta?"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:60
+msgid "Tracking ID"
+msgstr "Tracking ID"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:61
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "Lascia in bianco per utilizzare in automatico il tuo tracking ID predefinito."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
 msgid "Widget ID"
 msgstr "ID widget"
 
-#: ../amazon-widgets-shortcode/web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
 msgid "Width"
 msgstr "Larghezza"
 
+#~ msgid ""
+#~ "For now, it only handles this widget in the \"Text + picture\" version."
+#~ msgstr ""
+#~ "Per il momento, sarà possibile utilizzare il widget solamente nella "
+#~ "versione \"Testo + immagine\"."
 #~ msgid ""
 #~ "This feature is under heave development and you should enjoy it in the "
 #~ "next 1.2 release of this plugin.As you may guess, you will copy/paste "
