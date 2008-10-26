@@ -25,6 +25,7 @@ $strings = 'tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode",{
 });
 
 tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
+  affiliate_options:    "'.js_escape(__('Affiliate Options', 'awshortcode')).'",
   align:                "'.js_escape(__('Align', 'awshortcode')).'",
   align_center:         "'.js_escape(__('centered', 'awshortcode')).'",
   align_left:           "'.js_escape(__('left', 'awshortcode')).'",
@@ -50,14 +51,14 @@ tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
   product_type_both:    "'.js_escape(__('Image and Text', 'awshortcode')).'",
   product_type_image:   "'.js_escape(__('Image only', 'awshortcode')).'",
   product_type_text:    "'.js_escape(__('Text only', 'awshortcode')).'",
-  region:               "'.js_escape(__('Amazon affiliate region:', 'awshortcode')).'",
+  region:               "'.js_escape(__('Region', 'awshortcode')).'",
   region_ca:            "'.js_escape(__('Amazon Canada', 'awshortcode')).'",
   region_fr:            "'.js_escape(__('Amazon France', 'awshortcode')).'",
   region_uk:            "'.js_escape(__('Amazon United Kingdom', 'awshortcode')).'",
   region_us:            "'.js_escape(__('Amazon USA', 'awshortcode')).'",
   small:                "'.js_escape(__('Small size?', 'awshortcode')).'",
-  tracking_id:          "'.js_escape(__('Amazon Tracking ID:', 'awshortcode')).'",
-  tracking_id_help:     "'.js_escape(__('If filled, it will override your default tracking ID for this widget only.', 'awshortcode')).'",
+  tracking_id:          "'.js_escape(__('Tracking ID', 'awshortcode')).'",
+  tracking_id_help:     "'.js_escape(__('Leave empty to use automatically your default tracking ID.', 'awshortcode')).'",
   widget_id:            "'.js_escape(__('Widget ID', 'awshortcode')).'",
   width:                "'.js_escape(__('Width', 'awshortcode')).'",
   zzz:                  ""

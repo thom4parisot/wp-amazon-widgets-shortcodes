@@ -23,7 +23,7 @@
         ed.windowManager.open({
           file : url + '/shortcode-'+val+'.html?'+popupArgs.join('&'),
           width : 450 + 'px',
-          height : 470 + 'px',
+          height : 490 + 'px',
           inline : 1
         }, {
           plugin_url: url,

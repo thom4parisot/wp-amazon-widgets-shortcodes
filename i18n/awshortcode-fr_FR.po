@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-19 19:19+0100\n"
-"PO-Revision-Date: 2008-10-19 19:20+0100\n"
+"POT-Creation-Date: 2008-10-26 15:27+0100\n"
+"PO-Revision-Date: 2008-10-26 15:28+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Oncle Tom <i18n@oncle-tom.net>\n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,59 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;_e ;__;__ ;_c;_c ;__ngettext;__ngettext\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+msgid "left"
+msgstr "à gauche"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "centered"
+msgstr "centré"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+msgid "right"
+msgstr "à droite"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
+msgid "Amazon Canada"
+msgstr "Amazon Canada"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:151
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
+msgid "Amazon France"
+msgstr "Amazon France"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:186
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Amazon United Kingdom"
+msgstr "Amazon Royaume-Uni"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:207
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
+msgid "Amazon USA"
+msgstr "Amazon États-Unis"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:266
+#: ../admin/view/documentation.php:92
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "Image and Text"
+msgstr "Image et texte"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:267
+#: ../admin/view/documentation.php:137
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Image only"
+msgstr "Image uniquement"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:268
+#: ../admin/view/documentation.php:152
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Text only"
+msgstr "Texte uniquement"
 
 #: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
 msgid "Amazon Widget Shortcodes has been activated"
@@ -32,75 +85,22 @@ msgstr "Vous devez <a href=\"%s\">paramétrer votre ID de suivi Amazon</a> afin 
 msgid "Amazon Widgets Shortcodes"
 msgstr "Amazon Widgets Shortcodes"
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
-msgid "left"
-msgstr "à gauche"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
-msgid "centered"
-msgstr "centré"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
-msgid "right"
-msgstr "à droite"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:110
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
-msgid "Amazon Canada"
-msgstr "Amazon Canada"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:144
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
-msgid "Amazon France"
-msgstr "Amazon France"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:178
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
-msgid "Amazon United Kingdom"
-msgstr "Amazon Royaume-Uni"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:198
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
-msgid "Amazon USA"
-msgstr "Amazon États-Unis"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:256
-#: ../admin/view/documentation.php:92
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
-msgid "Image and Text"
-msgstr "Image et texte"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:257
-#: ../admin/view/documentation.php:137
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
-msgid "Image only"
-msgstr "Image uniquement"
-
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:258
-#: ../admin/view/documentation.php:152
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
-msgid "Text only"
-msgstr "Texte uniquement"
-
-#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
-msgid "Consult my favorites on Amazon."
-msgstr "Consultez mes favoris sur Amazon."
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr "Votre version d'Adobe Flash Player n'est pas suffisamment à jour pour afficher cette animation."
 
 #: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
 msgid "Consult this wishlist on Amazon."
 msgstr "Consulter cette liste cadeau sur Amazon."
 
-#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
-#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
-msgid "You don't have a sufficient version of Flash Player to display this animation."
-msgstr "Votre version d'Adobe Flash Player n'est pas suffisamment à jour pour afficher cette animation."
-
 #: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
 msgid "Consult this product cloud on Amazon."
 msgstr "Consultez ce nuage de produits sur Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "Consultez mes favoris sur Amazon."
 
 #: ../admin/form/options.php:21
 msgid "Options saved."
@@ -299,8 +299,8 @@ msgstr "Bonne utilisation de ce plugin !"
 
 #: ../admin/view/options.php:36
 #: ../admin/view/options.php:42
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
 msgid "Main Options"
 msgstr "Options principales"
 
@@ -314,7 +314,6 @@ msgid "Documentation"
 msgstr "Documentation"
 
 #: ../admin/view/options.php:48
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
 msgid "Amazon affiliate region:"
 msgstr "Région d'affiliation Amazon :"
 
@@ -324,7 +323,6 @@ msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 msgstr "actuellement réglé sur <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
 
 #: ../admin/view/options.php:70
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
 msgid "Amazon Tracking ID:"
 msgstr "ID de suivi Amazon (Tracking ID) :"
 
@@ -386,89 +384,106 @@ msgid "Save Changes"
 msgstr "Enregister les modifications"
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:28
+msgid "Affiliate Options"
+msgstr "Options d'affiliation"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
 msgid "Align"
 msgstr "Alignement"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
 msgid "Link Color"
 msgstr "Couleur du lien"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
 msgid "Other Options"
 msgstr "Autres options"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
 msgid "Apply the magic!"
 msgstr "Hop, le tour est joué !"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
 msgid "ASIN Code"
 msgstr "Code ASIN"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
 msgid "Background Color"
 msgstr "Couleur de fond"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
 msgid "Border color"
 msgstr "Couleur de bordure"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
 msgid "Copy/paste Amazon HTML's code right below ↓"
 msgstr "Copiez/collez le code HTML Amazon ci-dessous ↓"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
 msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
 msgstr "Vous ne souhaitez pas remplir les champs des options principales ? Alors copiez/collez le code HTML Amazon et appréciez l'autocomplétion magique !"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
 msgid "Copy/Paste Code"
 msgstr "Copier/coller de code"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
 msgid "Glad you look at here!"
 msgstr "Ravi de vous voir ici !"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
 msgid "Height"
 msgstr "Hauteur"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
 msgid "Image Source"
 msgstr "Nom de l'image"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
 msgid "Link text"
 msgstr "Texte du lien"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
 msgid "pixels"
 msgstr "pixels"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
 msgid "Default Plugin Setting"
 msgstr "Réglage par défaut du plugin"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
 msgid "Display type"
 msgstr "Type d'affichage"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+msgid "Region"
+msgstr "Région"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
 msgid "Small size?"
 msgstr "Petite taille ?"
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:60
-msgid "If filled, it will override your default tracking ID for this widget only."
-msgstr "Si rempli, sa valeur surchargera l'ID de suivi Amazon par défaut, uniquement pour ce widget."
+msgid "Tracking ID"
+msgstr "ID de suivi"
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:61
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "Laisser vide pour automatiquement utiliser votre ID de suivi par défaut."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
 msgid "Widget ID"
 msgstr "Widget ID"
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
 msgid "Width"
 msgstr "Largeur"
 
+#~ msgid ""
+#~ "If filled, it will override your default tracking ID for this widget only."
+#~ msgstr ""
+#~ "Si rempli, sa valeur surchargera l'ID de suivi Amazon par défaut, "
+#~ "uniquement pour ce widget."
 #~ msgid ""
 #~ "For now, it only handles this widget in the \"Text + picture\" version."
 #~ msgstr ""

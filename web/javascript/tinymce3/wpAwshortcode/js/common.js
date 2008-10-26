@@ -55,6 +55,7 @@
           dom.hide(getById(prefix+(option.value || 'default')));
         });
         dom.show(getById(prefix+selected_id));
+        tinyMCEPopup.resizeToInnerSize();
       }
 
       el.onchange();

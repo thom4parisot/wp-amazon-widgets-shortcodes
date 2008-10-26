@@ -28,24 +28,6 @@
           <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
           <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
         </p>
-
-        <p>
-          <label for="region">{#wpAwshortcode_dlg.region}</label>
-          <select name="region" id="region">
-            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
-            <option value="ca">{#wpAwshortcode_dlg.region_ca}</option>
-            <option value="fr">{#wpAwshortcode_dlg.region_fr}</option>
-            <option value="uk">{#wpAwshortcode_dlg.region_uk}</option>
-            <option value="us">{#wpAwshortcode_dlg.region_us}</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="tracking_id">{#wpAwshortcode_dlg.tracking_id}</label>
-          <input id="tracking_id" name="tracking_id" type="text" value="" class="" />
-          <span class="help">({#wpAwshortcode_dlg.tracking_id_help})</span>
-        </p>
-
 			</fieldset>
 
       <fieldset>
@@ -75,6 +57,26 @@
         <p>
           <label for="width">{#wpAwshortcode_dlg.width}</label>
           <input id="width" name="width" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.affiliate_options}</legend>
+        <p>
+          <label for="region">{#wpAwshortcode_dlg.region}</label>
+          <select name="region" id="region">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="ca">{#wpAwshortcode_dlg.region_ca}</option>
+            <option value="fr">{#wpAwshortcode_dlg.region_fr}</option>
+            <option value="uk">{#wpAwshortcode_dlg.region_uk}</option>
+            <option value="us">{#wpAwshortcode_dlg.region_us}</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="tracking_id">{#wpAwshortcode_dlg.tracking_id}</label>
+          <input id="tracking_id" name="tracking_id" type="text" value="" class="" />
+          <span class="help">({#wpAwshortcode_dlg.tracking_id_help})</span>
         </p>
       </fieldset>
 		</div>

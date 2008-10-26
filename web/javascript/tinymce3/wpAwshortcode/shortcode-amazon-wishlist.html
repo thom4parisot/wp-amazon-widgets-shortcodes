@@ -28,7 +28,24 @@
           <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
           <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
         </p>
+      </fieldset>
 
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+
+        <p>
+          <label for="align">{#wpAwshortcode_dlg.align}</label>
+          <select name="align" id="align">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="left">{#wpAwshortcode_dlg.align_left}</option>
+            <option value="center">{#wpAwshortcode_dlg.align_center}</option>
+            <option value="right">{#wpAwshortcode_dlg.align_right}</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.affiliate_options}</legend>
         <p>
           <label for="region">{#wpAwshortcode_dlg.region}</label>
           <select name="region" id="region">
@@ -44,21 +61,6 @@
           <label for="tracking_id">{#wpAwshortcode_dlg.tracking_id}</label>
           <input id="tracking_id" name="tracking_id" type="text" value="" class="" />
           <span class="help">({#wpAwshortcode_dlg.tracking_id_help})</span>
-        </p>
-
-      </fieldset>
-
-      <fieldset>
-        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
-
-        <p>
-          <label for="align">{#wpAwshortcode_dlg.align}</label>
-          <select name="align" id="align">
-            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
-            <option value="left">{#wpAwshortcode_dlg.align_left}</option>
-            <option value="center">{#wpAwshortcode_dlg.align_center}</option>
-            <option value="right">{#wpAwshortcode_dlg.align_right}</option>
-          </select>
         </p>
       </fieldset>
     </div>
