@@ -55,6 +55,7 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Todo-list ==
+1. Provide an API to let other developers to plug-in
 1. Blog sidebar Widgets
 1. Add support for all Amazon Partners programs
 1. Profile management
