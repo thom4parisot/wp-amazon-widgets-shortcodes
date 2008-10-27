@@ -315,7 +315,7 @@ var awShortcode = {
      */
     getTrackingIdFromString: function(uri, default_tracking_id){
       var default_tracking_id = default_tracking_id || tinyMCEPopup.editor.settings.awshortcode_tracking_id;
-      var tracking_id = /([a-z0-9]{4,12}(-[0-9]{1,2})?-[0-9]{2})/.execAndGet(uri);
+      var tracking_id = /([a-z0-9]{4,14}(-[0-9]{1,2})?-[0-9]{2})/.execAndGet(uri);
 
       return tracking_id == default_tracking_id ? null : tracking_id;
     }
