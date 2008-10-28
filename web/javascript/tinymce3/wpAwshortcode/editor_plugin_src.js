@@ -60,15 +60,30 @@
        * 
        * We basically remove span element
        */
+      ed.onBeforeGetContent.add(function(ed, o){
+        tinymce.each(ed.getBody().getElementsByTagName('span'), function(tag){
+          if (ed.dom.hasClass(tag, 'awshortcode'))
+          {
+            tag.innerHTML = tag.innerHTML.replace(/<\/?[^>]*>/g, '');
+          }
+        });
+      });
+
+      /*
+       * From Editor to database (Visual to HTML tab)
+       * 
+       * We basically remove span element
+       */
       ed.onPostProcess.add(function(ed, o){
         o.content = o.content.replace(
-          /<span class="awshortcode [^>]+>(.*\])<\/span>/g,
-          function(text, shortcode){
-            return shortcode.replace(/<\/?[^>]*>/g, '');
+          /<span class="awshortcode [^>]+>([^<>]+)<\/span>/g,
+          function (text, shortcode)
+          {
+            console.log(shortcode);
+            return shortcode;
           }
         );
       });
-
       /*
        * From database to Editor (HTML tab to Visual)
        * 
@@ -94,6 +109,7 @@
         body.innerHTML = body.innerHTML.replace(
           /(\[amazon-[a-z0-9]+[^\]]*\][^\[]+\[\/(amazon-[a-z0-9]+)\])/g,
           function(text, shortcode, widget_id){
+            console.log(text);
             return '<span class="awshortcode '+widget_id+'">'+shortcode+'</span>';
           }
         );
