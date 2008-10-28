@@ -79,7 +79,6 @@
           /<span class="awshortcode [^>]+>([^<>]+)<\/span>/g,
           function (text, shortcode)
           {
-            console.log(shortcode);
             return shortcode;
           }
         );
@@ -109,7 +108,6 @@
         body.innerHTML = body.innerHTML.replace(
           /(\[amazon-[a-z0-9]+[^\]]*\][^\[]+\[\/(amazon-[a-z0-9]+)\])/g,
           function(text, shortcode, widget_id){
-            console.log(text);
             return '<span class="awshortcode '+widget_id+'">'+shortcode+'</span>';
           }
         );
@@ -188,7 +186,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.2'
+        version:   '1.2.1'
       };
     },
     /*
