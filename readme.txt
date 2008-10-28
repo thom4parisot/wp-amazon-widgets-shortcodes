@@ -1,6 +1,6 @@
 === Amazon Widgets Shortcodes ===
 Contributors: oncletom
-Donate link:
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=752034
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 2.7.x
@@ -12,28 +12,27 @@ Keep your time and save your money with these Amazon widgets shortcodes. Standar
 
 == Description ==
 
-This plugin is made for you if you use Amazon Affiliate links (aka Amazon Associates, Amazon Partenaires etc.).
+Easy management of Amazon Links & Widgets on your blog. Preserve your post consistency, use copy/paste Amazon code or build your links with an easy to use interface
 
-Copy&Paste Amazon Widgets HTML tags is boring and causing trouble if you switch between HTML and rich text editor.
-Now you can earn money with affiliate links without any pain and with XHTML standard compliant code.
+Hot features:
 
-You may like it for these features:
-
+* switch from TinyMCE to HTML without loosing anything!
 * international Amazon support (Canada, France, United Kingdom, USA)
-* easy insertion from Rich Text Editor
-* copy/paste Amazon HTML code
-* valid XHTML code
-* deals nice with both HTML and Rich editors (no more glitches)
-* RSS feed filtering (don't spam your feeds)
-* minimal shortcodes (1 option and it runs)
-* inline documentation to help you using the shortcodes while writing your posts
 * built-in translations: English, French and Italian.
+* easy insertion from TinyMCE
+* autoconfigure from copy/paste code
+* minimal shortcodes (1 option and it runs)
+* inline documentation for people who want to manually write Amazon Shortcodes
 
+And enable these features within your blog:
+
+ * XHTML Strict validation
+ * RSS feed filtering (don't spam your feeds)
+ * Amazon Context Links
 
 Currently supported Amazon widgets/features:
 
 * Carrousel Widget
-* Context Links
 * My Favorites Widget
 * Product Preview
 * Product Links
@@ -81,6 +80,9 @@ Now you plug 'n play 'n earn money ;-)
  * widget: Product Widget now handles text+image, image and text
  * widget: added Product Cloud Widget
  * wordpress: Wordpress 2.7 compatibility
+ 
+HUGE thanks to [Kathryn Presner](http://www.zoonini.com) for testing and reporting problems.
+Kudos to LesBessant and fredl for reporting usage problems with Wordpress µ and Wordpress 2.7.
 
 = Version 1.2.2 =
  * wordpress: support of Wordpress µ 2.5+
@@ -152,6 +154,7 @@ It looks like nothing but it is an expandable feature so we can plug our own sho
 
 = How can I use the shortcodes? =
 You have 2 ways to using them:
+
  * by writing yourself the shortcode as plain text
  * by using the shortcode wizard provided with the Rich Text Editor (TinyMCE)
 
@@ -179,6 +182,7 @@ Once you have done your first translation from the trunk, [contact me](http://ca
 
 = How is organized the translation =
 There are 3 steps:
+
 1. code freezing
 2. translation
 3. code release
