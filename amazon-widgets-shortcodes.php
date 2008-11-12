@@ -3,7 +3,7 @@
 Plugin Name: Amazon Widgets Shortcodes
 Description: Easy management of Amazon Links & Widgets on your blog. Preserve your post consistency, use copy/paste Amazon code or build your links with an easy to use interface. <em>µ compatible</em>.
 Author: Oncle Tom
-Version: 1.3
+Version: 1.3.1
 Author URI: http://oncle-tom.net/
 Plugin URI: http://case.oncle-tom.net/code/wordpress/
 
@@ -88,7 +88,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
   {
     $class = 'AmazonWidgetsShortcodeProductPreview';
     require_once AWS_PLUGIN_BASEPATH.'/lib/tools/'.$class.'.class.php';
-    add_action('wp_footer', array($class, 'displayProductPreview'));
+    add_action('wp_footer', array($class, 'getHtmlCode'));
   }
 }
 

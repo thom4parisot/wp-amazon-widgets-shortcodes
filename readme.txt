@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 2.7.x
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -68,6 +68,9 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+= Version 1.3.1 =
+ * fixed Product Preview bug on plugin activation
+
 = Version 1.3 =
  * inline documentation is now more displayed by default
  * huge code overhaul for easier maintenance
