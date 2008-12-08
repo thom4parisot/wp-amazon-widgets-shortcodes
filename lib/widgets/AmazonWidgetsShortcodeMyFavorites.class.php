@@ -47,7 +47,7 @@ class AmazonWidgetsShortcodeMyFavorites extends AmazonWidgetsShortcodeBase
      * Display
      */
     return
-      '<div style="text-align:'.$align.'" class="awshortcode-wishlist">'.
+      '<div style="text-align:'.$align.'" class="awshortcode-myfavorites">'.
         '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
         '<noscript>'.
           '<a href="'.$uri_encoded.'&amp;Operation=NoScript">'.
