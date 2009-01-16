@@ -3,7 +3,7 @@ Contributors: oncletom
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=752034
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
-Tested up to: 2.7.x
+Tested up to: 2.7
 Stable tag: 1.3.1
 
 
@@ -68,6 +68,11 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+= Version 1.3.2 =
+ * fixed classname typo for "My Favourites widget"
+ * fixed an issue on some hosting plans which display a 404 page in TinyMCE Editor
+ * removed inlined CSS to use .alignleft, .aligncenter, .alignright WP classes (props of tbrincefield)
+
 = Version 1.3.1 =
  * fixed Product Preview bug on plugin activation
 

@@ -87,7 +87,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     if (get_option('awshortcode_strict_standards'))
     {
       return
-        '<div style="text-align:'.$align.'" class="awshortcode-product">'.
+        '<div class="awshortcode-product align'.$align.'">'.
           '<object type="text/html" data="'.$uri.'" style="width:'.$width.'px;height:'.$height.'px;">'.
           '</object>'.
         '</div>';
@@ -95,7 +95,7 @@ class AmazonWidgetsShortcodeProduct extends AmazonWidgetsShortcodeBase
     else
     {
       return
-        '<div style="text-align:'.$align.'" class="awshortcode-product">'.
+        '<div class="awshortcode-product align'.$align.'">'.
           '<iframe src="'.$uri.'" style="width:'.$width.'px;height:'.$height.'px;" '.
             'scrolling="no" marginwidth="0" marginheight="0" frameborder="0">'.
           '</iframe>'.

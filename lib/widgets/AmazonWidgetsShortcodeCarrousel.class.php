@@ -52,7 +52,7 @@ class AmazonWidgetsShortcodeCarrousel extends AmazonWidgetsShortcodeBase
      * Display
      */
     return
-      '<div style="text-align:'.$align.'" class="awshortcode-carrousel">'.
+      '<div class="awshortcode-carrousel align'.$align.'">'.
         '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
           '<param name="movie" value="'.$uri.'" />'.
           '<param name="bgcolor" value="'.$bgcolor.'" />'.

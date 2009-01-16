@@ -47,7 +47,7 @@ class AmazonWidgetsShortcodeProductCloud extends AmazonWidgetsShortcodeBase
      * Display
      */
     return
-      '<div style="text-align:'.$align.'" class="awshortcode-productcloud">'.
+      '<div class="awshortcode-productcloud align'.$align.'">'.
         '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
         '<noscript>'.
           '<a href="'.$uri_encoded.'&amp;Operation=NoScript">'.
