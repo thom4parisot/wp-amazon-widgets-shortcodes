@@ -18,7 +18,7 @@
          * Popup arguments
          */
         var popupArgs = [];
-        popupArgs.push('tinymce='+escape(tinymce.baseURL));
+        popupArgs.push('tinymce='+escape(tinymce.baseURL.replace(/^.+:\/\//, '//')));
 
         ed.windowManager.open({
           file : url + '/shortcode-'+val+'.html?'+popupArgs.join('&'),
@@ -186,7 +186,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.2.1'
+        version:   '1.2.2'
       };
     },
     /*
