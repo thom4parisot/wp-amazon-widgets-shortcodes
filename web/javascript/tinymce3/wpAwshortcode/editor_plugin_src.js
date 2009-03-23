@@ -168,6 +168,7 @@
      */
     shortcodes: {
       'amazon-carrousel':     'wpAwshortcode.amazon_carrousel',
+      'amazon-deals':         'wpAwshortcode.amazon_deals',
       'amazon-myfavorites':   'wpAwshortcode.amazon_myfavorites',
       'amazon-product':       'wpAwshortcode.amazon_product',
       'amazon-productcloud':  'wpAwshortcode.amazon_productcloud',
@@ -186,7 +187,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.2.2'
+        version:   '1.4'
       };
     },
     /*

@@ -19,8 +19,10 @@ class AmazonWidgetsShortCodePlugin
   {
     $class = __CLASS__;
     list($filename, $i18n_path) = call_user_func(array($class, 'getLocation'), $plugin_home_path);
+    $pluginfile = preg_replace('#(.+)([^/]+/[^/]+)$#sU', "$2", $filename);
     load_plugin_textdomain('awshortcode', $i18n_path);
     register_activation_hook($filename, array($class, 'executeActivation'));
+    add_filter('plugin_action_links_'.$pluginfile, array($class, 'executeFilterPluginActionLinks'));
 
     if (function_exists('register_uninstall_hook'))
     {
@@ -98,6 +100,20 @@ class AmazonWidgetsShortCodePlugin
       }
     }
     closedir($dp);
+  }
+
+  /**
+   * Filter action plugin action links to add context links
+   * 
+   * @author oncletom
+   * @version 1.0
+   * @since 1.4
+   * @return array
+   * @param array $action_links
+   */
+  function executeFilterPluginActionLinks($action_links)
+  {
+    return array_merge(array('<a href="options-general.php?page=awshortcode-options">'.__('Configure').'</a>'), $action_links);
   }
 
   /**

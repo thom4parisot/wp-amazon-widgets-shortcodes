@@ -44,15 +44,57 @@
       </li>
     </ul>
 
+<h4><?php _e('Amazon Deals', 'awshortcode') ?></h4>
+    <ul>
+      <li>
+        <strong><?php _e('Shortcode:', 'awshortcode') ?></strong>
+        <code>[amazon-deals][/amazon-deals]</code>
+      </li>
+      <li>
+        <strong><?php _e('Example:', 'awshortcode') ?></strong>
+        <code>[amazon-deals align="right"]fc64116b-6b59-444b-b4ee-074a4adecf57[/amazon-deals]</code>
+      </li>
+      <li>
+        <strong><?php _e('Options:', 'awshortcode') ?></strong>
+        <ul>
+          <li>
+            <code>align</code>:
+            {left, right, center}
+            <?php _e('align the widget on the desired way', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>bgcolor</code>:
+            [<?php _e('CSS hexa or code value', 'awshortcode') ?>]
+            <?php _e('customize the background color of the widget', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>height</code>:
+            [<?php _e('value in pixels', 'awshortcode') ?>]
+            <?php _e('height of the animation', 'awshortcode') ?>
+          </li>
+          <li>
+            <code>width</code>:
+            [<?php _e('value in pixels', 'awshortcode') ?>]
+            <?php _e('width of the animation', 'awshortcode') ?>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong><?php _e('Content:', 'awshortcode') ?></strong>
+        <?php _e('Widget ID, contained in HTML parameter value like this:', 'awshortcode') ?>
+        <code>Player_<span style="background: #ffc">fc64116b-6b59-444b-b4ee-074a4adecf57</span></code>.
+      </li>
+    </ul>
+
     <h4><?php _e('Amazon My Favorites', 'awshortcode') ?></h4>
     <ul>
       <li>
         <strong><?php _e('Shortcode:', 'awshortcode') ?></strong>
-        <code>[amazon-wishlist][/amazon-wishlist]</code>
+        <code>[amazon-myfavorites][/amazon-myfavorites]</code>
       </li>
       <li>
         <strong><?php _e('Example:', 'awshortcode') ?></strong>
-        <code>[amazon-wishlist align="right"]e048ac07-8b5b-4b38-abd0-49a92574494d[/amazon-wishlist]</code>
+        <code>[amazon-myfavorites align="right"]e048ac07-8b5b-4b38-abd0-49a92574494d[/amazon-myfavorites]</code>
       </li>
       <li>
         <strong><?php _e('Options:', 'awshortcode') ?></strong>

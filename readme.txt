@@ -68,6 +68,12 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+= Version 1.4 =
+ * added configuration link within plugins list
+ * fixed typo in documentation (`Amazon My Favourites` example)
+ * tinymce: fixed tracking ID parsing with some Flash Widget (messed up with classID)
+ * widget: added Deals Widget
+
 = Version 1.3.2 =
  * fixed classname typo for "My Favourites widget"
  * fixed an issue on some hosting plans which display a 404 page in TinyMCE Editor

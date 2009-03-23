@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#wpAwshortcode.amazon_deals}</title>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/configuration.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/aw-shortcode.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen" />
+	<base target="_self" />
+</head>
+<body style="display: none">
+    <form onsubmit="awShortcode.sendToRte(tinyMCEPopup.getWindowArg('widget'), this); return false;" method="post" action="" id="widget-form">
+
+    <div class="tabs">
+      <ul>
+        <li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.general_tab}</a></span></li>
+        <li id="copypaste_tab"><span><a href="javascript:mcTabs.displayTab('copypaste_tab','copypaste_panel');" onmousedown="return false;">{#wpAwshortcode_dlg.copypaste_tab}</a></span></li>
+      </ul>
+    </div>
+
+    <div class="panel_wrapper">
+  		<div id="general_panel" class="panel current">
+			<fieldset>
+				<legend>{#wpAwshortcode_dlg.main_options}</legend>
+
+        <p>
+          <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
+          <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
+        </p>
+			</fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.alt_options}</legend>
+
+        <p>
+          <label for="align">{#wpAwshortcode_dlg.align}</label>
+          <select name="align" id="align">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="left">{#wpAwshortcode_dlg.align_left}</option>
+            <option value="center">{#wpAwshortcode_dlg.align_center}</option>
+            <option value="right">{#wpAwshortcode_dlg.align_right}</option>
+          </select>
+        </p>
+
+        <div>
+          <label for="bgcolor">{#wpAwshortcode_dlg.bgcolor}</label>
+          <input id="bgcolor" name="bgcolor" type="text" value="" maxlength="7" class="hexa colorpicker" onkeyup="this.onchange()" onchange="updateColor('bgcolor_colorpicker','bgcolor');" />
+          <div id="bgcolor_colorpicker_holder" class="colorpicker"></div>
+        </div>
+
+        <p>
+          <label for="height">{#wpAwshortcode_dlg.height}</label>
+          <input id="height" name="height" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+
+        <p>
+          <label for="width">{#wpAwshortcode_dlg.width}</label>
+          <input id="width" name="width" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>{#wpAwshortcode_dlg.affiliate_options}</legend>
+        <p>
+          <label for="region">{#wpAwshortcode_dlg.region}</label>
+          <select name="region" id="region">
+            <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
+            <option value="ca">{#wpAwshortcode_dlg.region_ca}</option>
+            <option value="fr">{#wpAwshortcode_dlg.region_fr}</option>
+            <option value="uk">{#wpAwshortcode_dlg.region_uk}</option>
+            <option value="us">{#wpAwshortcode_dlg.region_us}</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="tracking_id">{#wpAwshortcode_dlg.tracking_id}</label>
+          <input id="tracking_id" name="tracking_id" type="text" value="" class="" />
+          <span class="help">({#wpAwshortcode_dlg.tracking_id_help})</span>
+        </p>
+      </fieldset>
+		</div>
+      <div id="copypaste_panel" class="panel">
+        <p><strong>{#wpAwshortcode_dlg.copypaste_welcome}</strong></p>
+        <p>{#wpAwshortcode_dlg.copypaste_rtfm}</p>
+        
+        <p class="wide">
+          <label for="copypaste">{#wpAwshortcode_dlg.copypaste_here}</label>
+          <textarea id="copypaste" name="copypaste" rows="15" cols="50" class="html"></textarea>
+        </p>
+
+        <p class="mceActionPanelAlternative">
+          <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm(tinyMCEPopup.getWindowArg('widget'), 'copypaste', 'widget-form')" />
+        </p>
+      </div>
+    </div>
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+			</div>
+
+			<div style="float: right">
+				<input type="submit" id="insert" name="insert" value="{#insert}" />
+			</div>
+		</div>
+	</form>
+</body>
+</html>

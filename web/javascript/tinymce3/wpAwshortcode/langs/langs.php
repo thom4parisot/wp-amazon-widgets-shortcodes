@@ -15,6 +15,7 @@
 
 $strings = 'tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode",{
   amazon_carrousel:     "'.js_escape(__('Amazon Carrousel', 'awshortcode')).'",
+  amazon_deals:         "'.js_escape(__('Amazon Deals', 'awshortcode')).'",
   amazon_myfavorites:   "'.js_escape(__('Amazon My Favorites', 'awshortcode')).'",
   amazon_product:       "'.js_escape(__('Amazon Product', 'awshortcode')).'",
   amazon_productcloud:  "'.js_escape(__('Amazon Product Cloud', 'awshortcode')).'",
@@ -63,4 +64,3 @@ tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
   width:                "'.js_escape(__('Width', 'awshortcode')).'",
   zzz:                  ""
 });';
-?>

@@ -315,7 +315,7 @@ var awShortcode = {
      */
     getTrackingIdFromString: function(uri, default_tracking_id){
       var default_tracking_id = default_tracking_id || tinyMCEPopup.editor.settings.awshortcode_tracking_id;
-      var tracking_id = /([a-z0-9]{4,14}(-[0-9]{1,2})?-[0-9]{2})/.execAndGet(uri);
+      var tracking_id = /([a-z0-9]{4,14}(-[0-9]{1,2})?-[0-9]{2})[\W]/.execAndGet(uri);
 
       return tracking_id == default_tracking_id ? null : tracking_id;
     }
@@ -328,6 +328,44 @@ var awShortcode = {
      * Carrousel
      */
     carrousel: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
+        form.setValue('height', /HEIGHT="([0-9]+)px"/i.execAndGet(html));
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
+        form.setValue('width', /WIDTH="([0-9]+)px"/i.execAndGet(html));
+
+        return form.getValue('widget_value');
+      },
+      /**
+       * Generate shortcode from forms value
+       * 
+       * @param {Object} form
+       * @param {Object} name
+       */
+      generate: function(form, name){
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:        form.getValue('align'),
+          bgcolor:      form.getValue('bgcolor'),
+          height:       form.getValue('height'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id'),
+          width:        form.getValue('width')
+        });
+
+        return shortcode;
+      }
+    },
+    /*
+     * Deals
+     */
+    deals: {
       /**
        * Populate the form from HTML code provided by Amazon
        * 
