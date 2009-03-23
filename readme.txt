@@ -17,7 +17,7 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 Hot features:
 
 * switch from TinyMCE to HTML without loosing anything!
-* international Amazon support (Canada, France, United Kingdom, USA)
+* international Amazon support (Canada, France, Germany, Japan, United Kingdom, USA)
 * built-in translations: English, French and Italian.
 * easy insertion from TinyMCE
 * autoconfigure from copy/paste code
@@ -33,6 +33,7 @@ And enable these features within your blog:
 Currently supported Amazon widgets/features:
 
 * Carrousel Widget
+* Deals Widget
 * My Favorites Widget
 * Product Preview
 * Product Links
@@ -56,7 +57,6 @@ Now you plug 'n play 'n earn money ;-)
 == Todo-list ==
 1. Provide an API to let other developers to plug-in
 1. Blog sidebar Widgets
-1. Add support for all Amazon Partners programs
 1. Profile management
 1. Widgets management
 1. Amazon Associate browsing in the same window
@@ -70,9 +70,12 @@ Now you plug 'n play 'n earn money ;-)
 == Release notes ==
 = Version 1.4 =
  * added configuration link within plugins list
+ * added support for Amazon Germany
+ * added support for Amazon Japan
  * fixed typo in documentation (`Amazon My Favourites` example)
  * tinymce: fixed tracking ID parsing with some Flash Widget (messed up with classID)
  * widget: added Deals Widget
+ * widget: fixed Context Links for Amazon Japan (missing feature so far)
 
 = Version 1.3.2 =
  * fixed classname typo for "My Favourites widget"

@@ -103,7 +103,7 @@ class AmazonWidgetsShortcodeConfiguration
    * Returns all region configuration
    * 
    * @author oncletom
-   * @version 2.0
+   * @version 2.1
    * @since 1.3
    * @return $regions Array
    */
@@ -132,20 +132,27 @@ class AmazonWidgetsShortcodeConfiguration
           'widget-wishlist' =>      'http://ws.amazon.ca/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
-      /*'de' => array(
+      'de' => array(
         'lang_iso_code' => 'de_DE',
-        'marketplace' => 'DE',
-        'name' => __('Amazon Germany', 'awshortcode'),
-        'suffix' => '-21',
+        'marketplace' =>   'DE',
+        'name' =>          __('Amazon Germany', 'awshortcode'),
+        'suffix' =>        '-21',
         'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.de/',
-          'tool-contextlinks' => '',
-          'tool-productpreview' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
+          'affiliate' =>            'http://partnernet.amazon.de/',
+          'images' =>               'http://ecx.images-amazon.com/images/I/%s',
+          'product' =>              'http://www.amazon.de/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
+          'site' =>                 'http://www.amazon.de/',
+          'tool-contextlinks' =>    'http://cls.assoc-amazon.de/de/s/cls.js',
+          'tool-productpreview' =>  'http://www.assoc-amazon.de/s/link-enhancer?tag=%s&amp;o=15',
+          'widget-carrousel' =>     'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-deals' =>         'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8009%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' =>   'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
+          'widget-product' =>       'http://rcm-de.amazon.de/e/cm?t=%s&amp;o=15&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
+          'widget-productcloud' =>  'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
+          'widget-slideshow' =>     'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>      'http://ws.amazon.de/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
-      ),*/
+      ),
       'fr' => array(
         'lang_iso_code' => 'fr_FR',
         'marketplace' =>   'FR',
@@ -168,20 +175,27 @@ class AmazonWidgetsShortcodeConfiguration
           'widget-wishlist' =>      'http://ws.amazon.fr/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
       ),
-      /*'jp' => array(
+      'jp' => array(
         'lang_iso_code' => 'ja_JP',
-        'marketplace' => 'JP',
-        'name' => __('Amazon Japan', 'awshortcode'),
-        'suffix' => '',
+        'marketplace' =>   'JP',
+        'name' =>          __('Amazon Japan', 'awshortcode'),
+        'suffix' =>        '-22',
         'url' => array(
-          'affiliate' => '',
-          'site' => 'http://www.amazon.co.jp/',
-          'tool-contextlinks' => '',
-          'tool-productpreview' => '',
-          'widget-carrousel' => '',
-          'widget-product' => '',
+          'affiliate' =>            'http://affiliate.amazon.co.jp/',
+          'images' =>               'http://ecx.images-amazon.com/images/I/%s',
+          'product' =>              'http://www.amazon.co.jp/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
+          'site' =>                 'http://www.amazon.co.jp/',
+          'tool-contextlinks' =>    '',
+          'tool-productpreview' =>  'http://www.assoc-amazon.jp/s/link-enhancer?tag=%s&o=8',
+          'widget-carrousel' =>     'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
+          'widget-deals' =>         'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8009%%2F%s&amp;Operation=%s',
+          'widget-myfavorites' =>   'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
+          'widget-product' =>       'http://rcm-jp.amazon.co.jp/e/cm?t=%s&amp;o=8&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
+          'widget-productcloud' =>  'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
+          'widget-slideshow' =>     'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
+          'widget-wishlist' =>      'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
         ),
-      ),*/
+      ),
       'uk' => array(
         'lang_iso_code' => 'en_UK',
         'marketplace' =>   'UK',

@@ -19,6 +19,11 @@ class AmazonWidgetsShortcodeContextLink
     $region = AmazonWidgetsShortcodeConfiguration::getRegion();
     $src = $region['url']['tool-contextlinks'];
 
+    if (!$src)
+    {
+      return;
+    }
+
     echo <<<EOF
 <script type="text/javascript">//<![CDATA[
 var amzn_cl_tag = '{$tracking_id}';
