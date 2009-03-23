@@ -11,9 +11,17 @@ var Configuration = {
       domain: 'amazon.ca',
       label:  'Canada'
     },
+    'de': {
+      domain: 'amazon.de',
+      label:  'Germany'
+    },
     'fr': {
       domain: 'amazon.fr',
       label:  'France'
+    },
+    'jp': {
+      domain: 'amazon.co.jp',
+      label:  'Japan'
     },
     'uk': {
       domain: 'amazon.co.uk',
