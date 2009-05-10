@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 2.7.x
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -14,7 +14,7 @@ Keep your time and save your money with these Amazon widgets shortcodes. Standar
 
 Easy management of Amazon Links & Widgets on your blog. Preserve your post consistency, use copy/paste Amazon code or build your links with an easy to use interface
 
-Hot features:
+**Hot Features**
 
 * switch from TinyMCE to HTML without loosing anything!
 * international Amazon support (Canada, France, Germany, Japan, United Kingdom, USA)
@@ -24,13 +24,13 @@ Hot features:
 * minimal shortcodes (1 option and it runs)
 * inline documentation for people who want to manually write Amazon Shortcodes
 
-And enable these features within your blog:
+**Other Features**
 
  * XHTML Strict validation
  * RSS feed filtering (don't spam your feeds)
  * Amazon Context Links
 
-Currently supported Amazon widgets/features:
+**Available Amazon Widgets**
 
 * Carrousel Widget
 * Deals Widget
@@ -40,6 +40,12 @@ Currently supported Amazon widgets/features:
 * Slideshow Widget
 * Product Cloud Widget
 * Wishlist Widget
+
+**Embed Translations**
+
+* Belorussian (by [Fat Cow](http://www.fatcow.com/))
+* Italian (by [Gianni Diurno](http://gidibao.net/))
+
 
 Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/) if you are not convinced.
 
@@ -68,6 +74,9 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+= Version 1.4.1 =
+ * i18n: new Belorussian translation thanks to [Fat Cow](http://www.fatcow.com/)
+
 = Version 1.4 =
  * added configuration link within plugins list
  * added support for Amazon Germany

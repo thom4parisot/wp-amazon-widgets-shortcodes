@@ -1,0 +1,509 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Amazon Widgets Shortcodes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 22:29+0100\n"
+"PO-Revision-Date: 2009-05-09 16:50+0300\n"
+"Last-Translator: \n"
+"Language-Team: Your name <your@email.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;_e ;__;__ ;_c;_c ;__ngettext;__ngettext\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
+msgid "Amazon Widget Shortcodes has been activated"
+msgstr "Amazon Widget Shortcodes актываваны"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
+#, php-format
+msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
+msgstr "Вы павінны <a href=\"%s\">усталяваць ваш Amazon Tracking ID</a> каб убачыць вашыя скарачэнні ў Amazon Widgets."
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
+#: ../admin/view/options.php:2
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:24
+msgid "Amazon Widgets Shortcodes"
+msgstr "Скарачэнні Amazon Widgets"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+msgid "left"
+msgstr "злева"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+msgid "centered"
+msgstr "ў цэнтры"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+msgid "right"
+msgstr "справа"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
+msgid "Amazon Canada"
+msgstr "Amazon Канада"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:138
+msgid "Amazon Germany"
+msgstr "Amazon Германія"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:159
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Amazon France"
+msgstr "Amazon Францыя"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:181
+msgid "Amazon Japan"
+msgstr "Amazon Японія"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:202
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
+msgid "Amazon United Kingdom"
+msgstr "Amazon Англія"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:224
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
+msgid "Amazon USA"
+msgstr "Amazon ЗША"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:286
+#: ../admin/view/documentation.php:134
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Image and Text"
+msgstr "Малюнак і тэкст"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:287
+#: ../admin/view/documentation.php:179
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Image only"
+msgstr "Толькі малюнак"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:288
+#: ../admin/view/documentation.php:194
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+msgid "Text only"
+msgstr "Толькі тэкст"
+
+#: ../lib/AmazonWidgetsShortcodePlugin.class.php:116
+msgid "Configure"
+msgstr "Налады"
+
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
+msgid "Consult this product cloud on Amazon."
+msgstr "Кансультаваць воблака прадуктаў на Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
+msgid "Consult this wishlist on Amazon."
+msgstr "Кансультаваць вішліст на Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "Кансультаваць маё выбранае на Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr "У вас не ўсталявана апошняя версія Flash Player'а для адлюстравання анімацыі"
+
+#: ../admin/view/options.php:4
+msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
+msgstr "Вітаем вас на старонцы канфігурацыі <em>скарачэнняў Amazon Widgets</em>"
+
+#: ../admin/view/options.php:8
+#, php-format
+msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
+msgstr "Вы можаце <a href=\"%s\" class=\"new-window\">запытаць дапамогу</a>, <a href=\"%s\" class=\"new-window\">напісаць нам</a> (крытычнае або пазітыўнае), <a href=\"%s\" class=\"new-window\">замовіць аб багу</a> ці <a href=\"%s\" class=\"new-window\">чытаць існуючыя водгукі</a>.<br />Калі вы распрацоўшчык Wordpress, какі ласка, выкарыстоўвайце <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a>."
+
+#: ../admin/view/options.php:23
+msgid "Enjoy the usage of this plugin!"
+msgstr "Поспехаў вам у выкарыстанні гэтага плагіна!"
+
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
+msgid "Main Options"
+msgstr "Галоўныя налады"
+
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:188
+msgid "Additional Tools"
+msgstr "Дадатковыя інструменты"
+
+#: ../admin/view/options.php:38
+msgid "Documentation"
+msgstr "Дакументацыя"
+
+#: ../admin/view/options.php:48
+msgid "Amazon affiliate region:"
+msgstr "Злучаны рэгіён Amazon:"
+
+#: ../admin/view/options.php:61
+#, php-format
+msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+msgstr "адлюстроўваць у <a href=\"%2$s\" class=\"новым акне\">%1$s</a>"
+
+#: ../admin/view/options.php:70
+msgid "Amazon Tracking ID:"
+msgstr "Ідэнтыфікатар трэкінгу Amazon:"
+
+#: ../admin/view/options.php:80
+#, php-format
+msgid "Your Amazon Tracking ID, generally suffixed by %s."
+msgstr "Ваш ідэнтыфікатар трэкінгу Amazon з прыстаўкай %s."
+
+#: ../admin/view/options.php:89
+msgid "Show inline documentation?"
+msgstr "Паказваць знешнюю дакументацыю?"
+
+#: ../admin/view/options.php:103
+msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+msgstr "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+
+#: ../admin/view/options.php:113
+msgid "Layout Options"
+msgstr "Налады макета"
+
+#: ../admin/view/options.php:119
+msgid "Default Widgets alignment:"
+msgstr "Стандартнае находжанне віджэта"
+
+#: ../admin/view/options.php:138
+msgid "Show Amazon Widgets in RSS feeds?"
+msgstr "Паказваць віджэт у RSS-ленце?"
+
+#: ../admin/view/options.php:152
+msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
+msgstr "Вы можаце захацець схаваць віджэты ў стужцы.<br />Карысна, калі вы хочаце пераапублікаваць іх на іншых сайтах у аб'явах."
+
+#: ../admin/view/options.php:162
+msgid "Strict Standards compliance?"
+msgstr "Падкрэсліваць звычайныя кампіляцыі?"
+
+#: ../admin/view/options.php:176
+msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
+msgstr "Калі вы хочаце праверыць ваш сайт на валідацыю HTML або XHTML Strict, калі ласка, адзначце тут.<br />."
+
+#: ../admin/view/options.php:194
+msgid "Enable context links:"
+msgstr "Уключыць кантэкстныя спасылкі:"
+
+#: ../admin/view/options.php:208
+msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
+msgstr "Кантэкстныя спасылкі - гэта гіперлінкі. якія дадаюцца па рэлевантным словам на вашай старонцы."
+
+#: ../admin/view/options.php:217
+msgid "Enable product preview:"
+msgstr "Уключыць перадагляд прадуктаў:"
+
+#: ../admin/view/options.php:231
+msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
+msgstr "Перадагляд прадуктаў адлюстройвае тултып над спасылкай, якая вядзе на інфармацыю аб прадукце."
+
+#: ../admin/view/options.php:247
+msgid "Save Changes"
+msgstr "Зхаваць змяненні"
+
+#: ../admin/view/documentation.php:2
+msgid "Amazon Widgets Shortcodes documentation"
+msgstr "Дакументацыя па скарачэннях Amazon Widgets"
+
+#: ../admin/view/documentation.php:5
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
+msgid "Amazon Carrousel"
+msgstr "Amazon Carrousel"
+
+#: ../admin/view/documentation.php:8
+#: ../admin/view/documentation.php:50
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:124
+#: ../admin/view/documentation.php:217
+#: ../admin/view/documentation.php:249
+#: ../admin/view/documentation.php:291
+msgid "Shortcode:"
+msgstr "Скарачэнні:"
+
+#: ../admin/view/documentation.php:12
+#: ../admin/view/documentation.php:54
+#: ../admin/view/documentation.php:96
+#: ../admin/view/documentation.php:128
+#: ../admin/view/documentation.php:221
+#: ../admin/view/documentation.php:253
+#: ../admin/view/documentation.php:295
+msgid "Example:"
+msgstr "Прыклад:"
+
+#: ../admin/view/documentation.php:16
+#: ../admin/view/documentation.php:58
+#: ../admin/view/documentation.php:100
+#: ../admin/view/documentation.php:134
+#: ../admin/view/documentation.php:179
+#: ../admin/view/documentation.php:194
+#: ../admin/view/documentation.php:225
+#: ../admin/view/documentation.php:257
+#: ../admin/view/documentation.php:299
+msgid "Options:"
+msgstr "Налады:"
+
+#: ../admin/view/documentation.php:21
+#: ../admin/view/documentation.php:63
+#: ../admin/view/documentation.php:105
+#: ../admin/view/documentation.php:139
+#: ../admin/view/documentation.php:144
+#: ../admin/view/documentation.php:184
+#: ../admin/view/documentation.php:230
+#: ../admin/view/documentation.php:262
+#: ../admin/view/documentation.php:304
+msgid "align the widget on the desired way"
+msgstr "выроўніванне віджэта ў жадаемым напрамку"
+
+#: ../admin/view/documentation.php:25
+#: ../admin/view/documentation.php:67
+#: ../admin/view/documentation.php:143
+#: ../admin/view/documentation.php:148
+#: ../admin/view/documentation.php:153
+#: ../admin/view/documentation.php:266
+msgid "CSS hexa or code value"
+msgstr "CSS хак або кодавае значэнне"
+
+#: ../admin/view/documentation.php:26
+#: ../admin/view/documentation.php:68
+#: ../admin/view/documentation.php:149
+#: ../admin/view/documentation.php:267
+msgid "customize the background color of the widget"
+msgstr "выбраць фонавы колер для віджэта"
+
+#: ../admin/view/documentation.php:30
+#: ../admin/view/documentation.php:35
+#: ../admin/view/documentation.php:72
+#: ../admin/view/documentation.php:77
+#: ../admin/view/documentation.php:158
+#: ../admin/view/documentation.php:173
+#: ../admin/view/documentation.php:271
+#: ../admin/view/documentation.php:276
+msgid "value in pixels"
+msgstr "значэнне ў пікселях"
+
+#: ../admin/view/documentation.php:31
+#: ../admin/view/documentation.php:73
+#: ../admin/view/documentation.php:272
+msgid "height of the animation"
+msgstr "вышыня анімацыі"
+
+#: ../admin/view/documentation.php:36
+#: ../admin/view/documentation.php:78
+#: ../admin/view/documentation.php:277
+msgid "width of the animation"
+msgstr "шырыня анімацыі"
+
+#: ../admin/view/documentation.php:41
+#: ../admin/view/documentation.php:83
+#: ../admin/view/documentation.php:115
+#: ../admin/view/documentation.php:209
+#: ../admin/view/documentation.php:240
+#: ../admin/view/documentation.php:282
+#: ../admin/view/documentation.php:314
+msgid "Content:"
+msgstr "Змесціва:"
+
+#: ../admin/view/documentation.php:42
+#: ../admin/view/documentation.php:84
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:283
+#: ../admin/view/documentation.php:315
+msgid "Widget ID, contained in HTML parameter value like this:"
+msgstr "Ідэнтыфікатар Widget, які змяшчаецца ў HTML, напрыклад, як тут:"
+
+#: ../admin/view/documentation.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
+msgid "Amazon Deals"
+msgstr "Дылеры Amazon "
+
+#: ../admin/view/documentation.php:89
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+msgid "Amazon My Favorites"
+msgstr "Маё выбранае на Amazon"
+
+#: ../admin/view/documentation.php:109
+#: ../admin/view/documentation.php:168
+#: ../admin/view/documentation.php:198
+#: ../admin/view/documentation.php:234
+#: ../admin/view/documentation.php:308
+msgid "string"
+msgstr "радок"
+
+#: ../admin/view/documentation.php:110
+#: ../admin/view/documentation.php:235
+#: ../admin/view/documentation.php:309
+msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
+msgstr "альтэрнатыўны тэкст, які будзе адлюстроўвацца замест Flash або JavaScript элементаў, калі яны будуць адключаныя карыстачом"
+
+#: ../admin/view/documentation.php:121
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+msgid "Amazon Product"
+msgstr "Прадукты Amazon"
+
+#: ../admin/view/documentation.php:154
+msgid "border color of the widget"
+msgstr "колер мяжы віджэта"
+
+#: ../admin/view/documentation.php:159
+msgid "height of the frame"
+msgstr "вышыня фрэйма"
+
+#: ../admin/view/documentation.php:164
+msgid "display a small picture or a big one (0 by default)"
+msgstr "паазваць малых малюнкаў альбо адзін вякікі (0 па змоўчванню)"
+
+#: ../admin/view/documentation.php:169
+msgid "window name to open the link in (_blank by default)"
+msgstr "назва акна, які будзе адкрывацца па спасылцы (_blank па змоўчванню)"
+
+#: ../admin/view/documentation.php:174
+msgid "width of the frame"
+msgstr "шырыня фрэйма"
+
+#: ../admin/view/documentation.php:183
+msgid "image name or Amazon OR full image URL"
+msgstr "імя малюнка на Amazon або поўны шлях да малюнка"
+
+#: ../admin/view/documentation.php:189
+msgid "display the widget as image"
+msgstr "паказваць віджэт як малюнак"
+
+#: ../admin/view/documentation.php:199
+msgid "text of the hyperlink"
+msgstr "тэкст гіперспасылкі"
+
+#: ../admin/view/documentation.php:204
+msgid "display the widget as hypertext link"
+msgstr "паказваць віджэт як спасылку"
+
+#: ../admin/view/documentation.php:210
+msgid "ASIN code of the product."
+msgstr "ASIN код прадукта."
+
+#: ../admin/view/documentation.php:214
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+msgid "Amazon Product Cloud"
+msgstr "Воблака прадуктаў Amazon "
+
+#: ../admin/view/documentation.php:246
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
+msgid "Amazon Slideshow"
+msgstr "Слайдшоу Amazon"
+
+#: ../admin/view/documentation.php:288
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:23
+msgid "Amazon Wishlist"
+msgstr "Amazon вішліст"
+
+#: ../admin/form/options.php:21
+msgid "Options saved."
+msgstr "Налады захаваныя."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
+msgid "Affiliate Options"
+msgstr "Аб'яднаныя налады"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "Align"
+msgstr "Выроўніванне"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+msgid "Link Color"
+msgstr "Колер спасылкі"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+msgid "Other Options"
+msgstr "Іншыя налады"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+msgid "Apply the magic!"
+msgstr "Прызначыць гэтае цуда!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+msgid "ASIN Code"
+msgstr "Код ASIN"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+msgid "Background Color"
+msgstr "Колер фону"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+msgid "Border color"
+msgstr "Колег мяжы"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+msgid "Copy/paste Amazon HTML's code right below ↓"
+msgstr "Скапіраваць/уставіць Amazon HTML-код тут ↓"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
+msgstr "Вы не хочаце запоўніць палі галоўных налад? Проста скапіруйце і ўстаўце HTML-код Amazon'а і радуйцеся магічнаму аўтазапаўненню!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+msgid "Copy/Paste Code"
+msgstr "Скапіраваць/уставіць код"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+msgid "Glad you look at here!"
+msgstr "Рады бачыць вас тут!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Height"
+msgstr "Вышыня"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+msgid "Image Source"
+msgstr "Крыніца малюнка"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+msgid "Link text"
+msgstr "Спасылка тэксту"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+msgid "pixels"
+msgstr "пікселяў"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Default Plugin Setting"
+msgstr "Звычайныя налады плагіна"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "Display type"
+msgstr "Адлюстроўваць тып"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
+msgid "Region"
+msgstr "Рэгіён"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:60
+msgid "Small size?"
+msgstr "Малы памер?"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:61
+msgid "Tracking ID"
+msgstr "ID трэкінгу"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "Пакіньце пустым, каб выкарыстаць ваш звычайны ідэнтыфікатар трэкінгу."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
+msgid "Widget ID"
+msgstr "ID віджэта"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:64
+msgid "Width"
+msgstr "Шырыня"
+
