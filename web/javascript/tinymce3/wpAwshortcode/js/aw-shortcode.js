@@ -442,7 +442,7 @@ var awShortcode = {
        */
       fromHtmlToForm: function(html, form){
         var value_patterns = [
-          /\D([0-9]{10})\D/i
+          /[\W\D]([A-Z0-9]{10})[\W\D]/i
         ];
 
         /*
