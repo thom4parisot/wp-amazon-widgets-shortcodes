@@ -23,9 +23,11 @@ class AmazonWidgetsShortcodeMp3 extends AmazonWidgetsShortcodeBase
       shortcode_atts(
         array(
           'align' => get_option('awshortcode_align'),
-          'alt' => '',
+          'bgcolor' => 'fff',
+          'height' => '250',
           'region' => get_option('awshortcode_region'),
           'tracking_id' => get_option('awshortcode_tracking_id'),
+          'width' => '250',
         ),
         $attributes
       )
@@ -39,21 +41,24 @@ class AmazonWidgetsShortcodeMp3 extends AmazonWidgetsShortcodeBase
              $region['url']['widget-mp3'],
              $region['marketplace'],
              $tracking_id,
-             $value
+             $value,
+             'GetDisplayTemplate'
            );
-    $uri_encoded = call_user_func(array(__CLASS__, 'encodeParameters'), $uri);
+    $bgcolor = call_user_func(array(__CLASS__, 'getHexadecimalFromString'), $bgcolor);
 
     /*
      * Display
      */
     return
       '<div class="awshortcode-mp3 align'.$align.'">'.
-        '<script charset="utf-8" type="text/javascript" src="'.$uri.'"></script>'.
-        '<noscript>'.
-          '<a href="'.$uri_encoded.'&amp;Operation=NoScript">'.
-            ($alt ? $alt : __('Consult my shared MP3 on Amazon.', 'awshortcode')).
-          '</a>'.
-        '</noscript>'.
+        '<object type="application/x-shockwave-flash" data="'.$uri.'" width="'.$width.'" height="'.$height.'">'.
+          '<param name="movie" value="'.$uri.'" />'.
+          '<param name="bgcolor" value="'.$bgcolor.'" />'.
+          '<param name="quality" value="high" />'.
+          '<param name="allowscriptaccess" value="always" />'.
+          '<param name="wmode" value="transparent" />'.
+          '<p>'.__("You don't have a sufficient version of Flash Player to display this animation.", 'awshortcode').'</p>'.
+        '</object>'.
       '</div>';
   }
 }
