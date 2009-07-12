@@ -476,7 +476,8 @@ var awShortcode = {
        */
       fromHtmlToForm: function(html, form){
         var value_patterns = [
-          /[\W\D]([A-Z0-9]{10})[\W\D]/i
+          /creativeASIN=([A-Z0-9]{10})[\W\D]/i,
+          /asins?=([A-Z0-9]{10})[\W\D]/i
         ];
 
         /*
@@ -485,14 +486,13 @@ var awShortcode = {
         if (/<iframe src/i.test(html))
         {
           form.setValue('type', 'both');
-          form.setValue('widget_value', /asins=([0-9]+)&/i.execAndGet(html));
+          form.setValue('widget_value', '');
           form.setValue('alink', /lc1=([0-9a-f]+)&/i.execAndGet(html));
           form.setValue('bordercolor', /bc1=([0-9a-f]+)&/i.execAndGet(html));
           form.setValue('height', /height:([0-9]+)px/i.execAndGet(html));
           form.setValue('small', /IS2=1&/i.test(html) ? 0 : 1);
           form.setValue('target', /lt1=([^&])+&/i.execAndGet(html));
           form.setValue('width', /width:([0-9]+)px"/i.execAndGet(html));
-          value_patterns = [];
         }
         /*
          * Image
