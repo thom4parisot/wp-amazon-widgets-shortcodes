@@ -28,7 +28,6 @@
           <label for="widget_value">{#wpAwshortcode_dlg.widget_id}</label>
           <input id="widget_value" name="widget_value" type="text" value="" class="required mceFocus" />
         </p>
-
       </fieldset>
 
       <fieldset>
@@ -43,6 +42,22 @@
             <option value="right">{#wpAwshortcode_dlg.align_right}</option>
           </select>
         </p>
+
+        <div>
+          <label for="bgcolor">{#wpAwshortcode_dlg.bgcolor}</label>
+          <input id="bgcolor" name="bgcolor" type="text" value="" maxlength="7" class="hexa colorpicker" onkeyup="this.onchange()" onchange="updateColor('bgcolor_colorpicker','bgcolor');" />
+          <div id="bgcolor_colorpicker_holder" class="colorpicker"></div>
+        </div>
+
+        <p>
+          <label for="height">{#wpAwshortcode_dlg.height}</label>
+          <input id="height" name="height" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
+
+        <p>
+          <label for="width">{#wpAwshortcode_dlg.width}</label>
+          <input id="width" name="width" type="text" maxlength="4" value="" class="size number" /> {#wpAwshortcode_dlg.pixels}
+        </p>
       </fieldset>
 
       <fieldset>
@@ -52,7 +67,9 @@
           <select name="region" id="region">
             <option value="">-- {#wpAwshortcode_dlg.plugin_setting}</option>
             <option value="ca">{#wpAwshortcode_dlg.region_ca}</option>
+            <option value="de">{#wpAwshortcode_dlg.region_de}</option>
             <option value="fr">{#wpAwshortcode_dlg.region_fr}</option>
+            <option value="jp">{#wpAwshortcode_dlg.region_jp}</option>
             <option value="uk">{#wpAwshortcode_dlg.region_uk}</option>
             <option value="us">{#wpAwshortcode_dlg.region_us}</option>
           </select>
@@ -76,6 +93,7 @@
 
         <p class="mceActionPanelAlternative">
           <input type="button" value="{#wpAwshortcode_dlg.apply_the_magic}" onclick="awShortcode.fromHtmlToForm(tinyMCEPopup.getWindowArg('widget'), 'copypaste', 'widget-form')" />
+          <span id="apply-magic-response">{#wpAwshortcode_dlg.apply_the_magic_err}</span>
         </p>
       </div>
     </div>

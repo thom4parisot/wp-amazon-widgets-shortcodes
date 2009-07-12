@@ -110,9 +110,15 @@ var awShortcode = {
 
     var form = document.getElementById(form_id) || document.getElementsByTagName('form')[0];
     awShortcode.form.extend(form);
+
     if (widgets[widget_type].fromHtmlToForm(form.getValue(value_tag_name), form))
     {
+      document.getElementById('apply-magic-response').className = '';
       mcTabs.displayTab('general_tab','general_panel');
+    }
+    else
+    {
+      document.getElementById('apply-magic-response').className = 'error';
     }
   },
   /**
@@ -411,11 +417,9 @@ var awShortcode = {
        * @param {Object} form form to inject values in
        */
       fromHtmlToForm: function(html, form){
-        var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
-
         form.setValue('region', awShortcode.utils.getRegionFromString(html));
         form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
-        form.setValue('widget_value', widget_value);
+        form.setValue('widget_value', /id="Player_([^"]+)"/i.execAndGet(html));
 
         return form.getValue('widget_value');
       },

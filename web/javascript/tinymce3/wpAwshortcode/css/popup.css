@@ -76,3 +76,11 @@ input.size{
   cursor: pointer;
   padding: 5px 5px 5px 25px;
 }
+
+#apply-magic-response{
+  display: none;
+}
+#apply-magic-response.error{
+  display: block;
+  color: #c00;
+}
