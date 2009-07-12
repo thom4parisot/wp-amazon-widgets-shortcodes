@@ -401,6 +401,36 @@ var awShortcode = {
       }
     },
     /*
+     * MP3
+     */
+    mp3: {
+      /**
+       * Populate the form from HTML code provided by Amazon
+       * 
+       * @param {String} html HTML code
+       * @param {Object} form form to inject values in
+       */
+      fromHtmlToForm: function(html, form){
+        var widget_value = /<SCRIPT.+([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})"/i.execAndGet(html);
+
+        form.setValue('region', awShortcode.utils.getRegionFromString(html));
+        form.setValue('tracking_id', awShortcode.utils.getTrackingIdFromString(html));
+        form.setValue('widget_value', widget_value);
+
+        return form.getValue('widget_value');
+      },
+      generate: function(form, name){
+        var shortcode = awShortcode.generate(name, form.getValue('widget_value'), {
+          align:        form.getValue('align'),
+          alt:          form.getValue('alt'),
+          region:       form.getValue('region'),
+          tracking_id:  form.getValue('tracking_id')
+        });
+
+        return shortcode;
+      }
+    },
+    /*
      * My Favorites
      */
     myfavorites: {

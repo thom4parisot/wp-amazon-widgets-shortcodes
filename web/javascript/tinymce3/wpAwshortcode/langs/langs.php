@@ -16,6 +16,7 @@
 $strings = 'tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode",{
   amazon_carrousel:     "'.js_escape(__('Amazon Carrousel', 'awshortcode')).'",
   amazon_deals:         "'.js_escape(__('Amazon Deals', 'awshortcode')).'",
+  amazon_mp3:           "'.js_escape(__('Amazon MP3', 'awshortcode')).'",
   amazon_myfavorites:   "'.js_escape(__('Amazon My Favorites', 'awshortcode')).'",
   amazon_product:       "'.js_escape(__('Amazon Product', 'awshortcode')).'",
   amazon_productcloud:  "'.js_escape(__('Amazon Product Cloud', 'awshortcode')).'",

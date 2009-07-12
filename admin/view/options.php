@@ -240,7 +240,7 @@
     </div>
 
     <div id="awshortcode-documentation">
-      <?php include(dirname(__FILE__).'/documentation.php') ?>
+      <?php AmazonWidgetsShortcodesAdmin::displayDocumentation() ?>
     </div>
 
     <p class="submit">

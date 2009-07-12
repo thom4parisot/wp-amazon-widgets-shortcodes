@@ -34,6 +34,7 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 
 * Carrousel Widget
 * Deals Widget
+* MP3
 * My Favorites Widget
 * Product Preview
 * Product Links
@@ -74,6 +75,12 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Release notes ==
+= Version 1.5 =
+ * ui: documentation tab now displays the ... documentation (it helps a bit ...)
+ * widget: added MP3 Widget
+ * widget: fixed 'apply the magic' parser which missed some ASIN codes with alpha chars inside (reported by [DavidBorrink](http://wordpress.org/support/profile/20995))
+ * widget: fixed Germany widgets (reported by [jetztlernin](http://wordpress.org/support/profile/3392887))
+
 = Version 1.4.1 =
  * i18n: new Belorussian translation thanks to [Fat Cow](http://www.fatcow.com/)
 

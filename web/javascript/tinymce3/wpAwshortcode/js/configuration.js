@@ -38,6 +38,7 @@ var Configuration = {
   shortcode: {
     'carrousel':     {},
     'deals':         {},
+    'mp3':           {},
     'myfavorites':   {},
     'product':       {},
     'productcloud':  {},

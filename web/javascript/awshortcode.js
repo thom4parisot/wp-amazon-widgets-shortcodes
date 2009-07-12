@@ -16,6 +16,8 @@
       select: 0
     });
 
+    $('#awshortcode div.awshortcode-documentation').removeClass('closed');
+
     /*
      * Open links in a new page
      */
