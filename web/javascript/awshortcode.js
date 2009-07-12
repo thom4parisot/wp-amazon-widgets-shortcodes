@@ -11,8 +11,7 @@
     /*
      * Add tabs for options page
      */
-    $('#awshortcode #awshortcode-navigation').tabs({
-      fxFade: true,
+    $('#awshortcode-options-wrapper').tabs({
       select: 0
     });
 
