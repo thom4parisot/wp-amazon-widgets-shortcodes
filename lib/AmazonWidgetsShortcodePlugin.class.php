@@ -18,9 +18,9 @@ class AmazonWidgetsShortCodePlugin
   function bootstrap($plugin_home_path)
   {
     $class = __CLASS__;
-    list($filename, $i18n_path) = call_user_func(array($class, 'getLocation'), $plugin_home_path);
+    list($filename, $i18n_path, $i18n_from_plugin_path) = call_user_func(array($class, 'getLocation'), $plugin_home_path);
     $pluginfile = preg_replace('#(.+)([^/]+/[^/]+)$#sU', "$2", $filename);
-    load_plugin_textdomain('awshortcode', $i18n_path);
+    load_plugin_textdomain('awshortcode', $i18n_path, $i18n_from_plugin_path);
     register_activation_hook($filename, array($class, 'executeActivation'));
     add_filter('plugin_action_links_'.$pluginfile, array($class, 'executeFilterPluginActionLinks'));
 
@@ -38,27 +38,37 @@ class AmazonWidgetsShortCodePlugin
    * In case of symlink, it assumes you linked it with its original plugin name
    * eg: `ln -s /path/to/plugins/amazon-widgets-shortcodes /real/path/to/aws-plugin`
    * 
+   * Array returned contains 3 fields:
+   * - fixed filename (for relocated wordpress ABSPATH ; like SVN install/symlinked plugin)
+   * - relative path to i18n folder (from abspath ; will fail on 2.7 if WP is relocated)
+   * - plugin relative path to i18n folder (from plugin dir) (supported since WP 2.7)
+   * 
    * @static
    * @author oncletom
-   * @version 2.0
+   * @version 2.1
    * @since 1.3
    * @return $location Array
    * @param $filepath String File location
    */
   function getLocation($filepath)
   {
+    /*
+     * The plugin is installed as a symlink
+     */
     if (function_exists('is_link') && is_link(WP_PLUGIN_DIR.'/amazon-widgets-shortcodes'))
     {
       return array(
         WP_PLUGIN_DIR.'/amazon-widgets-shortcodes/'.basename($filepath),
-        PLUGINDIR.'/amazon-widgets-shortcodes/i18n'
+        PLUGINDIR.'/amazon-widgets-shortcodes/i18n',
+        'amazon-widgets-shortcodes/i18n'
       );
     }
     else
     {
       return array(
         $filepath,
-        PLUGINDIR.'/'.dirname(plugin_basename($filepath)).'/i18n'
+        PLUGINDIR.'/'.dirname(plugin_basename($filepath)).'/i18n',
+        dirname(plugin_basename($filepath)).'/i18n'
       );
     }
   }
