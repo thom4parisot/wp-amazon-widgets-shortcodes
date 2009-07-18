@@ -3,8 +3,8 @@ Contributors: oncletom
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=752034
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
-Tested up to: 2.7.x
-Stable tag: 1.4.1
+Tested up to: 2.8.x
+Stable tag: 1.5
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -18,7 +18,6 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 
 * switch from TinyMCE to HTML without loosing anything!
 * international Amazon support (Canada, France, Germany, Japan, United Kingdom, USA)
-* built-in translations: English, French and Italian.
 * easy insertion from TinyMCE
 * autoconfigure from copy/paste code
 * minimal shortcodes (1 option and it runs)
@@ -42,9 +41,11 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 * Product Cloud Widget
 * Wishlist Widget
 
-**Embed Translations**
+**Built-in Translations**
 
 * Belorussian (by [Fat Cow](http://www.fatcow.com/))
+* English
+* French
 * Italian (by [Gianni Diurno](http://gidibao.net/))
 
 
@@ -76,10 +77,14 @@ Now you plug 'n play 'n earn money ;-)
 
 == Release notes ==
 = Version 1.5 =
+Please notice it may be the **last release** where WordPress 2.5 will be supported.
+
+ * i18n : fixed relocated WordPress folder for WordPress 2.7+ ; translations were not loading due to wrong path
  * ui: documentation tab now displays the ... documentation (it helps a bit ...)
  * widget: added MP3 Widget
  * widget: fixed 'apply the magic' parser which missed some ASIN codes with alpha chars inside (reported by [DavidBorrink](http://wordpress.org/support/profile/20995))
  * widget: fixed Germany widgets (reported by [jetztlernin](http://wordpress.org/support/profile/3392887))
+ * widget: fixed some inconsistencies with titles and regions
 
 = Version 1.4.1 =
  * i18n: new Belorussian translation thanks to [Fat Cow](http://www.fatcow.com/)
