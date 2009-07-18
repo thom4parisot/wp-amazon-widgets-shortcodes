@@ -476,8 +476,8 @@ var awShortcode = {
        */
       fromHtmlToForm: function(html, form){
         var value_patterns = [
-          /creativeASIN=([A-Z0-9]{10})[\W\D]/i,
-          /asins?=([A-Z0-9]{10})[\W\D]/i
+          /creativeASIN=([a-z0-9]{10})[^a-z0-9]/i,
+          /asins?=([a-z0-9]{10})[[^a-z0-9]]/i
         ];
 
         /*
