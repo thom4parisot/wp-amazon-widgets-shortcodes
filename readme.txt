@@ -75,7 +75,7 @@ Now you plug 'n play 'n earn money ;-)
 1. Makes you earning a lot of money thanks to this widget ;-)
 
 
-== Release notes ==
+== Changelog ==
 = Version 1.5 =
 Please notice it may be the **last release** where WordPress 2.5 will be supported.
 
