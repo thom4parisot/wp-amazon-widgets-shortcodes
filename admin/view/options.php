@@ -66,6 +66,7 @@
               </span>
             </td>
           </tr>
+          <tr>
             <th scope="row">
               <label for="awshortcode_tracking_id">
                 <?php _e('Amazon Tracking ID:', 'awshortcode') ?>
