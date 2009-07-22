@@ -194,7 +194,7 @@ class AmazonWidgetsShortcodeConfiguration
           'widget-deals' =>         'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8009%%2F%s&amp;Operation=%s',
           'widget-mp3' =>           'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8014%%2F%s&amp;Operation=%s',
           'widget-myfavorites' =>   'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8001/%s',
-          'widget-product' =>       'http://rcm-jp.amazon.co.jp/e/cm?t=%s&amp;o=8&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
+          'widget-product' =>       'http://rcm-jp.amazon.co.jp/e/cm?t=%s&amp;o=9&amp;p=8&amp;l=as1&amp;asins=%s&amp;fc1=%s&amp;%s=1&amp;lt1=%s&amp;lc1=%s&amp;bc1=%s&amp;bg1=%s&amp;f=ifr',
           'widget-productcloud' =>  'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8006/%s',
           'widget-slideshow' =>     'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8003%%2F%s&amp;Operation=%s',
           'widget-wishlist' =>      'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822/%1$s/%s/8004/%s',
