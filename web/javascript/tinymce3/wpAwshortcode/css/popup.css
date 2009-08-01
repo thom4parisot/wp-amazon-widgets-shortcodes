@@ -73,6 +73,7 @@ input.size{
  */
 #copypaste_panel .mceActionPanelAlternative input{
   background: #c6ffcb url('../img/wand.png') no-repeat 5px center;
+  color: #000;
   cursor: pointer;
   padding: 5px 5px 5px 25px;
 }
