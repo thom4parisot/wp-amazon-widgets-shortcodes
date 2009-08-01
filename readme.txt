@@ -80,6 +80,7 @@ Now you plug 'n play 'n earn money ;-)
 *Work in progress*.
 
 Please notice that this forthcoming version **will require at least**:
+
  * PHP 5.1.2 (so that the `spl_autoload` function is available)
  * WordPress 2.7
 
