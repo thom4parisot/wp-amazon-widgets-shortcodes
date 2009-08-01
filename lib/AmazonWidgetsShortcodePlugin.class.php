@@ -24,11 +24,6 @@ class AmazonWidgetsShortCodePlugin
     register_activation_hook($filename, array($class, 'executeActivation'));
     add_filter('plugin_action_links_'.$pluginfile, array($class, 'executeFilterPluginActionLinks'));
 
-    if (function_exists('register_uninstall_hook'))
-    {
-      register_uninstall_hook($filename, array($class, 'executeUninstall'));
-    }
-
     define('AWS_PLUGIN_BASEPATH', dirname($filename));
   }
 
@@ -124,26 +119,6 @@ class AmazonWidgetsShortCodePlugin
   function executeFilterPluginActionLinks($action_links)
   {
     return array_merge(array('<a href="options-general.php?page=awshortcode-options">'.__('Configure').'</a>'), $action_links);
-  }
-
-  /**
-   * Removes all data set by the plugin, including custom settings
-   * 
-   * Note : in use if the function `register_uninstall_hook` is implemented
-   * Either in a case of a plugin or Core WP files
-   * 
-   * @static
-   * @author oncletom
-   * @version 2.0
-   * @since 1.3
-   * @return null
-   */
-  function executeUninstall()
-  {
-    foreach (array_keys(AmazonWidgetsShortcodes::getRegisteredOptions()) as $option_id)
-    {
-      delete_option($option_id);
-    }
   }
 
   /**
