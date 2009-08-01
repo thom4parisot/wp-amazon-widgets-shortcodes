@@ -76,9 +76,21 @@ Now you plug 'n play 'n earn money ;-)
 
 
 == Changelog ==
-= Version 1.5 =
-Please notice it may be the **last release** where WordPress 2.5 will be supported.
+= Version 2.0 =
+*Work in progress*.
 
+Please notice that this forthcoming version **will require at least**:
+ * PHP 5.1.2 (so that the `spl_autoload` function is available)
+ * WordPress 2.7
+
+= Version 1.5.1 =
+ * fixed plugin uninstall process ([report topic](http://wordpress.org/support/topic/241974))
+ * ui: fixed *apply the magic* color for WordPress 2.8
+ * widget: fixed Amazon Product widget alternate pattern parsing ([report topic](http://wordpress.org/support/topic/293885))
+ * widget: fixed Amazon Product widget display for Amazon Japan ([report topic](http://wordpress.org/support/topic/292387))
+
+= Version 1.5 =
+ * support of the `Changelog` feature
  * i18n : fixed relocated WordPress folder for WordPress 2.7+ ; translations were not loading due to wrong path
  * ui: documentation tab now displays the ... documentation (it helps a bit ...)
  * widget: added MP3 Widget
