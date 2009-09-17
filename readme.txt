@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 2.8.x
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -47,6 +47,8 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 * English
 * French
 * Italian (by [Gianni Diurno](http://gidibao.net/))
+* Russian (by [ilyuha](http://antsar.info/)]
+* Uzbek (by [Alexsandra Bolshova](http://www.comfi.com/)]
 
 
 Don't forget to look at the [screenshots](http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/screenshots/) if you are not convinced.
@@ -82,7 +84,11 @@ Now you plug 'n play 'n earn money ;-)
 Please notice that this forthcoming version **will require at least**:
 
  * PHP 5.1.2 (so that the `spl_autoload` function is available)
- * WordPress 2.7
+ * WordPress 2.8
+
+= Version 1.5.2 =
+ * i18n: added Russian translation
+ * i18n: added Uzbek translation
 
 = Version 1.5.1 =
  * fixed plugin uninstall process ([report topic](http://wordpress.org/support/topic/241974))

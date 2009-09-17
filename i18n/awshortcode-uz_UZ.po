@@ -1,0 +1,511 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Amazon Widgets Shortcodes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 22:29+0100\n"
+"PO-Revision-Date: 2009-09-17 09:27+0100\n"
+"Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
+"Language-Team: Your name <your@email.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;_e ;__;__ ;_c;_c ;__ngettext;__ngettext\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Uzbek\n"
+"X-Poedit-Country: UZBEKISTAN\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
+msgid "Amazon Widget Shortcodes has been activated"
+msgstr "Amazon Widget Shortcodes ishga tushirildi"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
+#, php-format
+msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
+msgstr "Qisqa kodlaringiz Amazon Widgetsni ko'rsatishi uchun Siz Amazon kuzatuv ID</a>ingizni <a href=\"%s\">o'rnatishingiz zarur."
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
+#: ../admin/view/options.php:2
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:24
+msgid "Amazon Widgets Shortcodes"
+msgstr "Amazon Widgets qisqa kodlari"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:32
+msgid "left"
+msgstr "chap tomondan"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+msgid "centered"
+msgstr "markazdan"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:33
+msgid "right"
+msgstr "o'ng tomondan"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:56
+msgid "Amazon Canada"
+msgstr "Amazon Kanada"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:138
+msgid "Amazon Germany"
+msgstr "Amazon Germaniya"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:159
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Amazon France"
+msgstr "Amazon Frantsiya"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:181
+msgid "Amazon Japan"
+msgstr "Amazon Yaponiya"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:202
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:58
+msgid "Amazon United Kingdom"
+msgstr "Amazon Angliya"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:224
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:59
+msgid "Amazon USA"
+msgstr "Amazon AQSh"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:286
+#: ../admin/view/documentation.php:134
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Image and Text"
+msgstr "Tasvir va matn"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:287
+#: ../admin/view/documentation.php:179
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Image only"
+msgstr "Faqat tasvir"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:288
+#: ../admin/view/documentation.php:194
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:54
+msgid "Text only"
+msgstr "Faqat matn"
+
+#: ../lib/AmazonWidgetsShortcodePlugin.class.php:116
+msgid "Configure"
+msgstr "Sozlamoq"
+
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
+msgid "Consult this product cloud on Amazon."
+msgstr "Bu mahsulot guruhi borasida Amazonga murojaat qiling."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
+msgid "Consult this wishlist on Amazon."
+msgstr "Istaklar ro'yxati borasida Amazonga murojaat eting."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "Mening yoqtirgan sahifalarim borasida Amazonga murojaat qiling."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr "Flash Playeringizning talqini bu animatsiyani ko'rsata olmaydi."
+
+#: ../admin/view/options.php:4
+msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
+msgstr "<em>Amazon Widgets Shortcodes</em> sozlanmalari sahifasiga xush kelibsiz!"
+
+#: ../admin/view/options.php:8
+#, php-format
+msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
+msgstr "Siz <a href=\"%s\" class=\"new-window\">yordam so'rashingiz</a>, <a href=\"%s\" class=\"new-window\">taqriz yozishingiz</a> (ijobiy yoki salbiy), <a href=\"%s\" class=\"new-window\">xato haqida xabar berishingiz</a> va hatto <a href=\"%s\" class=\"new-window\">mavjud taqrizlarni o'qishingiz</a>mumkin. <br />Agar siz Wordpress rivojlantiruvchisi bo'lsangiz, iltimos buning o'rniga <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a>dan foydalaning."
+
+#: ../admin/view/options.php:23
+msgid "Enjoy the usage of this plugin!"
+msgstr "Plagindan huzur bilan foydalaning!"
+
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
+msgid "Main Options"
+msgstr "Asosiy sozlanmalar"
+
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:188
+msgid "Additional Tools"
+msgstr "Qo'shimcha asboblar"
+
+#: ../admin/view/options.php:38
+msgid "Documentation"
+msgstr "Hujjatlar"
+
+#: ../admin/view/options.php:48
+msgid "Amazon affiliate region:"
+msgstr "Amazonning filial hududlari:"
+
+#: ../admin/view/options.php:61
+#, php-format
+msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+msgstr "<a href=\"%2$s\" class=\"yangi oyna\">%1$s</a>da o'rnatilgan"
+
+#: ../admin/view/options.php:70
+msgid "Amazon Tracking ID:"
+msgstr "Amazon kuzatuv IDsi:"
+
+#: ../admin/view/options.php:80
+#, php-format
+msgid "Your Amazon Tracking ID, generally suffixed by %s."
+msgstr "Sizning Amazon IDingizga %s qo'shimcha qo'shiladi."
+
+#: ../admin/view/options.php:89
+msgid "Show inline documentation?"
+msgstr "Ichki hukkatlar ko'rsatilsinmi?"
+
+#: ../admin/view/options.php:103
+msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+msgstr "Ichki hujjatlar sizning yozuv maydoningiz pastida ham xabar ham sahifani boshqarish maydonida joylashtiriladi.<br />Bu sizga Amazon Widgetsni samarali kiritishda yordam beradi."
+
+#: ../admin/view/options.php:113
+msgid "Layout Options"
+msgstr "Maket sozlanmalari"
+
+#: ../admin/view/options.php:119
+msgid "Default Widgets alignment:"
+msgstr "Vidjetlarning birlamchi joylashishi:"
+
+#: ../admin/view/options.php:138
+msgid "Show Amazon Widgets in RSS feeds?"
+msgstr "Amazon vidjetlari RSS-lentalarida ko'rsatilsinmi?"
+
+#: ../admin/view/options.php:152
+msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
+msgstr "Siz vidjetlarni RRS-lentalaridan ularni toza saqlash maqsadida yashirishni hohlashingiz mumkin.<br />Vidjetni tashqi saytlarda reklamalarga qarshi qayta nashr qilmoqchi bo'lsangiz bu juda qulay."
+
+#: ../admin/view/options.php:162
+msgid "Strict Standards compliance?"
+msgstr "Qat'iy Standartlar muvofiqligi?"
+
+#: ../admin/view/options.php:176
+msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
+msgstr "Agar siz o'z saytingizni HTML yoki XHTML Strictda tasdiqlashni hohlasangiz ushbu katakchani belgilang.<br />Eslatma: Internet Explorer 6da ayrim Amazon Vidjetlarini ishlatganda xatolar yuzaga kelishi mumkin."
+
+#: ../admin/view/options.php:194
+msgid "Enable context links:"
+msgstr "Kontekst ishoratlarini yoqish:"
+
+#: ../admin/view/options.php:208
+msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
+msgstr "Kontekst ishoratlar giperishoratlar bo'lib sahifangizning tegishli kalit so'zlarga avtomatik tarzda qo'shiladi."
+
+#: ../admin/view/options.php:217
+msgid "Enable product preview:"
+msgstr "Mahsulotni oldindan ko'rish:"
+
+#: ../admin/view/options.php:231
+msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
+msgstr "Mahsulotni oldindan ko'rsatish narx, tasvir, to'liq nomi va boshqa ma'lumotlarga ega Amazon mahsulotlari uchun mo'ljallangan gipermatnli ishoratlardir. "
+
+#: ../admin/view/options.php:247
+msgid "Save Changes"
+msgstr "O'zgarishlarni saqlash"
+
+#: ../admin/view/documentation.php:2
+msgid "Amazon Widgets Shortcodes documentation"
+msgstr "Amazon Widgets qisqa kodlari hujjatlari"
+
+#: ../admin/view/documentation.php:5
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
+msgid "Amazon Carrousel"
+msgstr "Amazon Carrousel"
+
+#: ../admin/view/documentation.php:8
+#: ../admin/view/documentation.php:50
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:124
+#: ../admin/view/documentation.php:217
+#: ../admin/view/documentation.php:249
+#: ../admin/view/documentation.php:291
+msgid "Shortcode:"
+msgstr "Qisqa kod:"
+
+#: ../admin/view/documentation.php:12
+#: ../admin/view/documentation.php:54
+#: ../admin/view/documentation.php:96
+#: ../admin/view/documentation.php:128
+#: ../admin/view/documentation.php:221
+#: ../admin/view/documentation.php:253
+#: ../admin/view/documentation.php:295
+msgid "Example:"
+msgstr "Misol:"
+
+#: ../admin/view/documentation.php:16
+#: ../admin/view/documentation.php:58
+#: ../admin/view/documentation.php:100
+#: ../admin/view/documentation.php:134
+#: ../admin/view/documentation.php:179
+#: ../admin/view/documentation.php:194
+#: ../admin/view/documentation.php:225
+#: ../admin/view/documentation.php:257
+#: ../admin/view/documentation.php:299
+msgid "Options:"
+msgstr "Sozlanmalar:"
+
+#: ../admin/view/documentation.php:21
+#: ../admin/view/documentation.php:63
+#: ../admin/view/documentation.php:105
+#: ../admin/view/documentation.php:139
+#: ../admin/view/documentation.php:144
+#: ../admin/view/documentation.php:184
+#: ../admin/view/documentation.php:230
+#: ../admin/view/documentation.php:262
+#: ../admin/view/documentation.php:304
+msgid "align the widget on the desired way"
+msgstr "vidjetni hohlagan usulda joylashtiring"
+
+#: ../admin/view/documentation.php:25
+#: ../admin/view/documentation.php:67
+#: ../admin/view/documentation.php:143
+#: ../admin/view/documentation.php:148
+#: ../admin/view/documentation.php:153
+#: ../admin/view/documentation.php:266
+msgid "CSS hexa or code value"
+msgstr "CSS hexa yoki kod ko'rsatkichi"
+
+#: ../admin/view/documentation.php:26
+#: ../admin/view/documentation.php:68
+#: ../admin/view/documentation.php:149
+#: ../admin/view/documentation.php:267
+msgid "customize the background color of the widget"
+msgstr "vidjet foni rangini tanlang"
+
+#: ../admin/view/documentation.php:30
+#: ../admin/view/documentation.php:35
+#: ../admin/view/documentation.php:72
+#: ../admin/view/documentation.php:77
+#: ../admin/view/documentation.php:158
+#: ../admin/view/documentation.php:173
+#: ../admin/view/documentation.php:271
+#: ../admin/view/documentation.php:276
+msgid "value in pixels"
+msgstr "piksellardagi ko'rsatkich"
+
+#: ../admin/view/documentation.php:31
+#: ../admin/view/documentation.php:73
+#: ../admin/view/documentation.php:272
+msgid "height of the animation"
+msgstr "animatsiya balandligi"
+
+#: ../admin/view/documentation.php:36
+#: ../admin/view/documentation.php:78
+#: ../admin/view/documentation.php:277
+msgid "width of the animation"
+msgstr "animatsiya kengligi"
+
+#: ../admin/view/documentation.php:41
+#: ../admin/view/documentation.php:83
+#: ../admin/view/documentation.php:115
+#: ../admin/view/documentation.php:209
+#: ../admin/view/documentation.php:240
+#: ../admin/view/documentation.php:282
+#: ../admin/view/documentation.php:314
+msgid "Content:"
+msgstr "Kontent:"
+
+#: ../admin/view/documentation.php:42
+#: ../admin/view/documentation.php:84
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:283
+#: ../admin/view/documentation.php:315
+msgid "Widget ID, contained in HTML parameter value like this:"
+msgstr "HTML parametrlari ko'rsatkichlaridagi quyidagidek Vidjet ID:"
+
+#: ../admin/view/documentation.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
+msgid "Amazon Deals"
+msgstr "Amazon kelishuvlari"
+
+#: ../admin/view/documentation.php:89
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+msgid "Amazon My Favorites"
+msgstr "Amazondagi sevimli sahifalarim"
+
+#: ../admin/view/documentation.php:109
+#: ../admin/view/documentation.php:168
+#: ../admin/view/documentation.php:198
+#: ../admin/view/documentation.php:234
+#: ../admin/view/documentation.php:308
+msgid "string"
+msgstr "qator"
+
+#: ../admin/view/documentation.php:110
+#: ../admin/view/documentation.php:235
+#: ../admin/view/documentation.php:309
+msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
+msgstr "mehmon brauzerida Flash yoki JavaScript bo'lmaganda alternativ matn"
+
+#: ../admin/view/documentation.php:121
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+msgid "Amazon Product"
+msgstr "Amazon mahsulotlari"
+
+#: ../admin/view/documentation.php:154
+msgid "border color of the widget"
+msgstr "vidjet chegarasining rangi"
+
+#: ../admin/view/documentation.php:159
+msgid "height of the frame"
+msgstr "freym balandligi"
+
+#: ../admin/view/documentation.php:164
+msgid "display a small picture or a big one (0 by default)"
+msgstr "kichik yoki katta rasmni ko'rsatish (0 birlamchi holat)"
+
+#: ../admin/view/documentation.php:169
+msgid "window name to open the link in (_blank by default)"
+msgstr "ko'rsatkichni ochish uchun darcha nomi (birlamchi holat uchun bo'sh qoldirish zarur)"
+
+#: ../admin/view/documentation.php:174
+msgid "width of the frame"
+msgstr "freym kengligi"
+
+#: ../admin/view/documentation.php:183
+msgid "image name or Amazon OR full image URL"
+msgstr "tasvir nomi yoki Amazon yoki to'liq tasvir URLi"
+
+#: ../admin/view/documentation.php:189
+msgid "display the widget as image"
+msgstr "vidjetni tasvir sifatida ko'rsatish"
+
+#: ../admin/view/documentation.php:199
+msgid "text of the hyperlink"
+msgstr "giperishorat matni"
+
+#: ../admin/view/documentation.php:204
+msgid "display the widget as hypertext link"
+msgstr "vidjetni giperishorat sifatida ko'rsatish"
+
+#: ../admin/view/documentation.php:210
+msgid "ASIN code of the product."
+msgstr "Mhsulotning ASIN kodi."
+
+#: ../admin/view/documentation.php:214
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+msgid "Amazon Product Cloud"
+msgstr "Amazon mahsulotlari guruhi"
+
+#: ../admin/view/documentation.php:246
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
+msgid "Amazon Slideshow"
+msgstr "Amazon slaydshousi"
+
+#: ../admin/view/documentation.php:288
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:23
+msgid "Amazon Wishlist"
+msgstr "Amazon istaklar ro'yxati"
+
+#: ../admin/form/options.php:21
+msgid "Options saved."
+msgstr "Sozlanmalar saqlandi."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:29
+msgid "Affiliate Options"
+msgstr "Filial sozlanmalari"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "Align"
+msgstr "Joylashtirish"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:34
+msgid "Link Color"
+msgstr "Ishorat rangi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+msgid "Other Options"
+msgstr "Boshqa sozlanmalar"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+msgid "Apply the magic!"
+msgstr "Mo'jizani qo'llash!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+msgid "ASIN Code"
+msgstr "ASIN kodi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+msgid "Background Color"
+msgstr "Fon rangi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+msgid "Border color"
+msgstr "Chagara rangi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+msgid "Copy/paste Amazon HTML's code right below ↓"
+msgstr "Amazon HTML-kodini quyida nusxalash/joylashtirish ↓"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
+msgstr "Asosiy sozlanmalar maydonchasini to'ldirishni hohlamaysizmi? Unda shunchaki Amazon HTML-kodini nusxalang/joylashtiring va avtoto'ldirish mo'jizasidan huzurlaning!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+msgid "Copy/Paste Code"
+msgstr "Kodni nusxalash/joylashtirish"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+msgid "Glad you look at here!"
+msgstr "Tashrifingiz uchun rahmat!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Height"
+msgstr "Balandlik"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+msgid "Image Source"
+msgstr "Tasvir manbasi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+msgid "Link text"
+msgstr "Ishorat matni"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+msgid "pixels"
+msgstr "piksellar"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Default Plugin Setting"
+msgstr "Plaginning birlamchi sozlanmalari"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "Display type"
+msgstr "Namoyish qilish turi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:55
+msgid "Region"
+msgstr "Mamlakat"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:60
+msgid "Small size?"
+msgstr "Kichik o'lcham?"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:61
+msgid "Tracking ID"
+msgstr "Kuzatuv IDsi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "Avtomatik tarzda birlamchi kuzatuv IDingizni ishlatish uchun bo'sh qoldiring."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
+msgid "Widget ID"
+msgstr "Vidjet IDsi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:64
+msgid "Width"
+msgstr "Kenglik"
+
