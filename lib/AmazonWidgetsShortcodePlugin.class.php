@@ -7,7 +7,7 @@ class AmazonWidgetsShortCodePlugin
 {
   /**
    * Register main functions for plugin's sake
-   * 
+   *
    * @static
    * @author oncletom
    * @version 1.0
@@ -25,19 +25,20 @@ class AmazonWidgetsShortCodePlugin
     add_filter('plugin_action_links_'.$pluginfile, array($class, 'executeFilterPluginActionLinks'));
 
     define('AWS_PLUGIN_BASEPATH', dirname($filename));
+    define('AWS_PLUGIN_PLUGINFILE', $pluginfile);
   }
 
   /**
    * Returns plugin location
-   * 
+   *
    * In case of symlink, it assumes you linked it with its original plugin name
    * eg: `ln -s /path/to/plugins/amazon-widgets-shortcodes /real/path/to/aws-plugin`
-   * 
+   *
    * Array returned contains 3 fields:
    * - fixed filename (for relocated wordpress ABSPATH ; like SVN install/symlinked plugin)
    * - relative path to i18n folder (from abspath ; will fail on 2.7 if WP is relocated)
    * - plugin relative path to i18n folder (from plugin dir) (supported since WP 2.7)
-   * 
+   *
    * @static
    * @author oncletom
    * @version 2.1
@@ -70,7 +71,7 @@ class AmazonWidgetsShortCodePlugin
 
   /**
    * Plugin activation processing
-   * 
+   *
    * @static
    * @author oncletom
    * @version 2.0
@@ -109,7 +110,7 @@ class AmazonWidgetsShortCodePlugin
 
   /**
    * Filter action plugin action links to add context links
-   * 
+   *
    * @author oncletom
    * @version 1.0
    * @since 1.4
@@ -123,7 +124,7 @@ class AmazonWidgetsShortCodePlugin
 
   /**
    * Register shortcode class & syntax
-   * 
+   *
    * @author oncletom
    * @version 1.0
    * @since 1.3

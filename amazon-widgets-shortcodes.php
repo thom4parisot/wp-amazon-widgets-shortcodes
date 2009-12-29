@@ -42,6 +42,7 @@ if (is_admin())
   $class = 'AmazonWidgetsShortcodesAdmin';
   require_once(AWS_PLUGIN_BASEPATH.'/lib/'.$class.'.class.php');
   add_action('admin_menu', array($class, 'setupAdminMenu'));
+  add_action('wpmu_new_blog', array($class, 'setupNewMuBlog'), 20, 2);
   add_filter('whitelist_options', array($class, 'setupOptionsWhitelist'));
 
   if (get_option('awshortcode_inline_documentation'))
@@ -72,7 +73,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
    * We enqueue Amazon JS at the bottom
    * Why the bottom ? Because it is recommended for external scripts
    * And it is one ;-)
-   * 
+   *
    * @see http://developer.yahoo.net/blog/archives/2007/07/high_performanc_5.html
    */
   if (get_option('awshortcode_context_links'))

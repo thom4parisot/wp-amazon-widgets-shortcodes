@@ -1,7 +1,7 @@
 <?php
 /**
  * Admin functions
- * 
+ *
  * @author oncletom
  * @version 1.0
  * @since 1.0 alpha 2
@@ -10,7 +10,7 @@ class AmazonWidgetsShortcodesAdmin
 {
   /**
    * Display tags help
-   * 
+   *
    * @author oncletom
    * @since 1.0 beta 1
    * @return null
@@ -22,7 +22,7 @@ class AmazonWidgetsShortcodesAdmin
 
   /**
    * Display options page
-   * 
+   *
    * @author oncletom
    * @since 1.0 alpha 2
    * @return null
@@ -58,7 +58,7 @@ class AmazonWidgetsShortcodesAdmin
 
   /**
    * Show a notice to the user if (s)he has not setup the plugin yet
-   * 
+   *
    * @author oncletom
    * @since 1.0 alpha 2
    * @return null
@@ -89,10 +89,10 @@ class AmazonWidgetsShortcodesAdmin
 
   /**
    * Setup admin pages
-   * 
+   *
    * Includes menu
    * Hook scripts & stylesheets
-   * 
+   *
    * @author oncletom
    * @version 1.1
    * @since 1.0 alpha 2
@@ -119,8 +119,46 @@ class AmazonWidgetsShortcodesAdmin
   }
 
   /**
+   * Copying master informations and activate plugin
+   *
+   * @since 1.5.3
+   * @author oncletom
+   * @param $blog_id integer
+   * @param $user_id integer
+   */
+  function setupNewMuBlog($blog_id, $user_id)
+  {
+    $dashblog = get_dashboard_blog();
+    $copy_options = array('tracking_id', 'region');
+    $copied_values = array();
+
+    if (!(int)$blog_id || (int)$blog_id === (int)$dashblog->blog_id)
+    {
+      return false;
+    }
+
+    /*
+     * Options to copy
+     */
+    foreach ($copy_options as $option_id)
+    {
+      $copied_values['awshortcode_'.$option_id] = get_option('awshortcode_'.$option_id);
+    }
+
+    switch_to_blog($blog_id);
+
+    activate_plugin(AWS_PLUGIN_PLUGINFILE);
+    foreach ($copied_values as $option_id => $option_value)
+    {
+      update_option($option_id, $option_value);
+    }
+
+    restore_current_blog();
+  }
+
+  /**
    * Add whitelist options for WPMU
-   * 
+   *
    * @see http://wordpress.org/support/topic/191773#post-876524
    * @see http://mu.wordpress.org/forums/topic.php?id=9210
    * @author oncletom
