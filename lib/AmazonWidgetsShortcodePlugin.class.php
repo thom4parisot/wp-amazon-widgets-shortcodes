@@ -95,6 +95,7 @@ class AmazonWidgetsShortCodePlugin
 
     /*
      * Purge TinyMCE config
+     * @todo do that only if needed (since WP ??, it's not necessary anymore)
      */
     $js_cache_dir = WP_CONTENT_DIR.'/uploads/js_cache';
     $dp = opendir($js_cache_dir);
@@ -126,17 +127,19 @@ class AmazonWidgetsShortCodePlugin
    * Register shortcode class & syntax
    *
    * @author oncletom
-   * @version 1.0
+   * @version 1.1
    * @since 1.3
    * @return $registered_shortcodes Integer Number of registered shortcodes
    */
   function registerShortcodes()
   {
     $registered_shortcodes = 0;
+    $disabled_widgets = AmazonWidgetsShortcodeConfiguration::getDisabledWidgets();
+    $active_widgets = array_intersect(AmazonWidgetsShortcodeConfiguration::getShortcodes(), array_flip($disabled_widgets));
 
     require AWS_PLUGIN_BASEPATH.'/lib/widgets/AmazonWidgetsShortcodeBase.class.php';
 
-    foreach (AmazonWidgetsShortcodeConfiguration::getShortcodes() as $shortcode_id => $shortcode_config)
+    foreach ($active_widgets as $shortcode_id => $shortcode_config)
     {
       require AWS_PLUGIN_BASEPATH.'/lib/widgets/'.$shortcode_config['class'].'.class.php';
       add_shortcode($shortcode_id, array($shortcode_config['class'], 'displayAsHtml'));
