@@ -36,6 +36,8 @@ class AmazonWidgetsShortcodesAdmin
      */
     $options = AmazonWidgetsShortcodeConfiguration::getOptions();
     $regions = AmazonWidgetsShortcodeConfiguration::getRegions();
+    $shortcodes = AmazonWidgetsShortcodeConfiguration::getShortcodes();
+  	$disabled_widgets = AmazonWidgetsShortcodeConfiguration::getDisabledWidgets();
 
     /*
      * Including elements
@@ -45,7 +47,7 @@ class AmazonWidgetsShortcodesAdmin
   }
 
   /**
-   * Include our own stylesheet
+   * Include our own javascript
    * @author oncletom
    * @since 1.0 beta 1
    * @return null

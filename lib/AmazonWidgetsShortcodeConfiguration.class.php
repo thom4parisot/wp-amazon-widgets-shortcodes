@@ -6,6 +6,26 @@
 class AmazonWidgetsShortcodeConfiguration
 {
   /**
+   * Retrieves disabled widgets list
+   * 
+   * @author	oncletom
+   * @version	1.0
+   * @since		1.6
+   * Enter description here ...
+   */
+  function getDisabledWidgets()
+  {
+  	static $disabledWidgets;
+  	
+  	if (null === $disabledWidgets)
+  	{
+  		$disabledWidgets = ('' === $disabledWidgets) ? array() : unserialize(get_option('awshortcode_disabled_widgets'));
+  	}
+  	
+  	return $disabledWidgets;
+  }
+
+  /**
    * Easy way to get the whole list of registered options
    * 
    * @author oncletom

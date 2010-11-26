@@ -86,6 +86,23 @@
           </tr>
           <tr>
             <th scope="row">
+              <label>
+                <?php _e('Disabled widgets', 'awshortcode') ?>
+              </label>
+            </th>
+            <td>
+              <span class="help">
+                <?php _e('Disabling a widget will hide it from the Rich Text Editor. Its shortcode will also be disabled.', 'awshortcode') ?>
+              </span>
+
+              <?php foreach ($shortcodes as $key => $shortcode): ?>
+              <input type="checkbox" name="awshortcode_disabled_widgets[]" value="<?php echo $key ?>" id="awshortcode_disable_widget_<?php echo $key ?>" <?php echo in_array($key, $disabled_widgets) ? 'checked="checked"' : '' ?> />
+              <label for="awshortcode_disable_widget_<?php echo $key ?>"><?php echo $shortcode['name'] ?></label>
+              <?php endforeach ?>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
               <label for="awshortcode_inline_documentation">
                 <?php _e('Show inline documentation?', 'awshortcode') ?>
               </label>
