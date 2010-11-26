@@ -3,7 +3,7 @@ Contributors: oncletom
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=752034
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
-Tested up to: 2.9.x
+Tested up to: 3.0
 Stable tag: 1.5.2
 
 
@@ -87,6 +87,7 @@ Please notice that this forthcoming version **will require at least**:
  * WordPress 2.8
 
 = Version 1.5.3 =
+ * admin: you can now enable/disable some widgets
  * wordpress-mu: by default, all new blogs have the plugin enabled
  * wordpress-mu: by default, a new blog import your Tracking ID and region
 
