@@ -96,6 +96,7 @@ if (get_option('awshortcode_tracking_id') && !is_admin())
 
 /*
  * Global stuff
+ * @todo	move this into admin only
  */
 $class = 'AmazonWidgetsShortcodeRteTinyMce';
 require_once AWS_PLUGIN_BASEPATH.'/lib/rte/'.$class.'.class.php';
