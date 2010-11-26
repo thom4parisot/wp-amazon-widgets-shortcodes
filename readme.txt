@@ -84,9 +84,9 @@ Now you plug 'n play 'n earn money ;-)
 Please notice that this forthcoming version **will require at least**:
 
  * PHP 5.1.2 (so that the `spl_autoload` function is available)
- * WordPress 2.8
+ * WordPress 3.0
 
-= Version 1.5.3 =
+= Version 1.6 =
  * admin: you can now enable/disable some widgets
  * wordpress-mu: by default, all new blogs have the plugin enabled
  * wordpress-mu: by default, a new blog import your Tracking ID and region
