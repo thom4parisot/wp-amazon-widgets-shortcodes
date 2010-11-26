@@ -32,6 +32,12 @@ class AmazonWidgetsShortcodeConfiguration
         'onSaveCallback' => 'intval',
         'possibleValues' => array(0, 1),
       ),
+      'awshortcode_disabled_widgets' => array(
+      	'autoload' => yes,
+      	'defaultValue' => array(),
+      	'onSaveCallback' => 'serialize',
+      	'possibleValue' => '',
+      ),
       'awshortcode_feed' => array(
         'autoload' => true,
         'defaultValue' => 0,
@@ -279,19 +285,24 @@ class AmazonWidgetsShortcodeConfiguration
     return array(
       'amazon-carrousel' => array(
         'class' => 'AmazonWidgetsShortcodeCarrousel',
+    	'name' => __('Amazon Carrousel', 'awshortcode'),
       ),
       'amazon-deals' => array(
         'class' => 'AmazonWidgetsShortcodeDeals',
+    	'name' => __('Amazon Deals', 'awshortcode'),
       ),
       'amazon-mp3' => array(
         'class' => 'AmazonWidgetsShortcodeMp3',
+    	'name' => __('Amazon MP3', 'awshortcode'),
       ),
       'amazon-myfavorites' => array(
         'class' => 'AmazonWidgetsShortcodeMyFavorites',
+    	'name' => __('Amazon My Favorites', 'awshortcode'),
       ),
       'amazon-product' => array(
         'class' => 'AmazonWidgetsShortcodeProduct',
         'default_type' => 'both',
+    	'name' => __('Amazon Product', 'awshortcode'),
         'types' => array(
           'both' => __('Image and Text'),
           'image' => __('Image only'),
@@ -300,12 +311,15 @@ class AmazonWidgetsShortcodeConfiguration
       ),
       'amazon-productcloud' => array(
         'class' => 'AmazonWidgetsShortcodeProductCloud',
+    	'name' => __('Amazon Product Cloud', 'awshortcode'),
       ),
       'amazon-slideshow' => array(
         'class' => 'AmazonWidgetsShortcodeSlideshow',
+    	'name' => __('Amazon Slideshow', 'awshortcode'),
       ),
       'amazon-wishlist' => array(
         'class' => 'AmazonWidgetsShortcodeWishlist',
+    	'name' => __('Amazon Wishlist', 'awshortcode'),
       ),
     );
   }
