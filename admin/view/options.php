@@ -25,11 +25,10 @@
   <form action="options.php" method="post">
     <?php if ($wp_version < '2.7' && !isset($wpmu_version)): ?>
       <?php wp_nonce_field('update-options') ?>
+      <input type="hidden" name="action" value="update" />
     <?php else: ?>
-      <?php wp_nonce_field('awshortcode-options') ?>
-      <input type="hidden" name="option_page" value="awshortcode" />
+      <?php settings_fields('awshortcode') ?>
     <?php endif ?>
-    <input type="hidden" name="action" value="update" />
     <input type="hidden" name="page_options" value="<?php echo implode(',', array_keys($options)) ?>" />
 
     <div id="awshortcode-options-wrapper">
