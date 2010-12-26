@@ -8,6 +8,7 @@ class AmazonWidgetsShortcodeContextLink
   /**
    * Display HTML Code
    * 
+   * @todo use wp_enqueue_script for script dependency
    * @author oncletom
    * @version 2.0
    * @since 1.3

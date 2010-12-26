@@ -8,6 +8,7 @@ class AmazonWidgetsShortcodeProductPreview
   /**
    * Displays context links on Amazon links
    * 
+   * @todo use wp_enqueue_script for script dependency
    * @static
    * @author oncletom
    * @version 2.0
