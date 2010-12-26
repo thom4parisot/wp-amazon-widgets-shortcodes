@@ -16,8 +16,12 @@ var Configuration = {
       label:  'Germany'
     },
     'fr': {
-      domain: 'amazon.fr',
-      label:  'France'
+        domain: 'amazon.fr',
+        label:  'France'
+    },
+    'it': {
+        domain: 'amazon.it',
+        label:  'Italia'
     },
     'jp': {
       domain: 'amazon.co.jp',

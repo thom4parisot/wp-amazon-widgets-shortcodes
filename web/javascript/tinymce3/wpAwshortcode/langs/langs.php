@@ -58,6 +58,7 @@ tinyMCE.addI18n("'.$mce_locale.'.wpAwshortcode_dlg",{
   region_ca:            "'.js_escape(__('Amazon Canada', 'awshortcode')).'",
   region_de:            "'.js_escape(__('Amazon Germany', 'awshortcode')).'",
   region_fr:            "'.js_escape(__('Amazon France', 'awshortcode')).'",
+  region_it:            "'.js_escape(__('Amazon Italia', 'awshortcode')).'",
   region_jp:            "'.js_escape(__('Amazon Japan', 'awshortcode')).'",
   region_uk:            "'.js_escape(__('Amazon United Kingdom', 'awshortcode')).'",
   region_us:            "'.js_escape(__('Amazon USA', 'awshortcode')).'",

@@ -87,7 +87,9 @@ Please notice that this forthcoming version **will require at least**:
  * WordPress 3.0
 
 = Version 1.6 =
+ * added support for Amazon Italia (restricted to Products so far)
  * admin: you can now enable/disable some widgets
+ * i18n: updated strings
  * wordpress-mu: by default, all new blogs have the plugin enabled
  * wordpress-mu: by default, a new blog import your Tracking ID and region
 

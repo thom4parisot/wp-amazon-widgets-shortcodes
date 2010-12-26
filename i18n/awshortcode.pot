@@ -2,10 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Amazon Widgets Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-12 16:06+0100\n"
-"PO-Revision-Date: 2009-07-12 16:06+0100\n"
+"POT-Creation-Date: 2010-12-26 12:40+0100\n"
+"PO-Revision-Date: 2010-12-26 12:40+0100\n"
 "Last-Translator: Oncle Tom <thomas@oncle-tom.net>\n"
 "Language-Team: Your name <your@email.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,70 +15,113 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
 msgid "Amazon Widget Shortcodes has been activated"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:74
 #, php-format
 msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
-#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:109
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:110
 msgid "Amazon Widgets Shortcodes"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:44
 msgid "left"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:45
 msgid "centered"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:46
 msgid "right"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:142
 msgid "Amazon Canada"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:139
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:165
 msgid "Amazon Germany"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:161
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:187
 msgid "Amazon France"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:184
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:210
+msgid "Amazon Italia"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:233
 msgid "Amazon Japan"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:206
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:255
 msgid "Amazon United Kingdom"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:229
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:278
 msgid "Amazon USA"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:296
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:331
+msgid "Amazon Carrousel"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:335
+msgid "Amazon Deals"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:339
+msgid "Amazon MP3"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:343
+msgid "Amazon My Favorites"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:348
+msgid "Amazon Product"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:350
 msgid "Image and Text"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:297
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:351
 msgid "Image only"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:298
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:352
 msgid "Text only"
 msgstr ""
 
-#: ../lib/AmazonWidgetsShortcodePlugin.class.php:116
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:357
+msgid "Amazon Product Cloud"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:361
+msgid "Amazon Slideshow"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:365
+msgid "Amazon Wishlist"
+msgstr ""
+
+#: ../lib/AmazonWidgetsShortcodePlugin.class.php:123
 msgid "Configure"
+msgstr ""
+
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeMp3.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
 msgstr ""
 
 #: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
@@ -92,119 +136,12 @@ msgstr ""
 msgid "Consult my favorites on Amazon."
 msgstr ""
 
-#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
-#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
-#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
-#: ../lib/widgets/AmazonWidgetsShortcodeMp3.class.php:60
-msgid "You don't have a sufficient version of Flash Player to display this animation."
-msgstr ""
-
-#: ../admin/view/options.php:4
-msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
-msgstr ""
-
-#: ../admin/view/options.php:8
-#, php-format
-msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
-msgstr ""
-
-#: ../admin/view/options.php:23
-msgid "Enjoy the usage of this plugin!"
-msgstr ""
-
-#: ../admin/view/options.php:36
-#: ../admin/view/options.php:42
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
-msgid "Main Options"
-msgstr ""
-
-#: ../admin/view/options.php:37
-#: ../admin/view/options.php:188
-msgid "Additional Tools"
-msgstr ""
-
-#: ../admin/view/options.php:38
-msgid "Documentation"
-msgstr ""
-
-#: ../admin/view/options.php:48
-msgid "Amazon affiliate region:"
-msgstr ""
-
-#: ../admin/view/options.php:61
-#, php-format
-msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
-msgstr ""
-
-#: ../admin/view/options.php:70
-msgid "Amazon Tracking ID:"
-msgstr ""
-
-#: ../admin/view/options.php:80
-#, php-format
-msgid "Your Amazon Tracking ID, generally suffixed by %s."
-msgstr ""
-
-#: ../admin/view/options.php:89
-msgid "Show inline documentation?"
-msgstr ""
-
-#: ../admin/view/options.php:103
-msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
-msgstr ""
-
-#: ../admin/view/options.php:113
-msgid "Layout Options"
-msgstr ""
-
-#: ../admin/view/options.php:119
-msgid "Default Widgets alignment:"
-msgstr ""
-
-#: ../admin/view/options.php:138
-msgid "Show Amazon Widgets in RSS feeds?"
-msgstr ""
-
-#: ../admin/view/options.php:152
-msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
-msgstr ""
-
-#: ../admin/view/options.php:162
-msgid "Strict Standards compliance?"
-msgstr ""
-
-#: ../admin/view/options.php:176
-msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
-msgstr ""
-
-#: ../admin/view/options.php:194
-msgid "Enable context links:"
-msgstr ""
-
-#: ../admin/view/options.php:208
-msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
-msgstr ""
-
-#: ../admin/view/options.php:217
-msgid "Enable product preview:"
-msgstr ""
-
-#: ../admin/view/options.php:231
-msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
-msgstr ""
-
-#: ../admin/view/options.php:247
-msgid "Save Changes"
+#: ../admin/form/options.php:21
+msgid "Options saved."
 msgstr ""
 
 #: ../admin/view/documentation.php:2
 msgid "Amazon Widgets Shortcodes documentation"
-msgstr ""
-
-#: ../admin/view/documentation.php:5
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
-msgid "Amazon Carrousel"
 msgstr ""
 
 #: ../admin/view/documentation.php:8
@@ -315,16 +252,6 @@ msgstr ""
 msgid "Widget ID, contained in HTML parameter value like this:"
 msgstr ""
 
-#: ../admin/view/documentation.php:47
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
-msgid "Amazon Deals"
-msgstr ""
-
-#: ../admin/view/documentation.php:89
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
-msgid "Amazon MP3"
-msgstr ""
-
 #: ../admin/view/documentation.php:109
 #: ../admin/view/documentation.php:141
 #: ../admin/view/documentation.php:200
@@ -339,16 +266,6 @@ msgstr ""
 #: ../admin/view/documentation.php:267
 #: ../admin/view/documentation.php:341
 msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
-msgstr ""
-
-#: ../admin/view/documentation.php:121
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
-msgid "Amazon My Favorites"
-msgstr ""
-
-#: ../admin/view/documentation.php:153
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
-msgid "Amazon Product"
 msgstr ""
 
 #: ../admin/view/documentation.php:186
@@ -391,23 +308,111 @@ msgstr ""
 msgid "ASIN code of the product."
 msgstr ""
 
-#: ../admin/view/documentation.php:246
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
-msgid "Amazon Product Cloud"
+#: ../admin/view/options.php:4
+msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
 msgstr ""
 
-#: ../admin/view/documentation.php:278
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:23
-msgid "Amazon Slideshow"
+#: ../admin/view/options.php:8
+#, php-format
+msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
 msgstr ""
 
-#: ../admin/view/documentation.php:320
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:24
-msgid "Amazon Wishlist"
+#: ../admin/view/options.php:23
+msgid "Enjoy the usage of this plugin!"
 msgstr ""
 
-#: ../admin/form/options.php:21
-msgid "Options saved."
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Main Options"
+msgstr ""
+
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:206
+msgid "Additional Tools"
+msgstr ""
+
+#: ../admin/view/options.php:38
+msgid "Documentation"
+msgstr ""
+
+#: ../admin/view/options.php:48
+msgid "Amazon affiliate region:"
+msgstr ""
+
+#: ../admin/view/options.php:61
+#, php-format
+msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+msgstr ""
+
+#: ../admin/view/options.php:71
+msgid "Amazon Tracking ID:"
+msgstr ""
+
+#: ../admin/view/options.php:81
+#, php-format
+msgid "Your Amazon Tracking ID, generally suffixed by %s."
+msgstr ""
+
+#: ../admin/view/options.php:90
+msgid "Disabled widgets"
+msgstr ""
+
+#: ../admin/view/options.php:95
+msgid "Disabling a widget will hide it from the Rich Text Editor. Its shortcode will also be disabled."
+msgstr ""
+
+#: ../admin/view/options.php:107
+msgid "Show inline documentation?"
+msgstr ""
+
+#: ../admin/view/options.php:121
+msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+msgstr ""
+
+#: ../admin/view/options.php:131
+msgid "Layout Options"
+msgstr ""
+
+#: ../admin/view/options.php:137
+msgid "Default Widgets alignment:"
+msgstr ""
+
+#: ../admin/view/options.php:156
+msgid "Show Amazon Widgets in RSS feeds?"
+msgstr ""
+
+#: ../admin/view/options.php:170
+msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
+msgstr ""
+
+#: ../admin/view/options.php:180
+msgid "Strict Standards compliance?"
+msgstr ""
+
+#: ../admin/view/options.php:194
+msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
+msgstr ""
+
+#: ../admin/view/options.php:212
+msgid "Enable context links:"
+msgstr ""
+
+#: ../admin/view/options.php:226
+msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
+msgstr ""
+
+#: ../admin/view/options.php:235
+msgid "Enable product preview:"
+msgstr ""
+
+#: ../admin/view/options.php:249
+msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
+msgstr ""
+
+#: ../admin/view/options.php:266
+msgid "Save Changes"
 msgstr ""
 
 #: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
@@ -490,23 +495,23 @@ msgstr ""
 msgid "Region"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:65
 msgid "Small size?"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:66
 msgid "Tracking ID"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:64
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:67
 msgid "Leave empty to use automatically your default tracking ID."
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:65
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:68
 msgid "Widget ID"
 msgstr ""
 
-#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:66
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:69
 msgid "Width"
 msgstr ""
 
