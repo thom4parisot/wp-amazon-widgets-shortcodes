@@ -238,7 +238,7 @@ class AmazonWidgetsShortcodeConfiguration
           'product' =>              'http://www.amazon.co.jp/gp/product/%s?ie=UTF8&amp;tag=%s&amp;linkCode=as2&amp;camp=1642&amp;creative=6746&amp;creativeASIN=%1$s',
           'site' =>                 'http://www.amazon.co.jp/',
           'tool-contextlinks' =>    '',
-          'tool-productpreview' =>  'http://www.assoc-amazon.jp/s/link-enhancer?tag=%s&o=8',
+          'tool-productpreview' =>  'http://www.assoc-amazon.jp/s/link-enhancer?tag=%s&o=9',
           'widget-carrousel' =>     'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8010%%2F%s&amp;Operation=%s',
           'widget-deals' =>         'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8009%%2F%s&amp;Operation=%s',
           'widget-mp3' =>           'http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&amp;MarketPlace=%s&amp;ID=V20070822%%2F%1$s%%2F%s%%2F8014%%2F%s&amp;Operation=%s',

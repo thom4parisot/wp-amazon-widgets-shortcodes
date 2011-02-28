@@ -90,6 +90,7 @@ Please notice that this forthcoming version **will require at least**:
  * added support for Amazon Italia (restricted to Products so far)
  * admin: you can now enable/disable some widgets
  * i18n: updated strings
+ * widget: fixed Link Enhancer for Japan (was displaying French links)
  * wordpress-mu: by default, all new blogs have the plugin enabled
  * wordpress-mu: by default, a new blog import your Tracking ID and region
 
