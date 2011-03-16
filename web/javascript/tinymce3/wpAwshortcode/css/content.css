@@ -11,7 +11,7 @@
 .mceContentBody .awshortcode{
   background: #ffc url('../img/amazon-partners-icon-trans.gif') no-repeat 5px center;
   border: 1px solid #69c;
-  display: block;
-  margin: 1em 0; 
+  display: inline;
+  margin: 1em 0;
   padding: .3em .3em .3em 30px;
 }
