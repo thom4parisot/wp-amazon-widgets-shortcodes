@@ -7,7 +7,7 @@ class AmazonWidgetsShortcodeRteTinyMce
 {
   /**
    * Register TinyMCE hooks & filters
-   * 
+   *
    * @author oncletom
    * @version 2.0
    * @since 1.3
@@ -32,7 +32,7 @@ class AmazonWidgetsShortcodeRteTinyMce
 
   /**
    * Pass some more configuration to TinyMCE, essentially WP related options
-   * 
+   *
    * @author oncletom
    * @version 1.0
    * @since 1.3
@@ -46,13 +46,14 @@ class AmazonWidgetsShortcodeRteTinyMce
       array(
         'awshortcode_region' => get_option('awshortcode_region'),
         'awshortcode_tracking_id' => get_option('awshortcode_tracking_id'),
+        'awshortcode_enabled_widgets' => implode(',', AmazonWidgetsShortcodeConfiguration::getEnabledWidgets()),
       )
     );
   }
 
   /**
    * Loads additional buttons into the TinyMCE 3 UI
-   * 
+   *
    * @author oncletom
    * @version 2.0
    * @since 1.3
@@ -67,7 +68,7 @@ class AmazonWidgetsShortcodeRteTinyMce
 
   /**
    * Loads TinyMCE 3 language files
-   * 
+   *
    * @author oncletom
    * @version 1.0
    * @since 1.1
@@ -82,7 +83,7 @@ class AmazonWidgetsShortcodeRteTinyMce
 
   /**
    * Loads TinyMCE 3 external plugins
-   * 
+   *
    * @author oncletom
    * @version 2.0
    * @since 1.3

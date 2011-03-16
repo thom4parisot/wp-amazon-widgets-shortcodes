@@ -37,7 +37,7 @@
         <li><a href="#awshortcode-tools" class="button-secondary"><?php _e('Additional Tools', 'awshortcode') ?></a></li>
         <li><a href="#awshortcode-documentation" class="button-secondary"><?php _e('Documentation', 'awshortcode') ?></a></li>
       </ul>
-  
+
       <div id="awshortcode-main">
       <h3><?php _e('Main Options', 'awshortcode') ?></h3>
       <table class="form-table">
@@ -95,10 +95,14 @@
                 <?php _e('Disabling a widget will hide it from the Rich Text Editor. Its shortcode will also be disabled.', 'awshortcode') ?>
               </span>
 
+              <ul class="disabled-widgets-list">
               <?php foreach ($shortcodes as $key => $shortcode): ?>
+              <li>
               <input type="checkbox" name="awshortcode_disabled_widgets[]" value="<?php echo $key ?>" id="awshortcode_disable_widget_<?php echo $key ?>" <?php echo in_array($key, $disabled_widgets) ? 'checked="checked"' : '' ?> />
               <label for="awshortcode_disable_widget_<?php echo $key ?>"><?php echo $shortcode['name'] ?></label>
+              </li>
               <?php endforeach ?>
+              </ul>
             </td>
           </tr>
           <tr>
@@ -127,7 +131,7 @@
           </tr>
         </tbody>
       </table>
-  
+
       <h3><?php _e('Layout Options', 'awshortcode') ?></h3>
       <table class="form-table">
         <tbody>
@@ -201,7 +205,7 @@
         </tbody>
       </table>
       </div>
-  
+
       <div id="awshortcode-tools">
       <h3><?php _e('Additional Tools', 'awshortcode') ?></h3>
       <table class="form-table">
@@ -256,7 +260,7 @@
         </tbody>
       </table>
       </div>
-  
+
       <div id="awshortcode-documentation">
         <?php AmazonWidgetsShortcodesAdmin::displayDocumentation() ?>
       </div>

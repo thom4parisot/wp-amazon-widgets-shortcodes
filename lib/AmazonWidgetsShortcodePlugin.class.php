@@ -134,12 +134,10 @@ class AmazonWidgetsShortCodePlugin
   function registerShortcodes()
   {
     $registered_shortcodes = 0;
-    $disabled_widgets = AmazonWidgetsShortcodeConfiguration::getDisabledWidgets();
-    $active_widgets = array_intersect(AmazonWidgetsShortcodeConfiguration::getShortcodes(), array_flip($disabled_widgets));
 
     require AWS_PLUGIN_BASEPATH.'/lib/widgets/AmazonWidgetsShortcodeBase.class.php';
 
-    foreach ($active_widgets as $shortcode_id => $shortcode_config)
+    foreach (AmazonWidgetsShortcodeConfiguration::getEnabledWidgets() as $shortcode_id => $shortcode_config)
     {
       require AWS_PLUGIN_BASEPATH.'/lib/widgets/'.$shortcode_config['class'].'.class.php';
       add_shortcode($shortcode_id, array($shortcode_config['class'], 'displayAsHtml'));

@@ -30,6 +30,31 @@ class AmazonWidgetsShortcodeConfiguration
   }
 
   /**
+   * Retrieves enabled widgets list
+   *
+   * @author  oncletom
+   * @version 1.0
+   * @since   1.6
+   */
+  function getEnabledWidgets()
+  {
+    static $enabledWidgets;
+
+    if (null === $enabledWidgets)
+    {
+      $enabledWidgets = array_flip(array_keys(AmazonWidgetsShortcodeConfiguration::getShortcodes()));
+      foreach (AmazonWidgetsShortcodeConfiguration::getDisabledWidgets() as $w)
+      {
+        unset($enabledWidgets[$w]);
+      }
+
+      $enabledWidgets = array_flip($enabledWidgets);
+    }
+
+    return $enabledWidgets;
+  }
+
+  /**
    * Easy way to get the whole list of registered options
    *
    * @author oncletom
