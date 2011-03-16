@@ -3,8 +3,8 @@ Contributors: oncletom
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=752034
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
-Tested up to: 3.0
-Stable tag: 1.5.2
+Tested up to: 3.1
+Stable tag: 1.6
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -93,8 +93,8 @@ Please notice that this forthcoming version **will require at least**:
  * widget: fixed Link Enhancer for Germany (was displaying Canadian links)
  * widget: fixed Amazon Products for Germany (was displaying Canadian links)
  * widget: fixed Link Enhancer for Japan (was displaying French links)
- * wordpress-mu: by default, all new blogs have the plugin enabled
- * wordpress-mu: by default, a new blog import your Tracking ID and region
+ * multisite: by default, all new blogs have the plugin enabled
+ * multisite: by default, a new blog import your Tracking ID and region
 
 = Version 1.5.2 =
  * i18n: added Russian translation
@@ -147,7 +147,7 @@ Please notice that this forthcoming version **will require at least**:
  * widget: Product Widget now handles text+image, image and text
  * widget: added Product Cloud Widget
  * wordpress: Wordpress 2.7 compatibility
- 
+
 HUGE thanks to [Kathryn Presner](http://www.zoonini.com) for testing and reporting problems.
 Kudos to LesBessant and fredl for reporting usage problems with Wordpress µ and Wordpress 2.7.
 
