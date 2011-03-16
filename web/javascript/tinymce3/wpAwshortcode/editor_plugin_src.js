@@ -57,7 +57,7 @@
 
       /*
        * From Editor to database (Visual to HTML tab)
-       * 
+       *
        * We basically remove span element
        */
       ed.onBeforeGetContent.add(function(ed, o){
@@ -71,7 +71,7 @@
 
       /*
        * From Editor to database (Visual to HTML tab)
-       * 
+       *
        * We basically remove span element
        */
       ed.onPostProcess.add(function(ed, o){
@@ -85,9 +85,9 @@
       });
       /*
        * From database to Editor (HTML tab to Visual)
-       * 
+       *
        * We encapsulate shortcode in span elements
-       * 
+       *
        * @todo it seems a bit dirty
        * Maybe for speed reasons; doing a getBody() + replace + setBody() does not work
        */
@@ -96,7 +96,7 @@
 
         /*
          * Check if there are already shortcode
-         * 
+         *
          * Avoid undo/redo problem without bloating the code with other ed.onXXX events
          * Or when the code is copy paster in plain HTML, could happens!
          */
@@ -144,14 +144,15 @@
           title:   'wpAwshortcode.desc'
         }).setDisabled(1);
 
-        each(t.shortcodes, function(value, key) {
-          var o = {icon : 0}, mi;
+        each(ed.settings.awshortcode_enabled_widgets.split(','), function(key) {
+          var o = {icon : 0}, mi,
+              label = 'wpAwshortcode.' + key.replace('-', '_');
 
           o.onclick = function() {
             ed.execCommand('wpAwshortcodeSelector', true, key);
           };
 
-          o.title = value;
+          o.title = label;
           mi = m.add(o);
           menu[key] = mi;
         });
@@ -163,7 +164,7 @@
     },
     /**
      * Shortcodes list
-     * 
+     *
      * @since 1.1
      */
     shortcodes: {
@@ -188,7 +189,7 @@
         author:    'Oncle Tom',
         authorurl: 'http://oncle-tom.net',
         infourl:   'http://wordpress.org/extend/plugins/amazon-widgets-shortcodes/',
-        version:   '1.5'
+        version:   '1.6'
       };
     },
     /*
@@ -202,7 +203,7 @@
     },
     /**
      * Select an item menu based on its classname
-     * 
+     *
      * @since 1.1
      * @version 1.0
      * @param {Object} ed TinyMCE Editor reference
