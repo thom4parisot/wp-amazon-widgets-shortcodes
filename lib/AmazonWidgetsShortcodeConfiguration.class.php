@@ -7,27 +7,31 @@ class AmazonWidgetsShortcodeConfiguration
 {
   /**
    * Retrieves disabled widgets list
-   * 
+   *
    * @author	oncletom
    * @version	1.0
    * @since		1.6
-   * Enter description here ...
    */
   function getDisabledWidgets()
   {
   	static $disabledWidgets;
-  	
+
   	if (null === $disabledWidgets)
   	{
-  		$disabledWidgets = ('' === $disabledWidgets) ? array() : unserialize(get_option('awshortcode_disabled_widgets'));
+  		$disabledWidgets = ('' === $disabledWidgets) ? array() : get_option('awshortcode_disabled_widgets');
+
+      if (is_string($disabledWidgets))
+      {
+        $disabledWidgets = unserialize($disabledWidgets);
+      }
   	}
-  	
+
   	return $disabledWidgets;
   }
 
   /**
    * Easy way to get the whole list of registered options
-   * 
+   *
    * @author oncletom
    * @version 2.0
    * @since 1.3
@@ -105,7 +109,7 @@ class AmazonWidgetsShortcodeConfiguration
 
   /**
    * Return a region configuration
-   * 
+   *
    * @author oncletom
    * @version 1.0
    * @since 1.3
@@ -127,7 +131,7 @@ class AmazonWidgetsShortcodeConfiguration
 
   /**
    * Returns all region configuration
-   * 
+   *
    * @author oncletom
    * @version 2.1
    * @since 1.3
@@ -300,7 +304,7 @@ class AmazonWidgetsShortcodeConfiguration
 
   /**
    * Return a specific shortcode configuration
-   * 
+   *
    * @static
    * @author oncletom
    * @version 1.0
@@ -317,7 +321,7 @@ class AmazonWidgetsShortcodeConfiguration
 
   /**
    * Returns shortcodes configuration
-   * 
+   *
    * @static
    * @version 1.0
    * @since 1.3
