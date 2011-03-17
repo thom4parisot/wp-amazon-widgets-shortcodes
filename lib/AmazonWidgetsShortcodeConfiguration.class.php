@@ -9,7 +9,7 @@ class AmazonWidgetsShortcodeConfiguration
    * Retrieves disabled widgets list
    *
    * @author	oncletom
-   * @version	1.0
+   * @version	1.0.1
    * @since		1.6
    */
   function getDisabledWidgets()
@@ -18,7 +18,12 @@ class AmazonWidgetsShortcodeConfiguration
 
   	if (null === $disabledWidgets)
   	{
-  		$disabledWidgets = ('' === $disabledWidgets) ? array() : get_option('awshortcode_disabled_widgets');
+  		$disabledWidgets = get_option('awshortcode_disabled_widgets', array());
+
+      if (!$disabledWidgets || $disabledWidgets = 'a:0:{}')
+      {
+        $disabledWidgets = array();
+      }
 
       if (is_string($disabledWidgets))
       {

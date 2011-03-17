@@ -127,21 +127,39 @@ class AmazonWidgetsShortCodePlugin
    * Register shortcode class & syntax
    *
    * @author oncletom
-   * @version 1.1
+   * @version 1.2
    * @since 1.3
    * @return $registered_shortcodes Integer Number of registered shortcodes
    */
   function registerShortcodes()
   {
-    $registered_shortcodes = 0;
+    $disabled_widgets = AmazonWidgetsShortcodeConfiguration::getDisabledWidgets();
 
     require AWS_PLUGIN_BASEPATH.'/lib/widgets/AmazonWidgetsShortcodeBase.class.php';
 
-    foreach (AmazonWidgetsShortcodeConfiguration::getEnabledWidgets() as $shortcode_id => $shortcode_config)
+    foreach (AmazonWidgetsShortcodeConfiguration::getShortcodes() as $shortcode_id => $shortcode_config)
     {
-      require AWS_PLUGIN_BASEPATH.'/lib/widgets/'.$shortcode_config['class'].'.class.php';
+      /*
+       * Standard HTML generator
+       */
+      if (empty($disabled_widgets) || !in_array($shortcode_id, $disabled_widgets))
+      {
+        require AWS_PLUGIN_BASEPATH.'/lib/widgets/'.$shortcode_config['class'].'.class.php';
+      }
+      /*
+       * Load dummy HTML generator, in case you don't want to display disabled widgets
+       */
+      else
+      {
+        $shortcode_config['class'] = 'AmazonWidgetsShortcodeDummy';
+
+        if (!class_exists($shortcode_config['class']))
+        {
+          require AWS_PLUGIN_BASEPATH.'/lib/widgets/'.$shortcode_config['class'].'.class.php';
+        }
+      }
+
       add_shortcode($shortcode_id, array($shortcode_config['class'], 'displayAsHtml'));
-      $registered_shortcodes++;
     }
 
     return $registered_shortcodes;

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: amazon, affiliate, shortcode, shortcodes, monetization, context, links, product, preview, carrousel, documentation, plugin, slideshow, admin, post, page, tinymce, wysiwyg, wpmu
 Requires at least: 2.5
 Tested up to: 3.1
-Stable tag: 1.6
+Stable tag: 1.6.1
 
 
 Keep your time and save your money with these Amazon widgets shortcodes. Standard compliants, easy to use and so on !
@@ -85,6 +85,9 @@ Please notice that this forthcoming version **will require at least**:
 
  * PHP 5.1.2 (so that the `spl_autoload` function is available)
  * WordPress 3.0
+
+= Version 1.6.1 =
+ * fix: disabled widgets messed up things when none set (as said, always...)
 
 = Version 1.6 =
  * added support for Amazon Italia (restricted to Products so far)
