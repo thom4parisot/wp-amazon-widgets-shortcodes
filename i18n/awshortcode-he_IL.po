@@ -1,0 +1,519 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Amazon Widgets Shortcodes in Hebrew\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-26 12:40+0100\n"
+"PO-Revision-Date: 2011-10-20 20:48+0200\n"
+"Last-Translator: שגיב SEO <info@sagive.co.il>\n"
+"Language-Team: Sagive SEO <info@sagive.co.il>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;_e ;__;__ ;_c;_c ;__ngettext;__ngettext\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
+msgid "Amazon Widget Shortcodes has been activated"
+msgstr "התוסף Amazon Widget Shortcodes הופעל בהצלחה"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:74
+#, php-format
+msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
+msgstr "אתה צריך להגדיר את <a href=\"%s\">Amazon Tracking ID</a> כדי שהקיצורים יעבדו כשורה בוידג'טים שלך."
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:109
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:110
+msgid "Amazon Widgets Shortcodes"
+msgstr "Amazon Widgets Shortcodes"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:44
+msgid "left"
+msgstr "שמאלה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:45
+msgid "centered"
+msgstr "במרכז"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:46
+msgid "right"
+msgstr "ימינה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:142
+msgid "Amazon Canada"
+msgstr "אמזון קנדה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:165
+msgid "Amazon Germany"
+msgstr "אמזון גרמניה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:187
+msgid "Amazon France"
+msgstr "אמזון צרפת"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:210
+msgid "Amazon Italia"
+msgstr "אמזון איטליה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:233
+msgid "Amazon Japan"
+msgstr "אמזון יפן"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:255
+msgid "Amazon United Kingdom"
+msgstr "אמזון בריטניה"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:278
+msgid "Amazon USA"
+msgstr "אמזון ארצות הברית"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:331
+msgid "Amazon Carrousel"
+msgstr "קרוסלה של אמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:335
+msgid "Amazon Deals"
+msgstr "עסקאות באמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:339
+msgid "Amazon MP3"
+msgstr "מוזיקה (MP3) באמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:343
+msgid "Amazon My Favorites"
+msgstr "המועדפים שלי באמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:348
+msgid "Amazon Product"
+msgstr "מוצרים באמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:350
+msgid "Image and Text"
+msgstr "תמונה וטקסט"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:351
+msgid "Image only"
+msgstr "תמונה בלבד"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:352
+msgid "Text only"
+msgstr "טקסט בלבד"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:357
+msgid "Amazon Product Cloud"
+msgstr "ענן מוצרי אמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:361
+msgid "Amazon Slideshow"
+msgstr "סליידר של אמזון"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:365
+msgid "Amazon Wishlist"
+msgstr "רשימת משאלות באמזון"
+
+#: ../lib/AmazonWidgetsShortcodePlugin.class.php:123
+msgid "Configure"
+msgstr "הגדר"
+
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeMp3.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr "אין לך גרסה חדשה מספיק של פלאש כדי לנגן אנימציה זאת"
+
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
+msgid "Consult this product cloud on Amazon."
+msgstr "היעזרו באמזון לגבי ענן מוצר זה."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
+msgid "Consult this wishlist on Amazon."
+msgstr "היעזרו באמזון לגבי רשימת המשאלות (Wishlist)."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "היעזרו באמזון לגבי המועדפים שלי."
+
+#: ../admin/form/options.php:21
+msgid "Options saved."
+msgstr "ההגדרות נשמרו"
+
+#: ../admin/view/documentation.php:2
+msgid "Amazon Widgets Shortcodes documentation"
+msgstr "תיעוד Amazon Widgets Shortcodes"
+
+#: ../admin/view/documentation.php:8
+#: ../admin/view/documentation.php:50
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:124
+#: ../admin/view/documentation.php:156
+#: ../admin/view/documentation.php:249
+#: ../admin/view/documentation.php:281
+#: ../admin/view/documentation.php:323
+msgid "Shortcode:"
+msgstr "קוד מקוצר (ShortCode):"
+
+#: ../admin/view/documentation.php:12
+#: ../admin/view/documentation.php:54
+#: ../admin/view/documentation.php:96
+#: ../admin/view/documentation.php:128
+#: ../admin/view/documentation.php:160
+#: ../admin/view/documentation.php:253
+#: ../admin/view/documentation.php:285
+#: ../admin/view/documentation.php:327
+msgid "Example:"
+msgstr "דוגמה:"
+
+#: ../admin/view/documentation.php:16
+#: ../admin/view/documentation.php:58
+#: ../admin/view/documentation.php:100
+#: ../admin/view/documentation.php:132
+#: ../admin/view/documentation.php:166
+#: ../admin/view/documentation.php:211
+#: ../admin/view/documentation.php:226
+#: ../admin/view/documentation.php:257
+#: ../admin/view/documentation.php:289
+#: ../admin/view/documentation.php:331
+msgid "Options:"
+msgstr "אפשרויות:"
+
+#: ../admin/view/documentation.php:21
+#: ../admin/view/documentation.php:63
+#: ../admin/view/documentation.php:105
+#: ../admin/view/documentation.php:137
+#: ../admin/view/documentation.php:171
+#: ../admin/view/documentation.php:176
+#: ../admin/view/documentation.php:216
+#: ../admin/view/documentation.php:262
+#: ../admin/view/documentation.php:294
+#: ../admin/view/documentation.php:336
+msgid "align the widget on the desired way"
+msgstr "יישר את הוידג'ט לכיוון הרצוי"
+
+#: ../admin/view/documentation.php:25
+#: ../admin/view/documentation.php:67
+#: ../admin/view/documentation.php:175
+#: ../admin/view/documentation.php:180
+#: ../admin/view/documentation.php:185
+#: ../admin/view/documentation.php:298
+msgid "CSS hexa or code value"
+msgstr "קוד CSS או ערך מקביל"
+
+#: ../admin/view/documentation.php:26
+#: ../admin/view/documentation.php:68
+#: ../admin/view/documentation.php:181
+#: ../admin/view/documentation.php:299
+msgid "customize the background color of the widget"
+msgstr "קבע את צבע הרקע של הוידג'ט"
+
+#: ../admin/view/documentation.php:30
+#: ../admin/view/documentation.php:35
+#: ../admin/view/documentation.php:72
+#: ../admin/view/documentation.php:77
+#: ../admin/view/documentation.php:190
+#: ../admin/view/documentation.php:205
+#: ../admin/view/documentation.php:303
+#: ../admin/view/documentation.php:308
+msgid "value in pixels"
+msgstr "ערך בפיקסלים"
+
+#: ../admin/view/documentation.php:31
+#: ../admin/view/documentation.php:73
+#: ../admin/view/documentation.php:304
+msgid "height of the animation"
+msgstr "הגובה של האנימציה"
+
+#: ../admin/view/documentation.php:36
+#: ../admin/view/documentation.php:78
+#: ../admin/view/documentation.php:309
+msgid "width of the animation"
+msgstr "הרוחב של האנימציה"
+
+#: ../admin/view/documentation.php:41
+#: ../admin/view/documentation.php:83
+#: ../admin/view/documentation.php:115
+#: ../admin/view/documentation.php:147
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:272
+#: ../admin/view/documentation.php:314
+#: ../admin/view/documentation.php:346
+msgid "Content:"
+msgstr "תוכן:"
+
+#: ../admin/view/documentation.php:42
+#: ../admin/view/documentation.php:84
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:148
+#: ../admin/view/documentation.php:273
+#: ../admin/view/documentation.php:315
+#: ../admin/view/documentation.php:347
+msgid "Widget ID, contained in HTML parameter value like this:"
+msgstr "מספר הוידג'ט (ID) בתוך פרטמטר HTML בצורה כזאת:"
+
+#: ../admin/view/documentation.php:109
+#: ../admin/view/documentation.php:141
+#: ../admin/view/documentation.php:200
+#: ../admin/view/documentation.php:230
+#: ../admin/view/documentation.php:266
+#: ../admin/view/documentation.php:340
+msgid "string"
+msgstr "מחרוזת טקסט"
+
+#: ../admin/view/documentation.php:110
+#: ../admin/view/documentation.php:142
+#: ../admin/view/documentation.php:267
+#: ../admin/view/documentation.php:341
+msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
+msgstr "טקסט חלופי במקרה בו אין לגולש תמיכה בפלאש או בג'אווה סקריפט בדפדפן שלו"
+
+#: ../admin/view/documentation.php:186
+msgid "border color of the widget"
+msgstr "צבע הגבול של הוידג'ט"
+
+#: ../admin/view/documentation.php:191
+msgid "height of the frame"
+msgstr "הגובה של המסגרת"
+
+#: ../admin/view/documentation.php:196
+msgid "display a small picture or a big one (0 by default)"
+msgstr "הצג תמונה קטנה או גדולה (0 לברירת מחדל)"
+
+#: ../admin/view/documentation.php:201
+msgid "window name to open the link in (_blank by default)"
+msgstr "סוג החלון בו לפתוח את הקישור (ברירת המחדל היא _blank)"
+
+#: ../admin/view/documentation.php:206
+msgid "width of the frame"
+msgstr "הרוחב של המסגרת"
+
+#: ../admin/view/documentation.php:215
+msgid "image name or Amazon OR full image URL"
+msgstr "שם התמונה באמזון או המסלול המלא של התמונה"
+
+#: ../admin/view/documentation.php:221
+msgid "display the widget as image"
+msgstr "הצג את הוידג'ט כתמונה"
+
+#: ../admin/view/documentation.php:231
+msgid "text of the hyperlink"
+msgstr "הטקסט של הקישור"
+
+#: ../admin/view/documentation.php:236
+msgid "display the widget as hypertext link"
+msgstr "הצג את הוידג'ט כקישור  "
+
+#: ../admin/view/documentation.php:242
+msgid "ASIN code of the product."
+msgstr "קוד ASIN של המוצר"
+
+#: ../admin/view/options.php:4
+msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
+msgstr "ברוכים הבאים לדף ההגדרות של התוסף <em> Amazon Widgets Shortcodes</em> "
+
+#: ../admin/view/options.php:8
+#, php-format
+msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
+msgstr "אתם יכולים <a href=\"%s\" class=\"new-window\">לפנות לעזרה</a>, <a href=\"%s\" class=\"new-window\">לכתוב פידבק</a> (חיובי או שלילי), <a href=\"%s\" class=\"new-window\">declare a bug</a> או אפילו <a href=\"%s\" class=\"new-window\">לקרוא פידבקים של אחרים</a>.<br />אם אתה כבר מפתח של וורדפרס אנא השתמש <a href=\"%s\" class=\"new-window\">ב-Wordpress Plugins Trac</a> במקום לפנות לעזרה."
+
+#: ../admin/view/options.php:23
+msgid "Enjoy the usage of this plugin!"
+msgstr "תהנו מהשימוש בתוסף זה!"
+
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Main Options"
+msgstr "אפשרויות ראשיות"
+
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:206
+msgid "Additional Tools"
+msgstr "כלים נוספים"
+
+#: ../admin/view/options.php:38
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: ../admin/view/options.php:48
+msgid "Amazon affiliate region:"
+msgstr "איזור אפיליאט (affiliate) של אמזון:"
+
+#: ../admin/view/options.php:61
+#, php-format
+msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+msgstr "מוגדר כרגע על <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+
+#: ../admin/view/options.php:71
+msgid "Amazon Tracking ID:"
+msgstr "אמזון קוד מעקב (Tracking ID):"
+
+#: ../admin/view/options.php:81
+#, php-format
+msgid "Your Amazon Tracking ID, generally suffixed by %s."
+msgstr "קוד המעקב שלך באמזון (Tracking ID) בדרך מתחיל עם %s"
+
+#: ../admin/view/options.php:90
+msgid "Disabled widgets"
+msgstr "כבה וידג'טים"
+
+#: ../admin/view/options.php:95
+msgid "Disabling a widget will hide it from the Rich Text Editor. Its shortcode will also be disabled."
+msgstr "כיבוי וידג'ט זה יסתיר עורך הטקסט העשיר. הקיצור שמפעיל אותו יכבה במקביל."
+
+#: ../admin/view/options.php:107
+msgid "Show inline documentation?"
+msgstr "הצג תיעוד פנימי?"
+
+#: ../admin/view/options.php:121
+msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+msgstr "תיעוד פנימי ימוקם מתחת לאיזור הכתיבה בפוסט, בדף ובאיזור הניהול.<br />זה יעזור לכם להכליל את הוידג'טים של אמזון בצורה קלה יותר."
+
+#: ../admin/view/options.php:131
+msgid "Layout Options"
+msgstr "אפשרויות מבנה"
+
+#: ../admin/view/options.php:137
+msgid "Default Widgets alignment:"
+msgstr "מיקום וידג'טים ברירת מחדל:"
+
+#: ../admin/view/options.php:156
+msgid "Show Amazon Widgets in RSS feeds?"
+msgstr "הצג את הוידג'טים של אמזון בהזנת RSS?"
+
+#: ../admin/view/options.php:170
+msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
+msgstr "אולי תעדיף להסתיר את הוידג'טים בהזנת RSS כדי להשאיר אותה נקייה.<br />שימושי אם אתם צריכים שאתרים אחרים ישתמשו בהזנת RSS שלכם עבור מודעות."
+
+#: ../admin/view/options.php:180
+msgid "Strict Standards compliance?"
+msgstr "התאמה לכללי דפדפן נוקשים?"
+
+#: ../admin/view/options.php:194
+msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
+msgstr "אם אתה זקוק לולידציה של האתר שלכם ב HTML או XHTML נוקשה (Strict), אנא סמן תיבה זאת.<br />רק זכור שאינטרנט אקספלורר 6 עשוי להציג עיצוב שבור מעט."
+
+#: ../admin/view/options.php:212
+msgid "Enable context links:"
+msgstr "אפשר קישורים רלוונטים:"
+
+#: ../admin/view/options.php:226
+msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
+msgstr "טקסטים רלוונטים לתוכן הם קישור אשר נוספים באופן אוטומטי למילות מפתח בעמוד שלך."
+
+#: ../admin/view/options.php:235
+msgid "Enable product preview:"
+msgstr "אפשר תצוגה מוקדמת של מוצר:"
+
+#: ../admin/view/options.php:249
+msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
+msgstr "ביקורת מוצר מציגה טיפ במעבר עכבר על כל הקישורים אשר מפנים אל מוצר של אמזון עם מידע כגון מחיר, תמונה, שם מלא וכו."
+
+#: ../admin/view/options.php:266
+msgid "Save Changes"
+msgstr "שמור שינויים"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "Affiliate Options"
+msgstr "אפשרויות אפיליאט (Affiliate)"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+msgid "Align"
+msgstr "יישר"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+msgid "Link Color"
+msgstr "צבע הקישור"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+msgid "Other Options"
+msgstr "אפשרויות נוספות"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+msgid "Apply the magic!"
+msgstr "החל את הקסם!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+msgid "Could not parse Amazon HTML code. It may be invalid or it is a bug of the plugin (then, please report it)."
+msgstr "לא הצלחתי לפרש את הHTML של אמזון. הוא עשוי להיות לא תקין או שזאת שגיאה של התוסף (אנא, ספר לי על כך)."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+msgid "ASIN Code"
+msgstr "קוד ASIN"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+msgid "Background Color"
+msgstr "צבע רקע"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Border color"
+msgstr "צבע הגבול"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+msgid "Copy/paste Amazon HTML's code right below ↓"
+msgstr "העתק/הדבר את הHTML של אמזון כאן למטה"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
+msgstr "לא רוצה למלא את כל השדות של האפשרויות? פשוט העתק והדבק את הקוד HTML של אמזון ותהנה מהשלמה אוטומטית!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+msgid "Copy/Paste Code"
+msgstr "העתק/הדבק קוד"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Glad you look at here!"
+msgstr "שמח שאתה מסתכל כאן!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+msgid "Height"
+msgstr "גובה"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
+msgid "Image Source"
+msgstr "מקור התמונה"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+msgid "Link text"
+msgstr "קישור טקסט"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "pixels"
+msgstr "פיקסלים"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Default Plugin Setting"
+msgstr "הגדרות תוסף ברירת מחדל"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Display type"
+msgstr "הצג סוג"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Region"
+msgstr "איזור"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:65
+msgid "Small size?"
+msgstr "גודל קטן?"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:66
+msgid "Tracking ID"
+msgstr "Tracking ID"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:67
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "השאר ריק כדי להשתמש באופן אוטומטי בTracking ID שלך"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:68
+msgid "Widget ID"
+msgstr "וידג'ט ID"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:69
+msgid "Width"
+msgstr "רוחב"
+
