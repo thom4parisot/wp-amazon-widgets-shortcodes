@@ -46,6 +46,7 @@ Easy management of Amazon Links & Widgets on your blog. Preserve your post consi
 * Belorussian (by [Fat Cow](http://www.fatcow.com/))
 * English
 * French
+* Hebrew (by [Sagive SEO](http://www.sagive.co.il))
 * Italian (by [Gianni Diurno](http://gidibao.net/))
 * Russian (by [ilyuha](http://antsar.info/)]
 * Uzbek (by [Alexsandra Bolshova](http://www.comfi.com/)]
