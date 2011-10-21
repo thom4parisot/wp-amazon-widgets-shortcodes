@@ -86,6 +86,9 @@ Please notice that this forthcoming version **will require at least**:
  * PHP 5.1.2 (so that the `spl_autoload` function is available)
  * WordPress 3.0
 
+= Version 1.6.2 =
+ * i18n: added Hebrew translation
+
 = Version 1.6.1 =
  * fix: disabled widgets messed up things when none set (as said, always...)
 
