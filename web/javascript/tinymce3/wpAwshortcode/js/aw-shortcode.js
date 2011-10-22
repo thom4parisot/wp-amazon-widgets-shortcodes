@@ -313,15 +313,18 @@ var awShortcode = {
      * Guess the tracking ID from a string and deals with the default one
      * 
      * @author oncletom
-     * @version 1.0
+     * @version 1.1
      * @package tinymce
      * @since 1.3
      * @param {String} uri
      * @param {String} default_tracking_id
+     * @changelog
+     * 1.1
+     * - fixed double dash ID (http://wordpress.org/support/topic/plugin-doesnt-pick-up-my-amazon-id-correctly)
      */
     getTrackingIdFromString: function(uri, default_tracking_id){
       var default_tracking_id = default_tracking_id || tinyMCEPopup.editor.settings.awshortcode_tracking_id;
-      var tracking_id = /([a-z0-9]{4,14}(-[0-9]{1,2})?-[0-9]{2})[\W]/.execAndGet(uri);
+      var tracking_id = /([a-z0-9-]{4,14}-[0-9]{2})[\W]/.execAndGet(uri);
 
       return tracking_id == default_tracking_id ? null : tracking_id;
     }
