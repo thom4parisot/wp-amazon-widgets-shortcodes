@@ -88,6 +88,8 @@ Please notice that this forthcoming version **will require at least**:
  * WordPress 3.0
 
 = Version 1.6.2 =
+ * fix: widget product was shown in French for Italian users
+ * fix: double dashed Tracking ID were not properly detected
  * i18n: added Hebrew translation
 
 = Version 1.6.1 =
