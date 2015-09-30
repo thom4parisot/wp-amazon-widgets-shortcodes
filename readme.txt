@@ -183,7 +183,7 @@ Kudos to LesBessant and fredl for reporting usage problems with Wordpress µ and
   * insert or edit current widgets in one click
   * handles all supported widgets for now
   * easy inclusion without having to read the documentation
- * widget: reintroduced the slideshow shortcode which was accidentaly removed
+ * widget: reintroduced the slideshow shortcode which was accidentally removed
 
 = Version 1.0 =
  * added Strict Standards compliance mode (`object` instead of `iframe`)
