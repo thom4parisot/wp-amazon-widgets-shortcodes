@@ -1,0 +1,563 @@
+﻿msgid ""
+msgstr ""
+"Project-Id-Version: Amazon Widgets Shortcodes in italiano\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-12 16:06+0100\n"
+"PO-Revision-Date: 2017-03-25 17:48+0100\n"
+"Last-Translator: Jordan Silaen <jordan.silaen@chameleonjohn.com>\n"
+"Language-Team: Chameleonjohn.com <jordan.silaen@chameleonjohn.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: Indonesia\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;_e ;__;__ ;_c;_c ;__ngettext;__ngettext\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:70
+msgid "Amazon Widget Shortcodes has been activated"
+msgstr "Amazon Widget Shortcode telah diaktifkan"
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:72
+#, php-format
+msgid "You need to <a href=\"%s\">setup your Amazon Tracking ID</a> in order to see your shortcodes display Amazon Widgets."
+msgstr "You need to <a href=\"%s\"> setup guide </a> Amazon Tracking ID in order to see your shortcodes display the Amazon Widgets."
+
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:107
+#: ../lib/AmazonWidgetsShortcodesAdmin.class.php:108
+msgid "Amazon Widgets Shortcodes"
+msgstr "Amazon Widgets Shortcode"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:24
+msgid "left"
+msgstr "kiri"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:25
+msgid "centered"
+msgstr "berpusat"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:26
+msgid "right"
+msgstr "kanan"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:116
+msgid "Amazon Canada"
+msgstr "Amazon Kanada"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:139
+msgid "Amazon Germany"
+msgstr "Amazon Jerman"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:161
+msgid "Amazon France"
+msgstr "Amazon France"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:184
+msgid "Amazon Japan"
+msgstr "Amazon Jepang"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:206
+msgid "Amazon United Kingdom"
+msgstr "Amazon United Kingdom"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:229
+msgid "Amazon USA"
+msgstr "Amazon USA"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:296
+msgid "Image and Text"
+msgstr "Gambar dan teks"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:297
+msgid "Image only"
+msgstr "gambar hanya"
+
+#: ../lib/AmazonWidgetsShortcodeConfiguration.class.php:298
+msgid "Text only"
+msgstr "teks saja"
+
+#: ../lib/AmazonWidgetsShortcodePlugin.class.php:116
+msgid "Configure"
+msgstr "Konfigurasi"
+
+#: ../lib/widgets/AmazonWidgetsShortcodeProductCloud.class.php:54
+msgid "Consult this product cloud on Amazon."
+msgstr "Konsultasikan awan produk ini di Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeWishlist.class.php:54
+msgid "Consult this wishlist on Amazon."
+msgstr "Konsultasikan wishlist ini di Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeMyFavorites.class.php:54
+msgid "Consult my favorites on Amazon."
+msgstr "Konsultasikan favorit saya di Amazon."
+
+#: ../lib/widgets/AmazonWidgetsShortcodeDeals.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeCarrousel.class.php:62
+#: ../lib/widgets/AmazonWidgetsShortcodeSlideshow.class.php:60
+#: ../lib/widgets/AmazonWidgetsShortcodeMp3.class.php:60
+msgid "You don't have a sufficient version of Flash Player to display this animation."
+msgstr "Anda tidak memiliki versi yang cukup Flash Player untuk menampilkan animasi ini."
+
+#: ../admin/view/options.php:4
+msgid "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration page!"
+msgstr "Dengan senang hati menyambut dengan <em> Amazon Widgets Shortcode </ em> halaman konfigurasi!"
+
+#: ../admin/view/options.php:8
+#, php-format
+msgid "You can <a href=\"%s\" class=\"new-window\">ask for help</a>, <a href=\"%s\" class=\"new-window\">write a feedback</a> (positive or negative), <a href=\"%s\" class=\"new-window\">declare a bug</a> or even <a href=\"%s\" class=\"new-window\">read existing feedbacks</a>.<br />If you are already a Wordpress developer, please use <a href=\"%s\" class=\"new-window\">Wordpress Plugins Trac</a> instead."
+msgstr "You can <a href=\"%s\" class=\"new-window\"> ask for help </a>, <a href=\"%s\" class=\"new-window\"> write a </a> feedback (positive or negative), <a href=\"%s\" class=\"new-window\"> </a> declare a bug or even <a href = \ "% s \ "class = \" new-window \ "> read existing </a> feedbacks. <br /> If you are already a Wordpress developer, please use the <a href = \"% s \ "class = \" new- window \ "> Wordpress Plugins Trac </a> instead."
+
+#: ../admin/view/options.php:23
+msgid "Enjoy the usage of this plugin!"
+msgstr "Nikmati penggunaan plugin ini!"
+
+#: ../admin/view/options.php:36
+#: ../admin/view/options.php:42
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:46
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:50
+msgid "Main Options"
+msgstr "Pilihan utama"
+
+#: ../admin/view/options.php:37
+#: ../admin/view/options.php:188
+msgid "Additional Tools"
+msgstr "Alat tambahan"
+
+#: ../admin/view/options.php:38
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#: ../admin/view/options.php:48
+msgid "Amazon affiliate region:"
+msgstr "Amazon wilayah afiliasi:"
+
+#: ../admin/view/options.php:61
+#, php-format
+msgid "currenty set on <a href=\"%2$s\" class=\"new-window\">%1$s</a>"
+msgstr "currently set on <a href=\"%2$s\" class=\"new-window\">% 1 $ s </a>"
+
+#: ../admin/view/options.php:70
+msgid "Amazon Tracking ID:"
+msgstr "Amazon Tracking ID:"
+
+#: ../admin/view/options.php:80
+#, php-format
+msgid "Your Amazon Tracking ID, generally suffixed by %s."
+msgstr "Anda Amazon Tracking ID, umumnya suffixed oleh %s."
+
+#: ../admin/view/options.php:89
+msgid "Show inline documentation?"
+msgstr "Tampilkan dokumentasi inline?"
+
+#: ../admin/view/options.php:103
+msgid "Inline documentation will be located under your writing area in both post and page admin area.<br />It will help you to include Amazon Widgets in a wiser way."
+msgstr "Inline documentation will be located under your writing area in both post and page admin area. <br /> It will help you to include the Amazon Widgets in a wiser way."
+
+#: ../admin/view/options.php:113
+msgid "Layout Options"
+msgstr "Pilihan tata letak"
+
+#: ../admin/view/options.php:119
+msgid "Default Widgets alignment:"
+msgstr "Default Widget keselarasan:"
+
+#: ../admin/view/options.php:138
+msgid "Show Amazon Widgets in RSS feeds?"
+msgstr "Tampilkan Amazon Widgets di RSS feed?"
+
+#: ../admin/view/options.php:152
+msgid "You may want to hide widgets in feeds in order to keep them clean.<br />Usefull if you need to republish it on external websites againsts ads."
+msgstr "You may want to hide widgets in feeds in order to keep them clean. <br /> Usefull if you need to republish it on external websites againsts ads."
+
+#: ../admin/view/options.php:162
+msgid "Strict Standards compliance?"
+msgstr "kepatuhan Standar yang ketat?"
+
+#: ../admin/view/options.php:176
+msgid "If you need to validate your website in HTML or XHTML Strict, please tick this box.<br />Just keep in mind Internet Explorer 6 may display glitches on some Amazon Widgets."
+msgstr "If you need to validate your website in HTML or XHTML Strict, please tick this box. <br /> Just keep in mind Internet Explorer 6 may display some glitches on the Amazon Widgets."
+
+#: ../admin/view/options.php:194
+msgid "Enable context links:"
+msgstr "Aktifkan tautan konteks:"
+
+#: ../admin/view/options.php:208
+msgid "Context links are hyperkinks automatically added on relevant keywords of your page."
+msgstr "link konteks yang hyperkinks otomatis ditambahkan pada kata kunci yang relevan dari halaman Anda."
+
+#: ../admin/view/options.php:217
+msgid "Enable product preview:"
+msgstr "Aktifkan pratinjau produk:"
+
+#: ../admin/view/options.php:231
+msgid "Product preview display a tooltip on all hypertext links aiming to an Amazon product with informations such as price, picture, full name etc."
+msgstr "pratinjau produk menampilkan tooltip pada semua link hypertext bertujuan untuk produk Amazon dengan informasi seperti harga, gambar, nama lengkap dll"
+
+#: ../admin/view/options.php:247
+msgid "Save Changes"
+msgstr "Simpan perubahan"
+
+#: ../admin/view/documentation.php:2
+msgid "Amazon Widgets Shortcodes documentation"
+msgstr "dokumentasi Amazon Widgets Shortcode"
+
+#: ../admin/view/documentation.php:5
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:17
+msgid "Amazon Carrousel"
+msgstr "Amazon Carrousel"
+
+#: ../admin/view/documentation.php:8
+#: ../admin/view/documentation.php:50
+#: ../admin/view/documentation.php:92
+#: ../admin/view/documentation.php:124
+#: ../admin/view/documentation.php:156
+#: ../admin/view/documentation.php:249
+#: ../admin/view/documentation.php:281
+#: ../admin/view/documentation.php:323
+msgid "Shortcode:"
+msgstr "Kode pendek:"
+
+#: ../admin/view/documentation.php:12
+#: ../admin/view/documentation.php:54
+#: ../admin/view/documentation.php:96
+#: ../admin/view/documentation.php:128
+#: ../admin/view/documentation.php:160
+#: ../admin/view/documentation.php:253
+#: ../admin/view/documentation.php:285
+#: ../admin/view/documentation.php:327
+msgid "Example:"
+msgstr "Contoh:"
+
+#: ../admin/view/documentation.php:16
+#: ../admin/view/documentation.php:58
+#: ../admin/view/documentation.php:100
+#: ../admin/view/documentation.php:132
+#: ../admin/view/documentation.php:166
+#: ../admin/view/documentation.php:211
+#: ../admin/view/documentation.php:226
+#: ../admin/view/documentation.php:257
+#: ../admin/view/documentation.php:289
+#: ../admin/view/documentation.php:331
+msgid "Options:"
+msgstr "Pilihan:"
+
+#: ../admin/view/documentation.php:21
+#: ../admin/view/documentation.php:63
+#: ../admin/view/documentation.php:105
+#: ../admin/view/documentation.php:137
+#: ../admin/view/documentation.php:171
+#: ../admin/view/documentation.php:176
+#: ../admin/view/documentation.php:216
+#: ../admin/view/documentation.php:262
+#: ../admin/view/documentation.php:294
+#: ../admin/view/documentation.php:336
+msgid "align the widget on the desired way"
+msgstr "menyelaraskan widget pada cara yang diinginkan"
+
+#: ../admin/view/documentation.php:25
+#: ../admin/view/documentation.php:67
+#: ../admin/view/documentation.php:175
+#: ../admin/view/documentation.php:180
+#: ../admin/view/documentation.php:185
+#: ../admin/view/documentation.php:298
+msgid "CSS hexa or code value"
+msgstr "CSS hexa atau nilai kode"
+
+#: ../admin/view/documentation.php:26
+#: ../admin/view/documentation.php:68
+#: ../admin/view/documentation.php:181
+#: ../admin/view/documentation.php:299
+msgid "customize the background color of the widget"
+msgstr "menyesuaikan warna latar belakang dari widget"
+
+#: ../admin/view/documentation.php:30
+#: ../admin/view/documentation.php:35
+#: ../admin/view/documentation.php:72
+#: ../admin/view/documentation.php:77
+#: ../admin/view/documentation.php:190
+#: ../admin/view/documentation.php:205
+#: ../admin/view/documentation.php:303
+#: ../admin/view/documentation.php:308
+msgid "value in pixels"
+msgstr "nilai dalam pixel"
+
+#: ../admin/view/documentation.php:31
+#: ../admin/view/documentation.php:73
+#: ../admin/view/documentation.php:304
+msgid "height of the animation"
+msgstr "ketinggian animasi"
+
+#: ../admin/view/documentation.php:36
+#: ../admin/view/documentation.php:78
+#: ../admin/view/documentation.php:309
+msgid "width of the animation"
+msgstr "lebar animasi"
+
+#: ../admin/view/documentation.php:41
+#: ../admin/view/documentation.php:83
+#: ../admin/view/documentation.php:115
+#: ../admin/view/documentation.php:147
+#: ../admin/view/documentation.php:241
+#: ../admin/view/documentation.php:272
+#: ../admin/view/documentation.php:314
+#: ../admin/view/documentation.php:346
+msgid "Content:"
+msgstr "konten:"
+
+#: ../admin/view/documentation.php:42
+#: ../admin/view/documentation.php:84
+#: ../admin/view/documentation.php:116
+#: ../admin/view/documentation.php:148
+#: ../admin/view/documentation.php:273
+#: ../admin/view/documentation.php:315
+#: ../admin/view/documentation.php:347
+msgid "Widget ID, contained in HTML parameter value like this:"
+msgstr "Widget ID, yang terkandung dalam nilai parameter HTML seperti ini:"
+
+#: ../admin/view/documentation.php:47
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:18
+msgid "Amazon Deals"
+msgstr "Penawaran Amazon"
+
+#: ../admin/view/documentation.php:89
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:19
+msgid "Amazon MP3"
+msgstr "Amazon MP3"
+
+#: ../admin/view/documentation.php:109
+#: ../admin/view/documentation.php:141
+#: ../admin/view/documentation.php:200
+#: ../admin/view/documentation.php:230
+#: ../admin/view/documentation.php:266
+#: ../admin/view/documentation.php:340
+msgid "string"
+msgstr "tali"
+
+#: ../admin/view/documentation.php:110
+#: ../admin/view/documentation.php:142
+#: ../admin/view/documentation.php:267
+#: ../admin/view/documentation.php:341
+msgid "alternative text if Flash or JavaScript is not available on visitor's browser"
+msgstr "teks alternatif jika Flash atau JavaScript tidak tersedia pada browser pengunjung"
+
+#: ../admin/view/documentation.php:121
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:20
+msgid "Amazon My Favorites"
+msgstr "Favorit Amazon saya"
+
+#: ../admin/view/documentation.php:153
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:21
+msgid "Amazon Product"
+msgstr "Produk Amazon"
+
+#: ../admin/view/documentation.php:186
+msgid "border color of the widget"
+msgstr "warna border widget"
+
+#: ../admin/view/documentation.php:191
+msgid "height of the frame"
+msgstr "ketinggian frame"
+
+#: ../admin/view/documentation.php:196
+msgid "display a small picture or a big one (0 by default)"
+msgstr "menampilkan gambar kecil atau yang besar (0 secara default)"
+
+#: ../admin/view/documentation.php:201
+msgid "window name to open the link in (_blank by default)"
+msgstr "Nama jendela untuk membuka link di (_blank secara default)"
+
+#: ../admin/view/documentation.php:206
+msgid "width of the frame"
+msgstr "lebar frame"
+
+#: ../admin/view/documentation.php:215
+msgid "image name or Amazon OR full image URL"
+msgstr "Nama gambar atau Amazon ATAU URL gambar penuh"
+
+#: ../admin/view/documentation.php:221
+msgid "display the widget as image"
+msgstr "menampilkan widget seperti gambar"
+
+#: ../admin/view/documentation.php:231
+msgid "text of the hyperlink"
+msgstr "teks hyperlink"
+
+#: ../admin/view/documentation.php:236
+msgid "display the widget as hypertext link"
+msgstr "menampilkan widget sebagai link hypertext"
+
+#: ../admin/view/documentation.php:242
+msgid "ASIN code of the product."
+msgstr "ASIN kode produk."
+
+#: ../admin/view/documentation.php:246
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:22
+msgid "Amazon Product Cloud"
+msgstr "Amazon Product Cloud"
+
+#: ../admin/view/documentation.php:278
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:23
+msgid "Amazon Slideshow"
+msgstr "Amazon slideshow"
+
+#: ../admin/view/documentation.php:320
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:24
+msgid "Amazon Wishlist"
+msgstr "Amazon Daftar Keinginan"
+
+#: ../admin/form/options.php:21
+msgid "Options saved."
+msgstr "Pilihan disimpan."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:30
+msgid "Affiliate Options"
+msgstr "afiliasi Pilihan"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:31
+msgid "Align"
+msgstr "Meluruskan"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:35
+msgid "Link Color"
+msgstr "Link Color"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:36
+msgid "Other Options"
+msgstr "Pilihan lain"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:37
+msgid "Apply the magic!"
+msgstr "Terapkan sihir!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:38
+msgid "Could not parse Amazon HTML code. It may be invalid or it is a bug of the plugin (then, please report it)."
+msgstr "Tidak dapat mengurai kode Amazon HTML. Ini mungkin tidak valid atau merupakan bug dari plugin (kemudian, tolong laporkan)."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:39
+msgid "ASIN Code"
+msgstr "Kode ASIN"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:40
+msgid "Background Color"
+msgstr "Warna latar belakang"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:41
+msgid "Border color"
+msgstr "warna perbatasan"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:42
+msgid "Copy/paste Amazon HTML's code right below ↓"
+msgstr "Copy / paste kode Amazon HTML tepat di bawah ↓"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:43
+msgid "Don't want to fill main options fields ? So just copy/paste Amazon's HTML code and enjoy autocomplete magic!"
+msgstr "Tidak ingin mengisi pilihan bidang utama? Jadi hanya copy / paste kode HTML Amazon dan menikmati keajaiban autocomplete!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:44
+msgid "Copy/Paste Code"
+msgstr "Copy / Paste Kode"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:45
+msgid "Glad you look at here!"
+msgstr "Senang Anda melihat di sini!"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:47
+msgid "Height"
+msgstr "Tinggi"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:48
+msgid "Image Source"
+msgstr "Sumber gambar"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:49
+msgid "Link text"
+msgstr "Link text"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:51
+msgid "pixels"
+msgstr "piksel"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:52
+msgid "Default Plugin Setting"
+msgstr "Pengaturan Plugin bawaan"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:53
+msgid "Display type"
+msgstr "Tipe tampilan"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:57
+msgid "Region"
+msgstr "Wilayah"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:62
+msgid "Small size?"
+msgstr "Ukuran kecil?"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:63
+msgid "Tracking ID"
+msgstr "pelacakan ID"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:64
+msgid "Leave empty to use automatically your default tracking ID."
+msgstr "Biarkan kosong untuk menggunakan secara otomatis ID pelacakan default Anda."
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:65
+msgid "Widget ID"
+msgstr "widget ID"
+
+#: ../web/javascript/tinymce3/wpAwshortcode/langs/langs.php:66
+msgid "Width"
+msgstr "Lebar"
+
+#~ msgid ""
+#~ "For now, it only handles this widget in the \"Text + picture\" version."
+#~ msgstr ""
+#~ "Per il momento, sarà possibile utilizzare il widget solamente nella "
+#~ "versione \"Testo + immagine\"."
+#~ msgid ""
+#~ "This feature is under heave development and you should enjoy it in the "
+#~ "next 1.2 release of this plugin.As you may guess, you will copy/paste "
+#~ "widget HTML code provided by Amazon to autofill the previous tab."
+#~ msgstr ""
+#~ "Cette fonctionnalité est en plein développement and vous devriez pouvoir "
+#~ "en profiter lors de la sortie de la prochaine version de ce plugin, la "
+#~ "1.2. Comme vous pouvez vous en douter, vous pourrez copier/coller le code "
+#~ "HTML des widgets fourni par Amazon afin de préremplir le précédent onglet."
+#~ msgid "Nice isn\\t it?"
+#~ msgstr "Sympa n\\est-ce pas ?"
+#~ msgid "Carrousel ID, contained in HTML parameter value like this:"
+#~ msgstr ""
+#~ "ID du carrousel, contenu dans une valeur de paramètre HTML comme ceci :"
+#~ msgid ""
+#~ "Gladly welcome to the <em>Amazon Widgets Shortcodes</em> configuration "
+#~ "page.<br />You can also help improving this plugin by <a href=\"%s\" "
+#~ "class=\"new-window\">declaring a bug</a> or even look at the <a href=\"%s"
+#~ "\" class=\"new-window\">official plugin homepage</a> (or <a href=\"%s\" "
+#~ "class=\"new-window\">the author's one</a>)."
+#~ msgstr ""
+#~ "Bienvenue sur la page de configuration d'<em>Amazon Widgets Shortcodes</"
+#~ "em>.<br />Vous pouvez également participer à l'amélioration du plugin en "
+#~ "<a href=\"%s\" class=\"new-window\">déclarant un bug</a> ou bien en "
+#~ "jetant un œil à la <a href=\"%s\" class=\"new-window\">page officielle du "
+#~ "plugin</a> (ou <a href=\"%s\" class=\"new-window\">celle de son auteur</"
+#~ "a>)."
+#~ msgid ""
+#~ "For your convenience, the shortcode documentation is available on each "
+#~ "post and page edit screen, in a box called <em>%s</em>."
+#~ msgstr ""
+#~ "Pour votre confort, la documentation des shortcodes est disponible sur "
+#~ "chaque écran de rédaction d'articles et de pages, dans une boîte nommée "
+#~ "<em>%s</em>."
+#~ msgid ""
+#~ "For now, during this alpha stage, shortcode documentation is available on "
+#~ "the <a href=\"%s\">official Wordpress.org's plugin page</a>.<br />Don't "
+#~ "hesitate to read it to help yourself."
+#~ msgstr ""
+#~ "Pour l'instant, pendant ce stade de version alpha, la documentation des "
+#~ "shortcodes est disponible sur la <a href=\"%s\">page officielle du plugin "
+#~ "de Wordpress.org</a>.<br />N'hésitez pas à la lire pour comprendre leur "
+#~ "utilisation."
+
